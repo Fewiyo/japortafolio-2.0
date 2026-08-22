@@ -19,6 +19,16 @@ const SITE = {
 
   cta: "Conversemos un proyecto",
 
+  /* ---------- Blog ----------
+     Pestana del menu que apunta a la otra plataforma.
+     Pega la URL aqui cuando la tengas y el enlace se activa solo
+     (se abre en una pestana nueva). Mientras este vacia, la pestana
+     aparece atenuada y no lleva a ninguna parte. */
+  blog: {
+    texto: "Blog",
+    url: ""
+  },
+
   /* ---------- Encabezados de seccion ----------
      Cada seccion abre con una etiqueta chica y un titulo grande.
      El campo "intro" es opcional: si lo dejas en "" no se muestra. */

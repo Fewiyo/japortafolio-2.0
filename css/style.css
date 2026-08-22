@@ -154,12 +154,16 @@ body::before{
 .nav__links{display:flex; align-items:center; gap:24px; font-size:13px}
 .nav__links a{color:var(--muted); transition:color .2s var(--ease)}
 .nav__links a:hover, .nav__links a[aria-current="page"]{color:var(--fg)}
+/* pestana externa sin URL todavia */
+.nav__links a[aria-disabled="true"]{color:var(--faint); cursor:default}
+.nav__links a[aria-disabled="true"]:hover{color:var(--faint)}
 .theme-btn{
   font:inherit; font-size:13px; color:var(--muted);
   background:none; border:0; padding:0; cursor:pointer;
   transition:color .2s var(--ease);
 }
 .theme-btn:hover{color:var(--fg)}
+.theme-btn__ico{display:none; font-size:15px; line-height:1}
 
 /* ---------- Portada ---------- */
 .hero{padding:var(--air-hero) 0 0}
@@ -395,8 +399,11 @@ figcaption{font-size:13px; color:var(--faint); margin-top:12px}
   :root{--air-hero:148px; --air-section:96px; --pad:20px}
   .nav__name{font-size:12px}
   .nav__name span{display:none}
-  .nav__links{gap:18px; font-size:12px}
+  .nav__links{gap:14px; font-size:12px}
   .nav__links a[data-solo-desktop]{display:none}
+  /* el boton de tema pasa a icono para que la barra quepa en una linea */
+  .theme-btn__txt{display:none}
+  .theme-btn__ico{display:block}
   .section-head{margin-bottom:40px}
   .footer__bottom{margin-top:64px}
 }

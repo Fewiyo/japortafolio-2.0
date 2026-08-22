@@ -50,6 +50,17 @@ assets/files/     Tu CV en PDF
 
 Todo vive en [js/data.js](js/data.js). Los textos marcados con `PLACEHOLDER —` son los que tienes que reemplazar.
 
+### Pestaña de Blog
+
+Apunta a la plataforma externa. Mientras `url` esté vacía, la pestaña aparece en el menú pero atenuada y sin navegar a ninguna parte. Al pegar la URL se activa sola y se abre en una pestaña nueva:
+
+```js
+blog: {
+  texto: "Blog",
+  url: "https://tu-plataforma.com"
+}
+```
+
 ### Títulos de sección
 
 El objeto `secciones` controla el encabezado de cada bloque del inicio. Si dejas `intro: ""` esa línea no se muestra.

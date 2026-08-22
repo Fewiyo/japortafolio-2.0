@@ -41,16 +41,27 @@
     var links = [
       { t: "Proyectos", h: active === "home" ? "#proyectos" : "index.html#proyectos", k: "proyectos" },
       { t: "Servicios", h: active === "home" ? "#servicios" : "index.html#servicios", k: "servicios", movil: false },
-      { t: "Historia", h: "historia.html", k: "historia" }
+      { t: "Historia", h: "historia.html", k: "historia" },
+      { t: SITE.blog.texto, h: SITE.blog.url, k: "blog", externo: true }
     ];
     return (
       '<nav class="nav" id="nav"><div class="nav__in">' +
       '<a class="nav__name" href="index.html">' + esc(SITE.nombre) + ' <span>— ' + esc(SITE.rol) + "</span></a>" +
       '<div class="nav__links">' +
       links.map(function (l) {
-        return '<a href="' + l.h + '"' + (l.movil === false ? ' data-solo-desktop' : '') + (active === l.k ? ' aria-current="page"' : "") + ">" + l.t + "</a>";
+        /* enlace externo sin URL todavia: se muestra atenuado y no navega */
+        if (l.externo && !l.h) {
+          return '<a href="#" aria-disabled="true" title="Proximamente">' + esc(l.t) + "</a>";
+        }
+        var attrs = l.externo ? ' target="_blank" rel="noopener"' : "";
+        if (l.movil === false) attrs += " data-solo-desktop";
+        if (active === l.k) attrs += ' aria-current="page"';
+        return '<a href="' + esc(l.h) + '"' + attrs + ">" + esc(l.t) + "</a>";
       }).join("") +
-      '<button class="theme-btn" id="theme" type="button" aria-label="Cambiar tema">Tema</button>' +
+      '<button class="theme-btn" id="theme" type="button" aria-label="Cambiar tema">' +
+      '<span class="theme-btn__txt">Tema</span>' +
+      '<span class="theme-btn__ico" aria-hidden="true">◐</span>' +
+      "</button>" +
       "</div></div></nav>"
     );
   }
@@ -212,6 +223,11 @@
       localStorage.setItem("tema", next);
     });
   }
+
+  /* La pestana del blog no navega mientras no tenga URL */
+  document.querySelectorAll('.nav__links a[aria-disabled="true"]').forEach(function (a) {
+    a.addEventListener("click", function (e) { e.preventDefault(); });
+  });
 
   /* Borde de la nav al hacer scroll */
   var navEl = document.getElementById("nav");
