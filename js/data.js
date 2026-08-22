@@ -19,6 +19,22 @@ const SITE = {
 
   cta: "Conversemos un proyecto",
 
+  /* ---------- Encabezados de seccion ----------
+     Cada seccion abre con una etiqueta chica y un titulo grande.
+     El campo "intro" es opcional: si lo dejas en "" no se muestra. */
+  secciones: {
+    proyectos: {
+      eyebrow: "01 / Trabajo seleccionado",
+      titulo: "Proyectos que siguen funcionando cuando yo ya no estoy.",
+      intro: ""
+    },
+    servicios: {
+      eyebrow: "02 / Servicios",
+      titulo: "Todo lo que una institución necesita para sostener un espacio maker.",
+      intro: ""
+    }
+  },
+
   /* ---------- Redes / enlaces ---------- */
   redes: [
     { nombre: "Behance",   url: "https://behance.net/vcntja" },

@@ -73,6 +73,17 @@
     );
   }
 
+  /* ---------- Encabezado de seccion ---------- */
+  function head(s) {
+    return (
+      '<div class="section-head rise">' +
+      '<p class="eyebrow">' + esc(s.eyebrow) + "</p>" +
+      "<h2>" + esc(s.titulo) + "</h2>" +
+      (s.intro ? '<p class="intro">' + esc(s.intro) + "</p>" : "") +
+      "</div>"
+    );
+  }
+
   /* ---------- Tarjeta de proyecto ---------- */
   function card(p, i) {
     return (
@@ -98,12 +109,12 @@
       "</div></div></header>" +
 
       '<section class="section" id="proyectos"><div class="wrap">' +
-      '<p class="eyebrow">01 / Proyectos seleccionados</p>' +
+      head(SITE.secciones.proyectos) +
       '<div class="projects">' + SITE.proyectos.map(card).join("") + "</div>" +
       "</div></section>" +
 
       '<section class="section" id="servicios"><div class="wrap">' +
-      '<p class="eyebrow">02 / En qué puedo ayudar</p>' +
+      head(SITE.secciones.servicios) +
       '<div class="services">' +
       SITE.servicios.map(function (s) {
         return '<div class="service rise"><h3>' + esc(s.titulo) + "</h3><p>" + esc(s.texto) + "</p></div>";
@@ -125,7 +136,7 @@
       '<section class="section" style="padding-top:0"><div class="wrap">' +
       '<div class="prose rise">' + h.parrafos.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>" +
 
-      '<h2 class="prose" style="font-family:var(--serif);font-weight:400;font-size:28px;margin:72px 0 20px">Trayectoria</h2>' +
+      '<h2 class="subhead">Trayectoria</h2>' +
       '<div class="rows">' +
       h.trayectoria.map(function (r) {
         return '<div class="row rise"><span class="yr">' + esc(r[0]) + "</span><span>" + esc(r[1]) +
@@ -133,7 +144,7 @@
       }).join("") +
       "</div>" +
 
-      '<h2 style="font-family:var(--serif);font-weight:400;font-size:28px;margin:72px 0 20px">Instituciones</h2>' +
+      '<h2 class="subhead">Instituciones</h2>' +
       '<div class="chips rise">' + h.colaboraciones.map(function (c) { return '<span class="chip">' + esc(c) + "</span>"; }).join("") + "</div>" +
       "</div></section>" +
 
