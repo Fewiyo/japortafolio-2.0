@@ -235,14 +235,54 @@
   onScroll();
   addEventListener("scroll", onScroll, { passive: true });
 
-  /* Animacion de entrada */
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-    });
-  }, { rootMargin: "0px 0px -8%" });
-  document.querySelectorAll(".rise").forEach(function (el, i) {
+  /* ---------- Animacion de entrada ----------
+     La animacion es un adorno: el contenido NUNCA puede depender de ella.
+     Por eso hay tres formas de revelar un elemento, de mas fina a mas bruta:
+       1. el observador, cuando entra en pantalla
+       2. un repaso en cada scroll, que ademas atrapa lo que quedo arriba
+          tras un salto de ancla (el observador no avisa de eso)
+       3. una red de seguridad a los 2s, por si el navegador nunca
+          reporta intersecciones (pestana oculta, viewport de alto cero,
+          impresion a PDF, vistas previas). */
+  var pendientes = [].slice.call(document.querySelectorAll(".rise"));
+
+  pendientes.forEach(function (el, i) {
     el.style.transitionDelay = Math.min(i, 6) * 45 + "ms";
-    io.observe(el);
   });
+
+  function revelar(el) {
+    el.classList.add("in");
+    if (io) io.unobserve(el);
+  }
+  function revelarTodo() {
+    pendientes.forEach(revelar);
+    pendientes = [];
+  }
+  /* Revela lo que ya esta en pantalla o quedo por encima de ella. */
+  function repasar() {
+    if (!innerHeight) return;           // viewport sin alto: no hay nada que medir
+    pendientes = pendientes.filter(function (el) {
+      if (el.getBoundingClientRect().top < innerHeight * .92) { revelar(el); return false; }
+      return true;
+    });
+  }
+
+  var io = window.IntersectionObserver
+    ? new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            revelar(e.target);
+            pendientes = pendientes.filter(function (x) { return x !== e.target; });
+          }
+        });
+      }, { rootMargin: "0px 0px -8%" })
+    : null;
+
+  if (io) pendientes.forEach(function (el) { io.observe(el); });
+  else revelarTodo();
+
+  addEventListener("scroll", repasar, { passive: true });
+  addEventListener("resize", repasar, { passive: true });
+  repasar();
+  setTimeout(revelarTodo, 2000);
 })();

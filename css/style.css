@@ -382,11 +382,13 @@ figcaption{font-size:13px; color:var(--faint); margin-top:12px}
 .footer__social a:hover{color:var(--fg)}
 
 /* ---------- Animacion de entrada ---------- */
-.rise{opacity:0; transform:translateY(14px)}
+/* Solo se ocultan si JS esta corriendo: sin JS el contenido se ve igual. */
+.js .rise{opacity:0; transform:translateY(14px)}
 .rise.in{opacity:1; transform:none; transition:opacity .7s var(--ease), transform .7s var(--ease)}
 @media (prefers-reduced-motion:reduce){
   *{animation:none !important; transition:none !important}
-  .rise{opacity:1; transform:none}
+  /* misma especificidad que .js .rise para poder anularla */
+  .js .rise{opacity:1; transform:none}
   html{scroll-behavior:auto}
 }
 
