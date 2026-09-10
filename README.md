@@ -1,6 +1,5 @@
 # Portafolio — Vicente Cáceres Farías
 
-Sitio estático (HTML + CSS + JS puro, sin dependencias ni build). Construido sobre las medidas reales de [danielsun.space](https://danielsun.space).
 
 ## Sistema visual
 
