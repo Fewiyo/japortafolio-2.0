@@ -81,26 +81,114 @@ const SITE = {
 
   /* ---------- Proyectos ----------
      id: se usa en la URL → proyecto.html?id=salas-maker
-     img: ruta de portada. Deja "" para usar un marcador generado.
+     img: portada de la tarjeta del catálogo.
+     bloques: el caso de estudio, de arriba a abajo.
+              tipo: "texto" | "imagen" | "cita" | "lista"
      ---------------------------------------------------------- */
   proyectos: [
     {
-      id: "salas-maker",
-      titulo: "Salas Maker",
-      cliente: "Ideo Maker",
-      anio: "2022 — 2024",
-      tags: ["Diseño de servicios", "FabLab", "Docencia"],
+      id: "haalur",
+      titulo: "HAALUR",
+      cliente: "Universidad Diego Portales",
+      anio: "2018",
+      tags: ["Vehículo solar", "Diseño industrial", "Fotografía", "Competencia"],
       resumen:
-        "Modelo replicable de sala maker escolar: layout, equipamiento, protocolos y programa de formación docente.",
-      img: "",
-      /* Bloques del caso de estudio. tipo: "texto" | "imagen" | "cita" | "lista" */
+        "Auto solar con el que ganamos el primer lugar de la categoría Cruiser en la Carrera Solar Atacama 2018. Fui ayudante de diseño y fotógrafo del equipo.",
+      img: "assets/img/proyectos/haalur/01-portada.jpg",
       bloques: [
-        { tipo: "texto", valor: "PLACEHOLDER: Describe aquí el contexto: quién era el cliente, qué problema tenía y por qué te llamaron. Dos o tres párrafos bastan." },
-        { tipo: "lista", titulo: "Mi rol", valor: ["Diagnóstico y levantamiento de requerimientos", "Diseño del layout y selección de maquinaria", "Protocolos de seguridad y uso", "Formación del equipo docente"] },
-        { tipo: "imagen", valor: "", pie: "PLACEHOLDER: pie de foto." },
-        { tipo: "texto", valor: "PLACEHOLDER: Cuenta el proceso y las decisiones de diseño que tomaste." },
-        { tipo: "cita", valor: "PLACEHOLDER: Una frase del cliente o un dato de impacto funciona muy bien aquí." },
-        { tipo: "texto", titulo: "Resultado", valor: "PLACEHOLDER: Cierra con números: cuántas salas, cuántos estudiantes, qué quedó operando." }
+        { tipo: "lista", titulo: "Mi rol", valor: ["Ayudante de diseño del vehículo", "Fotógrafo oficial del equipo", "Registro de la construcción y de la carrera"] },
+        { tipo: "texto", valor: "HAALUR es el auto solar que la Universidad Diego Portales llevó a la Carrera Solar Atacama 2018, donde obtuvo el primer lugar en la categoría Cruiser. Trabajé en el equipo como ayudante de diseño y como fotógrafo: las imágenes de esta página son mías, desde el taller hasta la meta en Arica." },
+        { tipo: "imagen", valor: "assets/img/proyectos/haalur/02-construccion.jpg", pie: "El vehículo en construcción, con la carrocería todavía sin pintar." },
+        { tipo: "imagen", valor: "assets/img/proyectos/haalur/03-chasis.jpg", pie: "Estructura y habitáculo antes del montaje de los paneles." },
+        { tipo: "imagen", valor: "assets/img/proyectos/haalur/04-equipo-trabajando.jpg", pie: "Ajustes en ruta: buena parte de la carrera se corre con el auto abierto." },
+        { tipo: "texto", titulo: "La competencia", valor: "La edición 2018 fue la más exigente hasta esa fecha. Once equipos enfrentaron el tráfico de la capital, la costa chilena y el desierto de Atacama, en un recorrido de más de 2.500 kilómetros entre Santiago y Arica. Ese año el reglamento se alineó con el del Bridgestone World Solar Challenge, y por primera vez la carrera se corrió en formato continuo en vez de por etapas: cada día se retomaba donde había terminado el anterior." },
+        { tipo: "texto", valor: "La categoría Cruiser, estrenada esa edición, reúne vehículos de múltiples ocupantes diseñados para ser prácticos, eficientes y confiables. Son los que más se parecen a un auto de verdad, y por eso mismo los más difíciles: hay que resolver autonomía y espacio habitable al mismo tiempo." },
+        { tipo: "imagen", valor: "assets/img/proyectos/haalur/05-en-pista.jpg", pie: "El auto en pista durante las pruebas previas a la carrera." },
+        { tipo: "imagen", valor: "assets/img/proyectos/haalur/06-desierto.jpg", pie: "Ruta de Atacama: más de 2.500 kilómetros entre Santiago y Arica." },
+        { tipo: "imagen", valor: "assets/img/proyectos/haalur/07-atardecer.jpg", pie: "Fin de jornada en ruta." },
+        { tipo: "cita", valor: "Primer lugar, categoría Cruiser, Carrera Solar Atacama 2018." },
+        { tipo: "imagen", valor: "assets/img/proyectos/haalur/08-podio.jpg", pie: "El equipo en el podio." },
+        { tipo: "imagen", valor: "assets/img/proyectos/haalur/09-meta.jpg", pie: "Llegada a Arica." },
+        { tipo: "imagen", valor: "assets/img/proyectos/haalur/10-prensa.jpg", pie: "Cobertura de prensa de la partida de la carrera." }
+      ]
+    },
+    {
+      id: "salas-maker",
+      titulo: "Sala Maker STEAM",
+      cliente: "Ideo Maker y Fundación País Digital",
+      anio: "2024",
+      tags: ["FabLab", "Diseño de espacios", "Modelado 3D", "Educación"],
+      resumen:
+        "Sala maker escolar modelada y recorrida en 3D antes de construirse, para discutir el espacio con la institución cuando cambiarlo todavía era gratis.",
+      img: "assets/img/proyectos/salas-maker/01-render-steam.jpg",
+      bloques: [
+        { tipo: "texto", valor: "Sala Maker STEAM desarrollada en conjunto entre el equipo de Ideo Maker y la Fundación País Digital. El proyecto tuvo dos etapas: primero el espacio modelado y recorrido en 3D, y después la sala construida y en uso." },
+        { tipo: "texto", valor: "Modelar la sala antes de construirla no es un ejercicio de presentación. Permite discutir circulaciones, ubicación de maquinaria y zonas de trabajo con la institución en el momento en que mover una mesa cuesta un clic y no una obra. Cuando el colegio ve el espacio recorrido en primera persona, las observaciones que aparecen son otras." },
+        { tipo: "imagen", valor: "assets/img/proyectos/salas-maker/02-render-sala.jpg", pie: "Vista general: mesas de trabajo colaborativo al centro y puestos de computador en el perímetro." },
+        { tipo: "imagen", valor: "assets/img/proyectos/salas-maker/03-render-puestos.jpg", pie: "La línea de puestos de trabajo contra el ventanal." },
+        { tipo: "imagen", valor: "assets/img/proyectos/salas-maker/04-render-acceso.jpg", pie: "El acceso al espacio maker, con la señalética del proyecto." },
+        { tipo: "imagen", valor: "assets/img/proyectos/salas-maker/05-render-color.jpg", pie: "Estudio de color del espacio." },
+        { tipo: "imagen", valor: "assets/img/proyectos/salas-maker/06-render-impresora.jpg", pie: "Zona de impresión 3D con su material de apoyo en el muro." },
+        { tipo: "texto", titulo: "La sala construida", valor: "PLACEHOLDER: en qué establecimiento se implementó y en qué fecha. Cierra con lo que quedó operando." },
+        { tipo: "imagen", valor: "assets/img/proyectos/salas-maker/07-sala-construida.jpg", pie: "El muro de herramientas de la sala ya instalada." }
+      ]
+    },
+    {
+      id: "salud-mental",
+      titulo: "AnsioSOS: proyecto de título",
+      cliente: "Universidad Diego Portales",
+      anio: "2021",
+      tags: ["Proyecto de título", "Diseño de servicios", "Salud mental", "Plataforma digital"],
+      resumen:
+        "Proyecto de título: plataforma psicoeducativa para manejar la ansiedad en los primeros años de universidad, complementaria al servicio de atención psicológica de la UDP.",
+      img: "assets/img/proyectos/salud-mental/01-portada.jpg",
+      bloques: [
+        { tipo: "lista", titulo: "Ficha", valor: ["Proyecto de título, Diseño Industrial UDP", "Profesora guía: Florencia Adriasola", "Colaboradora: Camila Correa", "Enero de 2021"] },
+        { tipo: "texto", titulo: "El problema", valor: "Los altos niveles de ansiedad durante la primera etapa universitaria producen efectos dañinos en la salud mental y repercuten negativamente en el rendimiento académico. El servicio de atención psicológica de la universidad existe, pero atiende por hora agendada: entre que aparece el síntoma y llega la atención hay un espacio que nadie cubre." },
+        { tipo: "texto", titulo: "La propuesta", valor: "Una plataforma digital interactiva complementaria al servicio de atención psicológica de la UDP, con actividades psicoeducativas para manejar los síntomas de la ansiedad de manera inmediata y desde cualquier lugar. El objetivo no es reemplazar la atención profesional sino potenciarla, incentivando el autoconocimiento gradual, la relajación y la planificación del tiempo." },
+        { tipo: "imagen", valor: "assets/img/proyectos/salud-mental/02-situaciones.jpg", pie: "Situaciones comunes donde aparece la ansiedad, y qué nos decimos cuando estamos ansiosos." },
+        { tipo: "imagen", valor: "assets/img/proyectos/salud-mental/03-ejercicios.jpg", pie: "Buscador de ejercicios: respiración, organización del tiempo y otras herramientas descargables." },
+        { tipo: "imagen", valor: "assets/img/proyectos/salud-mental/04-quienes-somos.jpg", pie: "La plataforma se presenta como un servicio hecho por estudiantes para estudiantes." },
+        { tipo: "imagen", valor: "assets/img/proyectos/salud-mental/05-marca.jpg", pie: "La marca del proyecto." },
+        { tipo: "texto", titulo: "Cinco años después", valor: "En 2026 retomé esta memoria y la convertí en una aplicación real, construida con IA. Está en este mismo catálogo como AnsioSOS: el proyecto de título es su origen." }
+      ]
+    },
+    {
+      id: "diseno-editorial",
+      titulo: "Plan Nacional RAM",
+      cliente: "Converso",
+      anio: "2021",
+      tags: ["Editorial", "Diseño gráfico", "Salud pública", "Infografía"],
+      resumen:
+        "Diseño editorial del Plan Nacional contra la Resistencia a los Antimicrobianos 2021-2025, desarrollado como jefe de diseño gráfico en Converso.",
+      img: "assets/img/proyectos/diseno-editorial/01-portada.jpg",
+      bloques: [
+        { tipo: "lista", titulo: "Mi rol", valor: ["Jefe de Diseño Gráfico en Converso", "Diagramación de la publicación completa", "Infografías y sistema de color"] },
+        { tipo: "texto", valor: "Diseño editorial del Chilean National Plan on Antimicrobial Resistance 2021-2025. Un documento de política pública tiene un problema de diseño particular: el contenido es técnico y extenso, pero el lector al que hay que convencer no siempre es técnico. La diagramación tiene que dejar entrar por la infografía a quien no va a leer las setenta páginas." },
+        { tipo: "imagen", valor: "assets/img/proyectos/diseno-editorial/02-interior.jpg", pie: "Doble página interior: texto a dos columnas con fotografía de apoyo." },
+        { tipo: "imagen", valor: "assets/img/proyectos/diseno-editorial/03-infografia.jpg", pie: "El plan de acción global resumido en una infografía." },
+        { tipo: "imagen", valor: "assets/img/proyectos/diseno-editorial/04-doble-pagina.jpg", pie: "Sistema de color por sección, aplicado al pie de cada página." },
+        { tipo: "texto", titulo: "Pendiente", valor: "PLACEHOLDER: para qué institución se hizo el plan y qué más componía el encargo además del documento." }
+      ]
+    },
+    {
+      id: "congreso-futuro",
+      titulo: "Congreso Futuro en tu comuna",
+      cliente: "Ideo Maker",
+      anio: "2024",
+      tags: ["Divulgación", "Robótica", "Educación", "Prensa"],
+      resumen:
+        "Feria de ciencia en el Hospital de Niños Dr. Luis Calvo Mackenna, con el stand de robótica de Ideo Maker. La jornada tuvo cobertura nacional.",
+      img: "assets/img/proyectos/congreso-futuro/01-adprensa.jpg",
+      bloques: [
+        { tipo: "texto", valor: "Congreso Futuro en tu comuna abrió su temporada 2024 en el hall del Servicio de Atención a las Personas del Hospital de Niños Dr. Luis Calvo Mackenna. Niñas y niños de atención ambulatoria participaron de una feria de ciencia con tres estaciones: Astronomía del Instituto Milenio de Astrofísica MAS, el Festival de Matemáticas de la Sociedad Matemática de Chile, y el stand de robótica de Ideo Maker." },
+        { tipo: "texto", valor: "Llevar una actividad maker a un hospital cambia las restricciones. Los participantes llegan desde atención ambulatoria, los tiempos no se controlan y el espacio no es un aula. La actividad tiene que funcionar en sesiones cortas, entrar y salir sin montaje pesado, y sostenerse con lo que haya sobre una mesa." },
+        { tipo: "cita", valor: "Este tipo de actividades le alegra el corazón a todos: a nuestros niños, a sus familias, a funcionarios y a toda la comunidad. El compromiso es que permanezca en el tiempo." },
+        { tipo: "texto", valor: "La cita es de Michel Royer, director del Hospital de Niños Dr. Luis Calvo Mackenna." },
+        { tipo: "texto", titulo: "Cobertura", valor: "La jornada fue cubierta por el Senado de Chile, Canal 13, El Mostrador, Radio Agricultura, Cooperativa y AdPrensa, entre otros." },
+        { tipo: "imagen", valor: "assets/img/proyectos/congreso-futuro/02-agricultura.jpg", pie: "Radio Agricultura." },
+        { tipo: "imagen", valor: "assets/img/proyectos/congreso-futuro/03-cooperativa.jpg", pie: "Cooperativa.cl." },
+        { tipo: "texto", titulo: "Sobre las imágenes", valor: "Esta página muestra solo los titulares de la cobertura. Las fotografías que acompañaban esas notas son de niñas y niños en un hospital, y no se publican acá." }
       ]
     },
     {
@@ -108,44 +196,13 @@ const SITE = {
       titulo: "Kits educativos Bicho-bot",
       cliente: "Ideo Maker",
       anio: "2023",
-      tags: ["Producto", "STEAM", "Fabricación digital"],
+      tags: ["Producto", "STEAM", "Fabricación digital", "Robótica"],
       resumen:
         "Kit de robótica de bajo costo para primer ciclo, diseñado para armarse sin herramientas y fabricarse por corte láser.",
-      img: "",
+      img: "assets/img/proyectos/kits-educativos/01-packaging.jpg",
       bloques: [
-        { tipo: "texto", valor: "PLACEHOLDER: Contexto del proyecto." },
-        { tipo: "imagen", valor: "", pie: "PLACEHOLDER: pie de foto." },
-        { tipo: "texto", titulo: "Resultado", valor: "PLACEHOLDER: Impacto y aprendizajes." }
-      ]
-    },
-    {
-      id: "salud-mental",
-      titulo: "Proyecto de título: Salud mental",
-      cliente: "Universidad Diego Portales",
-      anio: "2021",
-      tags: ["Investigación", "Diseño de servicios"],
-      resumen:
-        "Investigación y propuesta de servicio en torno a la salud mental juvenil, desarrollada como proyecto de título.",
-      img: "",
-      bloques: [
-        { tipo: "texto", valor: "PLACEHOLDER: Contexto y pregunta de investigación." },
-        { tipo: "imagen", valor: "", pie: "PLACEHOLDER: pie de foto." },
-        { tipo: "texto", titulo: "Resultado", valor: "PLACEHOLDER: Conclusiones." }
-      ]
-    },
-    {
-      id: "docencia-uc",
-      titulo: "Docencia PENTA UC",
-      cliente: "Pontificia Universidad Católica de Chile",
-      anio: "2022 — 2024",
-      tags: ["Docencia", "STEAM", "Programa"],
-      resumen:
-        "Diseño y dictado de cursos de fabricación digital y pensamiento de diseño para estudiantes de talento académico.",
-      img: "",
-      bloques: [
-        { tipo: "texto", valor: "PLACEHOLDER: Qué cursos, a quiénes, con qué enfoque." },
-        { tipo: "imagen", valor: "", pie: "PLACEHOLDER: pie de foto." },
-        { tipo: "texto", titulo: "Resultado", valor: "PLACEHOLDER: Impacto." }
+        { tipo: "texto", valor: "PLACEHOLDER: esta es la ficha más incompleta del catálogo. Del proyecto solo sobrevivió el packaging. Falta para qué nivel se diseñó el kit, cómo se fabrica, qué electrónica lleva, si llegó a producirse y en cuántos colegios se usó." },
+        { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/01-packaging.jpg", pie: "El packaging del kit: Bicho BOT, aprender creando." }
       ]
     },
     {
@@ -158,21 +215,7 @@ const SITE = {
         "Cobertura fotográfica de terreno para la Organización Panamericana de la Salud.",
       img: "",
       bloques: [
-        { tipo: "texto", valor: "PLACEHOLDER: Encargo y condiciones del registro." },
-        { tipo: "imagen", valor: "", pie: "PLACEHOLDER: pie de foto." }
-      ]
-    },
-    {
-      id: "diseno-editorial",
-      titulo: "Diseño editorial",
-      cliente: "Converso",
-      anio: "2021",
-      tags: ["Editorial", "Identidad"],
-      resumen:
-        "Sistema editorial y piezas gráficas como jefe de diseño gráfico.",
-      img: "",
-      bloques: [
-        { tipo: "texto", valor: "PLACEHOLDER: Contexto." },
+        { tipo: "texto", valor: "PLACEHOLDER: el encargo, dónde fue y en qué condiciones se hizo el registro." },
         { tipo: "imagen", valor: "", pie: "PLACEHOLDER: pie de foto." }
       ]
     }

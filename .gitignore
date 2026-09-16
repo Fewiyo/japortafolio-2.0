@@ -12,6 +12,10 @@ desktop.ini
 *.log
 node_modules/
 
+# Archivo del trabajo anterior, recuperado del sitio viejo. No se publica:
+# incluye fotos de una actividad con menores y logos de terceros.
+Otras pegas/
+
 # Fichas fuente de las apps. No se publican: algunas nombran direcciones
 # internas de proyectos sin login, y rutas locales del disco. Al sitio solo
 # entra lo que el generador vuelca en js/data.js, que va filtrado.
