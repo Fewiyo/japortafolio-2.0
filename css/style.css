@@ -338,6 +338,19 @@ ul{list-style:none; padding:0}
 
 /* ---------- Prosa (historia / caso) ---------- */
 .prose{max-width:62ch}
+
+/* Retrato y bio de la pagina Historia */
+.bio{display:grid; gap:32px}
+.retrato{order:-1; margin:0; max-width:300px}  /* en movil el retrato va primero */
+.retrato img{
+  display:block; width:100%; height:auto;
+  aspect-ratio:1/1; object-fit:cover; object-position:center 22%;
+  border-radius:2px; background:var(--card);
+}
+@media (min-width:820px){
+  .bio{grid-template-columns:minmax(0,1fr) 300px; gap:56px; align-items:start}
+  .retrato{order:0; max-width:300px; position:sticky; top:96px}
+}
 .prose h2{
   font-family:var(--serif); font-weight:400;
   font-size:30px; line-height:40px; letter-spacing:-.017em;

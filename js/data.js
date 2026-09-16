@@ -100,12 +100,16 @@ const SITE = {
         { tipo: "texto", valor: "HAALUR es el auto solar que la Universidad Diego Portales llevó a la Carrera Solar Atacama 2018, donde obtuvo el primer lugar en la categoría Cruiser. Trabajé en el equipo como ayudante de diseño y como fotógrafo: las imágenes de esta página son mías, desde el taller hasta la meta en Arica." },
         { tipo: "imagen", valor: "assets/img/proyectos/haalur/02-construccion.jpg", pie: "El vehículo en construcción, con la carrocería todavía sin pintar." },
         { tipo: "imagen", valor: "assets/img/proyectos/haalur/03-chasis.jpg", pie: "Estructura y habitáculo antes del montaje de los paneles." },
+        { tipo: "imagen", valor: "assets/img/proyectos/haalur/13-taller.jpg", pie: "Taller: montaje de los paneles sobre la carrocería, todavía en blanco." },
         { tipo: "imagen", valor: "assets/img/proyectos/haalur/04-equipo-trabajando.jpg", pie: "Ajustes en ruta: buena parte de la carrera se corre con el auto abierto." },
         { tipo: "texto", titulo: "La competencia", valor: "La edición 2018 fue la más exigente hasta esa fecha. Once equipos enfrentaron el tráfico de la capital, la costa chilena y el desierto de Atacama, en un recorrido de más de 2.500 kilómetros entre Santiago y Arica. Ese año el reglamento se alineó con el del Bridgestone World Solar Challenge, y por primera vez la carrera se corrió en formato continuo en vez de por etapas: cada día se retomaba donde había terminado el anterior." },
         { tipo: "texto", valor: "La categoría Cruiser, estrenada esa edición, reúne vehículos de múltiples ocupantes diseñados para ser prácticos, eficientes y confiables. Son los que más se parecen a un auto de verdad, y por eso mismo los más difíciles: hay que resolver autonomía y espacio habitable al mismo tiempo." },
         { tipo: "imagen", valor: "assets/img/proyectos/haalur/05-en-pista.jpg", pie: "El auto en pista durante las pruebas previas a la carrera." },
+        { tipo: "imagen", valor: "assets/img/proyectos/haalur/12-equipo-en-el-auto.jpg", pie: "Dos del equipo en el habitáculo, revisando antes de salir." },
         { tipo: "imagen", valor: "assets/img/proyectos/haalur/06-desierto.jpg", pie: "Ruta de Atacama: más de 2.500 kilómetros entre Santiago y Arica." },
         { tipo: "imagen", valor: "assets/img/proyectos/haalur/07-atardecer.jpg", pie: "Fin de jornada en ruta." },
+        { tipo: "imagen", valor: "assets/img/proyectos/haalur/11-equipo-en-ruta.jpg", pie: "El equipo completo con el auto, en una parada de la ruta." },
+        { tipo: "texto", valor: "Un auto solar no lo hace un diseñador. Lo hace un equipo grande, de varias carreras, que vive tres semanas en la ruta con el vehículo. Mi trabajo fue doble: ayudar en el diseño y ser quien registraba. La mayoría de las fotos de esta página existen porque alguien tenía que dejar constancia de lo que estaba pasando, y ese era yo." },
         { tipo: "cita", valor: "Primer lugar, categoría Cruiser, Carrera Solar Atacama 2018." },
         { tipo: "imagen", valor: "assets/img/proyectos/haalur/08-podio.jpg", pie: "El equipo en el podio." },
         { tipo: "imagen", valor: "assets/img/proyectos/haalur/09-meta.jpg", pie: "Llegada a Arica." },
@@ -227,7 +231,8 @@ const SITE = {
         { tipo: "imagen", valor: "assets/img/proyectos/eloisa/07-uso-1.jpg", pie: "El material en uso durante una atención." },
         { tipo: "imagen", valor: "assets/img/proyectos/eloisa/08-uso-2.jpg", pie: "Las fichas están pensadas para revisarse en mano, no para quedarse en un mesón." },
         { tipo: "imagen", valor: "assets/img/proyectos/eloisa/09-en-la-consulta.jpg", pie: "El sistema completo sobre el escritorio de la consulta, con el formulario en uso." },
-        { tipo: "texto", titulo: "Sobre estas imágenes", valor: "El proyecto se probó en atenciones reales y el registro incluye fotografías de pacientes y de sus hijos. Esas no se publican: en una consulta de salud sexual, mostrar la cara de quien consulta es exactamente lo contrario de lo que el proyecto intenta proteger. Acá aparecen solo las piezas y el material en uso." },
+        { tipo: "imagen", valor: "assets/img/proyectos/eloisa/10-profesional.jpg", pie: "La matrona explicando la ficha de pastillas anticonceptivas durante una atención." },
+        { tipo: "texto", titulo: "Probado en consulta", valor: "El material no se quedó en la maqueta: se usó en atenciones reales, con la profesional explicando y la paciente siguiendo la ficha. Ahí se ve si funciona o no. Una ficha que hay que sostener con las dos manos, o que se dobla justo donde está el dato importante, falla en la consulta aunque se vea bien impresa." },
         { tipo: "texto", titulo: "Pendiente", valor: "PLACEHOLDER: el año lo deduje de la fecha de publicación en Behance, enero de 2020, así que el proyecto sería de 2019. Confírmalo. Falta también en qué CESFAM se probó, si fue en equipo y con quiénes, y si el material llegó a quedar en uso." }
       ]
     },
@@ -969,6 +974,7 @@ const SITE = {
   /* ---------- Página Historia ---------- */
   historia: {
     titular: "Diseño cosas que otras personas tienen que poder mantener funcionando.",
+    retrato: "assets/img/retrato.jpg",
     parrafos: [
       "PLACEHOLDER: Empieza por dónde partiste. Diseño industrial en la Universidad Diego Portales, y desde ahí el desvío hacia la educación y la fabricación digital.",
       "PLACEHOLDER: Cuenta qué te interesa realmente: que un FabLab siga vivo tres años después de la inauguración, que un profesor pueda dar la clase sin ti al lado.",

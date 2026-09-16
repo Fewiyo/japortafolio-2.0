@@ -366,7 +366,12 @@
       "</div></header>" +
 
       '<section class="section" style="padding-top:0"><div class="wrap">' +
+      '<div class="bio">' +
       '<div class="prose rise">' + h.parrafos.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>" +
+      (h.retrato
+        ? '<figure class="retrato rise"><img src="' + esc(h.retrato) + '" alt="' + esc(SITE.nombre) + '" loading="lazy" decoding="async"></figure>'
+        : "") +
+      "</div>" +
 
       '<h2 class="subhead">Trayectoria</h2>' +
       '<div class="rows">' +
