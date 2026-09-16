@@ -206,6 +206,32 @@ const SITE = {
       ]
     },
     {
+      id: "eloisa",
+      titulo: "Eloísa",
+      cliente: "Proyecto universitario · CESFAM",
+      anio: "2019",
+      tags: ["Diseño de servicios", "Salud pública", "Diseño de información", "Migración"],
+      resumen:
+        "Sistema de traducción español-créole para mujeres haitianas en el CESFAM: acceso a salud sexual y métodos anticonceptivos cuando el idioma es la primera barrera.",
+      img: "assets/img/proyectos/eloisa/01-marca.jpg",
+      bloques: [
+        { tipo: "texto", valor: "Eloísa, o Èd Jinekolojik, es un sistema de traducción español-créole haitiano para la atención en salud de la población haitiana en Chile. Está pensado específicamente para mujeres y para el momento en que la barrera del idioma decide qué información recibe una paciente sobre su propia salud sexual." },
+        { tipo: "texto", titulo: "El problema", valor: "En una consulta de salud sexual, no entender el idioma no significa entender menos: significa quedarse fuera de la decisión. Una mujer que no puede preguntar cómo se toma un anticonceptivo, qué efectos tiene o cada cuánto se repite, no está eligiendo un método, está recibiendo uno. Eso es lo que el proyecto intenta corregir, y por eso el material está en créole con el español en segundo plano, no al revés." },
+        { tipo: "imagen", valor: "assets/img/proyectos/eloisa/02-pastillas.jpg", pie: "Grenn kontraseptif, pastillas anticonceptivas: una al día a la misma hora, con sus ventajas y desventajas explicadas por separado." },
+        { tipo: "imagen", valor: "assets/img/proyectos/eloisa/03-inyectable-trimestral.jpg", pie: "Piki chak trimès, inyectable trimestral." },
+        { tipo: "imagen", valor: "assets/img/proyectos/eloisa/04-inyectable-mensual.jpg", pie: "Piki chak mwa, inyectable mensual." },
+        { tipo: "texto", titulo: "Cómo está resuelto", valor: "Cada método anticonceptivo tiene su ficha, y todas siguen la misma estructura: el nombre en créole con la traducción al español bajo el título, la frecuencia de uso destacada, y dos columnas enfrentadas con ventajas y desventajas. La ilustración es literal a propósito: el blíster con las pastillas marcadas, la jeringa, el gesto de la inyección. Cuando el texto falla, el dibujo todavía funciona." },
+        { tipo: "imagen", valor: "assets/img/proyectos/eloisa/05-fichas.jpg", pie: "Ficha de información personal y de antecedentes gineco-obstétricos, bilingüe y con casillas para completar durante la consulta." },
+        { tipo: "imagen", valor: "assets/img/proyectos/eloisa/06-ficha-obstetrica.jpg", pie: "El historial ginecológico traducido: menarquia, ciclo, antecedentes y síntomas, con apoyo gráfico para lo que cuesta nombrar." },
+        { tipo: "texto", valor: "Junto a las fichas de métodos hay formularios de registro traducidos, que el profesional completa con la paciente. No son un folleto para llevarse: son la herramienta de la consulta misma. Eso obliga a que el material aguante el uso sobre el escritorio, con lápiz encima, y no solo la lectura." },
+        { tipo: "imagen", valor: "assets/img/proyectos/eloisa/07-uso-1.jpg", pie: "El material en uso durante una atención." },
+        { tipo: "imagen", valor: "assets/img/proyectos/eloisa/08-uso-2.jpg", pie: "Las fichas están pensadas para revisarse en mano, no para quedarse en un mesón." },
+        { tipo: "imagen", valor: "assets/img/proyectos/eloisa/09-en-la-consulta.jpg", pie: "El sistema completo sobre el escritorio de la consulta, con el formulario en uso." },
+        { tipo: "texto", titulo: "Sobre estas imágenes", valor: "El proyecto se probó en atenciones reales y el registro incluye fotografías de pacientes y de sus hijos. Esas no se publican: en una consulta de salud sexual, mostrar la cara de quien consulta es exactamente lo contrario de lo que el proyecto intenta proteger. Acá aparecen solo las piezas y el material en uso." },
+        { tipo: "texto", titulo: "Pendiente", valor: "PLACEHOLDER: el año lo deduje de la fecha de publicación en Behance, enero de 2020, así que el proyecto sería de 2019. Confírmalo. Falta también en qué CESFAM se probó, si fue en equipo y con quiénes, y si el material llegó a quedar en uso." }
+      ]
+    },
+    {
       id: "registro-fotografico",
       titulo: "Registro fotográfico",
       cliente: "OPS / PAHO",
