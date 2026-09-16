@@ -33,10 +33,12 @@ const SITE = {
      Cada seccion abre con una etiqueta chica y un titulo grande.
      El campo "intro" es opcional: si lo dejas en "" no se muestra. */
   secciones: {
-    proyectos: {
-      eyebrow: "01 / Trabajo seleccionado",
-      titulo: "Proyectos que siguen funcionando cuando yo ya no estoy.",
-      intro: ""
+    /* El catálogo reúne proyectos y cursos en una sola grilla,
+       ordenada del año más reciente al más antiguo. */
+    catalogo: {
+      eyebrow: "01 / Catálogo",
+      titulo: "Todo lo que he hecho, de lo más reciente a lo más antiguo.",
+      intro: "Siete cursos de creación propia para el Programa PENTA UC de la Pontificia Universidad Católica de Chile, junto a proyectos de diseño de servicios, fabricación digital y registro. Ninguno de los cursos existía antes: todos son innovación docente."
     },
     servicios: {
       eyebrow: "02 / Servicios",

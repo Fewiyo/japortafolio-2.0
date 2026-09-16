@@ -14,11 +14,10 @@ Las medidas del referente están anotadas como tokens al inicio de [css/style.cs
 | `--air-hero` | 340 px | Aire sobre el titular |
 | `--air-section` | 200 px | Aire sobre cada título de sección |
 | `--gap-card` | 12 px | Separación entre tarjetas |
-| `--grid-op` | 0.06 | Intensidad de la cuadrícula de fondo |
 
-**Cuadrícula de fondo:** papel milimetrado de 8,5 px al 6% de opacidad, dibujado con un SVG en `--grid-img` y repetido sobre toda la altura de la página. En modo oscuro las líneas se invierten a blanco.
+**Fondo:** color plano, blanco en modo claro y `#0b0b0b` en oscuro. Sin texturas ni patrones.
 
-**Rejilla de proyectos:** una tarjeta ancha (16:9), luego dos en pareja (8:9), y así sucesivamente. El patrón lo genera `.card:nth-child(3n+1)`, así que se mantiene solo al agregar o quitar proyectos.
+**Rejilla del catálogo:** una tarjeta ancha (16:9), luego dos en pareja (8:9), y así sucesivamente. El patrón lo genera `.card:nth-child(3n+1)`, así que se mantiene solo al agregar o quitar proyectos.
 
 **Tipografía:** EB Garamond para titulares (64 px / 72 px, tracking −0.02em) y subtítulos (30 px / 40 px); Inter para interfaz y textos de servicio (16 px / 26 px).
 
@@ -35,10 +34,10 @@ Luego entra a `http://localhost:5173`.
 ## Estructura
 
 ```
-index.html          Inicio: titular, proyectos, servicios, contacto
+index.html          Inicio: titular, catálogo, servicios, contacto
 proyecto.html       Caso de estudio (recibe ?id=... del proyecto)
-cursos.html         Listado de cursos impartidos
 curso.html          Ficha de un curso (recibe ?id=... del curso)
+cursos.html         Redirección al catálogo, para no romper enlaces antiguos
 historia.html       Sobre mí, trayectoria e instituciones
 css/style.css       Todo el estilo (tokens de color, tipografía, layout)
 js/data.js          ← TODO EL CONTENIDO. Es el único archivo que editas.
@@ -64,21 +63,27 @@ blog: {
 }
 ```
 
+### El catálogo
+
+La pestaña **Catálogo** reúne en una sola grilla los `proyectos` y los `cursos`, ordenados del año más reciente al más antiguo. No hay que mantener ese orden a mano: `main.js` lo calcula del campo `anio` y, si dice `"2022 — 2024"`, usa el año final.
+
+Cada tipo conserva sus propios campos en `data.js`; el catálogo los normaliza al dibujar la tarjeta. Para que algo aparezca ahí basta con agregarlo a `proyectos` o a `cursos`.
+
 ### Títulos de sección
 
 El objeto `secciones` controla el encabezado de cada bloque del inicio. Si dejas `intro: ""` esa línea no se muestra.
 
 ```js
-proyectos: {
-  eyebrow: "01 / Trabajo seleccionado",
-  titulo: "Proyectos que siguen funcionando cuando yo ya no estoy.",
+catalogo: {
+  eyebrow: "01 / Catálogo",
+  titulo: "Todo lo que he hecho, de lo más reciente a lo más antiguo.",
   intro: ""
 }
 ```
 
 ### Cursos
 
-Los cursos son un tipo de contenido aparte de los proyectos: viven en el array `cursos` y tienen su propio listado (`cursos.html`) y su propia ficha (`curso.html?id=`).
+Los cursos viven en el array `cursos` y tienen ficha propia en `curso.html?id=`. En el catálogo aparecen mezclados con los proyectos, ordenados por año.
 
 Los siete cursos de PENTA UC ya están cargados con su contenido real, extraído de los programas oficiales de cada curso.
 
@@ -111,7 +116,7 @@ Los siete cursos de PENTA UC ya están cargados con su contenido real, extraído
 }
 ```
 
-En la tarjeta del listado se muestran `etiqueta`, `anio` y `nivel` como etiquetas sobre la foto, y `nombre` con `cargo` e `institucion` debajo. Los campos vacíos no aparecen: si dejas `equipo: ""`, esa fila desaparece de la ficha.
+En la tarjeta del catálogo se muestran `etiqueta`, `anio` y `nivel` como etiquetas sobre la foto, y `nombre` con `cargo` e `institucion` debajo. Los campos vacíos no aparecen: si dejas `equipo: ""`, esa fila desaparece de la ficha.
 
 **Destacados.** Son los recuadros que aparecen bajo la descripción. Se usan para dejar constancia de la autoría de cada curso y, en los cursos 4, 5 y 6, del robot educativo desarrollado con Elvis Andrade.
 
@@ -153,7 +158,7 @@ Cada proyecto es un objeto dentro de `proyectos`:
 
 ### Agregar un proyecto nuevo
 
-Copia un objeto completo de `proyectos`, cámbiale el `id` (sin espacios ni tildes) y pégalo en la posición que quieras. El orden del array es el orden en la grilla, y el enlace "Siguiente proyecto" se encadena solo.
+Copia un objeto completo de `proyectos`, cámbiale el `id` (sin espacios ni tildes) y pégalo en la posición que quieras. El enlace "Siguiente proyecto" se encadena solo. El orden dentro del catálogo no depende del array: lo define el año.
 
 ## Imágenes
 

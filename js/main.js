@@ -39,9 +39,8 @@
   /* ---------- Navegacion ---------- */
   function nav(active) {
     var links = [
-      { t: "Proyectos", h: active === "home" ? "#proyectos" : "index.html#proyectos", k: "proyectos" },
-      { t: "Cursos", h: "cursos.html", k: "cursos" },
-      { t: "Servicios", h: active === "home" ? "#servicios" : "index.html#servicios", k: "servicios", movil: false },
+      { t: "Catálogo", h: active === "home" ? "#catalogo" : "index.html#catalogo", k: "catalogo" },
+      { t: "Servicios", h: active === "home" ? "#servicios" : "index.html#servicios", k: "servicios" },
       { t: "Historia", h: "historia.html", k: "historia" },
       { t: SITE.blog.texto, h: SITE.blog.url, k: "blog", externo: true }
     ];
@@ -104,32 +103,51 @@
     );
   }
 
-  /* ---------- Tarjeta de proyecto ---------- */
-  function card(p, i) {
-    return (
-      '<a class="card rise" href="proyecto.html?id=' + encodeURIComponent(p.id) + '">' +
-      '<div class="card__media">' + media(p.img, p.titulo, i) +
-      '<div class="card__tags">' + p.tags.map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") + "</div>" +
-      "</div>" +
-      '<div class="card__bar"><span class="card__title">' + esc(p.titulo) + "</span>" +
-      '<span class="card__meta">' + esc(p.cliente) + "<br>" + esc(p.anio) + "</span></div>" +
-      "</a>"
-    );
+  /* ---------- Catalogo ----------
+     Proyectos y cursos conviven en una sola grilla. Cada tipo guarda
+     sus campos propios en data.js, asi que aqui se normalizan a una
+     forma comun antes de dibujar la tarjeta. */
+  function catalogo() {
+    var items = [];
+
+    (SITE.proyectos || []).forEach(function (p) {
+      items.push({
+        href: "proyecto.html?id=" + encodeURIComponent(p.id),
+        img: p.img, titulo: p.titulo,
+        etiquetas: p.tags || [],
+        meta: [p.cliente, p.anio],
+        anio: p.anio
+      });
+    });
+
+    (SITE.cursos || []).forEach(function (c) {
+      items.push({
+        href: "curso.html?id=" + encodeURIComponent(c.id),
+        img: c.portada, titulo: c.nombre,
+        etiquetas: [c.etiqueta, c.anio, c.nivel].filter(Boolean),
+        meta: [c.cargo, c.institucion],
+        anio: c.anio
+      });
+    });
+
+    /* Mas reciente primero. "2022 — 2024" se ordena por su ano final. */
+    function ultimoAnio(a) {
+      var nums = String(a || "").match(/\d{4}/g);
+      return nums ? Math.max.apply(null, nums.map(Number)) : 0;
+    }
+    items.sort(function (a, b) { return ultimoAnio(b.anio) - ultimoAnio(a.anio); });
+    return items;
   }
 
-  /* ---------- Tarjeta de curso ----------
-     Las etiquetas sobre la foto son: tipo, ano y nivel.
-     Debajo van el nombre del curso y el cargo con la institucion. */
-  function cardCurso(c, i) {
-    var etiquetas = [c.etiqueta, c.anio, c.nivel].filter(Boolean);
+  function cardCatalogo(it, i) {
     return (
-      '<a class="card rise" href="curso.html?id=' + encodeURIComponent(c.id) + '">' +
-      '<div class="card__media">' + media(c.portada, c.nombre, i) +
+      '<a class="card rise" href="' + it.href + '">' +
+      '<div class="card__media">' + media(it.img, it.titulo, i) +
       '<div class="card__tags">' +
-      etiquetas.map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") +
+      it.etiquetas.map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") +
       "</div></div>" +
-      '<div class="card__bar"><span class="card__title">' + esc(c.nombre) + "</span>" +
-      '<span class="card__meta">' + esc(c.cargo) + "<br>" + esc(c.institucion) + "</span></div>" +
+      '<div class="card__bar"><span class="card__title">' + esc(it.titulo) + "</span>" +
+      '<span class="card__meta">' + it.meta.filter(Boolean).map(esc).join("<br>") + "</span></div>" +
       "</a>"
     );
   }
@@ -148,24 +166,6 @@
     }
     return '<figure class="rise">' + cuerpo +
       (g.pie ? "<figcaption>" + esc(g.pie) + "</figcaption>" : "") + "</figure>";
-  }
-
-  /* ---------- Pagina: listado de cursos ---------- */
-  function cursos(root) {
-    var h = SITE.cursosHead;
-    root.innerHTML =
-      nav("cursos") +
-      '<header class="case-head"><div class="wrap">' +
-      '<p class="eyebrow">' + esc(h.eyebrow) + "</p>" +
-      '<h1 class="rise">' + esc(h.titulo) + "</h1>" +
-      (h.intro ? '<p class="lead rise">' + esc(h.intro) + "</p>" : "") +
-      "</div></header>" +
-
-      '<section class="section section--tight"><div class="wrap">' +
-      '<div class="projects">' + SITE.cursos.map(cardCurso).join("") + "</div>" +
-      "</div></section>" +
-
-      footer();
   }
 
   /* ---------- Pagina: un curso ---------- */
@@ -203,9 +203,9 @@
     }).join("");
 
     root.innerHTML =
-      nav("cursos") +
+      nav("catalogo") +
       '<header class="case-head"><div class="wrap">' +
-      '<a class="back" href="cursos.html">&larr; Todos los cursos</a>' +
+      '<a class="back" href="index.html#catalogo">&larr; Volver al catálogo</a>' +
       '<h1 class="rise">' + esc(c.nombre) + "</h1>" +
       (c.subtitulo ? '<p class="subtitulo rise">' + esc(c.subtitulo) + "</p>" : "") +
       (c.resumen ? '<p class="lead rise">' + esc(c.resumen) + "</p>" : "") +
@@ -251,9 +251,9 @@
       '<p class="hero__note">' + esc(SITE.bajada) + "</p>" +
       "</div></div></header>" +
 
-      '<section class="section" id="proyectos"><div class="wrap">' +
-      head(SITE.secciones.proyectos) +
-      '<div class="projects">' + SITE.proyectos.map(card).join("") + "</div>" +
+      '<section class="section" id="catalogo"><div class="wrap">' +
+      head(SITE.secciones.catalogo) +
+      '<div class="projects">' + catalogo().map(cardCatalogo).join("") + "</div>" +
       "</div></section>" +
 
       '<section class="section" id="servicios"><div class="wrap">' +
@@ -317,9 +317,9 @@
     }).join("");
 
     root.innerHTML =
-      nav("proyectos") +
+      nav("catalogo") +
       '<header class="case-head"><div class="wrap">' +
-      '<a class="back" href="index.html#proyectos">&larr; Todos los proyectos</a>' +
+      '<a class="back" href="index.html#catalogo">&larr; Volver al catálogo</a>' +
       '<h1 class="rise">' + esc(p.titulo) + "</h1>" +
       '<p class="lead rise">' + esc(p.resumen) + "</p>" +
       '<div class="case-facts rise">' +
@@ -346,7 +346,6 @@
     home: home,
     historia: historia,
     proyecto: proyecto,
-    cursos: cursos,
     curso: curso
   }[page] || home)(root);
 
