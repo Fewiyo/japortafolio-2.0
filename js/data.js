@@ -528,7 +528,14 @@ const SITE = {
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-04.jpg", pie: "Mesa de trabajo durante el diseño de la mecánica del juego." },
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-05.jpg", pie: "Cartas, fichas y componentes del juego en desarrollo." },
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-06.jpg", pie: "Prueba del robot sobre un terreno con relieve." },
-        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-07.jpg", pie: "Primeras pruebas de recorrido sobre el mapa de papel." }
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-07.jpg", pie: "Primeras pruebas de recorrido sobre el mapa de papel." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-08.jpg", pie: "Tablero terminado de un equipo: el recorrido dibujado a mano y el microcontrolador montado sobre el mapa." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-09.jpg", pie: "El robot controlado desde el teléfono mientras recorre el tablero." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-10.jpg", pie: "Arena de cartón con cuadrícula y arcos: otro formato de desafío para el mismo robot." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-11.jpg", pie: "El mazo de cartas del juego: Concepto, Objeto y Restricción, las tres variables con las que juegan los equipos." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-12.jpg", pie: "Panel de storyboard: cada viñeta es un momento de la partida." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-13.jpg", pie: "Plano del recorrido dibujado a mano antes de construirlo." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-14.jpg", pie: "Bocetos de mecánica de juego sobre la mesa de trabajo." }
       ]
     }
   ],
