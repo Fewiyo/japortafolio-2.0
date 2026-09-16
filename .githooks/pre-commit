@@ -1,0 +1,28 @@
+#!/bin/sh
+# Antes de cada commit, vuelve a numerar los enlaces a CSS y JS segun el
+# contenido de cada archivo. Asi el navegador nunca sirve una version
+# vieja del sitio desde su cache.
+#
+# Se activa con:  git config core.hooksPath .githooks
+#
+# Si no hay Python en este equipo, avisa y deja pasar el commit: un
+# numero de version sin actualizar es un problema menor comparado con
+# no poder commitear.
+
+if command -v python >/dev/null 2>&1; then
+  PY=python
+elif command -v python3 >/dev/null 2>&1; then
+  PY=python3
+else
+  echo "pre-commit: no encontré Python, no pude renumerar los enlaces."
+  echo "            El sitio puede quedar cacheado. Corre tools/version.py"
+  echo "            a mano cuando puedas."
+  exit 0
+fi
+
+"$PY" tools/version.py || exit 0
+
+# sumar al commit los HTML que hayan cambiado
+git add -- *.html 2>/dev/null
+
+exit 0

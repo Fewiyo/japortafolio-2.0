@@ -182,6 +182,20 @@ El CV va en `assets/files/cv-vicente-caceres.pdf` — la ruta ya está enlazada 
 
 Por defecto sigue la preferencia del sistema. El botón "Tema" de la barra superior la invierte y guarda la elección en `localStorage`.
 
+## Caché del navegador
+
+Todo el contenido del sitio vive en `js/data.js` y `css/style.css`. El navegador los guarda en caché y los reusa sin volver a preguntar, así que después de publicar se seguía viendo la versión vieja hasta hacer Ctrl+F5.
+
+Resuelto: cada HTML pide esos archivos con una versión calculada desde su propio contenido, por ejemplo `js/data.js?v=5e9242a3`. Si el archivo cambia, cambia la dirección y el navegador está obligado a bajarlo; si no cambia, sigue usando la caché, que es lo deseable.
+
+La numeración es automática: [.githooks/pre-commit](.githooks/pre-commit) corre [tools/version.py](tools/version.py) antes de cada commit y suma al commit los HTML que haya renumerado. El hook se activa una vez por equipo:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+Sin Python en el equipo, el hook avisa y deja pasar el commit; en ese caso hay que correr `python tools/version.py` a mano antes de publicar.
+
 ## Publicar
 
 Al ser estático, sirve cualquier hosting:
