@@ -52,7 +52,8 @@
 
     return (
       '<nav class="nav" id="nav"><div class="nav__in">' +
-      '<a class="nav__name" href="index.html">' + esc(pila) +
+      '<a class="nav__name" href="index.html">' +
+      '<span class="nav__marca" aria-hidden="true"></span>' + esc(pila) +
       '<span class="nav__name-resto"> ' + esc(apellidos) + "</span>" +
       '<span class="nav__name-rol"> — ' + esc(SITE.rol) + "</span></a>" +
       '<div class="nav__links">' +

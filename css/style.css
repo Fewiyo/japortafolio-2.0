@@ -38,6 +38,9 @@
 }
 
 @media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .nav__marca{
+    background-image:url("../assets/img/marca/ja-claro.png");
+  }
   :root:not([data-theme="light"]){
     --bg:#0b0b0b; --fg:#f5f4f2;
     --muted:rgba(245,244,242,.58);
@@ -46,6 +49,9 @@
     --card:#191918;
     --invert-bg:#f5f4f2; --invert-fg:#0b0b0b;
   }
+}
+:root[data-theme="dark"] .nav__marca{
+  background-image:url("../assets/img/marca/ja-claro.png");
 }
 :root[data-theme="dark"]{
   --bg:#0b0b0b; --fg:#f5f4f2;
@@ -131,6 +137,12 @@ ul{list-style:none; padding:0}
   display:flex; align-items:center; justify-content:space-between; gap:16px;
 }
 .nav__name{font-size:13px; letter-spacing:-.01em}
+/* La marca Ja de la barra. El archivo cambia con el tema: disco negro
+   sobre fondo claro, disco blanco sobre fondo oscuro. */
+.nav__marca{
+  display:inline-block; width:22px; height:22px; margin-right:9px; vertical-align:-6px;
+  background:url("../assets/img/marca/ja-oscuro.png") center/contain no-repeat;
+}
 .nav__name-rol{color:var(--muted)}
 .nav__links{display:flex; align-items:center; gap:24px; font-size:13px}
 .nav__links a{color:var(--muted); transition:color .2s var(--ease)}
