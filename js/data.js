@@ -95,12 +95,12 @@ const SITE = {
       img: "",
       /* Bloques del caso de estudio. tipo: "texto" | "imagen" | "cita" | "lista" */
       bloques: [
-        { tipo: "texto", valor: "PLACEHOLDER — Describe aquí el contexto: quién era el cliente, qué problema tenía y por qué te llamaron. Dos o tres párrafos bastan." },
+        { tipo: "texto", valor: "PLACEHOLDER: Describe aquí el contexto: quién era el cliente, qué problema tenía y por qué te llamaron. Dos o tres párrafos bastan." },
         { tipo: "lista", titulo: "Mi rol", valor: ["Diagnóstico y levantamiento de requerimientos", "Diseño del layout y selección de maquinaria", "Protocolos de seguridad y uso", "Formación del equipo docente"] },
-        { tipo: "imagen", valor: "", pie: "PLACEHOLDER — pie de foto." },
-        { tipo: "texto", valor: "PLACEHOLDER — Cuenta el proceso y las decisiones de diseño que tomaste." },
-        { tipo: "cita", valor: "PLACEHOLDER — Una frase del cliente o un dato de impacto funciona muy bien aquí." },
-        { tipo: "texto", titulo: "Resultado", valor: "PLACEHOLDER — Cierra con números: cuántas salas, cuántos estudiantes, qué quedó operando." }
+        { tipo: "imagen", valor: "", pie: "PLACEHOLDER: pie de foto." },
+        { tipo: "texto", valor: "PLACEHOLDER: Cuenta el proceso y las decisiones de diseño que tomaste." },
+        { tipo: "cita", valor: "PLACEHOLDER: Una frase del cliente o un dato de impacto funciona muy bien aquí." },
+        { tipo: "texto", titulo: "Resultado", valor: "PLACEHOLDER: Cierra con números: cuántas salas, cuántos estudiantes, qué quedó operando." }
       ]
     },
     {
@@ -113,9 +113,9 @@ const SITE = {
         "Kit de robótica de bajo costo para primer ciclo, diseñado para armarse sin herramientas y fabricarse por corte láser.",
       img: "",
       bloques: [
-        { tipo: "texto", valor: "PLACEHOLDER — Contexto del proyecto." },
-        { tipo: "imagen", valor: "", pie: "PLACEHOLDER — pie de foto." },
-        { tipo: "texto", titulo: "Resultado", valor: "PLACEHOLDER — Impacto y aprendizajes." }
+        { tipo: "texto", valor: "PLACEHOLDER: Contexto del proyecto." },
+        { tipo: "imagen", valor: "", pie: "PLACEHOLDER: pie de foto." },
+        { tipo: "texto", titulo: "Resultado", valor: "PLACEHOLDER: Impacto y aprendizajes." }
       ]
     },
     {
@@ -128,9 +128,9 @@ const SITE = {
         "Investigación y propuesta de servicio en torno a la salud mental juvenil, desarrollada como proyecto de título.",
       img: "",
       bloques: [
-        { tipo: "texto", valor: "PLACEHOLDER — Contexto y pregunta de investigación." },
-        { tipo: "imagen", valor: "", pie: "PLACEHOLDER — pie de foto." },
-        { tipo: "texto", titulo: "Resultado", valor: "PLACEHOLDER — Conclusiones." }
+        { tipo: "texto", valor: "PLACEHOLDER: Contexto y pregunta de investigación." },
+        { tipo: "imagen", valor: "", pie: "PLACEHOLDER: pie de foto." },
+        { tipo: "texto", titulo: "Resultado", valor: "PLACEHOLDER: Conclusiones." }
       ]
     },
     {
@@ -143,9 +143,9 @@ const SITE = {
         "Diseño y dictado de cursos de fabricación digital y pensamiento de diseño para estudiantes de talento académico.",
       img: "",
       bloques: [
-        { tipo: "texto", valor: "PLACEHOLDER — Qué cursos, a quiénes, con qué enfoque." },
-        { tipo: "imagen", valor: "", pie: "PLACEHOLDER — pie de foto." },
-        { tipo: "texto", titulo: "Resultado", valor: "PLACEHOLDER — Impacto." }
+        { tipo: "texto", valor: "PLACEHOLDER: Qué cursos, a quiénes, con qué enfoque." },
+        { tipo: "imagen", valor: "", pie: "PLACEHOLDER: pie de foto." },
+        { tipo: "texto", titulo: "Resultado", valor: "PLACEHOLDER: Impacto." }
       ]
     },
     {
@@ -158,8 +158,8 @@ const SITE = {
         "Cobertura fotográfica de terreno para la Organización Panamericana de la Salud.",
       img: "",
       bloques: [
-        { tipo: "texto", valor: "PLACEHOLDER — Encargo y condiciones del registro." },
-        { tipo: "imagen", valor: "", pie: "PLACEHOLDER — pie de foto." }
+        { tipo: "texto", valor: "PLACEHOLDER: Encargo y condiciones del registro." },
+        { tipo: "imagen", valor: "", pie: "PLACEHOLDER: pie de foto." }
       ]
     },
     {
@@ -172,18 +172,11 @@ const SITE = {
         "Sistema editorial y piezas gráficas como jefe de diseño gráfico.",
       img: "",
       bloques: [
-        { tipo: "texto", valor: "PLACEHOLDER — Contexto." },
-        { tipo: "imagen", valor: "", pie: "PLACEHOLDER — pie de foto." }
+        { tipo: "texto", valor: "PLACEHOLDER: Contexto." },
+        { tipo: "imagen", valor: "", pie: "PLACEHOLDER: pie de foto." }
       ]
     }
   ],
-
-  /* ---------- Encabezado de la página Cursos ---------- */
-  cursosHead: {
-    eyebrow: "Docencia",
-    titulo: "Siete cursos de creación propia en PENTA UC.",
-    intro: "Programa de Estudios y Desarrollo de Talentos de la Pontificia Universidad Católica de Chile. Diseñé cada uno de estos cursos desde cero — la propuesta, el programa, la metodología y el material — y los dicté entre 2023 y 2025. Ninguno existía antes: todos son innovación docente."
-  },
 
   /* ---------- Cursos ----------
      Cada curso es una tarjeta en cursos.html y una página propia
@@ -260,7 +253,7 @@ const SITE = {
       resumen: "Desarmar objetos tecnológicos descartados para entender de qué están hechos, y rediseñarlos con electrónica básica para darles una segunda vida.",
       portada: "assets/img/cursos/sostenibilidad-portada.jpg",
       descripcion: [
-        "La pregunta de entrada era concreta: ¿de qué está hecho lo que botamos? El curso empieza literalmente desarmando — controles de consola que dejaron de funcionar, abiertos con destornillador sobre la mesa hasta dejar cada componente a la vista y catalogado en una materioteca.",
+        "La pregunta de entrada era concreta: ¿de qué está hecho lo que botamos? El curso empieza literalmente desarmando: controles de consola que dejaron de funcionar, abiertos con destornillador sobre la mesa hasta dejar cada componente a la vista y catalogado en una materioteca.",
         "Desde ahí el trabajo se vuelve proyectual. Con los Objetivos de Desarrollo Sostenible de la ONU y los principios de la economía circular como marco, cada equipo eligió un objeto cotidiano y lo rediseñó para reducir la cantidad de residuos que genera. La electrónica básica fue la herramienta que permitió que esos rediseños encendieran, se movieran y funcionaran de verdad.",
         "Al ser un curso de verano, la intensidad es otra: nueve sesiones seguidas de lunes a viernes, lo que obliga a un ritmo de proyecto mucho más comprimido que un semestre."
       ],
@@ -308,7 +301,7 @@ const SITE = {
       resumen: "Palancas, poleas y engranajes llevados al diseño de juegos: mecanismos impresos en 3D que se convierten en experiencias lúdicas para un usuario real.",
       portada: "assets/img/cursos/maquinas-fabulosas-portada.jpg",
       descripcion: [
-        "Este curso toma un contenido que suele quedarse en la pizarra —los mecanismos simples— y lo empuja hasta un producto jugable. Durante la primera mitad del semestre los estudiantes entienden y aplican palancas, poleas y engranajes, aprendiendo a modelarlos en Tinkercad y a imprimirlos en 3D con las tolerancias correctas para que encajen y giren.",
+        "Este curso toma los mecanismos simples, un contenido que suele quedarse en la pizarra, y lo empuja hasta un producto jugable. Durante la primera mitad del semestre los estudiantes entienden y aplican palancas, poleas y engranajes, aprendiendo a modelarlos en Tinkercad y a imprimirlos en 3D con las tolerancias correctas para que encajen y giren.",
         "La segunda mitad cambia de registro: ya no se trata de que el mecanismo funcione, sino de que le sirva a alguien. Cada equipo construyó un perfil de usuario, definió una necesidad y transformó su mecanismo en una experiencia de juego diseñada para esa persona.",
         "Al ser III y IV medio, el nivel de exigencia técnica es el más alto de todos mis cursos: engranajes complejos modelados desde cero, sistemas de transmisión que combinan varias etapas y prototipos que tienen que resistir el uso repetido de quien juega."
       ],
@@ -367,7 +360,7 @@ const SITE = {
       portada: "assets/img/cursos/robots-makers-portada.jpg",
       descripcion: [
         "Este es el curso que cambió los tres siguientes. Para poder enseñar robótica sin depender de kits comerciales caros y cerrados, junto a Elvis Andrade diseñamos y construimos un robot educativo propio: chasis, electrónica, puente H para el control de motores y firmware con control por Wi-Fi desde el navegador.",
-        "Con esa base, los estudiantes no arman un kit siguiendo instrucciones: construyen su robot desde cero, lo programan en la IDE de Arduino y diseñan en Tinkercad las piezas que necesitan —brazos, pinzas, soportes— para que su explorador resuelva la misión que ellos mismos definieron.",
+        "Con esa base, los estudiantes no arman un kit siguiendo instrucciones: construyen su robot desde cero, lo programan en la IDE de Arduino y diseñan en Tinkercad las piezas que necesitan (brazos, pinzas, soportes) para que su explorador resuelva la misión que ellos mismos definieron.",
         "La primera mitad del semestre mantiene la estructura de futuros posibles y problemas cotidianos; la segunda se vuelca completamente al robot, la programación y el prototipado, hasta la feria de aprendizajes final que reúne a todos los cursos del programa."
       ],
       destacados: [
@@ -418,16 +411,16 @@ const SITE = {
       anio: "2025",
       periodo: "CREA UC, enero 2025",
       cargo: "Profesor titular y creador del curso",
-      institucion: "CREA UC — PENTA UC",
+      institucion: "CREA UC · PENTA UC",
       nivel: "8 y 9 años",
       duracion: "6 días, lunes a sábado",
       equipo: "",
       resumen: "La versión para niños y niñas de 8 y 9 años: una misión espacial distinta cada día, construyendo y programando robots exploradores con materiales cotidianos y piezas impresas en 3D.",
       portada: "assets/img/cursos/mision-espacial-portada.jpg",
       descripcion: [
-        "Adaptar robótica real a estudiantes de 8 y 9 años obliga a cambiar todo el andamiaje sin bajar el nivel técnico. La solución fue estructurar el curso como una serie de misiones espaciales: cada día plantea un desafío concreto —navegar, aterrizar, desplazarse, personalizar— y el robot va creciendo misión a misión.",
+        "Adaptar robótica real a estudiantes de 8 y 9 años obliga a cambiar todo el andamiaje sin bajar el nivel técnico. La solución fue estructurar el curso como una serie de misiones espaciales: cada día plantea un desafío concreto (navegar, aterrizar, desplazarse, personalizar) y el robot va creciendo misión a misión.",
         "El robot educativo desarrollado el semestre anterior hizo posible este curso. Al tener una base propia y confiable, pude entregar a niños de esa edad un robot que de verdad se mueve y se controla, en lugar de una maqueta que solo lo aparenta.",
-        "La evaluación es por niveles —básico, medio y avanzado— dentro de cada misión, lo que permite que un grupo con ritmos muy distintos avance junto sin que nadie quede fuera. El curso cierra con una muestra, un discurso preparado por cada equipo y entrega de diplomas."
+        "La evaluación de cada misión tiene tres niveles: básico, medio y avanzado. Eso permite que un grupo con ritmos muy distintos avance junto sin que nadie quede fuera. El curso cierra con una muestra, un discurso preparado por cada equipo y entrega de diplomas."
       ],
       destacados: [
         {
@@ -530,15 +523,15 @@ const SITE = {
       periodo: "Segundo semestre 2025",
       cargo: "Profesor titular y creador del curso",
       institucion: "PENTA UC",
-      nivel: "PLACEHOLDER — nivel al que se impartió",
+      nivel: "PLACEHOLDER: nivel al que se impartió",
       duracion: "En curso",
       equipo: "",
       resumen: "Robots que juegan: programación por bloques y código, diseño centrado en el usuario y tableros construidos por los propios equipos para poner a prueba cada máquina.",
       portada: "assets/img/cursos/robots-juegos-portada.jpg",
       descripcion: [
         "El curso más reciente cruza las dos líneas que venía trabajando por separado: la robótica de los cursos espaciales y el diseño de juegos de Máquinas fabulosas. Los equipos ensamblan un robot, lo programan primero por bloques y después modificando el código directamente, y construyen el tablero o terreno sobre el que ese robot tiene que desempeñarse.",
-        "La etapa de empatía es explícita: cada equipo elige un tipo de usuario —niños pequeños, adultos mayores, alguien con una necesidad específica— y define cómo debe comportarse el robot para esa persona. El diseño de interacción deja de ser un accesorio y pasa a determinar la mecánica del juego.",
-        "PLACEHOLDER — El curso está en desarrollo. Cuando termine, actualiza esta descripción con los resultados y agrega las sesiones que faltan al temario."
+        "La etapa de empatía es explícita: cada equipo elige un tipo de usuario (niños pequeños, adultos mayores, alguien con una necesidad específica) y define cómo debe comportarse el robot para esa persona. El diseño de interacción deja de ser un accesorio y pasa a determinar la mecánica del juego.",
+        "PLACEHOLDER: El curso está en desarrollo. Cuando termine, actualiza esta descripción con los resultados y agrega las sesiones que faltan al temario."
       ],
       destacados: [
         {
@@ -580,9 +573,9 @@ const SITE = {
   historia: {
     titular: "Diseño cosas que otras personas tienen que poder mantener funcionando.",
     parrafos: [
-      "PLACEHOLDER — Empieza por dónde partiste. Diseño industrial en la Universidad Diego Portales, y desde ahí el desvío hacia la educación y la fabricación digital.",
-      "PLACEHOLDER — Cuenta qué te interesa realmente: que un FabLab siga vivo tres años después de la inauguración, que un profesor pueda dar la clase sin ti al lado.",
-      "PLACEHOLDER — Cierra con dónde estás hoy y qué tipo de proyectos buscas."
+      "PLACEHOLDER: Empieza por dónde partiste. Diseño industrial en la Universidad Diego Portales, y desde ahí el desvío hacia la educación y la fabricación digital.",
+      "PLACEHOLDER: Cuenta qué te interesa realmente: que un FabLab siga vivo tres años después de la inauguración, que un profesor pueda dar la clase sin ti al lado.",
+      "PLACEHOLDER: Cierra con dónde estás hoy y qué tipo de proyectos buscas."
     ],
     /* Trayectoria: [años, cargo, organización] */
     trayectoria: [

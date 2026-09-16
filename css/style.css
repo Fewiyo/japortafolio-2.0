@@ -111,7 +111,7 @@ ul{list-style:none; padding:0}
 .section-head .intro{
   font-family:var(--serif);
   font-size:20px; line-height:1.45;
-  color:var(--muted);
+  color:var(--fg);
   max-width:56ch;
   margin-top:24px;
 }
@@ -163,7 +163,7 @@ ul{list-style:none; padding:0}
 }
 .hero__note{
   font-family:var(--serif);
-  font-size:20px; line-height:1.45; color:var(--muted);
+  font-size:20px; line-height:1.45; color:var(--fg);
   max-width:46ch;
 }
 
@@ -249,7 +249,7 @@ ul{list-style:none; padding:0}
 }
 .service p{
   font-size:16px; line-height:26px; letter-spacing:.006em;
-  color:var(--muted);
+  color:var(--fg);
   max-width:var(--measure-text);
 }
 
@@ -275,7 +275,7 @@ ul{list-style:none; padding:0}
   margin-bottom:10px;
 }
 .nota p{
-  font-size:15px; line-height:25px; color:var(--muted);
+  font-size:15px; line-height:25px; color:var(--fg);
   max-width:46ch;
 }
 
@@ -294,7 +294,7 @@ ul{list-style:none; padding:0}
 .temario__t{font-size:16px; line-height:26px; max-width:62ch}
 .temario__d{
   display:block; margin-top:4px;
-  font-size:15px; line-height:24px; color:var(--muted);
+  font-size:15px; line-height:24px; color:var(--fg);
 }
 
 /* ---------- Galeria de un curso ---------- */
@@ -346,11 +346,11 @@ ul{list-style:none; padding:0}
 }
 .prose p{
   font-family:var(--serif);
-  font-size:20px; line-height:1.6; color:var(--muted);
+  font-size:20px; line-height:1.6; color:var(--fg);
   margin-bottom:20px;
 }
 .prose li{
-  font-size:16px; line-height:26px; color:var(--muted);
+  font-size:16px; line-height:26px; color:var(--fg);
   padding:14px 0; border-bottom:1px solid var(--line);
 }
 .quote{
@@ -361,7 +361,7 @@ ul{list-style:none; padding:0}
 }
 figure{margin:72px 0}
 figure img, figure svg{border-radius:16px; width:100%}
-figcaption{font-size:13px; color:var(--faint); margin-top:12px}
+figcaption{font-size:13px; color:var(--fg); margin-top:12px}
 
 /* ---------- Encabezado de caso ---------- */
 .case-head{padding:var(--air-hero) 0 0}
@@ -372,7 +372,7 @@ figcaption{font-size:13px; color:var(--faint); margin-top:12px}
 }
 .case-head .lead{
   font-family:var(--serif); font-size:20px; line-height:1.45;
-  color:var(--muted); max-width:52ch; margin-top:24px;
+  color:var(--fg); max-width:52ch; margin-top:24px;
 }
 .case-facts{
   display:flex; flex-wrap:wrap; gap:40px;
