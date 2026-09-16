@@ -206,7 +206,7 @@ const SITE = {
       duracion: "12 sesiones",
       equipo: "Ayudante: Felipe Rivera, psicólogo educacional",
       resumen: "Imaginar cómo será la vida en el año 2100 y construir, con impresión 3D y electrónica básica, la tecnología que esa humanidad necesitaría para resolver sus problemas cotidianos.",
-      portada: "assets/img/cursos/tecnologia-futurista-01.jpg",
+      portada: "assets/img/cursos/tecnologia-futurista-portada.jpg",
       descripcion: [
         "El curso parte de una pregunta que a los estudiantes de 7º y 8º les resulta irresistible: ¿cómo será vivir en el año 2100? En vez de responderla con una redacción, la respondimos construyendo. Cada equipo definió un futuro posible para la humanidad, identificó un problema cotidiano dentro de ese futuro y diseñó el objeto que lo resolvería.",
         "La columna vertebral es el Design Thinking en sus cinco etapas, pero aterrizado a herramientas que un estudiante de 13 años puede dominar en un semestre: diseño especulativo y referentes de ciencia ficción para empatizar, árbol de problemas para definir, Tinkercad y electrónica básica para idear, impresión 3D y materiales reutilizados para prototipar, y una feria de aprendizajes abierta al público para testear.",
@@ -233,9 +233,12 @@ const SITE = {
         { titulo: "Feria de aprendizajes", detalle: "Evaluación final: exposición abierta de los prototipos terminados." }
       ],
       galeria: [
-        { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-04.jpg", pie: "El puesto en la feria de aprendizajes: la impresora 3D trabajando en vivo junto a los prototipos terminados." },
+        { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-04.jpg", pie: "La impresora 3D trabajando en vivo durante la feria, junto a los prototipos terminados." },
+        { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-01.jpg", pie: "El puesto del curso, con el cartel del desafío: traer un control roto y llevarse una impresión 3D." },
+        { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-05.jpg", pie: "La mesa de exposición con los objetos del futuro construidos por los equipos." },
+        { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-03.jpg", pie: "Prototipo de un dispositivo de alimentación del futuro." },
         { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-02.jpg", pie: "Interior de un prototipo: protoboard, motores y portapilas montados dentro de una carcasa de cartón." },
-        { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-03.jpg", pie: "Prototipo de un dispositivo de alimentación del futuro." }
+        { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-06.jpg", pie: "El panel de cartón con el proceso completo del curso, montado para la feria." }
       ]
     },
 
@@ -253,7 +256,7 @@ const SITE = {
       duracion: "9 sesiones, lunes a viernes",
       equipo: "Ayudante: Belén Rebolledo, magíster en Territorio y Paisaje",
       resumen: "Desarmar objetos tecnológicos descartados para entender de qué están hechos, y rediseñarlos con electrónica básica para darles una segunda vida.",
-      portada: "assets/img/cursos/sostenibilidad-01.jpg",
+      portada: "assets/img/cursos/sostenibilidad-portada.jpg",
       descripcion: [
         "La pregunta de entrada era concreta: ¿de qué está hecho lo que botamos? El curso empieza literalmente desarmando — controles de consola que dejaron de funcionar, abiertos con destornillador sobre la mesa hasta dejar cada componente a la vista y catalogado en una materioteca.",
         "Desde ahí el trabajo se vuelve proyectual. Con los Objetivos de Desarrollo Sostenible de la ONU y los principios de la economía circular como marco, cada equipo eligió un objeto cotidiano y lo rediseñó para reducir la cantidad de residuos que genera. La electrónica básica fue la herramienta que permitió que esos rediseños encendieran, se movieran y funcionaran de verdad.",
@@ -277,9 +280,10 @@ const SITE = {
         { titulo: "Cierre", detalle: "Retroalimentación y reflexión sobre el proceso completo." }
       ],
       galeria: [
-        { tipo: "imagen", src: "assets/img/cursos/sostenibilidad-02.jpg", pie: "Desarme de un control de consola: el primer ejercicio del curso." },
+        { tipo: "imagen", src: "assets/img/cursos/sostenibilidad-01.jpg", pie: "Nueve controles desarmados y ordenados pieza por pieza: el punto de partida del curso." },
+        { tipo: "imagen", src: "assets/img/cursos/sostenibilidad-02.jpg", pie: "Desarme de un control de consola, el primer ejercicio." },
         { tipo: "imagen", src: "assets/img/cursos/sostenibilidad-03.jpg", pie: "Materioteca: cada componente catalogado y dispuesto para su análisis." },
-        { tipo: "imagen", src: "assets/img/cursos/sostenibilidad-04.jpg", pie: "Botones, gatillos y placas separados pieza por pieza." },
+        { tipo: "imagen", src: "assets/img/cursos/sostenibilidad-04.jpg", pie: "Botones, gatillos y placas separados uno a uno." },
         { tipo: "imagen", src: "assets/img/cursos/sostenibilidad-05.jpg", pie: "Rediseño funcional con iluminación LED integrada." },
         { tipo: "imagen", src: "assets/img/cursos/sostenibilidad-06.jpg", pie: "Prototipo terminado: carcasa intervenida sobre electrónica recuperada." },
         { tipo: "imagen", src: "assets/img/cursos/sostenibilidad-07.jpg", pie: "Mapeo de materiales en la etapa de definición." }
@@ -300,7 +304,7 @@ const SITE = {
       duracion: "12 sesiones",
       equipo: "",
       resumen: "Palancas, poleas y engranajes llevados al diseño de juegos: mecanismos impresos en 3D que se convierten en experiencias lúdicas para un usuario real.",
-      portada: "assets/img/cursos/maquinas-fabulosas-01.jpg",
+      portada: "assets/img/cursos/maquinas-fabulosas-portada.jpg",
       descripcion: [
         "Este curso toma un contenido que suele quedarse en la pizarra —los mecanismos simples— y lo empuja hasta un producto jugable. Durante la primera mitad del semestre los estudiantes entienden y aplican palancas, poleas y engranajes, aprendiendo a modelarlos en Tinkercad y a imprimirlos en 3D con las tolerancias correctas para que encajen y giren.",
         "La segunda mitad cambia de registro: ya no se trata de que el mecanismo funcione, sino de que le sirva a alguien. Cada equipo construyó un perfil de usuario, definió una necesidad y transformó su mecanismo en una experiencia de juego diseñada para esa persona.",
@@ -327,12 +331,19 @@ const SITE = {
         { titulo: "Feria de aprendizajes", detalle: "Presentación del proyecto final para evaluación." }
       ],
       galeria: [
-        { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-02.jpg", pie: "Mecanismo de engranajes impreso en 3D con manivela: transmisión completa en una sola pieza ensamblada." },
+        { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-01.jpg", pie: "Engranajes impresos en 3D por los equipos: distintos módulos y relaciones de transmisión." },
+        { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-02.jpg", pie: "Mecanismo de engranajes con manivela: la transmisión completa en una pieza ensamblada." },
         { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-03.jpg", pie: "Sistema de poleas construido con materiales simples para probar el principio antes de imprimirlo." },
         { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-07.jpg", pie: "Engranajes internos alojados en una carcasa impresa." },
-        { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-06.jpg", pie: "Prueba de encaje de engranajes sobre una base de cartón perforada." },
+        { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-06.jpg", pie: "Prueba de encaje sobre una base de cartón perforada." },
+        { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-13.jpg", pie: "Construcción de la estructura del juego con cartón y silicona caliente." },
+        { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-11.jpg", pie: "Presentación de un mecanismo de palancas ante el curso." },
+        { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-14.jpg", pie: "Papelógrafo del proyecto junto al mecanismo terminado." },
+        { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-09.jpg", pie: "Trabajo sobre el papelógrafo: perfil de usuario, referentes y decisiones de diseño." },
+        { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-10.jpg", pie: "Documentación de un equipo: perfil del usuario, referentes y el mecanismo de engranajes elegido." },
         { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-05.jpg", pie: "Diagrama de un equipo: manivela, cinta transportadora y patas de soporte." },
         { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-04.jpg", pie: "Tablero de juego pintado a mano sobre el que corre el mecanismo." },
+        { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-12.jpg", pie: "Demostración del juego terminado en la presentación final." },
         { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-08.jpg", pie: "Juego de mesa terminado, con piezas impresas en 3D." }
       ]
     },
@@ -351,7 +362,7 @@ const SITE = {
       duracion: "14 sesiones",
       equipo: "Ayudante: Elvis Andrade Torres",
       resumen: "El curso donde nació el robot educativo: un explorador construido desde cero, programado en Arduino y controlado por Wi-Fi, con piezas impresas en 3D por los propios estudiantes.",
-      portada: "assets/img/cursos/robots-makers-01.jpg",
+      portada: "assets/img/cursos/robots-makers-portada.jpg",
       descripcion: [
         "Este es el curso que cambió los tres siguientes. Para poder enseñar robótica sin depender de kits comerciales caros y cerrados, junto a Elvis Andrade diseñamos y construimos un robot educativo propio: chasis, electrónica, puente H para el control de motores y firmware con control por Wi-Fi desde el navegador.",
         "Con esa base, los estudiantes no arman un kit siguiendo instrucciones: construyen su robot desde cero, lo programan en la IDE de Arduino y diseñan en Tinkercad las piezas que necesitan —brazos, pinzas, soportes— para que su explorador resuelva la misión que ellos mismos definieron.",
@@ -384,12 +395,15 @@ const SITE = {
         { titulo: "Feria de aprendizajes", detalle: "Muestra conjunta con todos los cursos del programa." }
       ],
       galeria: [
-        { tipo: "imagen", src: "assets/img/cursos/robots-makers-02.jpg", pie: "El robot educativo en su versión de trabajo: chasis, motores, puente H y microcontrolador con Wi-Fi." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-makers-01.jpg", pie: "El robot educativo en su versión de trabajo: chasis, motores, puente H y microcontrolador con Wi-Fi." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-makers-08.jpg", pie: "Clase sobre el puente H y el control de motores, la pieza clave del robot." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-makers-02.jpg", pie: "Primeras pruebas de desplazamiento sobre la mesa." },
         { tipo: "imagen", src: "assets/img/cursos/robots-makers-03.jpg", pie: "Robot con pinza y accesorios diseñados e impresos por el equipo para cumplir su misión." },
         { tipo: "imagen", src: "assets/img/cursos/robots-makers-04.jpg", pie: "Mesa de trabajo durante la preparación de los kits: motores reductores, herramientas y cableado." },
-        { tipo: "imagen", src: "assets/img/cursos/robots-makers-05.jpg", pie: "Placas y componentes preparados para el armado de los robots." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-makers-05.jpg", pie: "Placas y componentes preparados para el armado." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-makers-09.jpg", pie: "Carrera de robots en el suelo de la sala durante la evaluación." },
         { tipo: "imagen", src: "assets/img/cursos/robots-makers-06.jpg", pie: "Varios robots en desarrollo, cada uno con su propia carcasa y accesorios." },
-        { tipo: "imagen", src: "assets/img/cursos/robots-makers-07.jpg", pie: "Prueba de desplazamiento en el suelo de la sala." }
+        { tipo: "imagen", src: "assets/img/cursos/robots-makers-07.jpg", pie: "Prueba de desplazamiento con la carcasa montada." }
       ]
     },
 
@@ -407,7 +421,7 @@ const SITE = {
       duracion: "6 días, lunes a sábado",
       equipo: "",
       resumen: "La versión para niños y niñas de 8 y 9 años: una misión espacial distinta cada día, construyendo y programando robots exploradores con materiales cotidianos y piezas impresas en 3D.",
-      portada: "assets/img/cursos/mision-espacial-01.jpg",
+      portada: "assets/img/cursos/mision-espacial-portada.jpg",
       descripcion: [
         "Adaptar robótica real a estudiantes de 8 y 9 años obliga a cambiar todo el andamiaje sin bajar el nivel técnico. La solución fue estructurar el curso como una serie de misiones espaciales: cada día plantea un desafío concreto —navegar, aterrizar, desplazarse, personalizar— y el robot va creciendo misión a misión.",
         "El robot educativo desarrollado el semestre anterior hizo posible este curso. Al tener una base propia y confiable, pude entregar a niños de esa edad un robot que de verdad se mueve y se controla, en lugar de una maqueta que solo lo aparenta.",
@@ -432,8 +446,13 @@ const SITE = {
         { titulo: "Muestra final", detalle: "Ensayo general, presentación de cada equipo y entrega de diplomas." }
       ],
       galeria: [
-        { tipo: "imagen", src: "assets/img/cursos/mision-espacial-02.jpg", pie: "Flota de robots durante la preparación del curso." },
-        { tipo: "imagen", src: "assets/img/cursos/mision-espacial-03.jpg", pie: "Los robots dispuestos en la sala, listos para la sesión del día." }
+        { tipo: "imagen", src: "assets/img/cursos/mision-espacial-01.jpg", pie: "La flota de robots durante la preparación del curso." },
+        { tipo: "imagen", src: "assets/img/cursos/mision-espacial-02.jpg", pie: "Robots y notebooks listos para la sesión del día." },
+        { tipo: "imagen", src: "assets/img/cursos/mision-espacial-03.jpg", pie: "Los robots dispuestos en la sala antes de empezar la misión." },
+        { tipo: "imagen", src: "assets/img/cursos/mision-espacial-07.jpg", pie: "Primer circuito: encender un LED en la protoboard." },
+        { tipo: "imagen", src: "assets/img/cursos/mision-espacial-05.jpg", pie: "Robot con la estructura y los personajes de la misión montados encima." },
+        { tipo: "imagen", src: "assets/img/cursos/mision-espacial-06.jpg", pie: "Robot personalizado por su equipo al cierre del curso." },
+        { tipo: "imagen", src: "assets/img/cursos/mision-espacial-04.jpg", pie: "El terreno de la misión, dibujado y construido por los equipos." }
       ]
     },
 
@@ -451,7 +470,7 @@ const SITE = {
       duracion: "12 sesiones",
       equipo: "",
       resumen: "Un semestre completo de exploración espacial: del primer circuito al robot controlado remotamente por Wi-Fi, con piezas propias modeladas en Tinkercad.",
-      portada: "assets/img/cursos/robot-espacial-01.jpg",
+      portada: "assets/img/cursos/robot-espacial-portada.jpg",
       descripcion: [
         "Robot Espacial lleva la lógica de las misiones a un formato semestral, con más tiempo para profundizar en cada capa técnica. Los estudiantes empiezan por entender las problemáticas reales de los viajes espaciales y terminan con un robot explorador que programan y controlan de forma remota a través de Wi-Fi.",
         "La progresión es deliberada: primero la metodología de diseño para abordar problemas complejos, después electrónica, después programación, y solo entonces el modelado 3D de las piezas que cada robot necesita. Cada capa se evalúa antes de montar la siguiente.",
@@ -482,8 +501,19 @@ const SITE = {
         { titulo: "Retroalimentación final", detalle: "Cierre y reflexión sobre el proceso del semestre." }
       ],
       galeria: [
+        { tipo: "imagen", src: "assets/img/cursos/robot-espacial-01.jpg", pie: "Motores, ruedas y controladores preparados para el armado." },
+        { tipo: "imagen", src: "assets/img/cursos/robot-espacial-05.jpg", pie: "Preparación de los kits antes de la sesión." },
+        { tipo: "imagen", src: "assets/img/cursos/robot-espacial-07.jpg", pie: "Clase de modelado 3D: cada estudiante trabajando su pieza en Tinkercad." },
+        { tipo: "imagen", src: "assets/img/cursos/robot-espacial-06.jpg", pie: "Pieza personalizada modelada en Tinkercad antes de imprimirla." },
+        { tipo: "imagen", src: "assets/img/cursos/robot-espacial-08.jpg", pie: "Modelado de una carcasa a medida para el robot." },
+        { tipo: "imagen", src: "assets/img/cursos/robot-espacial-11.jpg", pie: "La interfaz de control del robot, programada por los estudiantes en HTML." },
+        { tipo: "imagen", src: "assets/img/cursos/robot-espacial-12.jpg", pie: "Control LED Galáctico: una de las interfaces desarrolladas por un equipo." },
+        { tipo: "imagen", src: "assets/img/cursos/robot-espacial-13.jpg", pie: "Código e interfaz lado a lado durante el desarrollo." },
         { tipo: "imagen", src: "assets/img/cursos/robot-espacial-02.jpg", pie: "Prototipo de estructura construido con materiales simples antes del montaje electrónico." },
         { tipo: "imagen", src: "assets/img/cursos/robot-espacial-03.jpg", pie: "Carcasa de cartón montada sobre el chasis, con la electrónica y las baterías alojadas dentro." },
+        { tipo: "imagen", src: "assets/img/cursos/robot-espacial-14.jpg", pie: "Robot terminado con carcasa de cartón diseñada por su equipo." },
+        { tipo: "imagen", src: "assets/img/cursos/robot-espacial-10.jpg", pie: "Robot con carcasa impresa en 3D, listo para la evaluación." },
+        { tipo: "imagen", src: "assets/img/cursos/robot-espacial-09.jpg", pie: "Terreno de la misión construido para la evaluación final." },
         { tipo: "imagen", src: "assets/img/cursos/robot-espacial-04.jpg", pie: "Prueba de recorrido sobre un terreno construido en la sala." }
       ]
     },
@@ -502,7 +532,7 @@ const SITE = {
       duracion: "En curso",
       equipo: "",
       resumen: "Robots que juegan: programación por bloques y código, diseño centrado en el usuario y tableros construidos por los propios equipos para poner a prueba cada máquina.",
-      portada: "assets/img/cursos/robots-juegos-01.jpg",
+      portada: "assets/img/cursos/robots-juegos-portada.jpg",
       descripcion: [
         "El curso más reciente cruza las dos líneas que venía trabajando por separado: la robótica de los cursos espaciales y el diseño de juegos de Máquinas fabulosas. Los equipos ensamblan un robot, lo programan primero por bloques y después modificando el código directamente, y construyen el tablero o terreno sobre el que ese robot tiene que desempeñarse.",
         "La etapa de empatía es explícita: cada equipo elige un tipo de usuario —niños pequeños, adultos mayores, alguien con una necesidad específica— y define cómo debe comportarse el robot para esa persona. El diseño de interacción deja de ser un accesorio y pasa a determinar la mecánica del juego.",
@@ -523,19 +553,23 @@ const SITE = {
         { titulo: "Evaluación intermedia", detalle: "Robot funcional capaz de resolver el desafío definido, con presentación y bitácora." }
       ],
       galeria: [
-        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-02.jpg", pie: "Robot recorriendo el tablero construido por su equipo." },
-        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-03.jpg", pie: "Tablero de juego diseñado por un equipo, con piezas impresas en 3D." },
-        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-04.jpg", pie: "Mesa de trabajo durante el diseño de la mecánica del juego." },
-        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-05.jpg", pie: "Cartas, fichas y componentes del juego en desarrollo." },
-        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-06.jpg", pie: "Prueba del robot sobre un terreno con relieve." },
-        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-07.jpg", pie: "Primeras pruebas de recorrido sobre el mapa de papel." },
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-08.jpg", pie: "Tablero terminado de un equipo: el recorrido dibujado a mano y el microcontrolador montado sobre el mapa." },
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-09.jpg", pie: "El robot controlado desde el teléfono mientras recorre el tablero." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-01.jpg", pie: "Robot sobre el mapa de papel durante una partida de prueba." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-02.jpg", pie: "Recorrido completo del tablero, con las zonas dibujadas por el equipo." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-03.jpg", pie: "Tablero de juego diseñado por un equipo, con piezas impresas en 3D." },
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-10.jpg", pie: "Arena de cartón con cuadrícula y arcos: otro formato de desafío para el mismo robot." },
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-11.jpg", pie: "El mazo de cartas del juego: Concepto, Objeto y Restricción, las tres variables con las que juegan los equipos." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-15.jpg", pie: "Electrónica y cartas dispuestas para una sesión de prueba." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-16.jpg", pie: "Pantalla LCD y protoboard: la interfaz física del juego." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-04.jpg", pie: "Mesa de trabajo durante el diseño de la mecánica del juego." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-05.jpg", pie: "Cartas, fichas y componentes del juego en desarrollo." },
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-12.jpg", pie: "Panel de storyboard: cada viñeta es un momento de la partida." },
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-13.jpg", pie: "Plano del recorrido dibujado a mano antes de construirlo." },
-        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-14.jpg", pie: "Bocetos de mecánica de juego sobre la mesa de trabajo." }
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-14.jpg", pie: "Bocetos de mecánica de juego sobre la mesa de trabajo." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-17.jpg", pie: "Partida de prueba sobre el terreno con relieve." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-06.jpg", pie: "Prueba del robot sobre un terreno con relieve." },
+        { tipo: "imagen", src: "assets/img/cursos/robots-juegos-07.jpg", pie: "Primeras pruebas de recorrido sobre el mapa de papel." }
       ]
     }
   ],
