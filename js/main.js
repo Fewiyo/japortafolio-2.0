@@ -103,6 +103,10 @@
     );
   }
 
+  function mayus(s) {
+    return s ? s.charAt(0).toUpperCase() + s.slice(1) : "";
+  }
+
   /* ---------- Catalogo ----------
      Proyectos y cursos conviven en una sola grilla. Cada tipo guarda
      sus campos propios en data.js, asi que aqui se normalizan a una
@@ -127,6 +131,16 @@
         etiquetas: [c.etiqueta, c.anio, c.nivel].filter(Boolean),
         meta: [c.cargo, c.institucion],
         anio: c.anio
+      });
+    });
+
+    (SITE.apps || []).forEach(function (a) {
+      items.push({
+        href: "proyecto-ia.html?id=" + encodeURIComponent(a.id),
+        img: a.portada, titulo: a.titulo,
+        etiquetas: [a.tipo, a.anio, a.herramienta].filter(Boolean),
+        meta: [mayus(a.estado), a.dominio],
+        anio: a.anio
       });
     });
 
@@ -166,6 +180,81 @@
     }
     return '<figure class="rise">' + cuerpo +
       (g.pie ? "<figcaption>" + esc(g.pie) + "</figcaption>" : "") + "</figure>";
+  }
+
+  /* ---------- Pagina: un proyecto hecho con IA ----------
+     Misma estructura que la ficha de curso, con dos cosas propias:
+     el boton al proyecto en vivo y la bitacora de avances. */
+  function app(root) {
+    var id = new URLSearchParams(location.search).get("id");
+    var idx = SITE.apps.findIndex(function (a) { return a.id === id; });
+    if (idx < 0) idx = 0;
+    var a = SITE.apps[idx];
+    var sig = SITE.apps[(idx + 1) % SITE.apps.length];
+    document.title = a.titulo + " — " + SITE.nombre;
+
+    var datos = [
+      ["Tipo", a.tipo],
+      ["Fecha", a.fecha],
+      ["Estado", mayus(a.estado)],
+      ["Dominio", a.dominio],
+      ["Construido con", a.herramienta]
+    ].filter(function (d) { return d[1]; });
+
+    var bitacora = (a.bitacora || []).map(function (b) {
+      return '<li class="rise"><span class="temario__n">' + esc(b.fecha) + "</span>" +
+        '<span class="temario__t">' + esc(b.titulo) +
+        (b.texto ? '<span class="temario__d">' + esc(b.texto) + "</span>" : "") +
+        "</span></li>";
+    }).join("");
+
+    var galeria = (a.galeria || []).map(function (g, n) {
+      return pieza({ tipo: "imagen", src: g.src, pie: g.pie }, a.titulo, idx + n);
+    }).join("");
+
+    root.innerHTML =
+      nav("catalogo") +
+      '<header class="case-head"><div class="wrap">' +
+      '<a class="back" href="index.html#catalogo">&larr; Volver al catálogo</a>' +
+      '<h1 class="rise">' + esc(a.titulo) + "</h1>" +
+      (a.resumen ? '<p class="lead rise">' + esc(a.resumen) + "</p>" : "") +
+      (a.link
+        ? '<p class="rise" style="margin-top:28px"><a class="btn" href="' + esc(a.link) +
+          '" target="_blank" rel="noopener"><span class="dot"></span>Abrir el proyecto</a></p>'
+        : "") +
+      '<div class="case-facts rise">' +
+      datos.map(function (d) {
+        return "<div><span>" + esc(d[0]) + "</span>" + esc(d[1]) + "</div>";
+      }).join("") +
+      "</div></div></header>" +
+
+      '<section class="section section--tight"><div class="wrap">' +
+      '<figure class="rise" style="margin-top:0">' + media(a.portada, a.titulo, idx) + "</figure>" +
+
+      '<div class="prose rise">' +
+      (a.descripcion || []).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") +
+      "</div>" +
+
+      (bitacora
+        ? '<h2 class="subhead">Bitácora</h2><ol class="temario">' + bitacora + "</ol>"
+        : "") +
+
+      (galeria
+        ? '<h2 class="subhead">Pantallas</h2><div class="galeria">' + galeria + "</div>"
+        : "") +
+
+      (a.etiquetas && a.etiquetas.length
+        ? '<h2 class="subhead">Etiquetas</h2><div class="chips rise">' +
+          a.etiquetas.map(function (t) { return '<span class="chip">' + esc(t) + "</span>"; }).join("") +
+          "</div>"
+        : "") +
+
+      '<a class="next" href="proyecto-ia.html?id=' + encodeURIComponent(sig.id) + '">' +
+      '<span><span class="eyebrow" style="margin:0;display:block">Siguiente proyecto</span><strong>' +
+      esc(sig.titulo) + "</strong></span><span>&rarr;</span></a>" +
+      "</div></section>" +
+
+      footer();
   }
 
   /* ---------- Pagina: un curso ---------- */
@@ -346,7 +435,8 @@
     home: home,
     historia: historia,
     proyecto: proyecto,
-    curso: curso
+    curso: curso,
+    app: app
   }[page] || home)(root);
 
   /* Tema claro/oscuro (por defecto sigue al sistema) */

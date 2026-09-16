@@ -12,6 +12,11 @@ desktop.ini
 *.log
 node_modules/
 
+# Fichas fuente de las apps. No se publican: algunas nombran direcciones
+# internas de proyectos sin login, y rutas locales del disco. Al sitio solo
+# entra lo que el generador vuelca en js/data.js, que va filtrado.
+proyectos IA/
+
 # Material original de los cursos: 4,2 GB de fotos y videos en bruto.
 # Es el archivo de trabajo, no se publica. Al sitio solo entran las
 # fotos ya seleccionadas y optimizadas de assets/img/cursos/.

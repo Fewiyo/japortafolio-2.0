@@ -17,7 +17,7 @@ Las medidas del referente están anotadas como tokens al inicio de [css/style.cs
 
 **Fondo:** color plano, blanco en modo claro y `#0b0b0b` en oscuro. Sin texturas ni patrones.
 
-**Rejilla del catálogo:** una tarjeta ancha (16:9), luego dos en pareja (8:9), y así sucesivamente. El patrón lo genera `.card:nth-child(3n+1)`, así que se mantiene solo al agregar o quitar proyectos.
+**Rejilla del catálogo:** todas las tarjetas del mismo porte, tres columnas en escritorio y proporción 4:3. No hay ninguna regla `nth-child`: ninguna posición del array vuelve a un proyecto más llamativo que otro.
 
 **Tipografía:** EB Garamond para titulares (64 px / 72 px, tracking −0.02em) y subtítulos (30 px / 40 px); Inter para interfaz y textos de servicio (16 px / 26 px).
 
@@ -37,6 +37,7 @@ Luego entra a `http://localhost:5173`.
 index.html          Inicio: titular, catálogo, servicios, contacto
 proyecto.html       Caso de estudio (recibe ?id=... del proyecto)
 curso.html          Ficha de un curso (recibe ?id=... del curso)
+proyecto-ia.html    Ficha de una app o plataforma (recibe ?id=...)
 cursos.html         Redirección al catálogo, para no romper enlaces antiguos
 historia.html       Sobre mí, trayectoria e instituciones
 css/style.css       Todo el estilo (tokens de color, tipografía, layout)
@@ -44,6 +45,8 @@ js/data.js          ← TODO EL CONTENIDO. Es el único archivo que editas.
 js/main.js          Motor que arma las páginas desde data.js
 assets/img/         Tus fotos de proyecto
 assets/img/cursos/  Fotos de los cursos
+assets/img/ia/      Capturas de las apps y plataformas
+proyectos IA/       Fichas fuente de las apps (no se publica)
 assets/video/       Videos propios de los cursos
 assets/files/       Tu CV en PDF
 ```
@@ -67,7 +70,13 @@ blog: {
 
 La pestaña **Catálogo** reúne en una sola grilla los `proyectos` y los `cursos`, ordenados del año más reciente al más antiguo. No hay que mantener ese orden a mano: `main.js` lo calcula del campo `anio` y, si dice `"2022 — 2024"`, usa el año final.
 
-Cada tipo conserva sus propios campos en `data.js`; el catálogo los normaliza al dibujar la tarjeta. Para que algo aparezca ahí basta con agregarlo a `proyectos` o a `cursos`.
+Cada tipo conserva sus propios campos en `data.js`; el catálogo los normaliza al dibujar la tarjeta. Para que algo aparezca ahí basta con agregarlo a `proyectos`, `cursos` o `apps`.
+
+### Apps y plataformas hechas con IA
+
+El array `apps` guarda las aplicaciones y plataformas web construidas con IA. **No se edita a mano:** el texto vive en `proyectos IA/<id>/proyecto.md` y el bloque de `data.js` se genera desde ahí. Si cambia una ficha, se regenera el bloque.
+
+Cada app lleva `tipo` (`Aplicación`, `Plataforma web` o `Hardware`), `herramienta` (con qué IA se construyó), `estado`, `link` al proyecto en vivo, una `bitacora` de avances con fecha y un array `etiquetas` con vocabulario cerrado, pensado para un buscador futuro. En la tarjeta del catálogo se muestran `tipo`, `anio` y `herramienta`.
 
 ### Títulos de sección
 

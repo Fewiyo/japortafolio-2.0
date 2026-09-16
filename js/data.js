@@ -38,7 +38,7 @@ const SITE = {
     catalogo: {
       eyebrow: "01 / Catálogo",
       titulo: "Todo lo que he hecho, de lo más reciente a lo más antiguo.",
-      intro: "Siete cursos de creación propia para el Programa PENTA UC de la Pontificia Universidad Católica de Chile, junto a proyectos de diseño de servicios, fabricación digital y registro. Ninguno de los cursos existía antes: todos son innovación docente."
+      intro: "Siete cursos de creación propia para el Programa PENTA UC de la Pontificia Universidad Católica de Chile, diez aplicaciones y plataformas web construidas con IA, y proyectos de diseño de servicios y fabricación digital. Todo del mismo porte y ordenado por fecha: ninguno pesa más que otro por dónde quedó en la grilla."
     },
     servicios: {
       eyebrow: "02 / Servicios",
@@ -565,6 +565,334 @@ const SITE = {
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-17.jpg", pie: "Partida de prueba sobre el terreno con relieve." },
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-06.jpg", pie: "Prueba del robot sobre un terreno con relieve." },
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-07.jpg", pie: "Primeras pruebas de recorrido sobre el mapa de papel." }
+      ]
+    }
+  ],
+
+  /* ---------- Proyectos hechos con IA ----------
+     Aparecen en el Catálogo junto a proyectos y cursos.
+     Las fichas largas viven en "proyectos IA/<id>/proyecto.md";
+     este bloque se genera desde ahí, no se escribe a mano.
+
+     tipo         lo que sale como etiqueta en la tarjeta
+     herramienta  con qué IA se construyó
+     etiquetas    vocabulario cerrado, para el buscador futuro
+     ---------------------------------------------------------- */
+  apps: [
+    {
+      id: "sku",
+      titulo: "SKU",
+      tipo: "Aplicación",
+      herramienta: "Codex",
+      anio: "2026",
+      fecha: "2026-07",
+      estado: "en desarrollo",
+      dominio: "Comercio",
+      link: "",
+      repo: "",
+      resumen: "De una planilla de Excel a un inventario con etiquetas QR imprimibles y una página por producto.",
+      portada: "assets/img/ia/sku/01-portada.png",
+      etiquetas: ["Aplicación", "Comercio", "Next.js", "Supabase", "Vercel", "Programado con IA", "Codex"],
+      descripcion: [
+        "SKU toma una planilla de Excel de productos y la convierte en tres cosas de una pasada: un código único por producto, una etiqueta imprimible con su código QR, y un inventario consultable. Cada producto queda además con su propia página web, de modo que escanear la etiqueta pegada en la caja lleva directo a la ficha de lo que hay adentro.",
+        "Es el proyecto más reciente del conjunto y el que más se parece a una herramienta de trabajo y no a un experimento: resuelve un problema de bodega concreto, no una pregunta técnica.",
+        "El historial del repositorio muestra que no se quedó en la idea: tiene aislamiento por establecimiento detrás de un login (cada local ve solo su inventario), etiquetas de 20×50 mm en las dos orientaciones con un diseño que las cuadra en la hoja, y un comando para probar la conexión a la base sin tener que redesplegar. Eso último es de alguien que ya se cansó de depurar a ciegas.",
+        "PENDIENTE: para qué inventario se hizo, si está en uso y si llegó a desplegarse. Eso no lo puedo saber desde el repositorio.",
+      ],
+      bitacora: [
+        { fecha: "2026-07-29", titulo: "Etiquetas que cuadran en la hoja", texto: "Etiquetas de 20×50 mm en las dos orientaciones, con un diseño de página que las calza sin desperdiciar papel." },
+        { fecha: "2026-07-29", titulo: "Un local no ve el inventario de otro", texto: "Entra el aislamiento por establecimiento en la base de datos, detrás de un login. Las rutas de datos pasan a responder con un error claro en vez de mandar a la pantalla de inicio de sesión, que es lo correcto cuando quien llama es un programa y no una persona." },
+        { fecha: "2026-07-27", titulo: "Arranca el proyecto", texto: "Generación de códigos, etiquetas QR imprimibles, inventario desde planilla y una página por producto." },
+      ],
+      galeria: [
+        { src: "assets/img/ia/sku/01-portada.png", pie: "el inventario cargado desde la planilla." },
+        { src: "assets/img/ia/sku/02-etiquetas.png", pie: "la hoja de etiquetas QR lista para imprimir." },
+        { src: "assets/img/ia/sku/03-producto.png", pie: "la página de un producto." },
+      ]
+    },
+    {
+      id: "ansiosos",
+      titulo: "AnsioSOS",
+      tipo: "Aplicación",
+      herramienta: "Codex",
+      anio: "2026",
+      fecha: "2026-07",
+      estado: "en desarrollo",
+      dominio: "Salud, Educación",
+      link: "https://ansiosos.vercel.app",
+      repo: "",
+      resumen: "La memoria de título de 2021 convertida en una plataforma real para manejar la ansiedad universitaria.",
+      portada: "assets/img/ia/ansiosos/01-portada.png",
+      etiquetas: ["Aplicación", "Salud", "Educación", "React", "PWA", "Vercel", "Programado con IA", "Investigación con IA", "Codex"],
+      descripcion: [
+        "AnsioSOS es una plataforma psicoeducativa para que estudiantes universitarios manejen la ansiedad: contenido, ejercicios y un plan de seguridad personal. Es la reformulación funcional de mi memoria de título de Diseño Industrial (UDP, 2021, aprobada con distinción), que hasta ahora solo existía como prototipo navegable en Adobe XD. Pasó de ser una maqueta a diecisiete componentes y catorce pantallas que de verdad funcionan.",
+        "La parte más seria del proyecto no es el código, es el modelo de privacidad. Los datos están clasificados en tres niveles según qué tan sensibles son, con una línea que no se cruza: los pensamientos, el chat y la ideación nunca salen del dispositivo. El principio para el panel institucional es que la institución ve el bosque y nunca los árboles: solo agregados, y solo por sobre un umbral de diez personas. Durante el desarrollo se detectó y corrigió un error ético de diseño: una versión del panel dejaba leer datos individuales.",
+        "La decisión de no poner un modelo de lenguaje en el chat también está fundamentada, no es pereza: para este caso de uso la evidencia disponible no muestra diferencia práctica frente a un sistema de reglas, y un modelo agrega riesgo clínico y de privacidad que no compensa. El contenido clínico se filtró con el mismo criterio: respiración diafragmática sí, algunas técnicas populares no, y un suplemento descartado por hepatotóxico.",
+      ],
+      bitacora: [
+        { fecha: "2026-07-29", titulo: "Deja de estar escondida", texto: "Se desactiva la protección de despliegue del hosting, que tenía la dirección buena detrás de un login y dejaba como única URL funcional un nombre autogenerado, impresentable para enlazar una memoria de título. Un interruptor tuvo escondido dos meses el proyecto con mejor historia del conjunto." },
+        { fecha: "2026-07-20", titulo: "Protección de claves antes de necesitarlas", texto: "Se cierra el `.gitignore` para archivos de entorno. Hoy el proyecto no tiene secretos, pero la fase con backend va a necesitarlos y el primero se habría commiteado en silencio." },
+        { fecha: "2026-07-02", titulo: "El bug ético", texto: "Se detecta que el panel institucional permitía leer datos individuales. Se corrige y se fija el umbral de diez personas para cualquier dato agregado." },
+        { fecha: "2026-07-02", titulo: "La taxonomía de datos", texto: "Se clasifica todo el contenido en tres niveles de sensibilidad y se fija la regla innegociable: pensamientos, chat e ideación no salen del dispositivo." },
+        { fecha: "2026-07-02", titulo: "De prototipo a plataforma", texto: "La memoria de título de 2021 deja de ser una maqueta: 70 archivos, 17 componentes, 14 pantallas funcionando." },
+      ],
+      galeria: [
+        { src: "assets/img/ia/ansiosos/01-portada.png", pie: "✅ El inicio con los ejercicios para disminuir la ansiedad." },
+        { src: "assets/img/ia/ansiosos/02-ejercicios.png", pie: "✅ El catálogo de ejercicios." },
+        { src: "assets/img/ia/ansiosos/03-plan.png", pie: "✅ El plan de seguridad personal (sin datos, recién inicializado)." },
+        { src: "assets/img/ia/ansiosos/04-panel.png", pie: "✅ El panel institucional: \"solo conteo, nunca quién\"." },
+      ]
+    },
+    {
+      id: "app-escalada",
+      titulo: "App Escalada",
+      tipo: "Aplicación",
+      herramienta: "Codex",
+      anio: "2026",
+      fecha: "2026-07",
+      estado: "terminado",
+      dominio: "Deporte, Datos",
+      link: "https://escalada-xi.vercel.app",
+      repo: "",
+      resumen: "Entrenamiento de escalada con análisis de técnica por visión computacional, funcionando sin internet.",
+      portada: "assets/img/ia/app-escalada/01-portada.png",
+      etiquetas: ["Aplicación", "Deporte", "Datos", "React", "MediaPipe", "PWA", "Vercel", "IA en el producto", "Programado con IA", "Codex"],
+      descripcion: [
+        "Una aplicación instalable de entrenamiento de escalada: rutinas, metas por color de ruta, registro de nutrición y un módulo que analiza la técnica a partir de un video de la propia escalada. El modelo de estimación de pose corre entero dentro del teléfono, sobre 33 puntos del cuerpo, y devuelve puntajes de técnica sin que el video salga nunca del dispositivo.",
+        "La decisión de fondo fue que todo funcionara sin conexión, y eso obligó a resolver tres cosas que resultaron ser los aprendizajes más transferibles del conjunto. El video se captura con el selector de archivos del navegador en vez de pedir acceso directo a la cámara, porque lo primero funciona en una red local sin certificado y lo segundo exige HTTPS. El modelo pesa casi 6 MB, así que se deja fuera de la instalación inicial y se descarga la primera vez que se usa el módulo: instalar la aplicación sigue siendo instantáneo. Y toda la lógica de pose a puntaje vive aislada, sin nada de interfaz alrededor, para poder razonarla y corregirla por separado.",
+        "Hay una decisión de producto que vale la pena contar: la racha es semanal, no diaria. Una racha diaria en una aplicación de entrenamiento empuja a entrenar lesionado para no perderla.",
+      ],
+      bitacora: [
+        { fecha: "2026-08-20", titulo: "Rutas por día y compartir logros", texto: "Contador de rutas por día y la posibilidad de compartir los logros en redes. Es el único de estos proyectos que recibió trabajo en agosto." },
+        { fecha: "2026-07-01", titulo: "Publicada", texto: "Sale en línea. Del arranque a la versión publicada pasaron once horas." },
+        { fecha: "2026-07-01", titulo: "El módulo de técnica", texto: "Entra la estimación de pose sobre video. Queda pendiente calibrar los umbrales con videos reales de escalada en pared: los puntajes son plausibles, pero todavía no están validados contra la realidad." },
+        { fecha: "2026-07-01", titulo: "Arranca el proyecto", texto: "Rutinas, metas por color de ruta y nutrición. Todo local, sin cuenta ni backend." },
+      ],
+      galeria: [
+        { src: "assets/img/ia/app-escalada/01-portada.png", pie: "✅ El resumen de entrenamiento con la racha semanal." },
+        { src: "assets/img/ia/app-escalada/02-tecnica.png", pie: "✅ El módulo de técnica: todo se procesa en el teléfono." },
+        { src: "assets/img/ia/app-escalada/03-rutinas.png", pie: "✅ Las cinco rutinas, con duración y proteína objetivo." },
+        { src: "assets/img/ia/app-escalada/04-rutas.png", pie: "✅ Las metas por color de ruta." },
+      ]
+    },
+    {
+      id: "granada-tareas-del-hogar",
+      titulo: "Granada",
+      tipo: "Aplicación",
+      herramienta: "Codex",
+      anio: "2026",
+      fecha: "2026-07",
+      estado: "en desarrollo",
+      dominio: "Hogar",
+      link: "",
+      repo: "",
+      resumen: "Repartir las tareas de una casa entre tres personas sin que nadie tenga que llevar la cuenta.",
+      portada: "assets/img/ia/granada-tareas-del-hogar/01-portada.png",
+      etiquetas: ["Aplicación", "Hogar", "JavaScript", "Supabase", "PWA", "Vercel", "Programado con IA", "Codex"],
+      descripcion: [
+        "Granada es una aplicación web instalable que reparte y sincroniza las tareas domésticas de un hogar de tres personas. Cada quien ve lo que le toca, marca lo que hizo, y el resto lo ve al instante desde su propio teléfono. Es el único de estos proyectos con usuarios reales y uso sostenido: no es un prototipo que se enseña, es algo que se usa todos los días.",
+        "Casi todo lo interesante está en las decisiones de producto, no en el código. El color identifica a la persona, nunca la urgencia de la tarea: un sistema de colores por prioridad convierte la casa en un tablero de reproches. No hay chat interno, porque el hogar ya conversa por WhatsApp y una segunda bandeja de entrada solo agrega un lugar más donde no responder. Y el balance se muestra en positivo y sin ranking: se ve lo que cada persona aportó, no quién va ganando. Meter competencia entre convivientes era la forma más rápida de que la aplicación durara una semana.",
+        "Técnicamente es deliberadamente simple: un solo archivo HTML autocontenido con JavaScript sin framework y un service worker propio, contra una base de datos con sincronización en tiempo real. Es el proyecto más iterado de todos (doce versiones a lo largo de casi un mes) y el único que recibió la segunda semana de trabajo que al resto le faltó.",
+      ],
+      bitacora: [
+        { fecha: "2026-07-29", titulo: "Hoy es hoy", texto: "La pantalla principal pasa a mostrar solo el día actual; lo vencido se va a su propia vista. Se suman turnos por persona en el formulario y se alinea la grilla del mes. Es la iteración que la hizo usable de verdad, no solo funcional." },
+        { fecha: "2026-07-29", titulo: "Sin login", texto: "Corre la migración que saca el inicio de sesión: la aplicación entra como usuario anónimo. Menos fricción para tres personas que ya viven juntas, y una decisión de privacidad que conviene tener presente antes de publicar el link." },
+        { fecha: "2026-07-20", titulo: "Fuera las credenciales del HTML público", texto: "Se eliminan el correo, la contraseña y la llamada de autenticación que viajaban en texto plano dentro del archivo que sirve el sitio. La causa raíz estaba en la propia guía de instalación, que mandaba a incrustarlas: también corregida. Verificado contra el sitio en vivo, no contra el commit." },
+        { fecha: "2026-07-11", titulo: "Tareas que se repiten", texto: "Entra la recurrencia por intervalos con horizonte de seis meses, y la carga masiva desde planilla que expande cada tarea repetida y la reparte entre los responsables." },
+        { fecha: "2026-07-06", titulo: "Backend compartido y tiempo real", texto: "Lo que marca una persona aparece en el teléfono de las otras dos sin recargar. Antes de esto cada quien veía su propia versión de la verdad." },
+        { fecha: "2026-07-06", titulo: "Arranca el proyecto", texto: "Primera versión: aplicación instalable, sin backend, todo en el dispositivo." },
+      ],
+      galeria: [
+        { src: "assets/img/ia/granada-tareas-del-hogar/01-portada.png", pie: "✅ La selección de perfil: Sofía, Matías y Renata." },
+        { src: "assets/img/ia/granada-tareas-del-hogar/02-hoy.png", pie: "✅ Hoy, con el resumen de ayer y las tareas del día." },
+        { src: "assets/img/ia/granada-tareas-del-hogar/03-tareas.png", pie: "✅ La lista completa de tareas." },
+        { src: "assets/img/ia/granada-tareas-del-hogar/04-mes.png", pie: "✅ La grilla del mes." },
+        { src: "assets/img/ia/granada-tareas-del-hogar/05-yo.png", pie: "✅ El balance personal y el aporte de la casa, sin ranking." },
+      ]
+    },
+    {
+      id: "maker-lab",
+      titulo: "Maker Lab",
+      tipo: "Aplicación",
+      herramienta: "Codex",
+      anio: "2026",
+      fecha: "2026-07",
+      estado: "en desarrollo",
+      dominio: "Educación, Fabricación digital",
+      link: "https://maker-lab-ja18.vercel.app",
+      repo: "",
+      resumen: "Un juego de laboratorio maker donde programar con bloques exporta código Arduino que funciona de verdad.",
+      portada: "assets/img/ia/maker-lab/01-portada.png",
+      etiquetas: ["Aplicación", "Educación", "Fabricación digital", "React", "Blockly", "Arduino", "Programado con IA", "Codex"],
+      descripcion: [
+        "Un juego web de laboratorio maker escolar: el estudiante recolecta materiales, fabrica piezas, monta estaciones de trabajo y programa hardware con bloques. La diferencia con un juego de programación por bloques cualquiera es que el código que sale de esos bloques es Arduino real, listo para cargar en un microcontrolador. El puente entre el juego y el taller físico es el punto entero. Trece nodos de conocimiento, cinco estaciones, veintitrés recetas de fabricación y cinco prototipos como meta.",
+        "El generador de código Arduino está escrito a mano. Las bibliotecas que hacen esto ya existen, pero todas están abandonadas: la más conocida no se toca desde 2018 y otra ni siquiera tiene licencia clara. Reescribirlo fue más barato que heredar un problema.",
+        "Y el juego no se queda en recolectar y fabricar: al estudiar un nodo aparece un reto práctico real. El primero pide armar un circuito (pila, resistencia, LED, retorno a tierra) en el orden correcto y recién después programarlo. O sea, el error de electrónica se comete en pantalla antes de cometerse con componentes de verdad, que es exactamente para lo que sirve un simulador en un aula.",
+        "El taller de programación no es decorativo: los bloques se ejecutan contra un ESP32 simulado en pantalla (con sus pines reales, GPIO2 y compañía) y el mismo programa se puede ver como código Arduino o bajar como archivo `.ino` para cargarlo en una placa física. Ese es el puente completo, de bloque a placa, sin salir del navegador.",
+        "Lo más inusual del proyecto no es el juego, es cómo se verifica. Hay dos pruebas generativas: un solver que recorre todo el árbol de progresión y detecta contenido inalcanzable o dependencias circulares antes de que nadie juegue, y un bot que juega la partida completa contra la lógica real del juego. Se comprobó rompiendo a propósito un desbloqueo. Falta el sistema de energía y guardar la partida: hoy el progreso se pierde al recargar, que en una sala de clases es fatal.",
+      ],
+      bitacora: [
+        { fecha: "2026-07-29", titulo: "Destapado", texto: "Estaba desplegado desde hacía días, pero detrás del login del hosting: la URL existía y no la podía abrir nadie. Se desactiva la protección de despliegue y el juego queda accesible. No hubo que publicarlo, hubo que destaparlo." },
+        { fecha: "2026-07-21", titulo: "Las pruebas que juegan solas", texto: "El solver de alcanzabilidad del árbol de contenidos y el bot que juega una partida entera contra la lógica real. Verificado por mutación: romper a propósito un desbloqueo tumba las pruebas." },
+        { fecha: "2026-07-19", titulo: "Generador de Arduino propio", texto: "Se descarta usar bibliotecas existentes de bloques a Arduino, todas sin mantenimiento, y se escribe el generador desde cero." },
+        { fecha: "2026-07-19", titulo: "Arranca el proyecto", texto: "Se define la economía del juego: 13 nodos de conocimiento, 5 estaciones, 23 recetas, 5 prototipos objetivo." },
+      ],
+      galeria: [
+        { src: "assets/img/ia/maker-lab/01-portada.png", pie: "✅ El laboratorio: recolectar, estaciones y árbol STEAM de 13 nodos." },
+        { src: "assets/img/ia/maker-lab/02-bloques.png", pie: "✅ El taller de programación con el ESP32 simulado y la descarga del `.ino`." },
+        { src: "assets/img/ia/maker-lab/03-reto.png", pie: "✅ Partida avanzada: inventario, pieza fabricada y el reto de armar el circuito." },
+      ]
+    },
+    {
+      id: "esdiseno-malla-del-diseno",
+      titulo: "esdiseño: La Malla del Diseño",
+      tipo: "Plataforma web",
+      herramienta: "Codex",
+      anio: "2026",
+      fecha: "2026-07",
+      estado: "en desarrollo",
+      dominio: "Educación, Diseño",
+      link: "https://esdiseno.vercel.app",
+      repo: "",
+      resumen: "La formación del diseñador chileno convertida en una malla navegable de eras, cursos y roles.",
+      portada: "assets/img/ia/esdiseno-malla-del-diseno/01-portada.png",
+      etiquetas: ["Plataforma web", "Educación", "Diseño", "React", "Supabase", "Vercel", "Programado con IA", "Codex"],
+      descripcion: [
+        "Una plataforma de aprendizaje que estructura la formación de un diseñador como una malla curricular recorrible: cuatro eras, veintidós cursos, sesenta y seis clases y siete roles profesionales hacia los que se puede derivar. En vez de una lista de cursos sueltos, el mapa muestra de dónde viene cada cosa y hacia dónde lleva.",
+        "La decisión de arquitectura que la sostiene es que la aplicación funciona completa sin cuenta. Todo el contenido y la navegación andan en modo invitado, guardando el avance en el propio navegador; la base de datos solo agrega cuentas y progreso sincronizado entre dispositivos. Si el backend se cae o alguien no quiere registrarse, la plataforma sigue siendo usable en vez de mostrar una pantalla de error.",
+        "Lo que el prototipo ya muestra, y que no es menor: cada curso tiene su ruta de aprendizaje con clase de intro gratis y el resto desbloqueable por $24.990, con certificación en algunos y enlaces a la herramienta real que se enseña (AutoCAD, Fusion 360). Y los siete roles de salida no son etiquetas: cada uno declara de qué habilidades se alimenta y su sueldo referencial en Chile, de $700 mil a $4 millones mensuales según el rol. Eso convierte la malla en algo que se puede usar para decidir, no solo para mirar.",
+        "Lo que falta no es técnico: es el contenido de las clases, grabar los videos de intro, conectar el dominio propio y el inicio de sesión con cuenta. La propia plataforma declara su hoja de ruta en tres fases (el mapa navegable, la plataforma de cursos, y datos y comunidad) y hoy está en la primera.",
+      ],
+      bitacora: [
+        { fecha: "2026-07-04", titulo: "En línea, sin dominio propio", texto: "Queda desplegada y accesible. El dominio `esdiseño.cl` está comprado y el plan de conexión escrito, pero sin ejecutar: por ahora vive en una dirección provisoria." },
+        { fecha: "2026-07-04", titulo: "Modo invitado primero", texto: "Se decide que la plataforma sea 100% usable sin backend y que la base de datos solo sume cuentas y progreso. El esquema y los datos iniciales quedan escritos, pendientes de cargar." },
+        { fecha: "2026-07-04", titulo: "Arranca el proyecto", texto: "Se define la estructura: 4 eras, 22 cursos, 66 clases, 7 roles." },
+      ],
+      galeria: [
+        { src: "assets/img/ia/esdiseno-malla-del-diseno/01-portada.png", pie: "✅ La malla por revoluciones industriales, con los cursos que nacen en cada una." },
+        { src: "assets/img/ia/esdiseno-malla-del-diseno/02-curso.png", pie: "✅ La ficha de un curso: ruta de aprendizaje, clase gratis y clases bloqueadas." },
+        { src: "assets/img/ia/esdiseno-malla-del-diseno/03-roles.png", pie: "✅ Los siete roles de salida con su sueldo referencial." },
+      ]
+    },
+    {
+      id: "mercado-publico",
+      titulo: "Buscador Mercado Público",
+      tipo: "Plataforma web",
+      herramienta: "Codex",
+      anio: "2026",
+      fecha: "2026-07",
+      estado: "en desarrollo",
+      dominio: "Datos, Comercio, Fabricación digital",
+      link: "",
+      repo: "",
+      resumen: "Encontrar en las licitaciones del Estado las que sí tienen que ver con salas maker y fabricación digital.",
+      portada: "assets/img/ia/mercado-publico/01-portada.png",
+      etiquetas: ["Plataforma web", "Datos", "Comercio", "Fabricación digital", "React", "Vercel", "API pública", "Programado con IA", "Codex"],
+      descripcion: [
+        "Un buscador sobre los datos abiertos de compras públicas de Chile, filtrado a lo que de verdad importa en este oficio: aulas maker, laboratorios de fabricación, impresión 3D, corte láser y robótica educativa. El problema que resuelve es concreto y personal: el portal oficial publica cientos de licitaciones al día y las que sirven se pierden entre las que no.",
+        "Tiene una decisión técnica que vale la pena anotar. La interfaz no habla directo con la API oficial, porque esa API no permite consultas desde el navegador; en medio hay una pequeña función de servidor que actúa de puente y además guarda las respuestas quince minutos, para no repetir la misma consulta. Eso resuelve dos cosas de una: el bloqueo del navegador y el gasto de llamadas. La clave de acceso a la API vive solo en el servidor, nunca en el código que llega al usuario.",
+        "El proyecto trae su propio modo de demostración, y está bien resuelto: con la variable de ejemplo activada carga cinco licitaciones de muestra y **muestra en pantalla un aviso diciendo que son datos de ejemplo**. No hay forma de confundir la demo con datos reales, ni para quien la ve ni para quien la programó tres meses después.",
+        "Lo que falta es desplegarlo para que consulte la API de verdad: pedir el ticket gratuito, configurarlo en el panel del hosting y validar contra el servicio. Una tarde, y es lo único que separa este proyecto de estar terminado.",
+      ],
+      bitacora: [
+        { fecha: "2026-07-02", titulo: "La clave nunca viaja al navegador", texto: "Se separa la variable de desarrollo de la de producción, para que la credencial de la API no termine dentro del archivo que descarga el usuario." },
+        { fecha: "2026-07-02", titulo: "El puente de servidor", texto: "La API oficial no acepta consultas desde el navegador. Se escribe una función intermedia con caché de quince minutos." },
+        { fecha: "2026-07-02", titulo: "Arranca el proyecto", texto: "Se definen los términos de búsqueda del filtro maker." },
+      ],
+      galeria: [
+        { src: "assets/img/ia/mercado-publico/01-portada.png", pie: "✅ Cinco licitaciones de ejemplo, con el aviso de datos de muestra." },
+        { src: "assets/img/ia/mercado-publico/02-filtros.png", pie: "✅ El filtrado por categoría." },
+      ]
+    },
+    {
+      id: "estudiar-futuro",
+      titulo: "Estudiar Futuro",
+      tipo: "Plataforma web",
+      herramienta: "Codex",
+      anio: "2026",
+      fecha: "2026-07",
+      estado: "en desarrollo",
+      dominio: "Educación, Datos",
+      link: "",
+      repo: "",
+      resumen: "Comparar becas y magísters de Chile y el extranjero según lo que uno realmente quiere estudiar.",
+      portada: "assets/img/ia/estudiar-futuro/01-portada.png",
+      etiquetas: ["Plataforma web", "Educación", "Datos", "React", "Programado con IA", "Codex"],
+      descripcion: [
+        "Un tablero para decidir un postgrado: compara programas de magíster y becas disponibles en Chile y fuera, y los cruza con el área de interés de quien consulta. La pregunta que intenta contestar no es \"qué programas existen\" sino \"cuál me conviene a mí\".",
+        "Hoy tiene nueve becas reales cargadas a mano (Beca Chile, ANID, Chevening, Fulbright, DAAD y otras), con su cobertura desglosada en matrícula, manutención, pasajes y seguro, los requisitos de cada una y el mes de convocatoria. Se filtra por ocho áreas y por país de destino, y se puede armar una lista corta. Para ser un proyecto de un día, la interfaz está más terminada de lo que sugiere llamarlo mínimo funcional.",
+        "Lo que le falta es justamente lo que la haría útil: la capa de mercado y sueldos. Sin saber qué paga cada camino, la comparación se queda en la mitad: compara costos y requisitos, pero no retornos. Es el único proyecto del conjunto sin documentación de ningún tipo, y eso también hay que arreglarlo antes de mostrarlo.",
+      ],
+      bitacora: [
+        { fecha: "2026-07-04", titulo: "Mínimo funcional", texto: "Queda la comparación andando con datos cargados a mano: ~9 becas y ~10 programas. Pendiente la capa de mercado y sueldos." },
+        { fecha: "2026-07-04", titulo: "Arranca el proyecto", texto: "" },
+      ],
+      galeria: [
+        { src: "assets/img/ia/estudiar-futuro/01-portada.png", pie: "✅ Las nueve becas con su cobertura desglosada y los filtros por área." },
+        { src: "assets/img/ia/estudiar-futuro/02-magisters.png", pie: "✅ La pestaña de magísters." },
+      ]
+    },
+    {
+      id: "reporte-web-diseno",
+      titulo: "Diseño industrial en Chile",
+      tipo: "Plataforma web",
+      herramienta: "Codex",
+      anio: "2026",
+      fecha: "2026-07",
+      estado: "terminado",
+      dominio: "Datos, Diseño, Educación",
+      link: "",
+      repo: "",
+      resumen: "Nueve pilares de datos sobre el estado real del diseño industrial en Chile, en un solo tablero.",
+      portada: "assets/img/ia/reporte-web-diseno/01-portada.png",
+      etiquetas: ["Plataforma web", "Datos", "Diseño", "Educación", "React", "Programado con IA", "Investigación con IA", "Codex"],
+      descripcion: [
+        "Un tablero que reúne en nueve pilares lo que se puede saber con datos sobre el diseño industrial en Chile: mercado y sueldos por cargo, historia del oficio, formación (diez escuelas comparadas, diseño contra ingeniería, dónde quedó la matemática), herramientas e IA, referentes, trayectorias, concursos abiertos, y dos pilares que dan vuelta el ejercicio hacia quien lee: «tu perfil» y «qué hacer». 410 titulados al año, 23 profesores con proyecto propio, 16 proyectos influyentes, 17 concursos.",
+        "Lo que lo separa de un informe es el test de posición: trece ramas del oficio entre las que uno se ubica, y a partir de ahí el panel deja de describir el mercado y empieza a responder dónde estás parado tú. Compara sueldos por cargo con filtros por demanda, y muestra hacia dónde migran los diseñadores.",
+        "No nació como proyecto de portafolio: nació porque necesitaba decidir mi propia carrera con datos y no con impresiones. Es el sustento de las decisiones que vinieron después: a qué postgrado postular, qué posicionamiento sostener, qué servicios ofrecer. Que después sirva de portafolio es una consecuencia.",
+        "Es el proyecto con más código propio de todo el conjunto y, al mismo tiempo, uno que nunca se desplegó. Técnicamente no le falta nada: le falta la decisión de publicarlo.",
+      ],
+      bitacora: [
+        { fecha: "2026-07-04", titulo: "Terminado, sin publicar", texto: "Queda construido y verificado. No se despliega. Es, de todos, el que más código tiene y el único de ese tamaño que nunca salió a internet." },
+        { fecha: "2026-07-04", titulo: "Los nueve pilares", texto: "Se cierra la estructura: mercado, mallas, empleabilidad, distribución regional y el resto de los ejes, con la base de datos embebida en la propia aplicación." },
+        { fecha: "2026-07-04", titulo: "Arranca el proyecto", texto: "" },
+      ],
+      galeria: [
+        { src: "assets/img/ia/reporte-web-diseno/01-portada.png", pie: "✅ La portada con los nueve pilares y las cifras de cabecera." },
+        { src: "assets/img/ia/reporte-web-diseno/02-mercado.png", pie: "✅ El pilar de mercado: filtro de sueldos y cargos." },
+        { src: "assets/img/ia/reporte-web-diseno/03-trayectorias.png", pie: "✅ Trayectorias: hacia dónde migran los diseñadores." },
+        { src: "assets/img/ia/reporte-web-diseno/04-formacion.png", pie: "✅ Formación: las diez escuelas comparadas." },
+      ]
+    },
+    {
+      id: "proyecto-iot-01",
+      titulo: "Proyecto IOT 01",
+      tipo: "Hardware",
+      herramienta: "Codex",
+      anio: "2026",
+      fecha: "2026-07",
+      estado: "en desarrollo",
+      dominio: "Fabricación digital",
+      link: "",
+      repo: "",
+      resumen: "Diez microcontroladores distintos hablando un mismo idioma, para que sumar uno nuevo no rompa nada.",
+      portada: "assets/img/ia/proyecto-iot-01/01-portada.png",
+      etiquetas: ["Hardware", "Fabricación digital", "ESP32", "MQTT", "Arduino", "Programado con IA", "Codex"],
+      descripcion: [
+        "Una flota de diez microcontroladores con roles distintos: relés, servos, motores, tiras de luces, sensores: controlados desde un tablero central. Es la base de electrónica sobre la que se montan las estaciones de un taller maker.",
+        "El valor del proyecto no está en los aparatos, está en el contrato. En vez de inventar un formato de mensaje por cada tipo de dispositivo, todos hablan un modelo común de capacidades (interruptor, rango, color, sensor) y un comando es siempre la misma estructura de dos campos. La consecuencia práctica es que agregar un dispositivo nuevo no obliga a tocar el tablero ni a los demás: el aparato se anuncia solo al conectarse y el sistema aprende qué sabe hacer. Ese documento de contrato es la mejor decisión de arquitectura de todo el conjunto y sirve mucho más allá de este proyecto.",
+        "Hay uno de los diez funcionando de punta a punta. Los roles de los últimos seis ni siquiera están definidos. En desarrollo, con todo lo que eso significa.",
+      ],
+      bitacora: [
+        { fecha: "2026-07-29", titulo: "Se cierra el servidor de mensajes", texto: "Las reglas de firewall del puerto pasan a perfil de red privada. Hasta ese día el servidor aceptaba conexiones anónimas desde cualquier red a la que estuviera conectado el computador." },
+        { fecha: "2026-07-14", titulo: "Uno de diez", texto: "El primer nodo funciona completo: comando desde el tablero, acción en el dispositivo, confirmación de vuelta. Los otros nueve están pendientes." },
+        { fecha: "2026-07-14", titulo: "El contrato de mensajes", texto: "Se define el modelo de capacidades común y el mecanismo por el que cada dispositivo se describe solo al conectarse, además del aviso automático cuando uno se desconecta." },
+        { fecha: "2026-07-14", titulo: "Arranca el proyecto", texto: "" },
+      ],
+      galeria: [
+        { src: "assets/img/ia/proyecto-iot-01/01-portada.png", pie: "el tablero de control con el nodo activo." },
+        { src: "assets/img/ia/proyecto-iot-01/02-nodo.png", pie: "**foto** del ESP32 armado." },
+        { src: "assets/img/ia/proyecto-iot-01/03-contrato.png", pie: "el modelo de capacidades, como diagrama." },
       ]
     }
   ],
