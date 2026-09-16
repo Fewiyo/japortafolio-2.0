@@ -117,6 +117,8 @@ En la tarjeta del listado se muestran `etiqueta`, `anio` y `nivel` como etiqueta
 
 **Fotos.** Las del sitio viven en `assets/img/cursos/`, ya redimensionadas a 1600 px y **sin metadatos EXIF** — los JPG de teléfono guardan coordenadas GPS, y estas fotos son de colegios con menores de edad.
 
+**Regla de anonimato.** Ninguna foto publicada muestra la cara de un estudiante, ni nombres escritos en papelógrafos, pizarras o pantallas. Al agregar fotos nuevas hay que revisar las dos cosas: varias del archivo quedaron fuera por nombres manuscritos, no por caras. Cuando una foto vale la pena pero tiene una cara o un nombre en un borde, se recorta antes de publicarla.
+
 **Videos.** No se suben al repositorio: GitHub rechaza archivos sobre 100 MB y varios de los originales pasan los 200 MB. `.gitignore` los excluye. Para incluir uno, súbelo a YouTube y agrégalo como `{ tipo: "youtube", src: "ID" }`.
 
 **Material original.** La carpeta `Penta UC/` tiene 4,2 GB de fotos y videos en bruto más los programas de cada curso. Está excluida del repositorio a propósito: es el archivo de trabajo, no se publica.

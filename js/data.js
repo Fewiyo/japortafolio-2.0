@@ -233,11 +233,9 @@ const SITE = {
         { titulo: "Feria de aprendizajes", detalle: "Evaluación final: exposición abierta de los prototipos terminados." }
       ],
       galeria: [
-        { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-05.jpg", pie: "El puesto del curso en la feria de aprendizajes, con la impresora 3D funcionando en vivo." },
+        { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-04.jpg", pie: "El puesto en la feria de aprendizajes: la impresora 3D trabajando en vivo junto a los prototipos terminados." },
         { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-02.jpg", pie: "Interior de un prototipo: protoboard, motores y portapilas montados dentro de una carcasa de cartón." },
-        { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-03.jpg", pie: "Prototipo de un dispositivo de alimentación del futuro." },
-        { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-04.jpg", pie: "Un equipo con su proyecto terminado." },
-        { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-06.jpg", pie: "La feria de aprendizajes reunió a estudiantes, familias y público general." }
+        { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-03.jpg", pie: "Prototipo de un dispositivo de alimentación del futuro." }
       ]
     },
 
