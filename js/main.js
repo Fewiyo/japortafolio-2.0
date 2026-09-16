@@ -40,13 +40,22 @@
   function nav(active) {
     var links = [
       { t: "Proyectos", h: active === "home" ? "#proyectos" : "index.html#proyectos", k: "proyectos" },
+      { t: "Cursos", h: "cursos.html", k: "cursos" },
       { t: "Servicios", h: active === "home" ? "#servicios" : "index.html#servicios", k: "servicios", movil: false },
       { t: "Historia", h: "historia.html", k: "historia" },
       { t: SITE.blog.texto, h: SITE.blog.url, k: "blog", externo: true }
     ];
+    /* El nombre se parte para poder dejar solo el nombre de pila en movil,
+       donde la barra no da para tanto. */
+    var partes = SITE.nombre.split(" ");
+    var pila = partes.shift();
+    var apellidos = partes.join(" ");
+
     return (
       '<nav class="nav" id="nav"><div class="nav__in">' +
-      '<a class="nav__name" href="index.html">' + esc(SITE.nombre) + ' <span>— ' + esc(SITE.rol) + "</span></a>" +
+      '<a class="nav__name" href="index.html">' + esc(pila) +
+      '<span class="nav__name-resto"> ' + esc(apellidos) + "</span>" +
+      '<span class="nav__name-rol"> — ' + esc(SITE.rol) + "</span></a>" +
       '<div class="nav__links">' +
       links.map(function (l) {
         /* enlace externo sin URL todavia: se muestra atenuado y no navega */
@@ -106,6 +115,129 @@
       '<span class="card__meta">' + esc(p.cliente) + "<br>" + esc(p.anio) + "</span></div>" +
       "</a>"
     );
+  }
+
+  /* ---------- Tarjeta de curso ----------
+     Las etiquetas sobre la foto son: tipo, ano y nivel.
+     Debajo van el nombre del curso y el cargo con la institucion. */
+  function cardCurso(c, i) {
+    var etiquetas = [c.etiqueta, c.anio, c.nivel].filter(Boolean);
+    return (
+      '<a class="card rise" href="curso.html?id=' + encodeURIComponent(c.id) + '">' +
+      '<div class="card__media">' + media(c.portada, c.nombre, i) +
+      '<div class="card__tags">' +
+      etiquetas.map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") +
+      "</div></div>" +
+      '<div class="card__bar"><span class="card__title">' + esc(c.nombre) + "</span>" +
+      '<span class="card__meta">' + esc(c.cargo) + "<br>" + esc(c.institucion) + "</span></div>" +
+      "</a>"
+    );
+  }
+
+  /* ---------- Una pieza de la galeria: foto, video local o YouTube ---------- */
+  function pieza(g, label, i) {
+    var cuerpo;
+    if (g.tipo === "youtube" && g.src) {
+      cuerpo =
+        '<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/' + esc(g.src) +
+        '" title="' + esc(label) + '" loading="lazy" allowfullscreen></iframe></div>';
+    } else if (g.tipo === "video" && g.src) {
+      cuerpo = '<video src="' + esc(g.src) + '" controls preload="metadata" playsinline></video>';
+    } else {
+      cuerpo = media(g.src, label, i);
+    }
+    return '<figure class="rise">' + cuerpo +
+      (g.pie ? "<figcaption>" + esc(g.pie) + "</figcaption>" : "") + "</figure>";
+  }
+
+  /* ---------- Pagina: listado de cursos ---------- */
+  function cursos(root) {
+    var h = SITE.cursosHead;
+    root.innerHTML =
+      nav("cursos") +
+      '<header class="case-head"><div class="wrap">' +
+      '<p class="eyebrow">' + esc(h.eyebrow) + "</p>" +
+      '<h1 class="rise">' + esc(h.titulo) + "</h1>" +
+      (h.intro ? '<p class="lead rise">' + esc(h.intro) + "</p>" : "") +
+      "</div></header>" +
+
+      '<section class="section section--tight"><div class="wrap">' +
+      '<div class="projects">' + SITE.cursos.map(cardCurso).join("") + "</div>" +
+      "</div></section>" +
+
+      footer();
+  }
+
+  /* ---------- Pagina: un curso ---------- */
+  function curso(root) {
+    var id = new URLSearchParams(location.search).get("id");
+    var idx = SITE.cursos.findIndex(function (c) { return c.id === id; });
+    if (idx < 0) idx = 0;
+    var c = SITE.cursos[idx];
+    var sig = SITE.cursos[(idx + 1) % SITE.cursos.length];
+    document.title = c.nombre + " — " + SITE.nombre;
+
+    var datos = [
+      ["Periodo", c.periodo || c.anio],
+      ["Institución", c.institucion],
+      ["Cargo", c.cargo],
+      ["Nivel", c.nivel],
+      ["Duración", c.duracion],
+      ["Equipo", c.equipo]
+    ].filter(function (d) { return d[1]; });
+
+    /* Recuadros destacados: autoria del curso, el robot educativo, etc. */
+    var destacados = (c.destacados || []).map(function (d) {
+      return '<div class="nota rise"><h3>' + esc(d.titulo) + "</h3><p>" + esc(d.texto) + "</p></div>";
+    }).join("");
+
+    var temario = (c.temario || []).map(function (t, n) {
+      return '<li class="rise"><span class="temario__n">' + ("0" + (n + 1)).slice(-2) + "</span>" +
+        '<span class="temario__t">' + esc(t.titulo) +
+        (t.detalle ? '<span class="temario__d">' + esc(t.detalle) + "</span>" : "") +
+        "</span></li>";
+    }).join("");
+
+    var galeria = (c.galeria || []).map(function (g, n) {
+      return pieza(g, c.nombre, idx + n);
+    }).join("");
+
+    root.innerHTML =
+      nav("cursos") +
+      '<header class="case-head"><div class="wrap">' +
+      '<a class="back" href="cursos.html">&larr; Todos los cursos</a>' +
+      '<h1 class="rise">' + esc(c.nombre) + "</h1>" +
+      (c.subtitulo ? '<p class="subtitulo rise">' + esc(c.subtitulo) + "</p>" : "") +
+      (c.resumen ? '<p class="lead rise">' + esc(c.resumen) + "</p>" : "") +
+      '<div class="case-facts rise">' +
+      datos.map(function (d) {
+        return "<div><span>" + esc(d[0]) + "</span>" + esc(d[1]) + "</div>";
+      }).join("") +
+      "</div></div></header>" +
+
+      '<section class="section section--tight"><div class="wrap">' +
+      '<figure class="rise" style="margin-top:0">' + media(c.portada, c.nombre, idx) + "</figure>" +
+
+      '<div class="prose rise">' +
+      (c.descripcion || []).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") +
+      "</div>" +
+
+      (destacados ? '<div class="notas">' + destacados + "</div>" : "") +
+
+      (temario
+        ? '<h2 class="subhead">Temario</h2><ol class="temario">' + temario + "</ol>"
+        : "") +
+
+      (galeria
+        ? '<h2 class="subhead">Registro</h2><div class="galeria">' + galeria + "</div>"
+        : "") +
+
+      '<a class="next" href="curso.html?id=' + encodeURIComponent(sig.id) + '">' +
+      '<span><span class="eyebrow" style="margin:0;display:block">Siguiente curso</span><strong>' +
+      esc(sig.nombre) + "</strong></span><span>&rarr;</span></a>" +
+      "</div></section>" +
+
+      footer();
   }
 
   /* ---------- Pagina: inicio ---------- */
@@ -210,7 +342,13 @@
   /* ---------- Arranque ---------- */
   var root = document.getElementById("app");
   var page = document.body.dataset.page;
-  ({ home: home, historia: historia, proyecto: proyecto }[page] || home)(root);
+  ({
+    home: home,
+    historia: historia,
+    proyecto: proyecto,
+    cursos: cursos,
+    curso: curso
+  }[page] || home)(root);
 
   /* Tema claro/oscuro (por defecto sigue al sistema) */
   var btn = document.getElementById("theme");

@@ -109,6 +109,8 @@ body::before{
 /* Cada seccion abre con mucho aire arriba: es lo que da el ritmo. */
 .section{padding-top:var(--air-section)}
 .section:last-of-type{padding-bottom:var(--air-section)}
+/* Seccion que va justo despues de un encabezado de pagina: menos aire. */
+.section--tight{padding-top:64px}
 
 /* Encabezado de seccion: etiqueta chica + titulo serif grande */
 .section-head{margin-bottom:64px}
@@ -150,7 +152,7 @@ body::before{
   display:flex; align-items:center; justify-content:space-between; gap:16px;
 }
 .nav__name{font-size:13px; letter-spacing:-.01em}
-.nav__name span{color:var(--muted)}
+.nav__name-rol{color:var(--muted)}
 .nav__links{display:flex; align-items:center; gap:24px; font-size:13px}
 .nav__links a{color:var(--muted); transition:color .2s var(--ease)}
 .nav__links a:hover, .nav__links a[aria-current="page"]{color:var(--fg)}
@@ -271,6 +273,65 @@ body::before{
   color:var(--muted);
   max-width:var(--measure-text);
 }
+
+/* Subtitulo bajo el nombre del curso */
+.subtitulo{
+  font-family:var(--serif);
+  font-size:clamp(20px,2.4vw,28px); line-height:1.25;
+  letter-spacing:-.015em; color:var(--muted);
+  max-width:var(--measure-head); margin-top:12px;
+}
+
+/* ---------- Recuadros destacados ----------
+   Autoria del curso, el robot educativo, etc. */
+.notas{display:grid; gap:16px; margin:64px 0 0}
+@media (min-width:820px){ .notas{grid-template-columns:1fr 1fr} }
+.nota{
+  background:var(--card); border-radius:16px;
+  padding:28px 30px 30px;
+}
+.nota h3{
+  font-family:var(--serif); font-weight:400;
+  font-size:22px; line-height:28px; letter-spacing:-.015em;
+  margin-bottom:10px;
+}
+.nota p{
+  font-size:15px; line-height:25px; color:var(--muted);
+  max-width:46ch;
+}
+
+/* ---------- Temario de un curso ----------
+   Una clase por fila, con el numero en una columna fija a la izquierda. */
+.temario{border-top:1px solid var(--line); counter-reset:clase}
+.temario li{
+  display:grid; gap:4px 24px;
+  padding:20px 0; border-bottom:1px solid var(--line);
+}
+@media (min-width:820px){ .temario li{grid-template-columns:56px minmax(0,1fr)} }
+.temario__n{
+  font-size:12px; letter-spacing:.1em; color:var(--faint);
+  font-variant-numeric:tabular-nums;
+}
+.temario__t{font-size:16px; line-height:26px; max-width:62ch}
+.temario__d{
+  display:block; margin-top:4px;
+  font-size:15px; line-height:24px; color:var(--muted);
+}
+
+/* ---------- Galeria de un curso ---------- */
+.galeria{display:grid; gap:24px}
+@media (min-width:820px){ .galeria{grid-template-columns:1fr 1fr; gap:32px 24px} }
+.galeria figure{margin:0}
+.galeria img, .galeria svg, .galeria video{
+  width:100%; border-radius:16px; display:block;
+  aspect-ratio:4/3; object-fit:cover; background:var(--card);
+}
+/* Contenedor de proporcion 16:9 para los videos incrustados */
+.video{
+  position:relative; width:100%; aspect-ratio:16/9;
+  border-radius:16px; overflow:hidden; background:var(--card);
+}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
 
 /* Subtitulo dentro de una pagina (Trayectoria, Instituciones) */
 .subhead{
@@ -400,8 +461,9 @@ figcaption{font-size:13px; color:var(--faint); margin-top:12px}
 @media (max-width:819px){
   :root{--air-hero:148px; --air-section:96px; --pad:20px}
   .nav__name{font-size:12px}
-  .nav__name span{display:none}
-  .nav__links{gap:14px; font-size:12px}
+  /* en movil queda solo el nombre de pila: hay cinco destinos que ubicar */
+  .nav__name-resto, .nav__name-rol{display:none}
+  .nav__links{gap:13px; font-size:12px}
   .nav__links a[data-solo-desktop]{display:none}
   /* el boton de tema pasa a icono para que la barra quepa en una linea */
   .theme-btn__txt{display:none}

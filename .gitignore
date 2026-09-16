@@ -11,3 +11,15 @@ desktop.ini
 # Temporales
 *.log
 node_modules/
+
+# Material original de los cursos: 4,2 GB de fotos y videos en bruto.
+# Es el archivo de trabajo, no se publica. Al sitio solo entran las
+# fotos ya seleccionadas y optimizadas de assets/img/cursos/.
+Penta UC/
+
+# Videos pesados: GitHub rechaza archivos sobre 100 MB.
+# Súbelos a YouTube y enlázalos con { tipo: "youtube" } en data.js.
+*.mp4
+*.mov
+*.MP4
+*.MOV

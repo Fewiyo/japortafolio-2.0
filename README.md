@@ -35,14 +35,18 @@ Luego entra a `http://localhost:5173`.
 ## Estructura
 
 ```
-index.html        Inicio: titular, proyectos, servicios, contacto
-proyecto.html     Caso de estudio (recibe ?id=... del proyecto)
-historia.html     Sobre mí, trayectoria e instituciones
-css/style.css     Todo el estilo (tokens de color, tipografía, layout)
-js/data.js        ← TODO EL CONTENIDO. Es el único archivo que editas.
-js/main.js        Motor que arma las páginas desde data.js
-assets/img/       Tus fotos de proyecto
-assets/files/     Tu CV en PDF
+index.html          Inicio: titular, proyectos, servicios, contacto
+proyecto.html       Caso de estudio (recibe ?id=... del proyecto)
+cursos.html         Listado de cursos impartidos
+curso.html          Ficha de un curso (recibe ?id=... del curso)
+historia.html       Sobre mí, trayectoria e instituciones
+css/style.css       Todo el estilo (tokens de color, tipografía, layout)
+js/data.js          ← TODO EL CONTENIDO. Es el único archivo que editas.
+js/main.js          Motor que arma las páginas desde data.js
+assets/img/         Tus fotos de proyecto
+assets/img/cursos/  Fotos de los cursos
+assets/video/       Videos propios de los cursos
+assets/files/       Tu CV en PDF
 ```
 
 ## Cómo editar el contenido
@@ -71,6 +75,51 @@ proyectos: {
   intro: ""
 }
 ```
+
+### Cursos
+
+Los cursos son un tipo de contenido aparte de los proyectos: viven en el array `cursos` y tienen su propio listado (`cursos.html`) y su propia ficha (`curso.html?id=`).
+
+Los siete cursos de PENTA UC ya están cargados con su contenido real, extraído de los programas oficiales de cada curso.
+
+```js
+{
+  id: "robots-makers-en-accion",   // aparece en la URL, sin espacios ni tildes
+  nombre: "Robots Makers en Acción",
+  subtitulo: "Crea tu primer robot explorador",
+  etiqueta: "Curso semestral",     // Curso semestral / Curso de verano / Taller…
+  anio: "2024",
+  periodo: "Segundo semestre 2024",
+  cargo: "Profesor titular y creador del curso",
+  institucion: "PENTA UC",
+  nivel: "1º y 2º medio",
+  duracion: "14 sesiones",
+  equipo: "Ayudante: Elvis Andrade Torres",   // opcional
+  resumen: "Una línea de gancho.",
+  portada: "assets/img/cursos/robots-makers-01.jpg",
+  descripcion: ["Párrafo uno.", "Párrafo dos."],
+  destacados: [                    // recuadros bajo la descripción
+    { titulo: "Curso de creación propia", texto: "…" }
+  ],
+  temario: [
+    { titulo: "Presentación y formación de equipos", detalle: "Programa y reglas." }
+  ],
+  galeria: [
+    { tipo: "imagen",  src: "assets/img/cursos/robots-makers-02.jpg", pie: "Pie de foto." },
+    { tipo: "youtube", src: "dQw4w9WgXcQ",                            pie: "Video del curso." }
+  ]
+}
+```
+
+En la tarjeta del listado se muestran `etiqueta`, `anio` y `nivel` como etiquetas sobre la foto, y `nombre` con `cargo` e `institucion` debajo. Los campos vacíos no aparecen: si dejas `equipo: ""`, esa fila desaparece de la ficha.
+
+**Destacados.** Son los recuadros que aparecen bajo la descripción. Se usan para dejar constancia de la autoría de cada curso y, en los cursos 4, 5 y 6, del robot educativo desarrollado con Elvis Andrade.
+
+**Fotos.** Las del sitio viven en `assets/img/cursos/`, ya redimensionadas a 1600 px y **sin metadatos EXIF** — los JPG de teléfono guardan coordenadas GPS, y estas fotos son de colegios con menores de edad.
+
+**Videos.** No se suben al repositorio: GitHub rechaza archivos sobre 100 MB y varios de los originales pasan los 200 MB. `.gitignore` los excluye. Para incluir uno, súbelo a YouTube y agrégalo como `{ tipo: "youtube", src: "ID" }`.
+
+**Material original.** La carpeta `Penta UC/` tiene 4,2 GB de fotos y videos en bruto más los programas de cada curso. Está excluida del repositorio a propósito: es el archivo de trabajo, no se publica.
 
 ### Cambiar un proyecto
 
