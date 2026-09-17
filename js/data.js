@@ -987,21 +987,30 @@ const SITE = {
     retrato: "assets/img/retrato.jpg",
     parrafos: [
       "Estudié diseño industrial en la Universidad Diego Portales. Empecé diseñando objetos y terminé diseñando los lugares donde se hacen los objetos: laboratorios de fabricación digital, programas de curso, kits que un profesor puede usar sin que yo esté al lado.",
-      "Entre 2022 y 2024 dirigí sistemas de gestión en Ideo Maker, donde armé salas maker para colegios y fundaciones, del plano al primer prototipo. En paralelo creé y dicté siete cursos en el Programa PENTA UC de la Universidad Católica, sobre robótica, diseño de juegos y tecnología, para estudiantes de enseñanza básica y media. Los siete son de creación propia: propuesta, programa, metodología y material.",
+      "Entre 2022 y 2025 fui director de investigación, desarrollo e innovación en Ideo Maker, donde armé salas maker para colegios y fundaciones, del plano al primer prototipo. En paralelo creé y dicté siete cursos en el Programa PENTA UC de la Universidad Católica, sobre robótica, diseño de juegos y tecnología, para estudiantes de enseñanza básica y media. Los siete son de creación propia: propuesta, programa, metodología y material.",
       "Lo que me interesa es la parte que nadie fotografía. Que el FabLab siga funcionando tres años después de la inauguración. Que el protocolo de seguridad esté escrito. Que el profesor pueda dar la clase sin mí. Un espacio maker que depende de quien lo instaló no es un espacio maker, es una demostración.",
-      "Antes de eso fui jefe de diseño gráfico en Converso y fotógrafo para la Organización Panamericana de la Salud. Hoy sumo a todo eso el desarrollo de aplicaciones y plataformas web, casi siempre a partir de un problema concreto: un entrenamiento que quería medir, un inventario que se llevaba en papel, una barrera de idioma en una consulta médica. Busco proyectos donde el diseño tenga que quedar operando, y no solamente entregado."
+      "Antes de eso fui jefe de diseño en Converso, diseñador gráfico en el INFAS de la Universidad Alberto Hurtado y fotógrafo para la CEPAL y la Organización Panamericana de la Salud. Hoy sumo a todo eso el desarrollo de aplicaciones y plataformas web, casi siempre a partir de un problema concreto: un entrenamiento que quería medir, un inventario que se llevaba en papel, una barrera de idioma en una consulta médica. Busco proyectos donde el diseño tenga que quedar operando, y no solamente entregado."
     ],
     /* Trayectoria: [años, cargo, organización] */
     trayectoria: [
-      ["2022 — 2024", "Director de Sistemas de Gestión", "Ideo Maker"],
-      ["2022 — 2024", "Docente", "Pontificia Universidad Católica de Chile"],
-      ["2023",        "Fotógrafo", "Organización Panamericana de la Salud"],
-      ["2021",        "Jefe de Diseño Gráfico", "Converso"]
+      ["2022 — 2025", "Director de Investigación, Desarrollo e Innovación", "Ideo Maker"],
+      ["2023 — 2025", "Docente",                                            "PENTA UC, Pontificia Universidad Católica de Chile"],
+      ["2025",        "Profesor del taller de robótica",                    "Escuela Francisco Bilbao, Recoleta"],
+      ["2025",        "Docente, Exploración Espacial y Robótica",           "Programa CREA UC"],
+      ["2024",        "Diseñador de Investigación y Desarrollo",            "Atacama Biomaterials"],
+      ["2024",        "Docente, Robótica y Design Thinking",                "Colegio Andrés Bello"],
+      ["2023",        "Consultor de Diseño Instruccional",                  "TICAL"],
+      ["2023",        "Fotógrafo",                                          "CEPAL y Organización Panamericana de la Salud"],
+      ["2022 — 2023", "Docente de robótica",                                "Municipalidad de Lo Barnechea"],
+      ["2021",        "Jefe de Diseño",                                     "Converso"],
+      ["2021",        "Diseñador gráfico",                                  "INFAS, Universidad Alberto Hurtado"],
+      ["2019 — 2021", "Integrante de la Mesa de Salud Mental",              "Universidad Diego Portales"]
     ],
     colaboraciones: [
-      "Ideo Maker", "PENTA UC", "OPS/PAHO", "Universidad Diego Portales",
-      "Universidad Alberto Hurtado", "País Digital", "LH&A London",
-      "Municipalidad de Lo Barnechea", "TICAL"
+      "Ideo Maker", "PENTA UC", "CREA UC", "Universidad Diego Portales",
+      "Universidad Alberto Hurtado", "Atacama Biomaterials", "CEPAL", "OPS/PAHO",
+      "País Digital", "Colegio Andrés Bello", "Corporación Santa Cruz",
+      "Municipalidad de Lo Barnechea", "TICAL", "LH&A London"
     ]
   },
 
