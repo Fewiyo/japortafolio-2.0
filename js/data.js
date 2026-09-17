@@ -60,7 +60,7 @@ const SITE = {
      muestra, asi que no queda ningun enlace roto: sube el archivo a
      assets/files/ y pega el nombre aqui para que aparezca solo. */
   descargas: [
-    { nombre: "Descargar mi CV",     url: "" },
+    { nombre: "Descargar mi CV",     url: "assets/files/cv-vicente-caceres-2025.pdf" },
     { nombre: "Descargar portafolio", url: "" }
   ],
 

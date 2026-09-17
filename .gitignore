@@ -32,3 +32,8 @@ Penta UC/
 *.mov
 *.MP4
 *.MOV
+
+# El CV con datos personales se queda en el disco. Lo que se publica es
+# una copia sin RUT, direccion, fecha de nacimiento ni telefono, y vive
+# en assets/files/.
+/CV_*.pdf

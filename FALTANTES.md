@@ -28,10 +28,22 @@ Los dos botones de descarga están programados pero no se dibujan mientras no ha
 que por ahora no hay ningún enlace roto. Para activarlos: deja el PDF en `assets/files/` y pega
 el nombre en `descargas` dentro de `js/data.js`.
 
-| Qué | Dónde va |
+| Qué | Estado |
 |---|---|
-| CV en PDF | `assets/files/cv-vicente-caceres.pdf` |
-| Portafolio en PDF | `assets/files/portafolio-vicente-caceres.pdf` |
+| CV en PDF | Listo. `assets/files/cv-vicente-caceres-2025.pdf` |
+| Portafolio en PDF | Falta. Déjalo en `assets/files/portafolio-vicente-caceres.pdf` |
+
+El CV publicado **no es el mismo archivo** que tienes en el escritorio. Al original se le
+borraron cuatro datos que no pueden quedar a descarga libre: RUT, dirección, fecha de nacimiento
+y WhatsApp. Es redacción de verdad, no un rectángulo encima: el texto no se puede copiar ni
+extraer. Quedan huecos visibles donde estaban esas líneas, y también se fue la etiqueta
+"Portafolio:" porque compartía renglón con el RUT.
+
+Cuando reexportes el CV desde Illustrator sin esas líneas, el reemplazo queda sin huecos.
+**Al hacerlo, revisa que el archivo nuevo tampoco traiga esos datos antes de subirlo.**
+
+El CV con los datos completos está en la raíz del proyecto y lo cubre la regla `/CV_*.pdf` del
+`.gitignore`, para que no se suba por accidente.
 
 ---
 
