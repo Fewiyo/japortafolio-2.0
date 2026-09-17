@@ -398,7 +398,10 @@ ul{list-style:none; padding:0}
 .prose{max-width:62ch}
 
 /* Retrato y bio de la pagina Historia */
-.bio{display:grid; gap:32px}
+/* El titular y el texto quedaban pegados: la seccion entra con
+   padding-top:0 y .case-head no trae nada abajo. El aire se pone aca
+   para no mover las fichas de proyecto, que ya lo resuelven solas. */
+.bio{display:grid; gap:32px; margin-top:clamp(48px, 7vw, 96px)}
 .retrato{order:-1; margin:0; max-width:300px}  /* en movil el retrato va primero */
 .retrato img{
   display:block; width:100%; height:auto;
