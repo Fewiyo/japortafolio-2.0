@@ -104,7 +104,19 @@ entrar como proyecto.
 
 ---
 
-## 6. La página Historia
+## 6. El retrato es provisorio
+
+La foto de la página Historia la puso Vicente "por mientras": es una foto en la calle, con un
+helado en la mano, recortada a cuadrado desde
+`Otras pegas/identidad-propia/imagenes/foto plataforma.jpg`.
+
+Funciona, pero lee más como foto de viaje que como retrato de portafolio, y esa página es donde
+alguien decide si te escribe. Cuando haya una tomada para esto, reemplaza
+`assets/img/retrato.jpg`: tiene que ser cuadrada, 1200×1200, y sin metadatos.
+
+---
+
+## 7. La página Historia
 
 Los tres párrafos de la bio eran instrucciones para ti mismo, no texto publicable. Los escribí a
 partir de lo que el propio sitio ya afirma: tu carrera en la UDP, Ideo Maker entre 2022 y 2024,
@@ -115,7 +127,7 @@ habla de ti en primera persona. Es lo único del sitio que escribí poniéndote 
 
 ---
 
-## 7. Pendiente de otra conversación
+## 8. Pendiente de otra conversación
 
 - **La URL del blog.** La pestaña existe, atenuada, hasta que pegues la dirección en
   `SITE.blog.url`.
