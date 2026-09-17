@@ -977,7 +977,7 @@ const SITE = {
 
   /* ---------- Página Historia ---------- */
   historia: {
-    titular: "Diseño cosas que otras personas tienen que poder mantener funcionando.",
+    titular: "Diseño experiencias a la medida del usuario.",
     retrato: "assets/img/retrato.jpg",
     parrafos: [
       "Estudié diseño industrial en la Universidad Diego Portales. Empecé diseñando objetos y terminé diseñando los lugares donde se hacen los objetos: laboratorios de fabricación digital, programas de curso, kits que un profesor puede usar sin que yo esté al lado.",
