@@ -229,21 +229,64 @@ ul{list-style:none; padding:0}
 .card__title{font-size:15px}
 .card__meta{font-size:13px; color:var(--muted); text-align:right}
 
-/* Etiquetas sobre la imagen, visibles al pasar el cursor */
+/* Etiquetas bajo la imagen, en la zona de informacion: encima de la
+   foto la ensuciaban y tapaban justo lo que hay que mirar. */
+.card__info{padding:20px 24px 22px}
+.card__bar{padding:0}
 .card__tags{
-  position:absolute; left:20px; bottom:20px; right:20px;
-  display:flex; flex-wrap:wrap; gap:8px;
-  opacity:0; transform:translateY(6px);
-  transition:opacity .35s var(--ease), transform .35s var(--ease);
+  display:flex; flex-wrap:wrap; gap:6px;
+  margin-top:14px;
 }
-.card:hover .card__tags{opacity:1; transform:none}
-/* en pantallas tactiles no hay hover: las etiquetas se muestran siempre */
-@media (hover:none){ .card__tags{opacity:1; transform:none} }
 .tag{
-  font-size:14px; line-height:20px;
+  font-size:12px; line-height:18px;
+  padding:3px 10px; border-radius:999px;
+  border:1px solid var(--line); color:var(--muted);
+}
+.card[hidden]{display:none}
+
+/* ---------- Filtro del catalogo ---------- */
+.filtros{
+  display:flex; flex-wrap:wrap; gap:8px;
+  margin:0 0 28px;
+}
+.filtro{
+  display:inline-flex; align-items:center; gap:7px;
+  font:inherit; font-size:13px; line-height:20px;
   padding:6px 14px; border-radius:999px;
-  background:rgba(0,0,0,.72); color:#fff;
-  backdrop-filter:blur(6px);
+  border:1px solid var(--line); background:transparent; color:var(--muted);
+  cursor:pointer;
+  transition:color .2s var(--ease), border-color .2s var(--ease), background-color .2s var(--ease);
+}
+.filtro:hover{color:var(--fg); border-color:var(--fg)}
+.filtro.is-on{
+  background:var(--invert-bg); border-color:var(--invert-bg); color:var(--invert-fg);
+}
+.filtro__n{font-size:11px; opacity:.6; font-variant-numeric:tabular-nums}
+/* Las etiquetas de un solo proyecto se despliegan a pedido */
+.filtro--extra{display:none}
+.filtros.muestra-todo .filtro--extra{display:inline-flex}
+/* la elegida se ve siempre, aunque se cierre el desplegable */
+.filtro--extra.is-on{display:inline-flex}
+.filtro--mas{border-style:dashed}
+.filtros.muestra-todo .filtro--mas{order:1}
+.filtros__estado{
+  font-size:13px; color:var(--muted);
+  margin:-16px 0 24px; min-height:20px;
+}
+
+/* Boton secundario, en linea: codigo en GitHub y descargas */
+.btn--linea{
+  background:transparent; color:var(--fg);
+  border:1px solid var(--line);
+}
+.btn--linea:hover{border-color:var(--fg)}
+.acciones{
+  display:flex; flex-wrap:wrap; gap:12px;
+  margin-top:28px;
+}
+.footer__descargas{
+  display:flex; flex-wrap:wrap; gap:12px;
+  margin-top:28px;
 }
 
 /* ---------- Servicios ----------

@@ -1,0 +1,122 @@
+# Faltantes
+
+Todo lo que el sitio **no** dice porque todavía no lo sabemos. Antes esto vivía como texto
+`PLACEHOLDER` dentro de las propias páginas, a la vista de cualquiera que entrara. Ahora vive acá.
+
+Ninguna de estas líneas se publica. Cuando tengas el dato, se escribe en `js/data.js` y se borra
+de esta lista.
+
+Última revisión: 17 de septiembre de 2026.
+
+---
+
+## 1. Servicios
+
+Quedaste de mandarme la lista. Hoy el sitio ofrece cuatro: diseño de servicios, creación de
+FabLabs, docencia y STEAM, y fabricación digital.
+
+Mirando tu propio catálogo, hay tres cosas que haces y que no aparecen como servicio: el
+desarrollo de aplicaciones y plataformas web (diez proyectos, lo que más peso tiene hoy), la
+fotografía (OPS y HAALUR) y el diseño editorial y de información (Plan Nacional RAM, Eloísa).
+Dime cuáles van y con qué palabras, o pásame las tuyas.
+
+---
+
+## 2. Archivos que no existen todavía
+
+Los dos botones de descarga están programados pero no se dibujan mientras no haya archivo, así
+que por ahora no hay ningún enlace roto. Para activarlos: deja el PDF en `assets/files/` y pega
+el nombre en `descargas` dentro de `js/data.js`.
+
+| Qué | Dónde va |
+|---|---|
+| CV en PDF | `assets/files/cv-vicente-caceres.pdf` |
+| Portafolio en PDF | `assets/files/portafolio-vicente-caceres.pdf` |
+
+---
+
+## 3. Repositorios: los diez son privados
+
+Cada proyecto web ya tiene su enlace a GitHub escrito en `js/data.js`, y la ficha sabe mostrarlo.
+Pero los diez repositorios son privados: comprobado uno por uno, todos responden 404 a quien no
+sea tú. Un enlace así no sirve de nada en un portafolio, así que el enlace está apagado con
+`repoPublico: false`.
+
+Cuando hagas público un repositorio, cambia ese `false` por `true` y el botón aparece solo.
+
+| Proyecto | Repositorio |
+|---|---|
+| SKU | `Fewiyo/sku` |
+| AnsioSOS | `Fewiyo/ansiosos` |
+| App Escalada | `Fewiyo/escalada` |
+| Granada | `Fewiyo/granada` |
+| Maker Lab | `Fewiyo/maker-lab` |
+| esdiseño | `Fewiyo/esdiseno` |
+| Mercado Público | `Fewiyo/mercado-publico` |
+| Estudiar Futuro | `Fewiyo/estudiar-futuro` |
+| Reporte Web Diseño | `Fewiyo/reporte-web-diseno` |
+| Proyecto IoT 01 | `Fewiyo/proyecto-iot-01` |
+
+---
+
+## 4. Datos que faltan, proyecto por proyecto
+
+**Sala Maker STEAM.** En qué establecimiento se implementó y en qué fecha. Qué quedó operando
+después. La página hoy muestra los renders y la foto de la sala construida, sin decir dónde es.
+
+**Plan Nacional RAM.** Para qué institución se hizo y qué más componía el encargo además del
+documento.
+
+**Kits educativos Bicho-bot.** Para qué nivel se diseñó, qué electrónica lleva, si llegó a
+producirse y en cuántos colegios se usó. Del proyecto solo se conserva el packaging, y eso es lo
+único que la ficha afirma hoy.
+
+**Eloísa.** El año, 2019, está deducido de la fecha de publicación en Behance (enero de 2020).
+Falta confirmarlo, saber en qué CESFAM se probó, si fue en equipo y con quiénes, y si el
+material quedó en uso.
+
+**Al tablero y Robots (curso 7).** A qué nivel se impartió. El campo está vacío, así que la ficha
+simplemente no muestra esa fila. Faltan también las sesiones del temario y los resultados, porque
+el curso está en marcha.
+
+**SKU.** Para qué inventario se hizo, si está en uso y si llegó a desplegarse.
+
+---
+
+## 5. Proyectos sin imagen propia
+
+**SKU** y **Proyecto IoT 01** tenían tres imágenes cada uno, pero no eran del proyecto: eran
+marcadores grises con una nota escrita encima pidiéndote la captura. Se borraron. Ahora esas dos
+fichas usan una portada lisa, que se lee como una decisión de diseño y no como un hueco.
+
+SKU necesita login y base de datos para mostrar algo, así que la captura tiene que salir de ti.
+
+**Registro fotográfico (OPS).** Salió del catálogo: no tenía ni una imagen ni un texto propio, solo
+marcadores. El dato no se perdió, sigue en tu trayectoria de la página Historia como
+"2023 · Fotógrafo · Organización Panamericana de la Salud". Si aparecen las fotos, vuelve a
+entrar como proyecto.
+
+---
+
+## 6. La página Historia
+
+Los tres párrafos de la bio eran instrucciones para ti mismo, no texto publicable. Los escribí a
+partir de lo que el propio sitio ya afirma: tu carrera en la UDP, Ideo Maker entre 2022 y 2024,
+los siete cursos de PENTA UC, Converso, la OPS y los proyectos web.
+
+**Léelos y corrígelos.** Son datos verificables, pero la voz es una propuesta mía y esa página
+habla de ti en primera persona. Es lo único del sitio que escribí poniéndote palabras en la boca.
+
+---
+
+## 7. Pendiente de otra conversación
+
+- **La URL del blog.** La pestaña existe, atenuada, hasta que pegues la dirección en
+  `SITE.blog.url`.
+- **La imagen para compartir** (`og:image`), que hoy no existe: al pegar el link en WhatsApp o
+  LinkedIn sale sin miniatura. Necesita una URL absoluta, así que hay que decidir antes si apunta
+  a GitHub Pages o a japortafolio.com.
+- **Las fotos con menores** de Congreso Futuro y Eloísa, esperando que confirmes si tu
+  instrucción de usar las fotos con personas las incluye. Está explicado en
+  `Otras pegas/LEEME.md`.
+- **Migrar a Hostinger**, al dominio japortafolio.com.

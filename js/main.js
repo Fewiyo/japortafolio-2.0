@@ -13,21 +13,19 @@
     });
   };
 
-  /* ---------- Marcador de imagen (se usa cuando img esta vacio) ---------- */
+  /* ---------- Portada lisa (se usa cuando img esta vacio) ----------
+     Sin la palabra "IMAGEN" encima: el titulo ya va en la tarjeta, y un
+     fondo liso se lee como una decision y no como algo que falta. */
   function placeholder(label, i) {
-    var tints = ["#e9e7e3", "#e4e6e6", "#eae6e0", "#e5e7e3", "#e8e4e6", "#e3e6ea"];
-    var bg = tints[i % tints.length];
+    /* Los colores salen de las variables del tema, no van fijos: asi la
+       portada acompana al modo claro y al oscuro en vez de pelearse. */
     return (
-      '<svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="' +
-      esc(label) + '">' +
+      '<svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" class="portada-lisa" ' +
+      'role="img" aria-label="' + esc(label) + '">' +
       '<defs><pattern id="p' + i + '" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">' +
-      '<line x1="0" y1="0" x2="0" y2="26" stroke="rgba(0,0,0,.055)" stroke-width="9"/></pattern></defs>' +
-      '<rect width="800" height="600" fill="' + bg + '"/>' +
+      '<line x1="0" y1="0" x2="0" y2="26" stroke="var(--line)" stroke-width="9"/></pattern></defs>' +
+      '<rect width="800" height="600" fill="var(--card)"/>' +
       '<rect width="800" height="600" fill="url(#p' + i + ')"/>' +
-      '<text x="400" y="298" text-anchor="middle" font-family="Inter, sans-serif" font-size="19" ' +
-      'letter-spacing="2.4" fill="rgba(0,0,0,.34)">IMAGEN</text>' +
-      '<text x="400" y="326" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" ' +
-      'fill="rgba(0,0,0,.26)">' + esc(label) + '</text>' +
       "</svg>"
     );
   }
@@ -77,10 +75,19 @@
 
   /* ---------- Footer ---------- */
   function footer() {
+    /* Solo se dibuja la descarga que tenga archivo: sin url no hay enlace roto. */
+    var descargas = (SITE.descargas || []).filter(function (d) { return d.url; });
     return (
-      '<footer class="footer"><div class="wrap">' +
+      '<footer class="footer" id="contacto"><div class="wrap">' +
       '<p class="eyebrow">' + esc(SITE.footer) + "</p>" +
       '<h2 class="rise">Escríbeme a <a href="mailto:' + esc(SITE.email) + '">' + esc(SITE.email) + "</a></h2>" +
+      (descargas.length
+        ? '<div class="footer__descargas rise">' +
+          descargas.map(function (d) {
+            return '<a class="btn btn--linea" href="' + esc(d.url) + '" download>' + esc(d.nombre) + "</a>";
+          }).join("") +
+          "</div>"
+        : "") +
       '<div class="footer__bottom">' +
       '<div class="footer__social">' +
       SITE.redes.map(function (r) {
@@ -155,15 +162,59 @@
   }
 
   function cardCatalogo(it, i) {
+    /* Las etiquetas van bajo la imagen, no encima: sobre la foto la ensucian. */
     return (
-      '<a class="card rise" href="' + it.href + '">' +
-      '<div class="card__media">' + media(it.img, it.titulo, i) +
-      '<div class="card__tags">' +
-      it.etiquetas.map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") +
-      "</div></div>" +
+      '<a class="card rise" href="' + it.href + '" data-tags="' +
+      esc(it.etiquetas.join("|")) + '">' +
+      '<div class="card__media">' + media(it.img, it.titulo, i) + "</div>" +
+      '<div class="card__info">' +
       '<div class="card__bar"><span class="card__title">' + esc(it.titulo) + "</span>" +
       '<span class="card__meta">' + it.meta.filter(Boolean).map(esc).join("<br>") + "</span></div>" +
-      "</a>"
+      (it.etiquetas.length
+        ? '<div class="card__tags">' +
+          it.etiquetas.map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") +
+          "</div>"
+        : "") +
+      "</div></a>"
+    );
+  }
+
+  /* ---------- Filtro del catalogo ----------
+     Una fila con todas las etiquetas que existen, de la mas usada a la
+     menos usada. Es de seleccion unica: al elegir otra se cambia, y al
+     volver a hacer clic en la elegida se suelta. El filtrado ocurre en
+     el navegador sobre las tarjetas ya dibujadas. */
+  function barraFiltros(items) {
+    var cuenta = {};
+    items.forEach(function (it) {
+      it.etiquetas.forEach(function (t) { cuenta[t] = (cuenta[t] || 0) + 1; });
+    });
+    var tags = Object.keys(cuenta).sort(function (a, b) {
+      return cuenta[b] - cuenta[a] || a.localeCompare(b, "es");
+    });
+    /* Las que aparecen una sola vez son mas de la mitad y llenan la
+       pantalla antes del primer proyecto: quedan tras un "ver todas". */
+    var repetidas = tags.filter(function (t) { return cuenta[t] > 1; });
+    var unicas = tags.filter(function (t) { return cuenta[t] === 1; });
+
+    function chip(t, extra) {
+      return '<button class="filtro' + (extra ? " filtro--extra" : "") +
+        '" type="button" aria-pressed="false" data-tag="' + esc(t) + '">' + esc(t) +
+        '<span class="filtro__n">' + cuenta[t] + "</span></button>";
+    }
+
+    return (
+      '<div class="filtros rise" id="filtros">' +
+      '<button class="filtro is-on" type="button" aria-pressed="true" data-tag="">Todo' +
+      '<span class="filtro__n">' + items.length + "</span></button>" +
+      repetidas.map(function (t) { return chip(t, false); }).join("") +
+      unicas.map(function (t) { return chip(t, true); }).join("") +
+      (unicas.length
+        ? '<button class="filtro filtro--mas" type="button" id="filtros-mas" aria-expanded="false">' +
+          "Ver las otras " + unicas.length + "</button>"
+        : "") +
+      "</div>" +
+      '<p class="filtros__estado" id="filtros-estado" role="status"></p>'
     );
   }
 
@@ -219,9 +270,17 @@
       '<a class="back" href="index.html#catalogo">&larr; Volver al catálogo</a>' +
       '<h1 class="rise">' + esc(a.titulo) + "</h1>" +
       (a.resumen ? '<p class="lead rise">' + esc(a.resumen) + "</p>" : "") +
-      (a.link
-        ? '<p class="rise" style="margin-top:28px"><a class="btn" href="' + esc(a.link) +
-          '" target="_blank" rel="noopener"><span class="dot"></span>Abrir el proyecto</a></p>'
+      (a.link || (a.repo && a.repoPublico)
+        ? '<p class="acciones rise">' +
+          (a.link
+            ? '<a class="btn" href="' + esc(a.link) + '" target="_blank" rel="noopener">' +
+              '<span class="dot"></span>Abrir el proyecto</a>'
+            : "") +
+          (a.repo && a.repoPublico
+            ? '<a class="btn btn--linea" href="' + esc(a.repo) + '" target="_blank" rel="noopener">' +
+              'Ver el código en GitHub</a>'
+            : "") +
+          "</p>"
         : "") +
       '<div class="case-facts rise">' +
       datos.map(function (d) {
@@ -337,13 +396,14 @@
       '<header class="hero"><div class="wrap">' +
       '<h1 class="rise">' + SITE.titular + "</h1>" +
       '<div class="hero__row rise">' +
-      '<a class="btn" href="mailto:' + esc(SITE.email) + '"><span class="dot"></span>' + esc(SITE.cta) + "</a>" +
+      '<a class="btn" href="#contacto"><span class="dot"></span>' + esc(SITE.cta) + "</a>" +
       '<p class="hero__note">' + esc(SITE.bajada) + "</p>" +
       "</div></div></header>" +
 
       '<section class="section" id="catalogo"><div class="wrap">' +
       head(SITE.secciones.catalogo) +
-      '<div class="projects">' + catalogo().map(cardCatalogo).join("") + "</div>" +
+      barraFiltros(catalogo()) +
+      '<div class="projects" id="projects">' + catalogo().map(cardCatalogo).join("") + "</div>" +
       "</div></section>" +
 
       '<section class="section" id="servicios"><div class="wrap">' +
@@ -518,4 +578,50 @@
   addEventListener("resize", repasar, { passive: true });
   repasar();
   setTimeout(revelarTodo, 2000);
+
+  /* ---------- Filtrado del catalogo ----------
+     Trabaja sobre las tarjetas ya dibujadas: no vuelve a generar nada.
+     Al mostrar una tarjeta se la revela de inmediato, porque el
+     observador ya no la esta siguiendo. */
+  var barra = document.getElementById("filtros");
+  if (barra) {
+    var grilla = document.getElementById("projects");
+    var estado = document.getElementById("filtros-estado");
+    var tarjetas = [].slice.call(grilla.querySelectorAll(".card"));
+
+    barra.addEventListener("click", function (e) {
+      var boton = e.target.closest(".filtro");
+      if (!boton) return;
+
+      if (boton.id === "filtros-mas") {
+        var abierto = barra.classList.toggle("muestra-todo");
+        boton.setAttribute("aria-expanded", abierto ? "true" : "false");
+        boton.textContent = abierto
+          ? "Ver menos etiquetas"
+          : "Ver las otras " + barra.querySelectorAll(".filtro--extra").length;
+        return;
+      }
+
+      var tag = boton.dataset.tag;
+      /* segundo clic sobre la etiqueta ya elegida: se suelta */
+      if (tag && boton.classList.contains("is-on")) tag = "";
+
+      [].forEach.call(barra.querySelectorAll(".filtro"), function (x) {
+        var puesto = x.dataset.tag === tag;
+        x.classList.toggle("is-on", puesto);
+        x.setAttribute("aria-pressed", puesto ? "true" : "false");
+      });
+
+      var visibles = 0;
+      tarjetas.forEach(function (c) {
+        var entra = !tag || c.dataset.tags.split("|").indexOf(tag) > -1;
+        c.hidden = !entra;
+        if (entra) { visibles++; c.classList.add("in"); }
+      });
+
+      estado.textContent = tag
+        ? visibles + (visibles === 1 ? " proyecto" : " proyectos") + " con la etiqueta " + tag
+        : "";
+    });
+  }
 })();

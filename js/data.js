@@ -15,7 +15,7 @@ const SITE = {
 
   /* Frase corta bajo el botón */
   bajada:
-    "8+ años entre docencia, diseño de servicios y fabricación digital. Desde el aula hasta la puesta en marcha de FabLabs.",
+    "8 años entre docencia, diseño de servicios y fabricación digital. Desde el aula hasta la puesta en marcha de FabLabs.",
 
   cta: "Conversemos un proyecto",
 
@@ -38,7 +38,7 @@ const SITE = {
     catalogo: {
       eyebrow: "01 / Catálogo",
       titulo: "Todo lo que he hecho, de lo más reciente a lo más antiguo.",
-      intro: "Siete cursos de creación propia para el Programa PENTA UC de la Pontificia Universidad Católica de Chile, diez aplicaciones y plataformas web construidas con IA, y proyectos de diseño de servicios y fabricación digital. Todo del mismo porte y ordenado por fecha: ninguno pesa más que otro por dónde quedó en la grilla."
+      intro: "Siete cursos de creación propia para el Programa PENTA UC de la Pontificia Universidad Católica de Chile, diez aplicaciones y plataformas web construidas con IA, y proyectos de diseño de servicios y fabricación digital."
     },
     servicios: {
       eyebrow: "02 / Servicios",
@@ -49,10 +49,19 @@ const SITE = {
 
   /* ---------- Redes / enlaces ---------- */
   redes: [
-    { nombre: "Behance",   url: "https://behance.net/vcntja" },
-    { nombre: "Instagram", url: "https://instagram.com/estudia3d" },
     { nombre: "LinkedIn",  url: "https://www.linkedin.com/in/vicente-caceres-farias" },
-    { nombre: "CV (PDF)",  url: "assets/files/cv-vicente-caceres.pdf" }
+    { nombre: "GitHub",    url: "https://github.com/Fewiyo" },
+    { nombre: "Behance",   url: "https://behance.net/vcntja" },
+    { nombre: "Instagram", url: "https://instagram.com/estudia3d" }
+  ],
+
+  /* ---------- Descargas ----------
+     Van junto al boton de contacto. El que tenga la url vacia no se
+     muestra, asi que no queda ningun enlace roto: sube el archivo a
+     assets/files/ y pega el nombre aqui para que aparezca solo. */
+  descargas: [
+    { nombre: "Descargar mi CV",     url: "" },
+    { nombre: "Descargar portafolio", url: "" }
   ],
 
   /* ---------- Servicios ---------- */
@@ -133,7 +142,6 @@ const SITE = {
         { tipo: "imagen", valor: "assets/img/proyectos/salas-maker/04-render-acceso.jpg", pie: "El acceso al espacio maker, con la señalética del proyecto." },
         { tipo: "imagen", valor: "assets/img/proyectos/salas-maker/05-render-color.jpg", pie: "Estudio de color del espacio." },
         { tipo: "imagen", valor: "assets/img/proyectos/salas-maker/06-render-impresora.jpg", pie: "Zona de impresión 3D con su material de apoyo en el muro." },
-        { tipo: "texto", titulo: "La sala construida", valor: "PLACEHOLDER: en qué establecimiento se implementó y en qué fecha. Cierra con lo que quedó operando." },
         { tipo: "imagen", valor: "assets/img/proyectos/salas-maker/07-sala-construida.jpg", pie: "El muro de herramientas de la sala ya instalada." }
       ]
     },
@@ -171,8 +179,7 @@ const SITE = {
         { tipo: "texto", valor: "Diseño editorial del Chilean National Plan on Antimicrobial Resistance 2021-2025. Un documento de política pública tiene un problema de diseño particular: el contenido es técnico y extenso, pero el lector al que hay que convencer no siempre es técnico. La diagramación tiene que dejar entrar por la infografía a quien no va a leer las setenta páginas." },
         { tipo: "imagen", valor: "assets/img/proyectos/diseno-editorial/02-interior.jpg", pie: "Doble página interior: texto a dos columnas con fotografía de apoyo." },
         { tipo: "imagen", valor: "assets/img/proyectos/diseno-editorial/03-infografia.jpg", pie: "El plan de acción global resumido en una infografía." },
-        { tipo: "imagen", valor: "assets/img/proyectos/diseno-editorial/04-doble-pagina.jpg", pie: "Sistema de color por sección, aplicado al pie de cada página." },
-        { tipo: "texto", titulo: "Pendiente", valor: "PLACEHOLDER: para qué institución se hizo el plan y qué más componía el encargo además del documento." }
+        { tipo: "imagen", valor: "assets/img/proyectos/diseno-editorial/04-doble-pagina.jpg", pie: "Sistema de color por sección, aplicado al pie de cada página." }
       ]
     },
     {
@@ -205,7 +212,7 @@ const SITE = {
         "Kit de robótica de bajo costo para primer ciclo, diseñado para armarse sin herramientas y fabricarse por corte láser.",
       img: "assets/img/proyectos/kits-educativos/01-packaging.jpg",
       bloques: [
-        { tipo: "texto", valor: "PLACEHOLDER: esta es la ficha más incompleta del catálogo. Del proyecto solo sobrevivió el packaging. Falta para qué nivel se diseñó el kit, cómo se fabrica, qué electrónica lleva, si llegó a producirse y en cuántos colegios se usó." },
+        { tipo: "texto", valor: "Kit de robótica pensado para primer ciclo: se arma sin herramientas y sus piezas se fabrican por corte láser, que es lo que permite bajar el costo y reponer una pieza rota sin comprar el kit entero. De todo el proyecto se conserva el packaging, y es lo que se muestra acá." },
         { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/01-packaging.jpg", pie: "El packaging del kit: Bicho BOT, aprender creando." }
       ]
     },
@@ -232,22 +239,7 @@ const SITE = {
         { tipo: "imagen", valor: "assets/img/proyectos/eloisa/08-uso-2.jpg", pie: "Las fichas están pensadas para revisarse en mano, no para quedarse en un mesón." },
         { tipo: "imagen", valor: "assets/img/proyectos/eloisa/09-en-la-consulta.jpg", pie: "El sistema completo sobre el escritorio de la consulta, con el formulario en uso." },
         { tipo: "imagen", valor: "assets/img/proyectos/eloisa/10-profesional.jpg", pie: "La matrona explicando la ficha de pastillas anticonceptivas durante una atención." },
-        { tipo: "texto", titulo: "Probado en consulta", valor: "El material no se quedó en la maqueta: se usó en atenciones reales, con la profesional explicando y la paciente siguiendo la ficha. Ahí se ve si funciona o no. Una ficha que hay que sostener con las dos manos, o que se dobla justo donde está el dato importante, falla en la consulta aunque se vea bien impresa." },
-        { tipo: "texto", titulo: "Pendiente", valor: "PLACEHOLDER: el año lo deduje de la fecha de publicación en Behance, enero de 2020, así que el proyecto sería de 2019. Confírmalo. Falta también en qué CESFAM se probó, si fue en equipo y con quiénes, y si el material llegó a quedar en uso." }
-      ]
-    },
-    {
-      id: "registro-fotografico",
-      titulo: "Registro fotográfico",
-      cliente: "OPS / PAHO",
-      anio: "2023",
-      tags: ["Fotografía", "Documentación"],
-      resumen:
-        "Cobertura fotográfica de terreno para la Organización Panamericana de la Salud.",
-      img: "",
-      bloques: [
-        { tipo: "texto", valor: "PLACEHOLDER: el encargo, dónde fue y en qué condiciones se hizo el registro." },
-        { tipo: "imagen", valor: "", pie: "PLACEHOLDER: pie de foto." }
+        { tipo: "texto", titulo: "Probado en consulta", valor: "El material no se quedó en la maqueta: se usó en atenciones reales, con la profesional explicando y la paciente siguiendo la ficha. Ahí se ve si funciona o no. Una ficha que hay que sostener con las dos manos, o que se dobla justo donde está el dato importante, falla en la consulta aunque se vea bien impresa." }
       ]
     }
   ],
@@ -597,15 +589,14 @@ const SITE = {
       periodo: "Segundo semestre 2025",
       cargo: "Profesor titular y creador del curso",
       institucion: "PENTA UC",
-      nivel: "PLACEHOLDER: nivel al que se impartió",
+      nivel: "",
       duracion: "En curso",
       equipo: "",
       resumen: "Robots que juegan: programación por bloques y código, diseño centrado en el usuario y tableros construidos por los propios equipos para poner a prueba cada máquina.",
       portada: "assets/img/cursos/robots-juegos-portada.jpg",
       descripcion: [
         "El curso más reciente cruza las dos líneas que venía trabajando por separado: la robótica de los cursos espaciales y el diseño de juegos de Máquinas fabulosas. Los equipos ensamblan un robot, lo programan primero por bloques y después modificando el código directamente, y construyen el tablero o terreno sobre el que ese robot tiene que desempeñarse.",
-        "La etapa de empatía es explícita: cada equipo elige un tipo de usuario (niños pequeños, adultos mayores, alguien con una necesidad específica) y define cómo debe comportarse el robot para esa persona. El diseño de interacción deja de ser un accesorio y pasa a determinar la mecánica del juego.",
-        "PLACEHOLDER: El curso está en desarrollo. Cuando termine, actualiza esta descripción con los resultados y agrega las sesiones que faltan al temario."
+        "La etapa de empatía es explícita: cada equipo elige un tipo de usuario (niños pequeños, adultos mayores, alguien con una necesidad específica) y define cómo debe comportarse el robot para esa persona. El diseño de interacción deja de ser un accesorio y pasa a determinar la mecánica del juego."
       ],
       destacados: [
         {
@@ -663,15 +654,16 @@ const SITE = {
       estado: "en desarrollo",
       dominio: "Comercio",
       link: "",
-      repo: "",
+      repo: "https://github.com/Fewiyo/sku",
+      /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
+      repoPublico: false,
       resumen: "De una planilla de Excel a un inventario con etiquetas QR imprimibles y una página por producto.",
-      portada: "assets/img/ia/sku/01-portada.png",
+      portada: "",
       etiquetas: ["Aplicación", "Comercio", "Next.js", "Supabase", "Vercel", "Programado con IA", "Codex"],
       descripcion: [
         "SKU toma una planilla de Excel de productos y la convierte en tres cosas de una pasada: un código único por producto, una etiqueta imprimible con su código QR, y un inventario consultable. Cada producto queda además con su propia página web, de modo que escanear la etiqueta pegada en la caja lleva directo a la ficha de lo que hay adentro.",
         "Es el proyecto más reciente del conjunto y el que más se parece a una herramienta de trabajo y no a un experimento: resuelve un problema de bodega concreto, no una pregunta técnica.",
-        "El historial del repositorio muestra que no se quedó en la idea: tiene aislamiento por establecimiento detrás de un login (cada local ve solo su inventario), etiquetas de 20×50 mm en las dos orientaciones con un diseño que las cuadra en la hoja, y un comando para probar la conexión a la base sin tener que redesplegar. Eso último es de alguien que ya se cansó de depurar a ciegas.",
-        "PENDIENTE: para qué inventario se hizo, si está en uso y si llegó a desplegarse. Eso no lo puedo saber desde el repositorio.",
+        "No se quedó en la idea. Cada establecimiento ve solo su inventario, detrás de un login. Las etiquetas salen en 20×50 mm en las dos orientaciones, con un diseño que las cuadra en la hoja sin desperdicio. Y hay un comando para probar la conexión a la base sin redesplegar: eso último es de alguien que ya se cansó de depurar a ciegas.",
       ],
       bitacora: [
         { fecha: "2026-07-29", titulo: "Etiquetas que cuadran en la hoja", texto: "Etiquetas de 20×50 mm en las dos orientaciones, con un diseño de página que las calza sin desperdiciar papel." },
@@ -679,9 +671,6 @@ const SITE = {
         { fecha: "2026-07-27", titulo: "Arranca el proyecto", texto: "Generación de códigos, etiquetas QR imprimibles, inventario desde planilla y una página por producto." },
       ],
       galeria: [
-        { src: "assets/img/ia/sku/01-portada.png", pie: "el inventario cargado desde la planilla." },
-        { src: "assets/img/ia/sku/02-etiquetas.png", pie: "la hoja de etiquetas QR lista para imprimir." },
-        { src: "assets/img/ia/sku/03-producto.png", pie: "la página de un producto." },
       ]
     },
     {
@@ -694,7 +683,9 @@ const SITE = {
       estado: "en desarrollo",
       dominio: "Salud, Educación",
       link: "https://ansiosos.vercel.app",
-      repo: "",
+      repo: "https://github.com/Fewiyo/ansiosos",
+      /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
+      repoPublico: false,
       resumen: "La memoria de título de 2021 convertida en una plataforma real para manejar la ansiedad universitaria.",
       portada: "assets/img/ia/ansiosos/01-portada.png",
       etiquetas: ["Aplicación", "Salud", "Educación", "React", "PWA", "Vercel", "Programado con IA", "Investigación con IA", "Codex"],
@@ -705,16 +696,16 @@ const SITE = {
       ],
       bitacora: [
         { fecha: "2026-07-29", titulo: "Deja de estar escondida", texto: "Se desactiva la protección de despliegue del hosting, que tenía la dirección buena detrás de un login y dejaba como única URL funcional un nombre autogenerado, impresentable para enlazar una memoria de título. Un interruptor tuvo escondido dos meses el proyecto con mejor historia del conjunto." },
-        { fecha: "2026-07-20", titulo: "Protección de claves antes de necesitarlas", texto: "Se cierra el `.gitignore` para archivos de entorno. Hoy el proyecto no tiene secretos, pero la fase con backend va a necesitarlos y el primero se habría commiteado en silencio." },
+        { fecha: "2026-07-20", titulo: "Protección de claves antes de necesitarlas", texto: "Se cierra el .gitignore para archivos de entorno. Hoy el proyecto no tiene secretos, pero la fase con backend va a necesitarlos y el primero se habría commiteado en silencio." },
         { fecha: "2026-07-02", titulo: "El bug ético", texto: "Se detecta que el panel institucional permitía leer datos individuales. Se corrige y se fija el umbral de diez personas para cualquier dato agregado." },
         { fecha: "2026-07-02", titulo: "La taxonomía de datos", texto: "Se clasifica todo el contenido en tres niveles de sensibilidad y se fija la regla innegociable: pensamientos, chat e ideación no salen del dispositivo." },
         { fecha: "2026-07-02", titulo: "De prototipo a plataforma", texto: "La memoria de título de 2021 deja de ser una maqueta: 70 archivos, 17 componentes, 14 pantallas funcionando." },
       ],
       galeria: [
-        { src: "assets/img/ia/ansiosos/01-portada.png", pie: "✅ El inicio con los ejercicios para disminuir la ansiedad." },
-        { src: "assets/img/ia/ansiosos/02-ejercicios.png", pie: "✅ El catálogo de ejercicios." },
-        { src: "assets/img/ia/ansiosos/03-plan.png", pie: "✅ El plan de seguridad personal (sin datos, recién inicializado)." },
-        { src: "assets/img/ia/ansiosos/04-panel.png", pie: "✅ El panel institucional: \"solo conteo, nunca quién\"." },
+        { src: "assets/img/ia/ansiosos/01-portada.png", pie: "El inicio con los ejercicios para disminuir la ansiedad." },
+        { src: "assets/img/ia/ansiosos/02-ejercicios.png", pie: "El catálogo de ejercicios." },
+        { src: "assets/img/ia/ansiosos/03-plan.png", pie: "El plan de seguridad personal (sin datos, recién inicializado)." },
+        { src: "assets/img/ia/ansiosos/04-panel.png", pie: "El panel institucional: \"solo conteo, nunca quién\"." },
       ]
     },
     {
@@ -727,7 +718,9 @@ const SITE = {
       estado: "terminado",
       dominio: "Deporte, Datos",
       link: "https://escalada-xi.vercel.app",
-      repo: "",
+      repo: "https://github.com/Fewiyo/escalada",
+      /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
+      repoPublico: false,
       resumen: "Entrenamiento de escalada con análisis de técnica por visión computacional, funcionando sin internet.",
       portada: "assets/img/ia/app-escalada/01-portada.png",
       etiquetas: ["Aplicación", "Deporte", "Datos", "React", "MediaPipe", "PWA", "Vercel", "IA en el producto", "Programado con IA", "Codex"],
@@ -743,10 +736,10 @@ const SITE = {
         { fecha: "2026-07-01", titulo: "Arranca el proyecto", texto: "Rutinas, metas por color de ruta y nutrición. Todo local, sin cuenta ni backend." },
       ],
       galeria: [
-        { src: "assets/img/ia/app-escalada/01-portada.png", pie: "✅ El resumen de entrenamiento con la racha semanal." },
-        { src: "assets/img/ia/app-escalada/02-tecnica.png", pie: "✅ El módulo de técnica: todo se procesa en el teléfono." },
-        { src: "assets/img/ia/app-escalada/03-rutinas.png", pie: "✅ Las cinco rutinas, con duración y proteína objetivo." },
-        { src: "assets/img/ia/app-escalada/04-rutas.png", pie: "✅ Las metas por color de ruta." },
+        { src: "assets/img/ia/app-escalada/01-portada.png", pie: "El resumen de entrenamiento con la racha semanal." },
+        { src: "assets/img/ia/app-escalada/02-tecnica.png", pie: "El módulo de técnica: todo se procesa en el teléfono." },
+        { src: "assets/img/ia/app-escalada/03-rutinas.png", pie: "Las cinco rutinas, con duración y proteína objetivo." },
+        { src: "assets/img/ia/app-escalada/04-rutas.png", pie: "Las metas por color de ruta." },
       ]
     },
     {
@@ -759,7 +752,9 @@ const SITE = {
       estado: "en desarrollo",
       dominio: "Hogar",
       link: "",
-      repo: "",
+      repo: "https://github.com/Fewiyo/granada",
+      /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
+      repoPublico: false,
       resumen: "Repartir las tareas de una casa entre tres personas sin que nadie tenga que llevar la cuenta.",
       portada: "assets/img/ia/granada-tareas-del-hogar/01-portada.png",
       etiquetas: ["Aplicación", "Hogar", "JavaScript", "Supabase", "PWA", "Vercel", "Programado con IA", "Codex"],
@@ -777,11 +772,11 @@ const SITE = {
         { fecha: "2026-07-06", titulo: "Arranca el proyecto", texto: "Primera versión: aplicación instalable, sin backend, todo en el dispositivo." },
       ],
       galeria: [
-        { src: "assets/img/ia/granada-tareas-del-hogar/01-portada.png", pie: "✅ La selección de perfil: Sofía, Matías y Renata." },
-        { src: "assets/img/ia/granada-tareas-del-hogar/02-hoy.png", pie: "✅ Hoy, con el resumen de ayer y las tareas del día." },
-        { src: "assets/img/ia/granada-tareas-del-hogar/03-tareas.png", pie: "✅ La lista completa de tareas." },
-        { src: "assets/img/ia/granada-tareas-del-hogar/04-mes.png", pie: "✅ La grilla del mes." },
-        { src: "assets/img/ia/granada-tareas-del-hogar/05-yo.png", pie: "✅ El balance personal y el aporte de la casa, sin ranking." },
+        { src: "assets/img/ia/granada-tareas-del-hogar/01-portada.png", pie: "La selección de perfil: Sofía, Matías y Renata." },
+        { src: "assets/img/ia/granada-tareas-del-hogar/02-hoy.png", pie: "Hoy, con el resumen de ayer y las tareas del día." },
+        { src: "assets/img/ia/granada-tareas-del-hogar/03-tareas.png", pie: "La lista completa de tareas." },
+        { src: "assets/img/ia/granada-tareas-del-hogar/04-mes.png", pie: "La grilla del mes." },
+        { src: "assets/img/ia/granada-tareas-del-hogar/05-yo.png", pie: "El balance personal y el aporte de la casa, sin ranking." },
       ]
     },
     {
@@ -794,7 +789,9 @@ const SITE = {
       estado: "en desarrollo",
       dominio: "Educación, Fabricación digital",
       link: "https://maker-lab-ja18.vercel.app",
-      repo: "",
+      repo: "https://github.com/Fewiyo/maker-lab",
+      /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
+      repoPublico: false,
       resumen: "Un juego de laboratorio maker donde programar con bloques exporta código Arduino que funciona de verdad.",
       portada: "assets/img/ia/maker-lab/01-portada.png",
       etiquetas: ["Aplicación", "Educación", "Fabricación digital", "React", "Blockly", "Arduino", "Programado con IA", "Codex"],
@@ -802,7 +799,7 @@ const SITE = {
         "Un juego web de laboratorio maker escolar: el estudiante recolecta materiales, fabrica piezas, monta estaciones de trabajo y programa hardware con bloques. La diferencia con un juego de programación por bloques cualquiera es que el código que sale de esos bloques es Arduino real, listo para cargar en un microcontrolador. El puente entre el juego y el taller físico es el punto entero. Trece nodos de conocimiento, cinco estaciones, veintitrés recetas de fabricación y cinco prototipos como meta.",
         "El generador de código Arduino está escrito a mano. Las bibliotecas que hacen esto ya existen, pero todas están abandonadas: la más conocida no se toca desde 2018 y otra ni siquiera tiene licencia clara. Reescribirlo fue más barato que heredar un problema.",
         "Y el juego no se queda en recolectar y fabricar: al estudiar un nodo aparece un reto práctico real. El primero pide armar un circuito (pila, resistencia, LED, retorno a tierra) en el orden correcto y recién después programarlo. O sea, el error de electrónica se comete en pantalla antes de cometerse con componentes de verdad, que es exactamente para lo que sirve un simulador en un aula.",
-        "El taller de programación no es decorativo: los bloques se ejecutan contra un ESP32 simulado en pantalla (con sus pines reales, GPIO2 y compañía) y el mismo programa se puede ver como código Arduino o bajar como archivo `.ino` para cargarlo en una placa física. Ese es el puente completo, de bloque a placa, sin salir del navegador.",
+        "El taller de programación no es decorativo: los bloques se ejecutan contra un ESP32 simulado en pantalla (con sus pines reales, GPIO2 y compañía) y el mismo programa se puede ver como código Arduino o bajar como archivo .ino para cargarlo en una placa física. Ese es el puente completo, de bloque a placa, sin salir del navegador.",
         "Lo más inusual del proyecto no es el juego, es cómo se verifica. Hay dos pruebas generativas: un solver que recorre todo el árbol de progresión y detecta contenido inalcanzable o dependencias circulares antes de que nadie juegue, y un bot que juega la partida completa contra la lógica real del juego. Se comprobó rompiendo a propósito un desbloqueo. Falta el sistema de energía y guardar la partida: hoy el progreso se pierde al recargar, que en una sala de clases es fatal.",
       ],
       bitacora: [
@@ -812,9 +809,9 @@ const SITE = {
         { fecha: "2026-07-19", titulo: "Arranca el proyecto", texto: "Se define la economía del juego: 13 nodos de conocimiento, 5 estaciones, 23 recetas, 5 prototipos objetivo." },
       ],
       galeria: [
-        { src: "assets/img/ia/maker-lab/01-portada.png", pie: "✅ El laboratorio: recolectar, estaciones y árbol STEAM de 13 nodos." },
-        { src: "assets/img/ia/maker-lab/02-bloques.png", pie: "✅ El taller de programación con el ESP32 simulado y la descarga del `.ino`." },
-        { src: "assets/img/ia/maker-lab/03-reto.png", pie: "✅ Partida avanzada: inventario, pieza fabricada y el reto de armar el circuito." },
+        { src: "assets/img/ia/maker-lab/01-portada.png", pie: "El laboratorio: recolectar, estaciones y árbol STEAM de 13 nodos." },
+        { src: "assets/img/ia/maker-lab/02-bloques.png", pie: "El taller de programación con el ESP32 simulado y la descarga del archivo .ino." },
+        { src: "assets/img/ia/maker-lab/03-reto.png", pie: "Partida avanzada: inventario, pieza fabricada y el reto de armar el circuito." },
       ]
     },
     {
@@ -827,7 +824,9 @@ const SITE = {
       estado: "en desarrollo",
       dominio: "Educación, Diseño",
       link: "https://esdiseno.vercel.app",
-      repo: "",
+      repo: "https://github.com/Fewiyo/esdiseno",
+      /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
+      repoPublico: false,
       resumen: "La formación del diseñador chileno convertida en una malla navegable de eras, cursos y roles.",
       portada: "assets/img/ia/esdiseno-malla-del-diseno/01-portada.png",
       etiquetas: ["Plataforma web", "Educación", "Diseño", "React", "Supabase", "Vercel", "Programado con IA", "Codex"],
@@ -838,14 +837,14 @@ const SITE = {
         "Lo que falta no es técnico: es el contenido de las clases, grabar los videos de intro, conectar el dominio propio y el inicio de sesión con cuenta. La propia plataforma declara su hoja de ruta en tres fases (el mapa navegable, la plataforma de cursos, y datos y comunidad) y hoy está en la primera.",
       ],
       bitacora: [
-        { fecha: "2026-07-04", titulo: "En línea, sin dominio propio", texto: "Queda desplegada y accesible. El dominio `esdiseño.cl` está comprado y el plan de conexión escrito, pero sin ejecutar: por ahora vive en una dirección provisoria." },
+        { fecha: "2026-07-04", titulo: "En línea, sin dominio propio", texto: "Queda desplegada y accesible. El dominio esdiseño.cl está comprado y el plan de conexión escrito, pero sin ejecutar: por ahora vive en una dirección provisoria." },
         { fecha: "2026-07-04", titulo: "Modo invitado primero", texto: "Se decide que la plataforma sea 100% usable sin backend y que la base de datos solo sume cuentas y progreso. El esquema y los datos iniciales quedan escritos, pendientes de cargar." },
         { fecha: "2026-07-04", titulo: "Arranca el proyecto", texto: "Se define la estructura: 4 eras, 22 cursos, 66 clases, 7 roles." },
       ],
       galeria: [
-        { src: "assets/img/ia/esdiseno-malla-del-diseno/01-portada.png", pie: "✅ La malla por revoluciones industriales, con los cursos que nacen en cada una." },
-        { src: "assets/img/ia/esdiseno-malla-del-diseno/02-curso.png", pie: "✅ La ficha de un curso: ruta de aprendizaje, clase gratis y clases bloqueadas." },
-        { src: "assets/img/ia/esdiseno-malla-del-diseno/03-roles.png", pie: "✅ Los siete roles de salida con su sueldo referencial." },
+        { src: "assets/img/ia/esdiseno-malla-del-diseno/01-portada.png", pie: "La malla por revoluciones industriales, con los cursos que nacen en cada una." },
+        { src: "assets/img/ia/esdiseno-malla-del-diseno/02-curso.png", pie: "La ficha de un curso: ruta de aprendizaje, clase gratis y clases bloqueadas." },
+        { src: "assets/img/ia/esdiseno-malla-del-diseno/03-roles.png", pie: "Los siete roles de salida con su sueldo referencial." },
       ]
     },
     {
@@ -858,14 +857,16 @@ const SITE = {
       estado: "en desarrollo",
       dominio: "Datos, Comercio, Fabricación digital",
       link: "",
-      repo: "",
+      repo: "https://github.com/Fewiyo/mercado-publico",
+      /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
+      repoPublico: false,
       resumen: "Encontrar en las licitaciones del Estado las que sí tienen que ver con salas maker y fabricación digital.",
       portada: "assets/img/ia/mercado-publico/01-portada.png",
       etiquetas: ["Plataforma web", "Datos", "Comercio", "Fabricación digital", "React", "Vercel", "API pública", "Programado con IA", "Codex"],
       descripcion: [
         "Un buscador sobre los datos abiertos de compras públicas de Chile, filtrado a lo que de verdad importa en este oficio: aulas maker, laboratorios de fabricación, impresión 3D, corte láser y robótica educativa. El problema que resuelve es concreto y personal: el portal oficial publica cientos de licitaciones al día y las que sirven se pierden entre las que no.",
         "Tiene una decisión técnica que vale la pena anotar. La interfaz no habla directo con la API oficial, porque esa API no permite consultas desde el navegador; en medio hay una pequeña función de servidor que actúa de puente y además guarda las respuestas quince minutos, para no repetir la misma consulta. Eso resuelve dos cosas de una: el bloqueo del navegador y el gasto de llamadas. La clave de acceso a la API vive solo en el servidor, nunca en el código que llega al usuario.",
-        "El proyecto trae su propio modo de demostración, y está bien resuelto: con la variable de ejemplo activada carga cinco licitaciones de muestra y **muestra en pantalla un aviso diciendo que son datos de ejemplo**. No hay forma de confundir la demo con datos reales, ni para quien la ve ni para quien la programó tres meses después.",
+        "El proyecto trae su propio modo de demostración, y está bien resuelto: con la variable de ejemplo activada carga cinco licitaciones de muestra y muestra en pantalla un aviso diciendo que son datos de ejemplo. No hay forma de confundir la demo con datos reales, ni para quien la ve ni para quien la programó tres meses después.",
         "Lo que falta es desplegarlo para que consulte la API de verdad: pedir el ticket gratuito, configurarlo en el panel del hosting y validar contra el servicio. Una tarde, y es lo único que separa este proyecto de estar terminado.",
       ],
       bitacora: [
@@ -874,8 +875,8 @@ const SITE = {
         { fecha: "2026-07-02", titulo: "Arranca el proyecto", texto: "Se definen los términos de búsqueda del filtro maker." },
       ],
       galeria: [
-        { src: "assets/img/ia/mercado-publico/01-portada.png", pie: "✅ Cinco licitaciones de ejemplo, con el aviso de datos de muestra." },
-        { src: "assets/img/ia/mercado-publico/02-filtros.png", pie: "✅ El filtrado por categoría." },
+        { src: "assets/img/ia/mercado-publico/01-portada.png", pie: "Cinco licitaciones de ejemplo, con el aviso de datos de muestra." },
+        { src: "assets/img/ia/mercado-publico/02-filtros.png", pie: "El filtrado por categoría." },
       ]
     },
     {
@@ -888,7 +889,9 @@ const SITE = {
       estado: "en desarrollo",
       dominio: "Educación, Datos",
       link: "",
-      repo: "",
+      repo: "https://github.com/Fewiyo/estudiar-futuro",
+      /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
+      repoPublico: false,
       resumen: "Comparar becas y magísters de Chile y el extranjero según lo que uno realmente quiere estudiar.",
       portada: "assets/img/ia/estudiar-futuro/01-portada.png",
       etiquetas: ["Plataforma web", "Educación", "Datos", "React", "Programado con IA", "Codex"],
@@ -902,8 +905,8 @@ const SITE = {
         { fecha: "2026-07-04", titulo: "Arranca el proyecto", texto: "" },
       ],
       galeria: [
-        { src: "assets/img/ia/estudiar-futuro/01-portada.png", pie: "✅ Las nueve becas con su cobertura desglosada y los filtros por área." },
-        { src: "assets/img/ia/estudiar-futuro/02-magisters.png", pie: "✅ La pestaña de magísters." },
+        { src: "assets/img/ia/estudiar-futuro/01-portada.png", pie: "Las nueve becas con su cobertura desglosada y los filtros por área." },
+        { src: "assets/img/ia/estudiar-futuro/02-magisters.png", pie: "La pestaña de magísters." },
       ]
     },
     {
@@ -916,7 +919,9 @@ const SITE = {
       estado: "terminado",
       dominio: "Datos, Diseño, Educación",
       link: "",
-      repo: "",
+      repo: "https://github.com/Fewiyo/reporte-web-diseno",
+      /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
+      repoPublico: false,
       resumen: "Nueve pilares de datos sobre el estado real del diseño industrial en Chile, en un solo tablero.",
       portada: "assets/img/ia/reporte-web-diseno/01-portada.png",
       etiquetas: ["Plataforma web", "Datos", "Diseño", "Educación", "React", "Programado con IA", "Investigación con IA", "Codex"],
@@ -932,10 +937,10 @@ const SITE = {
         { fecha: "2026-07-04", titulo: "Arranca el proyecto", texto: "" },
       ],
       galeria: [
-        { src: "assets/img/ia/reporte-web-diseno/01-portada.png", pie: "✅ La portada con los nueve pilares y las cifras de cabecera." },
-        { src: "assets/img/ia/reporte-web-diseno/02-mercado.png", pie: "✅ El pilar de mercado: filtro de sueldos y cargos." },
-        { src: "assets/img/ia/reporte-web-diseno/03-trayectorias.png", pie: "✅ Trayectorias: hacia dónde migran los diseñadores." },
-        { src: "assets/img/ia/reporte-web-diseno/04-formacion.png", pie: "✅ Formación: las diez escuelas comparadas." },
+        { src: "assets/img/ia/reporte-web-diseno/01-portada.png", pie: "La portada con los nueve pilares y las cifras de cabecera." },
+        { src: "assets/img/ia/reporte-web-diseno/02-mercado.png", pie: "El pilar de mercado: filtro de sueldos y cargos." },
+        { src: "assets/img/ia/reporte-web-diseno/03-trayectorias.png", pie: "Trayectorias: hacia dónde migran los diseñadores." },
+        { src: "assets/img/ia/reporte-web-diseno/04-formacion.png", pie: "Formación: las diez escuelas comparadas." },
       ]
     },
     {
@@ -948,9 +953,11 @@ const SITE = {
       estado: "en desarrollo",
       dominio: "Fabricación digital",
       link: "",
-      repo: "",
+      repo: "https://github.com/Fewiyo/proyecto-iot-01",
+      /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
+      repoPublico: false,
       resumen: "Diez microcontroladores distintos hablando un mismo idioma, para que sumar uno nuevo no rompa nada.",
-      portada: "assets/img/ia/proyecto-iot-01/01-portada.png",
+      portada: "",
       etiquetas: ["Hardware", "Fabricación digital", "ESP32", "MQTT", "Arduino", "Programado con IA", "Codex"],
       descripcion: [
         "Una flota de diez microcontroladores con roles distintos: relés, servos, motores, tiras de luces, sensores: controlados desde un tablero central. Es la base de electrónica sobre la que se montan las estaciones de un taller maker.",
@@ -964,9 +971,6 @@ const SITE = {
         { fecha: "2026-07-14", titulo: "Arranca el proyecto", texto: "" },
       ],
       galeria: [
-        { src: "assets/img/ia/proyecto-iot-01/01-portada.png", pie: "el tablero de control con el nodo activo." },
-        { src: "assets/img/ia/proyecto-iot-01/02-nodo.png", pie: "**foto** del ESP32 armado." },
-        { src: "assets/img/ia/proyecto-iot-01/03-contrato.png", pie: "el modelo de capacidades, como diagrama." },
       ]
     }
   ],
@@ -976,9 +980,10 @@ const SITE = {
     titular: "Diseño cosas que otras personas tienen que poder mantener funcionando.",
     retrato: "assets/img/retrato.jpg",
     parrafos: [
-      "PLACEHOLDER: Empieza por dónde partiste. Diseño industrial en la Universidad Diego Portales, y desde ahí el desvío hacia la educación y la fabricación digital.",
-      "PLACEHOLDER: Cuenta qué te interesa realmente: que un FabLab siga vivo tres años después de la inauguración, que un profesor pueda dar la clase sin ti al lado.",
-      "PLACEHOLDER: Cierra con dónde estás hoy y qué tipo de proyectos buscas."
+      "Estudié diseño industrial en la Universidad Diego Portales. Empecé diseñando objetos y terminé diseñando los lugares donde se hacen los objetos: laboratorios de fabricación digital, programas de curso, kits que un profesor puede usar sin que yo esté al lado.",
+      "Entre 2022 y 2024 dirigí sistemas de gestión en Ideo Maker, donde armé salas maker para colegios y fundaciones, del plano al primer prototipo. En paralelo creé y dicté siete cursos en el Programa PENTA UC de la Universidad Católica, sobre robótica, diseño de juegos y tecnología, para estudiantes de enseñanza básica y media. Los siete son de creación propia: propuesta, programa, metodología y material.",
+      "Lo que me interesa es la parte que nadie fotografía. Que el FabLab siga funcionando tres años después de la inauguración. Que el protocolo de seguridad esté escrito. Que el profesor pueda dar la clase sin mí. Un espacio maker que depende de quien lo instaló no es un espacio maker, es una demostración.",
+      "Antes de eso fui jefe de diseño gráfico en Converso y fotógrafo para la Organización Panamericana de la Salud. Hoy sumo a todo eso el desarrollo de aplicaciones y plataformas web, casi siempre a partir de un problema concreto: un entrenamiento que quería medir, un inventario que se llevaba en papel, una barrera de idioma en una consulta médica. Busco proyectos donde el diseño tenga que quedar operando, y no solamente entregado."
     ],
     /* Trayectoria: [años, cargo, organización] */
     trayectoria: [
