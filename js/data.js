@@ -102,11 +102,11 @@ const SITE = {
       anio: "2018",
       tags: ["Vehículo solar", "Diseño industrial", "Fotografía", "Competencia"],
       resumen:
-        "Auto solar con el que ganamos el primer lugar de la categoría Cruiser en la Carrera Solar Atacama 2018. Fui ayudante de diseño y fotógrafo del equipo.",
+        "Auto solar con el que ganamos el primer lugar de la categoría Cruiser en la Carrera Solar Atacama 2018. Fui ayudante de construcción y fotógrafo del equipo.",
       img: "assets/img/proyectos/haalur/01-portada.jpg",
       bloques: [
-        { tipo: "lista", titulo: "Mi rol", valor: ["Ayudante de diseño del vehículo", "Fotógrafo oficial del equipo", "Registro de la construcción y de la carrera"] },
-        { tipo: "texto", valor: "HAALUR es el auto solar que la Universidad Diego Portales llevó a la Carrera Solar Atacama 2018, donde obtuvo el primer lugar en la categoría Cruiser. Trabajé en el equipo como ayudante de diseño y como fotógrafo: las imágenes de esta página son mías, desde el taller hasta la meta en Arica." },
+        { tipo: "lista", titulo: "Mi rol", valor: ["Ayudante de construcción del vehículo", "Fotógrafo oficial del equipo", "Registro de la construcción y de la carrera"] },
+        { tipo: "texto", valor: "HAALUR es el auto solar que la Universidad Diego Portales llevó a la Carrera Solar Atacama 2018, donde obtuvo el primer lugar en la categoría Cruiser. Trabajé en el equipo como ayudante de construcción y como fotógrafo: las imágenes de esta página son mías, desde el taller hasta la meta en Arica." },
         { tipo: "imagen", valor: "assets/img/proyectos/haalur/02-construccion.jpg", pie: "El vehículo en construcción, con la carrocería todavía sin pintar." },
         { tipo: "imagen", valor: "assets/img/proyectos/haalur/03-chasis.jpg", pie: "Estructura y habitáculo antes del montaje de los paneles." },
         { tipo: "imagen", valor: "assets/img/proyectos/haalur/13-taller.jpg", pie: "Taller: montaje de los paneles sobre la carrocería, todavía en blanco." },
