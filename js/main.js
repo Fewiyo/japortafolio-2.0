@@ -143,6 +143,7 @@
     });
 
     (SITE.apps || []).forEach(function (a) {
+      if (a.oculto) return;
       items.push({
         href: "proyecto-ia.html?id=" + encodeURIComponent(a.id),
         img: a.portada, titulo: a.titulo,
@@ -242,7 +243,13 @@
     var idx = SITE.apps.findIndex(function (a) { return a.id === id; });
     if (idx < 0) idx = 0;
     var a = SITE.apps[idx];
-    var sig = SITE.apps[(idx + 1) % SITE.apps.length];
+    /* El salto al siguiente se da sobre los visibles: no tiene sentido
+       mandar a alguien a una ficha que no esta en el catalogo. */
+    var visibles = SITE.apps.filter(function (x) { return !x.oculto; });
+    var pos = visibles.findIndex(function (x) { return x.id === a.id; });
+    var sig = visibles.length
+      ? visibles[(pos + 1) % visibles.length]
+      : SITE.apps[(idx + 1) % SITE.apps.length];
     document.title = a.titulo + " — " + SITE.nombre;
 
     var datos = [

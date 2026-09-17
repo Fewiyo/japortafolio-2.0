@@ -83,11 +83,17 @@ el curso está en marcha.
 
 ---
 
-## 5. Proyectos sin imagen propia
+## 5. Proyectos escondidos hasta que tengan imagen
 
-**SKU** y **Proyecto IoT 01** tenían tres imágenes cada uno, pero no eran del proyecto: eran
-marcadores grises con una nota escrita encima pidiéndote la captura. Se borraron. Ahora esas dos
-fichas usan una portada lisa, que se lee como una decisión de diseño y no como un hueco.
+**SKU** y **Proyecto IoT 01** están fuera del catálogo, con `oculto: true` en `js/data.js`.
+Tenían tres imágenes cada uno, pero no eran del proyecto: eran marcadores grises con una nota
+escrita encima pidiéndote la captura. Se borraron, y las fichas quedaron sin nada que mostrar.
+
+Sacarlas del catálogo no las borra. La ficha sigue viva y se puede abrir directo
+(`proyecto-ia.html?id=sku`), para que puedas revisarla mientras tanto. Lo que no hace es aparecer
+en la grilla, en el filtro ni en el enlace de "siguiente proyecto".
+
+Para que vuelvan: borra la línea `oculto: true` del proyecto, o ponla en `false`.
 
 SKU necesita login y base de datos para mostrar algo, así que la captura tiene que salir de ti.
 

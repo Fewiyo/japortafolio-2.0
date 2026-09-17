@@ -646,6 +646,9 @@ const SITE = {
   apps: [
     {
       id: "sku",
+      /* Escondido del catalogo hasta que existan las capturas.
+         Ponlo en false, o borra la linea, y vuelve a aparecer. */
+      oculto: true,
       titulo: "SKU",
       tipo: "Aplicación",
       herramienta: "Codex",
@@ -945,6 +948,9 @@ const SITE = {
     },
     {
       id: "proyecto-iot-01",
+      /* Escondido del catalogo hasta que existan las capturas.
+         Ponlo en false, o borra la linea, y vuelve a aparecer. */
+      oculto: true,
       titulo: "Proyecto IOT 01",
       tipo: "Hardware",
       herramienta: "Codex",
