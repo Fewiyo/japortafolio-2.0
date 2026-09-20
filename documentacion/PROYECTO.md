@@ -202,11 +202,11 @@ y hay que sostenerla.
 
 ## 6. Cosas que van a morder
 
-- **`node` no está instalado** en esa máquina y fue una decisión, no un olvido. Vicente pidió
-  no tener cadena de herramientas. Si algún día se justifica 11ty o Astro, migrar desde
-  Markdown será fácil; pero no se introduce npm sin pedírselo. Como consecuencia, `docx-js` y
-  cualquier herramienta de npm **no están disponibles**: para generar documentos Word se usa
-  `python-docx`.
+- **`node` existe desde el 20 de septiembre de 2026, pero el sitio NO lo usa.** Se instaló para
+  las diez aplicaciones de Vicente, que son todas proyectos de React, Vue o Next.js y que hasta
+  entonces no podía correr en su propia máquina. **La decisión de mantener el portafolio sin
+  cadena de herramientas sigue en pie:** el sitio se construye con Python y no se introduce npm
+  en él sin pedírselo. Son dos decisiones separadas y conviene que sigan separadas.
 - **Sí está LibreOffice**, instalado el 20 de septiembre de 2026 justamente para poder mirar los
   documentos antes de entregarlos. Con eso se revisa un `.docx` de verdad en vez de a ciegas:
 
@@ -233,7 +233,20 @@ y hay que sostenerla.
 
 ---
 
-## 7. Dónde está lo que falta
+## 7. Qué hay instalado en esa máquina
+
+Al 20 de septiembre de 2026: git, VS Code, Python (con Pillow, pillow-heif, python-docx,
+pymupdf y numpy), LibreOffice, Node LTS 24 con npm, GitHub CLI y ffmpeg.
+
+No hay Docker, ni pandoc, ni poppler, ni pnpm ni yarn. La rasterización de PDF se hace con
+`pymupdf`, no con poppler.
+
+`gh` está instalado pero **sin autenticar**, y Vercel CLI no está: las dos cosas necesitan que
+Vicente inicie sesión con sus cuentas.
+
+---
+
+## 8. Dónde está lo que falta
 
 **`FALTANTES.md`, en la raíz.** Es la lista única de todo lo que el sitio todavía no dice:
 datos que faltan por proyecto, archivos que no existen, repositorios privados y decisiones
@@ -244,7 +257,7 @@ anotado ahí.
 
 ---
 
-## 8. Hacia dónde va
+## 9. Hacia dónde va
 
 El plan completo, con los hallazgos de investigación que lo sostienen, está en
 `documentacion/Proyecto-portafolio.docx`, en esta misma carpeta.
