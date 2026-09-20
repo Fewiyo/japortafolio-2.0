@@ -41,3 +41,7 @@ Penta UC/
 # Briefs de trabajo y proyectos en cocina. No son contenido del sitio y
 # alguno es material privado que Vicente no quiere publicado.
 Prompt etapas/
+
+# Cache de Python de las herramientas
+__pycache__/
+*.pyc

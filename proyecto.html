@@ -2,21 +2,20 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Proyecto — Vicente Cáceres Farías</title>
-<meta name="description" content="Caso de estudio.">
-<link rel="icon" href="assets/img/marca/favicon-32-claro.png" sizes="32x32" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="assets/img/marca/favicon-32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="assets/img/marca/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=d9782fc2">
-<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("tema");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<title>Proyecto</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://fewiyo.github.io/japortafolio-2.0/">
+<script>
+/* Las fichas ahora viven en su propia direccion. Se traduce el ?id= viejo. */
+(function () {
+  var id = new URLSearchParams(location.search).get("id");
+  location.replace(id ? "proyectos/" + encodeURIComponent(id) + "/" : "index.html");
+})();
+</script>
 </head>
-<body data-page="proyecto">
-<div id="app"></div>
-<script src="js/data.js?v=6fbfb6f4"></script>
-<script src="js/main.js?v=b1e0bf99"></script>
+<body>
+<p style="font:14px system-ui;margin:3rem">
+  Esta ficha se movió. <a href="index.html">Ir al catálogo</a>.
+</p>
 </body>
 </html>

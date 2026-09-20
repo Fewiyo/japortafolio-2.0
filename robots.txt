@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Los rastreadores de IA son bienvenidos: este sitio existe para
+# que se pueda citar lo que hay adentro.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://fewiyo.github.io/japortafolio-2.0/sitemap.xml

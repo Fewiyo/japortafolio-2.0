@@ -1,28 +1,34 @@
 #!/bin/sh
-# Antes de cada commit, vuelve a numerar los enlaces a CSS y JS segun el
-# contenido de cada archivo. Asi el navegador nunca sirve una version
-# vieja del sitio desde su cache.
+# Antes de cada commit, reconstruye el sitio entero: lee js/data.js y
+# escribe el HTML de todas las paginas con el texto adentro, mas el
+# sitemap y el robots.txt. De paso renumera los enlaces a CSS y JS segun
+# el contenido de cada archivo, para que la cache del navegador nunca
+# sirva una version vieja.
 #
 # Se activa con:  git config core.hooksPath .githooks
 #
-# Si no hay Python en este equipo, avisa y deja pasar el commit: un
-# numero de version sin actualizar es un problema menor comparado con
-# no poder commitear.
+# Si no hay Python en este equipo, avisa y deja pasar el commit. Es
+# preferible un commit con el HTML desactualizado a no poder commitear;
+# el aviso queda a la vista para correrlo a mano despues.
 
 if command -v python >/dev/null 2>&1; then
   PY=python
 elif command -v python3 >/dev/null 2>&1; then
   PY=python3
 else
-  echo "pre-commit: no encontré Python, no pude renumerar los enlaces."
-  echo "            El sitio puede quedar cacheado. Corre tools/version.py"
-  echo "            a mano cuando puedas."
+  echo "pre-commit: no encontré Python, el sitio NO se reconstruyó."
+  echo "            Corre tools/construir.py a mano cuando puedas."
   exit 0
 fi
 
-"$PY" tools/version.py || exit 0
+"$PY" tools/construir.py || {
+  echo "pre-commit: tools/construir.py falló. Reviso el error de arriba"
+  echo "            antes de seguir: el HTML quedó como estaba."
+  exit 1
+}
 
-# sumar al commit los HTML que hayan cambiado
-git add -- *.html 2>/dev/null
+# sumar al commit todo lo que el constructor haya reescrito
+git add -- ./*.html sitemap.xml robots.txt 2>/dev/null
+git add -- proyectos cursos apps 2>/dev/null
 
 exit 0
