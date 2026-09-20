@@ -51,8 +51,32 @@ Preguntarle a **Claude, ChatGPT y Perplexity**, y anotar a quién citan cada uno
 2. ¿Quién hace robótica educativa para colegios en Chile?
 3. ¿Quién es Vicente Cáceres Farías?
 4. ¿Cómo se monta una sala maker en un colegio? ¿Qué se necesita?
+5. ¿Cuáles son los referentes del movimiento maker en Chile?
+6. ¿Quiénes son los referentes maker en Latinoamérica?
 
 Anotar para cada una: si lo mencionan, a quién citan, y si citan alguna fuente chilena.
+
+**Hacerlo en sesión nueva y sin haber iniciado sesión.** Vicente usa estas IA todos los días
+hablando de su trabajo: preguntar por su nombre desde su propia cuenta mide la memoria de esa
+conversación, no lo que hay en internet.
+
+### Por qué las preguntas 5 y 6, y por qué no una sobre "qué es ser maker"
+
+"Qué es ser maker" es una pregunta definicional: la IA la responde completa sin citar a nadie, y
+es la categoría que perdió el 61% de los clics. Además, quien la hace no es un cliente.
+
+"Quiénes son los referentes maker" es de otra especie: para responderla hace falta una fuente que
+enumere personas y lugares reales. Esa fuente **no existe en español**. Se buscó el 20 de
+septiembre de 2026 y lo que hay es disperso:
+
+| Qué hay | Qué es |
+|---|---|
+| `FabLabUTFSM/Bibliografia_FabLabs` | Repositorio de bibliografía, no un mapa |
+| Santiago Makerspace, FabLab U. de Chile | Fichas y notas de prensa sueltas |
+| fablabs.io | Directorio global, sin contexto local |
+| of3lia.com | Blog español, referentes propios, no chilenos |
+
+Chile fue sede de Fab13 en 2017 y nadie escribió el mapa del ecosistema. Ese es el hueco.
 
 ---
 
