@@ -60,6 +60,26 @@ Anotar para cada una: si lo mencionan, a quién citan, y si citan alguna fuente 
 hablando de su trabajo: preguntar por su nombre desde su propia cuenta mide la memoria de esa
 conversación, no lo que hay en internet.
 
+### El montaje de la medición
+
+Esto importa más que las preguntas: una línea base comparada contra una configuración distinta
+no vale nada, y estas herramientas cambian cada pocas semanas.
+
+| Regla | Por qué |
+|---|---|
+| **Versión gratuita** | Es la que usa quien te va a buscar. Si apareces ahí, apareces en todas partes |
+| **Sesión nueva, sin iniciar sesión** | Si no, mides la memoria de tus propias conversaciones |
+| **Modo por defecto** | — |
+| **Nunca investigación profunda** | Hace decenas de búsquedas y termina encontrando hasta tu LinkedIn. Da un falso positivo: nadie lanza una investigación profunda para saber si existes |
+| **Pregunta suelta, primera respuesta** | Sin repreguntar ni pedir que busque más |
+
+**Anotar siempre junto a cada respuesta:** qué herramienta, qué versión, con o sin sesión
+iniciada, y la fecha. Dentro de tres meses hay que repetir el montaje idéntico.
+
+Si se quiere ver además el techo, se puede hacer una pasada con las versiones de pago, pero
+**como medición aparte y etiquetada**. Dice hasta dónde llega alguien que se esfuerza en
+buscarte, que es otra pregunta. No se mezcla con la línea base.
+
 ### Por qué las preguntas 5 y 6, y por qué no una sobre "qué es ser maker"
 
 "Qué es ser maker" es una pregunta definicional: la IA la responde completa sin citar a nadie, y
