@@ -37,3 +37,7 @@ Penta UC/
 # una copia sin RUT, direccion, fecha de nacimiento ni telefono, y vive
 # en assets/files/.
 /CV_*.pdf
+
+# Briefs de trabajo y proyectos en cocina. No son contenido del sitio y
+# alguno es material privado que Vicente no quiere publicado.
+Prompt etapas/
