@@ -345,6 +345,101 @@ columnas, así que al extraer el texto la historia laboral se entrevera y queda 
 único bloque que sobrevive ordenado es el de educación e idiomas. La IA resumió lo único que
 podía leer.
 
+
+**ChatGPT · sin cuenta · incógnito · 20 de septiembre de 2026**
+
+Muy distinta y mucho más exacta. Dice: diseñador industrial chileno **titulado** de la UDP,
+**Director de I+D en Ideo Maker**, **docente del Programa de Estudios y Desarrollo de Talentos
+de la UC**, paso por **Atacama Biomaterials**, y una beca **Meta Spark**.
+
+Fuente declarada: **LinkedIn**.
+
+### El contraste, que es lo que importa
+
+| Herramienta | De dónde lo saca | Qué Vicente describe |
+|---|---|---|
+| Gemini | El CV en PDF del sitio antiguo | Un estudiante de diseño |
+| ChatGPT | LinkedIn | Director de I+D y docente universitario |
+
+**No hay "una" respuesta de la IA sobre él: hay tres y no coinciden.** Cada una depende de qué
+fuente alcanzó a leer, y ninguna de las dos leyó el portafolio nuevo.
+
+**Tres conclusiones:**
+
+1. **LinkedIn es hoy su mejor activo frente a la IA**, mejor que sus dos sitios. Mantenerlo al
+   día es barato, inmediato y de alto rendimiento. Conviene tratarlo como parte del sistema y
+   no como un perfil abandonado.
+2. **LinkedIn entrega cargos, no trabajo.** ChatGPT sabe qué puestos tuvo, pero no menciona
+   ninguno de los siete cursos, ni HAALUR, ni las salas maker, ni las diez aplicaciones. Ese es
+   exactamente el hueco que llena el portafolio cuando sea visible: LinkedIn dice dónde estuvo,
+   el sitio dice qué hizo.
+3. **Aparece una beca Meta Spark que no está en el CV ni en el sitio.** Hay que confirmarla: o
+   es un dato real que falta documentar, o es una confusión con otra persona. Si es real, entra
+   a la trayectoria.
+
+
+**Buscador de Google · 20 de septiembre de 2026**
+
+| Posición | Qué |
+|---|---|
+| 1 | **LinkedIn**. Titular: "Diseñador Industrial / MAKER / Docente STEAM / Director de I+D en Ideo Maker". 550+ seguidores |
+| 2 | **El CV en PDF de japortafolio.com**, con el extracto mostrando nombre y correo |
+| 3 | La portada de japortafolio.com |
+| 4 | Una publicación suya en LinkedIn |
+| — | Imágenes, todas de LinkedIn |
+| — | Después, ruido: listas de titulados de otras universidades, un PDF de subsidios, tesis de la UMCE |
+
+**El sitio nuevo no aparece.** Esperable con tres días y otro dominio, pero ahora está medido.
+
+Dos cosas más:
+
+- **Google tiene el PDF indexado por dentro**, no solo el archivo: el extracto muestra el
+  correo. O sea el RUT, la fecha de nacimiento y el teléfono también están en el índice. Por eso
+  borrarlo no basta y hay que pedir la retirada en Search Console.
+- **Hay ambigüedad de nombre con un futbolista.** Google sugiere "¿Cuántos años tiene el central
+  Vicente Cáceres?". Lo que desambigua es el apellido completo: conviene usar siempre
+  "Vicente Cáceres Farías", como ya hace el sitio.
+
+Y un dato a favor: **el titular de LinkedIn está bien escrito.** "Diseñador Industrial / MAKER /
+Docente STEAM / Director de I+D en Ideo Maker" es una línea precisa, y es la que ChatGPT
+convirtió en su respuesta. Es el activo que mejor funciona hoy.
+
+
+**Perplexity · sin cuenta · incógnito · 20 de septiembre de 2026**
+
+Correcta y actual: diseñador industrial chileno, maker, docente STEAM y director de I+D en Ideo
+Maker. Titulado de la UDP.
+
+Lo interesante es de dónde saca una de las frases: *"su portafolio lo describe como profesional
+dedicado al diseño de servicios, los Fab Labs y la docencia STEAM"*. Eso es, casi literal, **la
+descripción del repositorio de GitHub**. No leyó el sitio: leyó el repo.
+
+Además desambigua sola de "Vicente Cáceres, luchador español de los Juegos Olímpicos de 1988 y
+1992". Sumado al futbolista que sugiere Google, son **al menos dos colisiones de nombre**.
+
+---
+
+### Resultado consolidado de la pregunta 3
+
+**Las tres lo encontraron.** Ninguna dijo "no sé quién es". Pero cada una leyó una fuente
+distinta y devolvió un Vicente distinto:
+
+| Herramienta | Fuente | Qué Vicente |
+|---|---|---|
+| Gemini | El CV en PDF del sitio viejo | Estudiante de diseño, en presente |
+| ChatGPT | LinkedIn | Director de I+D, docente UC, Atacama Biomaterials |
+| Perplexity | LinkedIn + la descripción del repositorio | Director de I+D, y lo del portafolio |
+
+**Ninguna leyó el sitio.** Su identidad en línea se está armando con fragmentos de terceros —un
+perfil, un PDF viejo, la descripción de un repositorio— y lo único que él controla y curó, que
+es el portafolio, todavía no aporta nada.
+
+Eso es exactamente lo que arreglan la Fase A, ya hecha, y la Fase C, pendiente.
+
+**Y un detalle alentador:** la descripción del repositorio es **una sola línea**, y bastó para
+cambiar la respuesta de una IA. Cuando el contenido está donde el rastreador llega, mover la
+aguja es barato. El problema nunca fue la cantidad de texto: era que no había ninguno.
+
 ---
 
 ## URGENTE · El CV público de japortafolio.com tiene datos personales
