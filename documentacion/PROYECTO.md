@@ -204,7 +204,21 @@ y hay que sostenerla.
 
 - **`node` no está instalado** en esa máquina y fue una decisión, no un olvido. Vicente pidió
   no tener cadena de herramientas. Si algún día se justifica 11ty o Astro, migrar desde
-  Markdown será fácil; pero no se introduce npm sin pedírselo.
+  Markdown será fácil; pero no se introduce npm sin pedírselo. Como consecuencia, `docx-js` y
+  cualquier herramienta de npm **no están disponibles**: para generar documentos Word se usa
+  `python-docx`.
+- **Sí está LibreOffice**, instalado el 20 de septiembre de 2026 justamente para poder mirar los
+  documentos antes de entregarlos. Con eso se revisa un `.docx` de verdad en vez de a ciegas:
+
+  ```bash
+  "/c/Program Files/LibreOffice/program/soffice.exe" --headless --convert-to pdf --outdir . archivo.docx
+  python -c "import pymupdf; d=pymupdf.open('archivo.pdf'); [p.get_pixmap(dpi=105).save('pg-%d.png'%i) for i,p in enumerate(d,1)]"
+  ```
+
+  No hay pandoc ni poppler, así que el PDF se rasteriza con `pymupdf`, que sí está.
+- **En `python-docx`, fijar `cell.width` no basta.** Word y LibreOffice respetan la rejilla de la
+  tabla, no el ancho de cada celda: sin escribir el `w:tblGrid` todas las columnas salen iguales.
+  Y restar dos `Length` devuelve un `int` en EMU, que ya no tiene `.twips`.
 - **El hash de caché solo cambia en el commit.** Durante el desarrollo local el navegador sirve
   el CSS viejo. Para ver cambios hay que forzar la recarga del `<link>`.
 - **Los heredocs de bash fallan con contenido largo** en ese entorno. Usar la herramienta de
