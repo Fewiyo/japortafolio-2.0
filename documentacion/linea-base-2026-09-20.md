@@ -417,6 +417,24 @@ descripción del repositorio de GitHub**. No leyó el sitio: leyó el repo.
 Además desambigua sola de "Vicente Cáceres, luchador español de los Juegos Olímpicos de 1988 y
 1992". Sumado al futbolista que sugiere Google, son **al menos dos colisiones de nombre**.
 
+
+**Las fuentes que Perplexity declaró usar**, cuando se le preguntó:
+
+el repositorio de GitHub, su LinkedIn personal, el CV en PDF de junio de 2024, su **Behance**
+y el **LinkedIn de Ideo Maker**.
+
+Y cerró con una advertencia que vale la pena leer dos veces: *"la información proviene
+principalmente de perfiles profesionales y del portafolio personal, por lo que algunos datos
+son **autodeclarados** y no necesariamente verificados por una fuente independiente."*
+
+**Eso es una señal de peso.** Las IA distinguen entre lo que alguien dice de sí mismo y lo que
+dicen otros de él, y le dan menos confianza a lo primero. Por muy bien escrito que quede el
+portafolio, sigue siendo autodeclarado.
+
+Lo que cambia esa categoría es que **otros lo citen**: prensa, páginas institucionales, sitios
+de colegios, otros makers. Eso refuerza la estrategia de escribir el mapa del ecosistema sobre
+otras personas, porque es la forma más directa de que otras personas enlacen de vuelta.
+
 ---
 
 ### Resultado consolidado de la pregunta 3
@@ -444,18 +462,29 @@ aguja es barato. El problema nunca fue la cantidad de texto: era que no había n
 
 ## URGENTE · El CV público de japortafolio.com tiene datos personales
 
-Ese PDF, descargable por cualquiera desde la portada del sitio desde diciembre de 2024,
-contiene **RUT, fecha de nacimiento y teléfono**. No trae la dirección.
+**Son al menos dos archivos, no uno.** Los dos siguen en línea y los dos traen **RUT, fecha de
+nacimiento, teléfono y correo**. Ninguno trae la dirección.
+
+| Archivo | Estado | Quién lo encontró |
+|---|---|---|
+| `uploads/2024/12/CV-Vicente-Caceres-Farias02.pdf` | Enlazado desde el botón "VER CV" de la portada. **Segundo resultado en Google al buscar su nombre** | Gemini y el buscador |
+| `uploads/2024/06/CV-Vicente-Caceres-Farias.pdf` | **Huérfano**: nadie lo enlaza, pero sigue en línea e indexado | Perplexity |
+
+El de junio es el caso clásico: se reemplazó el archivo y nunca se borró el anterior. **Puede
+haber más** que no se pueden enumerar desde afuera; se ven en la biblioteca de medios de
+WordPress.
 
 Es el mismo tipo de dato que el 17 de septiembre se borró del CV nuevo antes de publicarlo.
 
 **Qué hacer**, en el hosting de Hostinger, que es de Vicente:
 
-1. Borrar el PDF, o reemplazarlo por `assets/files/cv-vicente-caceres-2025.pdf`, que ya está
+1. Entrar a la **biblioteca de medios de WordPress y buscar todos los archivos que empiecen con
+   "CV"**. No basta con borrar el que está enlazado.
+2. Borrarlos, o reemplazarlos por `assets/files/cv-vicente-caceres-2025.pdf`, que ya está
    redactado.
-2. Quitar o corregir el botón "VER CV" de la portada.
-3. Pedir la retirada de la URL en Google Search Console. Un archivo borrado sigue apareciendo
-   en caché y en el índice un tiempo, y acá conviene apurarlo.
+3. Quitar o corregir el botón "VER CV" de la portada.
+4. Pedir la retirada de **cada URL** en Google Search Console. Un archivo borrado sigue
+   apareciendo en caché y en el índice un tiempo, y acá conviene apurarlo.
 
 ---
 
