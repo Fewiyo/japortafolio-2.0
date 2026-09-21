@@ -12,4 +12,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://fewiyo.github.io/japortafolio-2.0/sitemap.xml
+Sitemap: https://japortafolio.com/sitemap.xml

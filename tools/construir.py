@@ -35,7 +35,7 @@ from leer_data import cargar  # noqa: E402
 # La direccion publica del sitio. Al migrar a Hostinger se cambia SOLO
 # esta linea: de aca salen las urls canonicas, las de compartir y el
 # sitemap completo.
-BASE = "https://fewiyo.github.io/japortafolio-2.0"
+BASE = "https://japortafolio.com"
 
 ANIO = datetime.date.today().year
 HOY = datetime.date.today().isoformat()
