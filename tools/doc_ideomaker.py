@@ -242,7 +242,7 @@ C = Cm
 
 
 # ================================ PORTADA ================================
-p("PARA IDEO MAKER SPA", size=8, bold=True, color=SUAVE, caps=True, track=120, despues=2)
+p("NOTA INTERNA · IDEO MAKER SPA", size=8, bold=True, color=SUAVE, caps=True, track=120, despues=2)
 
 par = doc.add_paragraph(); par.paragraph_format.space_after = Pt(2)
 r = par.add_run("Cómo dejar de ser invisible")
@@ -257,12 +257,12 @@ p("Preparado por Vicente Cáceres Farías  ·  " + FECHA, size=10, bold=True,
   color=ACENTO, antes=8, despues=14)
 
 recuadro(
-    "Qué es esto y por qué se los mando",
+    "Qué es esto",
     "El 20 de septiembre le hice a ChatGPT, Gemini y Perplexity las preguntas que haría un "
-    "sostenedor antes de contratar. Sin cuenta, en incógnito, seis preguntas por herramienta. "
+    "sostenedor antes de contratarnos. Sin cuenta, en incógnito, seis preguntas por herramienta. "
     "Lo que sigue no es una opinión sobre marketing: es lo que esas herramientas respondieron, "
-    "más el diagnóstico técnico del sitio de Ideo Maker. Lo comparto porque el resultado me "
-    "sorprendió y porque tiene arreglo, y no es caro.")
+    "más el diagnóstico técnico de nuestro propio sitio. Lo levanto porque el resultado me "
+    "sorprendió, porque tiene arreglo y porque no cuesta plata, solo trabajo.")
 
 # ================================ LA MEDICIÓN ================================
 h1("1. El resultado")
@@ -434,17 +434,17 @@ pm("La pregunta que importa es simple: **en la consulta por robótica educativa 
   "Chile, ¿cuántas de las tres nombran a Ideo Maker?** Hoy: cero de tres.", antes=6)
 
 # ================================ CIERRE ================================
-h1("6. Por qué se los mando")
+h1("6. Por qué levanto esto")
 
-p("Trabajé en Ideo Maker como Director de Investigación, Desarrollo e Innovación entre 2022 y "
-  "2025. Buena parte de los proyectos que este documento propone publicar son trabajos en los "
-  "que participé.")
+p("Escribo esto desde adentro, como Director de Investigación, Desarrollo e Innovación. Buena "
+  "parte de los proyectos que este documento propone publicar son trabajos en los que "
+  "participé, así que también me toca a mí escribirlos: no estoy pidiendo que otro haga la pega.")
 
-pm("Y tengo un interés directo, así que lo digo de frente: **estoy haciendo exactamente lo mismo "
-  "con mi propio portafolio.** En esa misma medición yo aparezco cero de tres, igual que la "
-  "empresa. Si Ideo Maker documenta su trabajo y yo documento el mío, los dos ganamos, porque "
-   "cada uno respalda al otro: la empresa demuestra que el trabajo existe, y las personas "
-   "demuestran quién lo hizo.")
+pm("Y digo de frente que tengo un interés paralelo: **estoy haciendo exactamente lo mismo con "
+   "mi propio portafolio.** En esa misma medición yo aparezco cero de doce, igual que la "
+   "empresa. No compiten: se refuerzan. La empresa demuestra que el trabajo existe y a qué "
+   "escala; las personas demuestran quién lo hizo y cómo. Un sostenedor que busca proveedor "
+   "quiere ver las dos cosas, y hoy no encuentra ninguna.")
 
 pm("Hay un dato de la medición que lo ilustra mejor que cualquier argumento: **Patricia Ramírez, "
   "cofundadora de Ideo Maker, sí aparece nombrada como referente del movimiento maker chileno.** "
@@ -461,7 +461,7 @@ par = doc.add_paragraph()
 par.paragraph_format.space_before = Pt(16)
 par.alignment = WD_ALIGN_PARAGRAPH.CENTER
 r = par.add_run("Medición del 20 de septiembre de 2026  ·  Diagnóstico de ideomaker.cl del mismo día  ·  "
-                "Los datos completos están disponibles si los quieren revisar")
+                "Tengo los datos completos y el detalle por pregunta, por si alguien los quiere revisar")
 r.font.name = FUENTE; r.font.size = Pt(8); r.font.color.rgb = SUAVE
 
 doc.save(SALIDA)
