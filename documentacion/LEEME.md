@@ -21,11 +21,15 @@ Los `.docx` se generan con Python, no se editan a mano, para que se puedan rehac
 nuevos sin perder el formato.
 
 ```bash
+python tools/doc_proyecto.py
 python tools/doc_ideomaker.py
 ```
 
-*(El generador del documento de proyecto todavía vive fuera del repositorio. Cuando haya que
-actualizarlo, conviene traerlo a `tools/` como este.)*
+El formato de los dos vive en [`../tools/formato_docx.py`](../tools/formato_docx.py): colores,
+títulos, tablas, recuadros y renglones para escribir a mano. Cada documento pone solo su
+contenido. Ahí están resueltas las tres trampas de python-docx que costaron descubrir: la
+rejilla de la tabla, los `Length` que al restarse pierden `.twips`, y la negrita a mitad de
+párrafo.
 
 ## Cómo revisarlos antes de entregarlos
 
@@ -48,6 +52,9 @@ mirarlos: anchos de columna que no se aplicaban y asteriscos de markdown a la vi
 ## La medición, en una línea
 
 Al 20 de septiembre de 2026, preguntando a ChatGPT, Gemini y Perplexity lo que preguntaría un
-cliente: **Vicente aparece 0 de 12. Ideo Maker, 1 de 9.** El sitio nuevo no lo leyó ninguna.
+cliente: **Vicente no aparece en ninguna consulta de mercado.** Sí aparece al preguntar por su
+nombre, pero cada herramienta lee una fuente distinta y devuelve un Vicente distinto, y una lo
+describe como estudiante de diseño. **Ninguna leyó el sitio nuevo.**
 
-El detalle y las conclusiones están en el archivo de línea base.
+El problema no era la invisibilidad: era información equivocada circulando. El detalle
+pregunta por pregunta está en el archivo de línea base.
