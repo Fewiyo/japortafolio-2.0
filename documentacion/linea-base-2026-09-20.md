@@ -458,6 +458,166 @@ Eso es exactamente lo que arreglan la Fase A, ya hecha, y la Fase C, pendiente.
 cambiar la respuesta de una IA. Cuando el contenido está donde el rastreador llega, mover la
 aguja es barato. El problema nunca fue la cantidad de texto: era que no había ninguno.
 
+
+### Pregunta 5: ¿Cuáles son los referentes del movimiento maker en Chile?
+
+**Gemini · sin cuenta · incógnito · 20 de septiembre de 2026**
+
+¿Aparece Vicente? **No.**
+
+| Quién | Qué es |
+|---|---|
+| **Fab Lab Santiago** | Fundado en 2013. Primero de la red del MIT en Chile. Biomateriales y diseño regenerativo |
+| **FabLab U. de Chile (OpenBeauchef)** | FCFM. Prototipado e innovación abierta desde la universidad pública |
+| **FabLab UC** | Centro de Innovación UC. Producto, validación temprana e incubación |
+| **ProteinLab UTEM** | Fabricación digital cruzada con investigación textil y de materiales |
+| **Stgo Makerspace** | Independiente, con Fundación Chile |
+| **Tomás Vivanco** | Arquitecto, académico UC, cofundador de Fab Lab Santiago |
+| Comunidades regionales | Valparaíso, Viña, Biobío, ediciones locales de Maker Faire |
+
+En toda la respuesta de Gemini hay **una sola persona con nombre y apellido: Tomás Vivanco**.
+Todo el resto son instituciones. La respuesta lo describe como "uno de los rostros más visibles
+y **divulgadores**": no está ahí por vender más ni por tener el taller más grande, sino porque
+publica, habla y enseña en público.
+
+*(Nota: al leer solo esta respuesta se concluyó que el ecosistema tenía una única persona
+reconocida. ChatGPT desmiente eso más abajo, con seis nombres. La conclusión correcta está al
+cierre de la pregunta 5.)*
+
+
+**ChatGPT · sin cuenta · incógnito · 20 de septiembre de 2026 · MEDICIÓN INVÁLIDA**
+
+⚠️ **Esta respuesta no cuenta para la línea base.** ChatGPT nombró a Vicente, pero lo dijo él
+mismo: *"Dado que preguntaste por él antes"*. La pregunta 3 se hizo en esa misma conversación y
+quedó en contexto. No lo encontró: lo recordó.
+
+**Regla que faltaba en el método y queda incorporada: cada pregunta va en una conversación
+nueva.** Hay que repetir esta en ChatGPT desde cero.
+
+Como inteligencia del sector, igual sirve, y mucho. Nombra **seis personas**:
+
+| Quién | Qué es |
+|---|---|
+| **Danisa Peric** | Directora ejecutiva del FabLab U. de Chile. Fabricación digital, innovación abierta, producción distribuida |
+| **Andrés Briceño** | Cofundador y exdirector de Fab Lab Santiago. Codirector de Fab13, Santiago 2017 |
+| **Patricia Ramírez** | **Cofundadora de Ideo Maker** |
+| **Maximiliano Rivera** | Director del FabLab UTFSM |
+| **José Tomás Domínguez** | Lab Manager del FabLab UTFSM, ligado a Fab Academy |
+| **Javier Figueroa** | Director de Fab Lab Atacama. El movimiento fuera de Santiago |
+
+Y una red de laboratorios: U. de Chile, UAI/DesignLab, UTFSM, UC/FabHaus, USACH/Physalis,
+UTEM/ProteinLab, UV, FAB INACAP, FabLab Austral, articulados en la **Red Chilena de FabLabs**,
+que se define a sí misma como "una red de personas, proyectos y conocimientos, más que de
+máquinas".
+
+**Tres cosas que quedan de acá:**
+
+1. **Cero coincidencia con Gemini.** Gemini nombró a Vivanco y ChatGPT no lo menciona; los seis
+   de ChatGPT no aparecen en Gemini. Igual que en las preguntas 1 y 2: **nadie tiene autoridad
+   establecida en este campo**, y cada herramienta arma su lista con lo que alcanzó a leer.
+2. **Patricia Ramírez, cofundadora de Ideo Maker, figura como referente.** El director de I+D de
+   la misma empresa, no. La diferencia no es la empresa ni el trabajo: es la visibilidad.
+3. **El encuadre que propone ChatGPT es correcto y conviene adoptarlo:** no fundador histórico,
+   sino "una generación posterior que está llevando el concepto maker hacia STEAM, educación,
+   diseño e I+D". Reclamar el lugar de fundador sería falso y comprobable. Ese otro lugar está
+   disponible y es verdadero.
+
+
+**ChatGPT · chat nuevo · sin cuenta · incógnito · 20 de septiembre de 2026 · MEDICIÓN VÁLIDA**
+
+¿Aparece Vicente? **No.** Repetida en conversación limpia, no lo nombra.
+
+Siete personas:
+
+| Quién | Qué es |
+|---|---|
+| **Tomás Vivanco** | Cofundador y codirector de FabLab Santiago, 2012 |
+| **Andrés Briceño** | Codirector de FabLab Santiago |
+| **Danisa Peric** | **Diseñadora industrial**, directora del FabLab U. de Chile. Biofabricación |
+| **Alysia Garmulewicz** | Académica USACH. Materiales, economía circular, fabricación distribuida |
+| **Maximiliano Rivera** | Director del FabLab UTFSM |
+| **Macarena Pola** | Cofundadora de Santiago Makerspace |
+| **Blanca Valdés** | Gestión de Santiago Makerspace, difusión DIY |
+
+---
+
+### Resultado consolidado de la pregunta 5
+
+Vicente: **0 de 2** en mediciones válidas. Falta Perplexity.
+
+Entre Gemini y ChatGPT se nombran **ocho personas**, y **solo una coincide: Tomás Vivanco**.
+Otra vez el mismo patrón de las preguntas 1, 2 y 3: nadie tiene autoridad consolidada, y cada
+herramienta arma su lista con lo que alcanzó a leer.
+
+**Dos lecturas que sí se sostienen con los datos:**
+
+1. **El lugar de referente se gana por laboratorio, no por empresa.** Los ocho están atados a
+   un espacio con nombre: FabLab Santiago, FabLab U. de Chile, FabLab UTFSM, Santiago
+   Makerspace, USACH. Vicente viene de una empresa y de un programa universitario, no de un
+   laboratorio con nombre propio. Eso explica parte de la invisibilidad, y no se arregla
+   escribiendo mejor: se arregla documentando los espacios que sí montó, con nombre y lugar.
+
+2. **Y acá está la posición realmente disponible.** De los ocho, ninguno es principalmente un
+   **educador**. Son arquitectos, diseñadores industriales, académicos de materiales y
+   fundadores de makerspaces. El propio ChatGPT ofrece "educación maker" como una sub-área
+   aparte que podría mapear, o sea la reconoce como categoría distinta, **y no tiene a nadie
+   puesto ahí**.
+
+   *(Corregido más abajo: Perplexity nombra a Pedro Hepp en ese lugar. La versión precisa está
+   al cierre de la pregunta 5.)*
+
+Dato menor y útil: **Danisa Peric es diseñadora industrial dirigiendo un FabLab.** Es el
+análogo profesional más cercano, y vale la pena mirar qué publica y dónde.
+
+
+**Perplexity · cuenta recién creada, sin historial · 20 de septiembre de 2026**
+
+Caveat menor: hubo que crear cuenta para seguir preguntando. Es la primera vez que se usa, sin
+historial ni personalización, así que la medición se acepta.
+
+¿Aparece Vicente? **No.**
+
+Nuevos: **Felipe Vidal, Martín Johnson y Paulina Zúñiga** del FabLab UAI, que reclama haber
+sido el primero de Chile en 2011; **Neil Gershenfeld** del MIT como referencia intelectual;
+FabLab U. de Talca. Y un dato con fecha: **la Red Chilena de FabLabs se reactivó en 2026**.
+
+Y sobre todo: **Pedro Hepp**.
+
+---
+
+### Cierre de la pregunta 5
+
+Vicente: **0 de 3**.
+
+Nueve personas nombradas entre las tres herramientas. **Solo Tomás Vivanco aparece en las
+tres.** Andrés Briceño en dos. El resto, una vez cada uno.
+
+### Corrección: el lugar de "educación maker" no está vacío
+
+Se afirmó antes que nadie ocupaba esa posición. **Es falso.** Pedro Hepp la ocupa:
+
+> Ingeniero civil eléctrico PUC, doctor en Ciencias de la Computación en Edimburgo,
+> **coordinador nacional de Enlaces durante diez años** hasta 2001, profesor titular en la
+> Universidad de La Frontera. Sus líneas de investigación declaradas son el movimiento maker en
+> educación, el aprendizaje basado en proyectos, el pensamiento computacional y la computación
+> física.
+
+**La distinción que sí se sostiene**, y que es más útil que la afirmación original:
+
+| | Quién está | Qué hace |
+|---|---|---|
+| Autoridad académica y de política pública en educación maker | **Pedro Hepp** | Investiga, asesora, publica, integra directorios. Opera a nivel de sistema |
+| **El practicante que documenta** | **Nadie** | Armar la sala, dictar el curso, construir el robot, y contar qué pasó después |
+
+Ninguno de los nueve nombres es la segunda cosa. Hepp estudia el fenómeno; Vicente lo hace.
+
+**Y el dato más accionable de toda la medición:** Hepp integra el directorio de **Fundación
+País Digital**, que es la contraparte del proyecto Sala Maker STEAM de Vicente. Ya comparten
+institución: están a un grado de distancia, no a un mundo.
+
+Segundo dato accionable: **la Red Chilena de FabLabs se reactivó en 2026**. Una red que se
+reactiva es el momento exacto para entrar.
+
 ---
 
 ## URGENTE · El CV público de japortafolio.com tiene datos personales
