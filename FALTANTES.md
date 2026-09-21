@@ -149,8 +149,8 @@ habla de ti en primera persona. Es lo único del sitio que escribí poniéndote 
 - **Las fotos con menores** de Congreso Futuro y Eloísa, esperando que confirmes si tu
   instrucción de usar las fotos con personas las incluye. Está explicado en
   `Otras pegas/LEEME.md`.
-- **Borrar el WordPress viejo de Hostinger.** El dominio ya no apunta ahí, pero los archivos
-  siguen en el disco del hosting. Entre ellos tres CV con tus datos personales, que estuvieron
-  descargables hasta el 20 de septiembre de 2026. El respaldo está bajado y verificado.
-- **Pedir a Google la retirada de esos tres CV** y de las previsualizaciones en JPG que
-  WordPress les generó. Necesita Search Console con la propiedad verificada.
+- **Pedir a Google la retirada de tres CV con tus datos personales** que el WordPress viejo
+  tuvo descargables hasta el 20 de septiembre de 2026, y de las previsualizaciones en JPG que
+  les generó. Estaban en `/wp-content/uploads/2024/06/`, `/2024/10/` y `/2024/12/`. Los archivos
+  ya no existen, pero Google puede seguir mostrándolos hasta que se le pida la retirada.
+  Necesita Search Console con la propiedad verificada.
