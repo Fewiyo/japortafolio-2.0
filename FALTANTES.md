@@ -116,15 +116,30 @@ entrar como proyecto.
 
 ---
 
-## 6. El retrato es provisorio
+## 6. El retrato es provisorio · CONFIRMADO QUE SE CAMBIA
 
-La foto de la página Historia la puso Vicente "por mientras": es una foto en la calle, con un
-helado en la mano, recortada a cuadrado desde
-`Otras pegas/identidad-propia/imagenes/foto plataforma.jpg`.
+**Vicente dijo el 21 de septiembre de 2026 que va a cambiar la foto, en el sitio y en LinkedIn.**
+Hasta que lo haga, esto queda pendiente en tres lugares a la vez.
 
-Funciona, pero lee más como foto de viaje que como retrato de portafolio, y esa página es donde
-alguien decide si te escribe. Cuando haya una tomada para esto, reemplaza
-`assets/img/retrato.jpg`: tiene que ser cuadrada, 1200×1200, y sin metadatos.
+La foto actual la puso "por mientras": es una foto en la calle, con un helado en la mano,
+recortada a cuadrado desde `Otras pegas/identidad-propia/imagenes/foto plataforma.jpg`. Funciona,
+pero lee más como foto de viaje que como retrato de portafolio.
+
+Desde la migración pesa más que antes, porque el mismo archivo aparece en tres sitios:
+
+1. **La página Historia**, que es donde alguien decide si te escribe.
+2. **La vista previa al compartir el enlace** (`og:image`). Al pegar japortafolio.com en WhatsApp
+   o LinkedIn, esa foto es la miniatura.
+3. **La tarjeta de "Destacado" en LinkedIn**, creada el 21 de septiembre. Es lo primero que ve
+   quien entra a tu perfil, y toma la imagen del `og:image` del sitio.
+
+**Al reemplazar `assets/img/retrato.jpg`** (cuadrada, 1200×1200, sin metadatos) se arreglan los
+tres de una vez: los dos del sitio salen del mismo archivo, y la tarjeta de LinkedIn se
+actualiza cuando LinkedIn vuelve a leer el enlace. Si no se actualiza sola, se borra y se vuelve
+a crear la tarjeta.
+
+**La foto de perfil de LinkedIn es aparte** y hay que cambiarla a mano en LinkedIn: no sale del
+sitio.
 
 ---
 
@@ -155,6 +170,13 @@ habla de ti en primera persona. Es lo único del sitio que escribí poniéndote 
   ya no existen. El 21 de septiembre se pidieron dos retiradas por prefijo en Search Console,
   `/wp-content/uploads/` y `/uploads/`, las dos en estado "Procesando solicitud". Falta ver que
   pasen a aprobadas y que el CV deje de salir al buscar `site:japortafolio.com`.
+- **El mes en que terminó la docencia en PENTA UC.** Vicente confirmó que fue del 22 al 25, y
+  el sitio ya dice "2022 — 2025". Falta el mes para cerrar el cargo en LinkedIn, que hoy sigue
+  diciendo "ago. 2022 - actualidad". No se puso un mes inventado a propósito: es un cargo
+  público y la fecha de término tiene que ser la real.
+- **Normalizar la URL en la información de contacto de LinkedIn**, de `www.japortafolio.com` a
+  `https://japortafolio.com`, que es la forma canónica. Funciona igual; es para que una IA que
+  la cite copie la dirección exacta.
 - **Revisar el sitemap en Search Console.** Se envió el 21 de septiembre y quedó en "No se ha
   podido obtener", que es el estado normal recién enviado. El archivo está bien: responde 200,
   es XML válido y trae las 24 URLs. Si en un par de días sigue igual, ahí sí hay algo que mirar.

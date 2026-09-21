@@ -201,6 +201,25 @@ La verificación es el registro TXT de la zona: si se borra, se cae la propiedad
 
 El sitemap enviado es `https://japortafolio.com/sitemap.xml`.
 
+### LinkedIn es parte del sistema
+
+La medición del 20 de septiembre mostró que LinkedIn, no el sitio, era la fuente que las IA
+leían para responder quién es Vicente. El plan lo incorporó como pieza a mantener, no como un
+perfil abandonado. Lo que se hizo el 21 de septiembre:
+
+- Se reemplazó "Acerca de". El texto anterior estaba en tercera persona y lo posicionaba en
+  salud y sustentabilidad, sin nombrar maker, STEAM, Ideo Maker, PENTA UC ni las aplicaciones.
+  El nuevo termina con `https://japortafolio.com` sola en su línea, que es la forma en que mejor
+  la extrae un resumidor.
+- Se creó "Destacado" con una tarjeta al portafolio.
+
+**El titular no se tocó.** "Diseñador Industrial / MAKER / Docente STEAM / Director de I+D en
+Ideo Maker" es la línea que ChatGPT convirtió en su respuesta, y la medición la dejó como el
+activo que mejor funciona. No hay que "mejorarla" sin una razón medida.
+
+Cuidado al escribir en los campos de LinkedIn de forma automatizada: se comen caracteres. Todo
+lo que se escriba ahí hay que releerlo después de guardar, comparándolo con el original.
+
 **El dominio vence el 9 de julio de 2027 y la renovación automática está apagada.** Es una
 decisión de Vicente, no un descuido: prefiere renovar a mano. Si caduca, el sitio se cae y el
 dominio queda libre para que lo tome cualquiera. El plan de hosting es aparte y vence antes, el
