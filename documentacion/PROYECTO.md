@@ -180,10 +180,26 @@ La zona DNS quedó así:
 | A | @ | 185.199.108.153 · .109.153 · .110.153 · .111.153 (GitHub Pages) |
 | AAAA | @ | 2606:50c0:8000::153 · 8001 · 8002 · 8003 (GitHub Pages) |
 | CNAME | www | fewiyo.github.io |
-| A | ftp | 82.25.72.227, de Hostinger. Sobra cuando se borre el hosting |
+| TXT | @ | `google-site-verification=...`, la verificación de Search Console |
 
 No hay registros MX: este dominio no tiene correo, y la cuenta de Hostinger no tiene ningún
 buzón creado.
+
+**Ojo con esto.** Al borrar el WordPress, Hostinger volvió a meter sus propios registros en la
+zona: un `A` a 82.25.72.227 y un `AAAA` a 2a02:4780:..., conviviendo con los de GitHub. Con cinco
+registros `A` en el mismo nombre, una de cada cinco visitas habría caído en un servidor vacío,
+mientras que al dueño del sitio le habría funcionado casi siempre. Se borraron los dos el mismo
+día. Si alguna vez el sitio falla de forma intermitente y sin patrón, **lo primero que hay que
+mirar es esta zona**, no el código.
+
+### Search Console
+
+El dominio está verificado en Google Search Console como propiedad de tipo **Dominio**, no de
+prefijo de URL. La diferencia importa: la de dominio cubre www y sin www, http y https, todo de
+una vez, y por eso una sola solicitud de retirada alcanza para todas las variantes de una URL.
+La verificación es el registro TXT de la zona: si se borra, se cae la propiedad.
+
+El sitemap enviado es `https://japortafolio.com/sitemap.xml`.
 
 **El dominio vence el 9 de julio de 2027 y la renovación automática está apagada.** Es una
 decisión de Vicente, no un descuido: prefiere renovar a mano. Si caduca, el sitio se cae y el

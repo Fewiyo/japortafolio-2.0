@@ -149,8 +149,12 @@ habla de ti en primera persona. Es lo único del sitio que escribí poniéndote 
 - **Las fotos con menores** de Congreso Futuro y Eloísa, esperando que confirmes si tu
   instrucción de usar las fotos con personas las incluye. Está explicado en
   `Otras pegas/LEEME.md`.
-- **Pedir a Google la retirada de tres CV con tus datos personales** que el WordPress viejo
-  tuvo descargables hasta el 20 de septiembre de 2026, y de las previsualizaciones en JPG que
-  les generó. Estaban en `/wp-content/uploads/2024/06/`, `/2024/10/` y `/2024/12/`. Los archivos
-  ya no existen, pero Google puede seguir mostrándolos hasta que se le pida la retirada.
-  Necesita Search Console con la propiedad verificada.
+- **Confirmar que Google retiró los tres CV con tus datos personales.** El WordPress viejo los
+  tuvo descargables hasta el 20 de septiembre de 2026, en `/wp-content/uploads/2024/06/`,
+  `/2024/10/` y `/2024/12/`, y generó además previsualizaciones en JPG de cada uno. Los archivos
+  ya no existen. El 21 de septiembre se pidieron dos retiradas por prefijo en Search Console,
+  `/wp-content/uploads/` y `/uploads/`, las dos en estado "Procesando solicitud". Falta ver que
+  pasen a aprobadas y que el CV deje de salir al buscar `site:japortafolio.com`.
+- **Revisar el sitemap en Search Console.** Se envió el 21 de septiembre y quedó en "No se ha
+  podido obtener", que es el estado normal recién enviado. El archivo está bien: responde 200,
+  es XML válido y trae las 24 URLs. Si en un par de días sigue igual, ahí sí hay algo que mirar.
