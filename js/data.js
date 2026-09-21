@@ -994,7 +994,7 @@ const SITE = {
     /* Trayectoria: [años, cargo, organización] */
     trayectoria: [
       ["2022 — hoy",  "Director de Investigación, Desarrollo e Innovación", "Ideo Maker"],
-      ["2023 — 2025", "Docente",                                            "PENTA UC, Pontificia Universidad Católica de Chile"],
+      ["2022 — 2025", "Docente",                                            "PENTA UC, Pontificia Universidad Católica de Chile"],
       ["2025",        "Profesor del taller de robótica",                    "Escuela Francisco Bilbao, Recoleta"],
       ["2025",        "Docente, Exploración Espacial y Robótica",           "Programa CREA UC"],
       ["2024",        "Diseñador de Investigación y Desarrollo",            "Atacama Biomaterials"],
