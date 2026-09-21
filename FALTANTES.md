@@ -6,7 +6,7 @@ Todo lo que el sitio **no** dice porque todavía no lo sabemos. Antes esto viví
 Ninguna de estas líneas se publica. Cuando tengas el dato, se escribe en `js/data.js` y se borra
 de esta lista.
 
-Última revisión: 17 de septiembre de 2026.
+Última revisión: 20 de septiembre de 2026.
 
 ---
 
@@ -144,9 +144,13 @@ habla de ti en primera persona. Es lo único del sitio que escribí poniéndote 
 - **La URL del blog.** La pestaña existe, atenuada, hasta que pegues la dirección en
   `SITE.blog.url`.
 - **La imagen para compartir** (`og:image`), que hoy no existe: al pegar el link en WhatsApp o
-  LinkedIn sale sin miniatura. Necesita una URL absoluta, así que hay que decidir antes si apunta
-  a GitHub Pages o a japortafolio.com.
+  LinkedIn sale sin miniatura. Ya no está bloqueada: las etiquetas apuntan a japortafolio.com
+  desde la migración, así que solo falta el archivo. Déjalo en `assets/img/` y pégalo en `SITE`.
 - **Las fotos con menores** de Congreso Futuro y Eloísa, esperando que confirmes si tu
   instrucción de usar las fotos con personas las incluye. Está explicado en
   `Otras pegas/LEEME.md`.
-- **Migrar a Hostinger**, al dominio japortafolio.com.
+- **Borrar el WordPress viejo de Hostinger.** El dominio ya no apunta ahí, pero los archivos
+  siguen en el disco del hosting. Entre ellos tres CV con tus datos personales, que estuvieron
+  descargables hasta el 20 de septiembre de 2026. El respaldo está bajado y verificado.
+- **Pedir a Google la retirada de esos tres CV** y de las previsualizaciones en JPG que
+  WordPress les generó. Necesita Search Console con la propiedad verificada.

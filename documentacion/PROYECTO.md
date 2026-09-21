@@ -13,10 +13,10 @@ dentro de seis meses, pueda retomar este proyecto sin leer el historial de conve
 |---|---|
 | Qué es | Portafolio personal de un diseñador industrial chileno: docencia STEAM, creación de FabLabs, diseño de servicios y aplicaciones hechas con IA |
 | Dueño | Vicente Cáceres Farías · vicentecfarias@gmail.com · GitHub `Fewiyo` |
-| En línea | https://fewiyo.github.io/japortafolio-2.0/ |
+| En línea | https://japortafolio.com |
 | Repositorio | https://github.com/Fewiyo/japortafolio-2.0 (público) |
 | En el disco | `C:\Users\vicen\Documents\Ia\portafolio` |
-| Dominio futuro | japortafolio.com, comprado, con hosting en Hostinger. **Todavía no migrado** |
+| Dominio | japortafolio.com, registrado en Hostinger. **Migrado el 20 de septiembre de 2026.** Vence el 9 de julio de 2027 con la renovación automática apagada a propósito: se renueva a mano |
 | Stack | HTML + CSS + JS puro en el navegador. Python solo para construir |
 | Dependencias | Ninguna en el navegador. Python con Pillow para procesar imágenes |
 | Despliegue | `git push` a `main`. GitHub Pages publica en 40–60 segundos |
@@ -162,10 +162,34 @@ limpia.save(destino, "JPEG", quality=82, optimize=True, progressive=True)
 python tools/construir.py
 ```
 
-### Migrar a japortafolio.com
+### El dominio japortafolio.com
 
-Cambiar **una sola línea**: `BASE` arriba de `tools/construir.py`. De ahí salen las URLs
-canónicas, las de compartir y el sitemap entero.
+Migrado el 20 de septiembre de 2026. El sitio vive en GitHub Pages y el dominio apunta ahí desde
+la zona DNS de Hostinger, que sigue siendo el registrador. Antes ese dominio servía un WordPress
+con tema Astra y Elementor, que se reemplazó por completo.
+
+En el repositorio son dos piezas. `BASE`, arriba de `tools/construir.py`, es **una sola línea** y
+de ahí salen las URLs canónicas, las de compartir y el sitemap entero. Y `CNAME`, en la raíz, es
+lo que le dice a GitHub Pages cuál es el dominio: si ese archivo se borra, Pages vuelve a servir
+en `fewiyo.github.io/japortafolio-2.0` aunque el DNS siga apuntando bien.
+
+La zona DNS quedó así:
+
+| Tipo | Nombre | Contenido |
+|---|---|---|
+| A | @ | 185.199.108.153 · .109.153 · .110.153 · .111.153 (GitHub Pages) |
+| AAAA | @ | 2606:50c0:8000::153 · 8001 · 8002 · 8003 (GitHub Pages) |
+| CNAME | www | fewiyo.github.io |
+| A | ftp | 82.25.72.227, de Hostinger. Sobra cuando se borre el hosting |
+
+No hay registros MX: este dominio no tiene correo, y la cuenta de Hostinger no tiene ningún
+buzón creado.
+
+**El dominio vence el 9 de julio de 2027 y la renovación automática está apagada.** Es una
+decisión de Vicente, no un descuido: prefiere renovar a mano. Si caduca, el sitio se cae y el
+dominio queda libre para que lo tome cualquiera. El plan de hosting es aparte y vence antes, el
+6 de abril de 2027; una vez borrado el WordPress no hace falta renovarlo, porque lo único que se
+sigue usando de Hostinger es el registro del dominio y su zona DNS.
 
 ---
 
