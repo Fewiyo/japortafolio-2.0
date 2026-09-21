@@ -45,3 +45,11 @@ Prompt etapas/
 # Cache de Python de las herramientas
 __pycache__/
 *.pyc
+
+# Respaldo del WordPress viejo que ocupaba japortafolio.com. No se publica
+# nunca: el .sql trae la base de datos completa, con correos y hashes de
+# contrasena de los usuarios del sitio. El .tar.gz son 542 MB y GitHub
+# rechaza cualquier archivo sobre 100 MB.
+Copia de seguridad de portafolio antiguo/
+*.sql.gz
+*.sql
