@@ -35,7 +35,7 @@ const SITE = {
      y el script se activa solo en las 31 páginas. Mientras esté vacío,
      no se agrega nada. */
   analitica: {
-    codigo: ""
+    codigo: "vicentecaceresfarias"
   },
 
   /* ---------- Encabezados de seccion ----------
