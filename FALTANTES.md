@@ -127,8 +127,9 @@ descargada desde `Foto perfil/1751401741553.jpg`. Los tres lugares muestran ahor
 1. **La página Historia**, que es donde alguien decide si te escribe.
 2. **La vista previa al compartir el enlace** (`og:image`). Al pegar japortafolio.com en WhatsApp
    o LinkedIn, esa foto es la miniatura.
-3. **La tarjeta de "Destacado" en LinkedIn**, creada el 21 de septiembre. Es lo primero que ve
-   quien entra a tu perfil, y toma la imagen del `og:image` del sitio.
+3. **La tarjeta de "Destacado" en LinkedIn**, creada el 21 de septiembre y modificada ese mismo
+   día para que tome la foto nueva. Es lo primero que ve quien entra a tu perfil, y toma la
+   imagen del `og:image` del sitio.
 
 Queda un pendiente de calidad, no de identidad. El archivo que se instaló es la copia que
 LinkedIn sirve de tu foto de perfil, y esa copia mide **400×400**, no 1200×1200 como la que
@@ -139,9 +140,9 @@ origen no llega a 1200 px.
 **Para cerrar esto del todo:** consigue el archivo grande que subiste a LinkedIn (Configuración,
 Privacidad de los datos, Obtener una copia de tus datos) y reemplaza `assets/img/retrato.jpg`
 por esa versión, cuadrada, 1200×1200, sin metadatos. La ruta no cambia, así que no hace falta
-tocar `js/data.js` ni volver a construir el sitio: basta con pisar el archivo. La tarjeta de
-LinkedIn se actualiza sola cuando LinkedIn vuelve a leer el enlace; si no, se borra y se vuelve a
-crear.
+tocar `js/data.js` ni volver a construir el sitio: basta con pisar el archivo. Si para entonces
+la tarjeta de Destacado no toma la imagen nueva sola, se repite lo que ya funcionó el 21: se
+borra y se vuelve a crear.
 
 ---
 
