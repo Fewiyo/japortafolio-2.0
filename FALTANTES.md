@@ -6,7 +6,7 @@ Todo lo que el sitio **no** dice porque todavía no lo sabemos. Antes esto viví
 Ninguna de estas líneas se publica. Cuando tengas el dato, se escribe en `js/data.js` y se borra
 de esta lista.
 
-Última revisión: 21 de septiembre de 2026.
+Última revisión: 22 de septiembre de 2026.
 
 ---
 
@@ -170,13 +170,6 @@ habla de ti en primera persona. Es lo único del sitio que escribí poniéndote 
   ya no existen. El 21 de septiembre se pidieron dos retiradas por prefijo en Search Console,
   `/wp-content/uploads/` y `/uploads/`, las dos en estado "Procesando solicitud". Falta ver que
   pasen a aprobadas y que el CV deje de salir al buscar `site:japortafolio.com`.
-- **El mes en que terminó la docencia en PENTA UC.** Vicente confirmó que fue del 22 al 25, y
-  el sitio ya dice "2022 — 2025". Falta el mes para cerrar el cargo en LinkedIn, que hoy sigue
-  diciendo "ago. 2022 - actualidad". No se puso un mes inventado a propósito: es un cargo
-  público y la fecha de término tiene que ser la real.
-- **Normalizar la URL en la información de contacto de LinkedIn**, de `www.japortafolio.com` a
-  `https://japortafolio.com`, que es la forma canónica. Funciona igual; es para que una IA que
-  la cite copie la dirección exacta.
 - **Revisar el sitemap en Search Console.** Se envió el 21 de septiembre y quedó en "No se ha
   podido obtener", que es el estado normal recién enviado. El archivo está bien: responde 200,
   es XML válido y trae las 24 URLs. Si en un par de días sigue igual, ahí sí hay algo que mirar.
