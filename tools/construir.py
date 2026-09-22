@@ -268,9 +268,21 @@ def barra_filtros(items):
     )
 
 
+def bloque_analitica(sitio):
+    """GoatCounter: sin cookies, no bloquea el render (async), y no manda
+    nada mientras SITE.analitica.codigo este vacio."""
+    codigo = sitio.get("analitica", {}).get("codigo")
+    if not codigo:
+        return ""
+    return (
+        '<script data-goatcounter="https://%s.goatcounter.com/count" '
+        'async src="//gc.zgo.at/count.js"></script>\n' % esc(codigo)
+    )
+
+
 # ---------------------------------------------------------------- envoltura
 
-def documento(pre, titulo, descripcion, ruta, imagen, cuerpo, hashes, jsonld=None, tipo_og="website"):
+def documento(sitio, pre, titulo, descripcion, ruta, imagen, cuerpo, hashes, jsonld=None, tipo_og="website"):
     """El <head> completo y el <body> ya lleno. `ruta` es la url relativa
     limpia de esta pagina, sin barra inicial: "" para el inicio."""
     canonica = BASE.rstrip("/") + "/" + ruta
@@ -306,13 +318,14 @@ def documento(pre, titulo, descripcion, ruta, imagen, cuerpo, hashes, jsonld=Non
 <body>
 <div id="app">%(cuerpo)s</div>
 <script src="%(pre)sjs/main.js?v=%(hjs)s"></script>
-</body>
+%(analitica)s</body>
 </html>
 """ % {
         "titulo": esc(titulo), "desc": esc(descripcion), "canonica": esc(canonica),
         "ogimg": esc(og_img), "pre": pre, "cuerpo": cuerpo, "jsonld": bloque_jsonld,
         "tipo_og": tipo_og, "nombre": esc("Vicente Cáceres Farías"),
         "hcss": hashes["css"], "hjs": hashes["js"],
+        "analitica": bloque_analitica(sitio),
     }
 
 
@@ -360,7 +373,7 @@ def pagina_inicio(sitio, hashes):
                  absoluta("assets/img/retrato.jpg"),
                  ",".join('"%s"' % r["url"] for r in sitio["redes"] if r["url"].startswith("http"))))
     return documento(
-        pre="", titulo="%s — %s" % (sitio["nombre"], sitio["rol"]),
+        sitio=sitio, pre="", titulo="%s — %s" % (sitio["nombre"], sitio["rol"]),
         descripcion=recortar(sitio["bajada"]), ruta="", imagen="assets/img/retrato.jpg",
         cuerpo=cuerpo, hashes=hashes, jsonld=jsonld, tipo_og="website")
 
@@ -386,7 +399,7 @@ def pagina_historia(sitio, hashes):
         + "</div></section>" + pie("", sitio)
     )
     return documento(
-        pre="", titulo="Historia — %s" % sitio["nombre"],
+        sitio=sitio, pre="", titulo="Historia — %s" % sitio["nombre"],
         descripcion=recortar(h["parrafos"][0]), ruta="historia.html",
         imagen=h.get("retrato"), cuerpo=cuerpo, hashes=hashes, tipo_og="profile")
 
@@ -431,7 +444,7 @@ def pagina_proyecto(p, sig, idx, sitio, hashes):
               % (p["titulo"], recortar(p["resumen"], 200), sitio["nombre"],
                  str(p["anio"])[:4], BASE, p["id"], ", ".join(p["tags"])))
     return documento(
-        pre=pre, titulo="%s — %s" % (p["titulo"], sitio["nombre"]),
+        sitio=sitio, pre=pre, titulo="%s — %s" % (p["titulo"], sitio["nombre"]),
         descripcion=recortar(p["resumen"]), ruta="proyectos/%s/" % p["id"],
         imagen=p.get("img"), cuerpo=cuerpo, hashes=hashes, jsonld=jsonld, tipo_og="article")
 
@@ -476,7 +489,7 @@ def pagina_curso(c, sig, idx, sitio, hashes):
               % (c["nombre"], recortar(c.get("resumen", ""), 200), BASE, c["id"],
                  c.get("institucion", ""), sitio["nombre"]))
     return documento(
-        pre=pre, titulo="%s — %s" % (c["nombre"], sitio["nombre"]),
+        sitio=sitio, pre=pre, titulo="%s — %s" % (c["nombre"], sitio["nombre"]),
         descripcion=recortar(c.get("resumen") or c.get("subtitulo") or c["nombre"]),
         ruta="cursos/%s/" % c["id"], imagen=c.get("portada"),
         cuerpo=cuerpo, hashes=hashes, jsonld=jsonld, tipo_og="article")
@@ -530,7 +543,7 @@ def pagina_app(a, sig, idx, sitio, hashes):
               % (a["titulo"], recortar(a.get("resumen", ""), 200), a.get("tipo", ""),
                  sitio["nombre"], BASE, a["id"]))
     return documento(
-        pre=pre, titulo="%s — %s" % (a["titulo"], sitio["nombre"]),
+        sitio=sitio, pre=pre, titulo="%s — %s" % (a["titulo"], sitio["nombre"]),
         descripcion=recortar(a.get("resumen") or a["titulo"]), ruta="apps/%s/" % a["id"],
         imagen=a.get("portada"), cuerpo=cuerpo, hashes=hashes, jsonld=jsonld, tipo_og="article")
 

@@ -29,6 +29,15 @@ const SITE = {
     url: ""
   },
 
+  /* ---------- Analítica ----------
+     GoatCounter: sin cookies, sin banner de consentimiento, gratis.
+     Pega aquí el código del sitio (lo que va antes de ".goatcounter.com")
+     y el script se activa solo en las 31 páginas. Mientras esté vacío,
+     no se agrega nada. */
+  analitica: {
+    codigo: ""
+  },
+
   /* ---------- Encabezados de seccion ----------
      Cada seccion abre con una etiqueta chica y un titulo grande.
      El campo "intro" es opcional: si lo dejas en "" no se muestra. */
