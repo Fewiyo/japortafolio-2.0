@@ -46,6 +46,10 @@ Prompt etapas/
 __pycache__/
 *.pyc
 
+# Fuente del retrato en baja resolución, descargada de LinkedIn. Ya está
+# instalada en assets/img/retrato.jpg; esta carpeta es solo el origen.
+Foto perfil/
+
 # Respaldo del WordPress viejo que ocupaba japortafolio.com. No se publica
 # nunca: el .sql trae la base de datos completa, con correos y hashes de
 # contrasena de los usuarios del sitio. El .tar.gz son 542 MB y GitHub

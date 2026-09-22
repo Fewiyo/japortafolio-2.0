@@ -6,7 +6,7 @@ Todo lo que el sitio **no** dice porque todavía no lo sabemos. Antes esto viví
 Ninguna de estas líneas se publica. Cuando tengas el dato, se escribe en `js/data.js` y se borra
 de esta lista.
 
-Última revisión: 20 de septiembre de 2026.
+Última revisión: 21 de septiembre de 2026.
 
 ---
 
@@ -116,16 +116,13 @@ entrar como proyecto.
 
 ---
 
-## 6. El retrato es provisorio · CONFIRMADO QUE SE CAMBIA
+## 6. El retrato quedó, pero en baja resolución
 
-**Vicente dijo el 21 de septiembre de 2026 que va a cambiar la foto, en el sitio y en LinkedIn.**
-Hasta que lo haga, esto queda pendiente en tres lugares a la vez.
-
-La foto actual la puso "por mientras": es una foto en la calle, con un helado en la mano,
-recortada a cuadrado desde `Otras pegas/identidad-propia/imagenes/foto plataforma.jpg`. Funciona,
-pero lee más como foto de viaje que como retrato de portafolio.
-
-Desde la migración pesa más que antes, porque el mismo archivo aparece en tres sitios:
+**Vicente dijo el 21 de septiembre de 2026 que iba a cambiar la foto, en el sitio y en
+LinkedIn.** Ya lo hizo en los dos lados, con la misma foto: primer plano en el taller, con el
+panel perforado y las herramientas atrás. Se cambió a mano en LinkedIn (foto de perfil subida
+ahí el 20 de septiembre) y `assets/img/retrato.jpg` se reemplazó el 21 con esa misma foto,
+descargada desde `Foto perfil/1751401741553.jpg`. Los tres lugares muestran ahora la misma cara:
 
 1. **La página Historia**, que es donde alguien decide si te escribe.
 2. **La vista previa al compartir el enlace** (`og:image`). Al pegar japortafolio.com en WhatsApp
@@ -133,13 +130,18 @@ Desde la migración pesa más que antes, porque el mismo archivo aparece en tres
 3. **La tarjeta de "Destacado" en LinkedIn**, creada el 21 de septiembre. Es lo primero que ve
    quien entra a tu perfil, y toma la imagen del `og:image` del sitio.
 
-**Al reemplazar `assets/img/retrato.jpg`** (cuadrada, 1200×1200, sin metadatos) se arreglan los
-tres de una vez: los dos del sitio salen del mismo archivo, y la tarjeta de LinkedIn se
-actualiza cuando LinkedIn vuelve a leer el enlace. Si no se actualiza sola, se borra y se vuelve
-a crear la tarjeta.
+Queda un pendiente de calidad, no de identidad. El archivo que se instaló es la copia que
+LinkedIn sirve de tu foto de perfil, y esa copia mide **400×400**, no 1200×1200 como la que
+reemplazó. En la página Historia se nota poco, porque se dibuja a 300 px. En el `og:image` sí
+importa: LinkedIn suele mostrar la tarjeta de Destacado en formato chico cuando la imagen de
+origen no llega a 1200 px.
 
-**La foto de perfil de LinkedIn es aparte** y hay que cambiarla a mano en LinkedIn: no sale del
-sitio.
+**Para cerrar esto del todo:** consigue el archivo grande que subiste a LinkedIn (Configuración,
+Privacidad de los datos, Obtener una copia de tus datos) y reemplaza `assets/img/retrato.jpg`
+por esa versión, cuadrada, 1200×1200, sin metadatos. La ruta no cambia, así que no hace falta
+tocar `js/data.js` ni volver a construir el sitio: basta con pisar el archivo. La tarjeta de
+LinkedIn se actualiza sola cuando LinkedIn vuelve a leer el enlace; si no, se borra y se vuelve a
+crear.
 
 ---
 
@@ -158,9 +160,6 @@ habla de ti en primera persona. Es lo único del sitio que escribí poniéndote 
 
 - **La URL del blog.** La pestaña existe, atenuada, hasta que pegues la dirección en
   `SITE.blog.url`.
-- **La imagen para compartir** (`og:image`), que hoy no existe: al pegar el link en WhatsApp o
-  LinkedIn sale sin miniatura. Ya no está bloqueada: las etiquetas apuntan a japortafolio.com
-  desde la migración, así que solo falta el archivo. Déjalo en `assets/img/` y pégalo en `SITE`.
 - **Las fotos con menores** de Congreso Futuro y Eloísa, esperando que confirmes si tu
   instrucción de usar las fotos con personas las incluye. Está explicado en
   `Otras pegas/LEEME.md`.
