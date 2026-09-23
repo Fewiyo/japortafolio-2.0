@@ -6,7 +6,7 @@ Todo lo que el sitio **no** dice porque todavía no lo sabemos. Antes esto viví
 Ninguna de estas líneas se publica. Cuando tengas el dato, se escribe en `js/data.js` y se borra
 de esta lista.
 
-Última revisión: 22 de septiembre de 2026.
+Última revisión: 22 de septiembre de 2026 (noche).
 
 ---
 
@@ -164,18 +164,6 @@ habla de ti en primera persona. Es lo único del sitio que escribí poniéndote 
 - **Las fotos con menores** de Congreso Futuro y Eloísa, esperando que confirmes si tu
   instrucción de usar las fotos con personas las incluye. Está explicado en
   `Otras pegas/LEEME.md`.
-- **Confirmar que el CV dejó de salir en la búsqueda.** El WordPress viejo tuvo los tres CV con
-  tus datos personales descargables hasta el 20 de septiembre de 2026, en
-  `/wp-content/uploads/2024/06/`, `/2024/10/` y `/2024/12/`, y generó además previsualizaciones
-  en JPG de cada uno. Los archivos ya no existen. El 21 de septiembre se pidieron dos retiradas
-  por prefijo en Search Console, `/wp-content/uploads/` y `/uploads/`; el 22 las dos pasaron a
-  "Retirada temporalmente", que es la aprobación.
-
-  Un matiz de la herramienta: "temporalmente" son unos 6 meses, no para siempre; es así como
-  funciona la retirada de Search Console, no un error. No es un problema acá porque los archivos
-  ya no existen (dan 404), así que el rastreo normal de Google los va a ir sacando del índice
-  igual dentro de esa ventana. Falta solo comprobar con `site:japortafolio.com` que ya no
-  aparecen.
 - **Revisar el sitemap en Search Console.** Se envió el 21 de septiembre y quedó en "No se ha
   podido obtener", que es el estado normal recién enviado. El archivo está bien: responde 200,
   es XML válido y trae las 24 URLs. Si en un par de días sigue igual, ahí sí hay algo que mirar.
