@@ -289,6 +289,12 @@ y hay que sostenerla.
   verificar los conteos después.
 - **La consola de Windows es cp1252** y rompe al imprimir acentos. Escribir a archivo con
   `encoding="utf-8"` en vez de depender de `print`.
+- **El hook publica lo que haya en `data.js` en disco, no lo que va en el commit.** Si se deja un
+  borrador en `data.js` sin commitear y se commitea cualquier otra cosa, aunque sea un `.md`, el
+  hook reconstruye el sitio con el borrador y suma el HTML generado: la ficha sale publicada. Pasó
+  el 24 de septiembre de 2026 con la ficha de Aulas Impulsa, que estuvo unos minutos en línea sin
+  aprobar y sin sus fotos. **Los borradores de fichas viven en `Ideo Maker/borradores/`**, fuera
+  de git, y se pegan en `data.js` solo en el commit que los publica.
 
 ---
 
