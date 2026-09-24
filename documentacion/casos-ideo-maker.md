@@ -202,6 +202,10 @@ Del más nuevo al más antiguo, que es el orden en que aparecerían en el catál
 
 ### B.1 · Aulas Maker Fundación Chile, región de Antofagasta
 
+**Publicado el 24 de septiembre de 2026** como "Aulas Impulsa 4.0" (`aulas-impulsa`), con 12
+fotos. Equipo ejecutor confirmado por Vicente: Sebastián Higuera, Patricia Ramírez, Vicente
+Cáceres, Nelson Mora, Javiera Matus y Diego López (Elvis Andrade no participó en este).
+
 | Campo | Valor propuesto |
 |---|---|
 | Cliente | Ideo Maker, para Fundación Chile |

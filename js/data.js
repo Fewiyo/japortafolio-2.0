@@ -105,6 +105,37 @@ const SITE = {
      ---------------------------------------------------------- */
   proyectos: [
     {
+      id: "aulas-impulsa",
+      titulo: "Aulas Impulsa 4.0",
+      cliente: "Ideo Maker, para Fundación Chile",
+      anio: "2025",
+      tags: ["FabLab", "Diseño de espacios", "Capacitación docente", "Modelado 3D", "Educación"],
+      resumen:
+        "Dos aulas maker para liceos de la región de Antofagasta, diseñadas junto a sus comunidades, habilitadas en terreno e inauguradas en septiembre de 2025.",
+      img: "assets/img/proyectos/aulas-impulsa/08-sala-terminada.jpg",
+      bloques: [
+        { tipo: "texto", valor: "Dos Aulas Impulsa para el programa Impulsa 4.0 de Fundación Chile: una en el Liceo Likan Antai, en San Pedro de Atacama, y otra en el Liceo Técnico Profesional María Elena. El programa lo financian Antofagasta Minerals, BHP, Codelco, Novandino Litio y SQM, y busca acercar a estudiantes y docentes a cuatro tecnologías de la industria 4.0: robótica, realidad virtual y aumentada, programación y prototipado. Ideo Maker ejecutó el proyecto completo, desde el diseño participativo hasta la capacitación de los docentes." },
+        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño de los espacios y modelo 3D en Unreal Engine", "Presupuestos, carta Gantt y logística", "Habilitación en terreno: armado e instalación del mobiliario", "Capacitación docente en las cuatro tecnologías"] },
+        { tipo: "lista", titulo: "Equipo Ideo Maker", valor: ["Sebastián Higuera", "Patricia Ramírez", "Vicente Cáceres", "Nelson Mora", "Javiera Matus", "Diego López"] },
+        { tipo: "texto", titulo: "El co-diseño", valor: "La primera etapa fue en terreno, en abril de 2025. En cada liceo hubo una entrevista con el equipo directivo, una feria maker con encuesta a los estudiantes, un focus group con docentes y un levantamiento técnico de la sala. Lo que salió de ahí definió la distribución del espacio, las tecnologías que se compraron y las obras que había que hacer antes de instalar nada." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/01-render-interior.jpg", pie: "El aula de Likan Antai, modelada en Unreal Engine antes de construirse." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/02-render-exterior.jpg", pie: "El exterior y el patio, en el modelo." },
+        { tipo: "texto", titulo: "La habilitación", valor: "Ninguna de las dos salas estaba lista para recibir tecnología. En María Elena la red eléctrica tenía pocos puntos, no había climatización y el mobiliario estaba empotrado, así que no se podía reorganizar por estaciones. En Likan Antai la sala era un laboratorio de computación con un solo aire acondicionado, en mal estado. Por eso el proyecto sumó electricidad, climatización y pintura interior y exterior a la compra de equipos y mobiliario. Las salas se pintaron con la paleta de Ideo Maker." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/03-envio-mobiliario.jpg", pie: "El mobiliario sale en camión desde Santiago." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/04-pintura-maria-elena.jpg", pie: "Pintura de la sala en María Elena." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/05-exterior-likan-antai.jpg", pie: "El exterior de Likan Antai, ya pintado." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/06-patio-maria-elena.jpg", pie: "El patio de María Elena." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/07-instalacion-likan-antai.jpg", pie: "Likan Antai durante la instalación, con el mobiliario recién llegado." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/08-sala-terminada.jpg", pie: "El aula de Likan Antai, terminada." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/09-realidad-virtual.jpg", pie: "La zona de realidad virtual en María Elena, con su ficha de uso." },
+        { tipo: "texto", titulo: "La capacitación docente", valor: "Entre octubre y noviembre de 2025 se capacitó a los equipos docentes de los dos liceos en fabricación digital, realidad virtual, programación y robótica educativa. Cada tecnología tuvo dos sesiones presenciales, una actividad asincrónica y una bitácora donde cada docente registró sus prototipos. El orden de los módulos lo pusieron los propios docentes durante el co-diseño, partiendo por lo que podían usar al día siguiente." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/10-capacitacion-docente.jpg", pie: "Capacitación docente en el aula de Likan Antai." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/11-inauguracion.jpg", pie: "La inauguración, frente a la zona de electrónica." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/12-galardon.jpg", pie: "El galardón del Aula Impulsa 4.0." },
+        { tipo: "texto", valor: "Las aulas se inauguraron el 2 de septiembre de 2025 y quedaron con garantía, mantención y acompañamiento técnico y pedagógico hasta agosto de 2026. En 2026 el mismo trabajo siguió en Taltal y Calama." }
+      ]
+    },
+    {
       id: "haalur",
       titulo: "HAALUR",
       cliente: "Universidad Diego Portales",
