@@ -524,6 +524,7 @@ figcaption{font-size:13px; color:var(--fg); margin-top:12px}
 }
 .fotos svg, .fotos video{width:100%; aspect-ratio:4/3; display:block}
 .credito{display:block; margin-top:4px; opacity:.65}
+.credito-portada{opacity:.65; font-size:12px}
 .ampliar{display:block; cursor:zoom-in}
 .ampliar:focus-visible{outline:2px solid var(--fg); outline-offset:4px}
 

@@ -461,7 +461,9 @@ def pagina_proyecto(p, sig, idx, sitio, hashes):
         + "<div><span>Servicios</span>%s</div>" % " · ".join(esc(t) for t in p["tags"])
         + "</div></div></header>"
         + '<section class="section" style="padding-top:0"><div class="wrap">'
-        + '<figure style="margin-top:0">%s</figure>' % portada(p.get("img"), p["titulo"], idx, pre)
+        + '<figure style="margin-top:0">%s%s</figure>' % (
+            portada(p.get("img"), p["titulo"], idx, pre),
+            '<figcaption class="credito-portada">Foto: %s</figcaption>' % esc(p["img_credito"]) if p.get("img_credito") else "")
         + "".join(trozos)
         + '<a class="next" href="%sproyectos/%s/">' % (pre, sig["id"])
         + '<span><span class="eyebrow" style="margin:0;display:block">Siguiente proyecto</span>'
