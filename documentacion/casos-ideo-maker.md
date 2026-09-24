@@ -106,6 +106,24 @@ Lo útil quedó en `Ideo Maker 2/`, en la raíz del portafolio, fuera de git; la
 - La selección de fotos para cada ficha está en `Ideo Maker/*/seleccion/`, con pies sugeridos
   en `Ideo Maker/SELECCION.md`.
 
+**Lo que dice la prensa (búsqueda del 24 de septiembre de 2026):**
+
+- **Aulas Impulsa de Likan Antai y María Elena:** inauguradas el **2 de septiembre de 2025**. El
+  liceo de María Elena es el **HCTP María Elena**. Las financian Antofagasta Minerals, BHP,
+  Codelco, Novandino Litio y SQM; el modelo lo implementan el Clúster Minero de Antofagasta, el
+  Consejo de Competencias Mineras y Fundación Chile. Cuatro tecnologías: robótica, realidad
+  aumentada, programación y prototipado. Cada aula tiene tres ejes: seguridad, sustentabilidad
+  e inclusión.
+- **Taltal y Calama:** inauguradas en junio de 2026 (nota oficial de Fundación Chile, 3 de junio).
+- **Copiapó (MakerSTEM):** lanzado en abril de 2026 en el Liceo Fernando Ariztía Ruiz de
+  Paipote, el liceo técnico-profesional más grande de la región, con más de 1.500 estudiantes.
+  Es de Fundación Chile con Assist International y la Fundación Caterpillar. La inauguración
+  estaba proyectada para fines de julio y no aparece publicada.
+- **Sala Maker STEAM (País Digital):** inaugurada en **mayo de 2024**, en la Escuela Estación
+  Baquedano y el Complejo Educativo Caracoles, dentro del programa **MASXXI** de Fundación País
+  Digital con Spence (BHP). Baquedano subió 44 puntos en el SIMCE de matemáticas en 2024.
+- Las fotos publicadas quedaron en `Ideo Maker/*/fotos-oficiales-fch` y `fotos-publicadas`.
+
 **Lo que no entra al portafolio:** la carpeta `javi`, que es el proyecto de título de otra
 persona y no un trabajo de Ideo Maker. Lo demás, incluido el Unreal de Nelson y los informes de
 taller del Colegio Andrés Bello (firmados por Nelson Mora y Jorge Garrido), es trabajo de Ideo
