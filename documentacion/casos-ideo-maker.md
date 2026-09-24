@@ -248,7 +248,11 @@ propio que lo respalde.
 - **El año.** Según el Drive, 2023. Falta que Vicente lo confirme.
 - Fotos o video de la garra funcionando. Un video le sirve más que una foto: lo que la hace
   buena es el mecanismo, y eso se ve en movimiento.
-- Confirmar el nombre del espacio (CAOS) y si Fundación Mustakis permite mostrarlo.
+- Confirmar el nombre del espacio y si Fundación Mustakis permite mostrarlo. Los carteles de
+  Ideo Maker lo escriben **KAOS**.
+- **Hay renders 3D de tres herramientas:** garra, pala y gotero. Parecen compartir el mismo brazo
+  y cambiar solo la punta, es decir, un sistema modular. Confirmarlo: es la historia de diseño
+  de la ficha.
 
 ---
 
