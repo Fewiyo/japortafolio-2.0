@@ -122,7 +122,6 @@ const SITE = {
         { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/02-render-exterior.jpg", pie: "El exterior y el patio, en el modelo." },
         { tipo: "texto", titulo: "La habilitación", valor: "Ninguna de las dos salas estaba lista para recibir tecnología. En María Elena la red eléctrica tenía pocos puntos, no había climatización y el mobiliario estaba empotrado, así que no se podía reorganizar por estaciones. En Likan Antai la sala era un laboratorio de computación con un solo aire acondicionado, en mal estado. Por eso el proyecto sumó electricidad, climatización y pintura interior y exterior a la compra de equipos y mobiliario. Las salas se pintaron con la paleta de Ideo Maker." },
         { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/03-envio-mobiliario.jpg", pie: "El mobiliario sale en camión desde Santiago." },
-        { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/04-pintura-maria-elena.jpg", pie: "Pintura de la sala en María Elena." },
         { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/05-exterior-likan-antai.jpg", pie: "El exterior de Likan Antai, ya pintado." },
         { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/06-patio-maria-elena.jpg", pie: "El patio de María Elena." },
         { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/07-instalacion-likan-antai.jpg", pie: "Likan Antai durante la instalación, con el mobiliario recién llegado." },
@@ -131,7 +130,6 @@ const SITE = {
         { tipo: "texto", titulo: "La capacitación docente", valor: "Entre octubre y noviembre de 2025 se capacitó a los equipos docentes de los dos liceos en fabricación digital, realidad virtual, programación y robótica educativa. Cada tecnología tuvo dos sesiones presenciales, una actividad asincrónica y una bitácora donde cada docente registró sus prototipos. El orden de los módulos lo pusieron los propios docentes durante el co-diseño, partiendo por lo que podían usar al día siguiente." },
         { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/10-capacitacion-docente.jpg", pie: "Capacitación docente en el aula de Likan Antai." },
         { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/11-inauguracion.jpg", pie: "La inauguración, frente a la zona de electrónica." },
-        { tipo: "imagen", valor: "assets/img/proyectos/aulas-impulsa/12-galardon.jpg", pie: "El galardón del Aula Impulsa 4.0." },
         { tipo: "texto", valor: "Las aulas se inauguraron el 2 de septiembre de 2025 y quedaron con garantía, mantención y acompañamiento técnico y pedagógico hasta agosto de 2026. En 2026 el mismo trabajo siguió en Taltal y Calama." }
       ]
     },
