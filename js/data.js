@@ -141,10 +141,11 @@ const SITE = {
       anio: "2024",
       tags: ["FabLab", "Diseño de espacios", "Modelado 3D", "Educación"],
       resumen:
-        "Sala maker escolar modelada y recorrida en 3D antes de construirse, para discutir el espacio con la institución cuando cambiarlo todavía era gratis.",
+        "Sala maker para dos liceos de la región de Antofagasta, modelada y recorrida en 3D antes de construirse, para discutir el espacio con la institución cuando cambiarlo todavía era gratis.",
       img: "assets/img/proyectos/salas-maker/01-render-steam.jpg",
       bloques: [
-        { tipo: "texto", valor: "Sala Maker STEAM desarrollada en conjunto entre el equipo de Ideo Maker y la Fundación País Digital. El proyecto tuvo dos etapas: primero el espacio modelado y recorrido en 3D, y después la sala construida y en uso." },
+        { tipo: "texto", valor: "Sala Maker STEAM desarrollada en conjunto entre el equipo de Ideo Maker y la Fundación País Digital, para dos liceos de la región de Antofagasta: uno en Baquedano y otro en Sierra Gorda. El proyecto tuvo dos etapas: primero el espacio modelado y recorrido en 3D, y después la sala construida, con los docentes capacitados para usarla." },
+        { tipo: "lista", titulo: "Mi rol", valor: ["Todo el proceso de implementación y capacitación en los dos liceos", "Modelos 3D del espacio en Unreal Engine", "Definición del Espacio Maker Aula STEAM, junto al equipo"] },
         { tipo: "texto", valor: "Modelar la sala antes de construirla no es un ejercicio de presentación. Permite discutir circulaciones, ubicación de maquinaria y zonas de trabajo con la institución en el momento en que mover una mesa cuesta un clic y no una obra. Cuando el colegio ve el espacio recorrido en primera persona, las observaciones que aparecen son otras." },
         { tipo: "imagen", valor: "assets/img/proyectos/salas-maker/02-render-sala.jpg", pie: "Vista general: mesas de trabajo colaborativo al centro y puestos de computador en el perímetro." },
         { tipo: "imagen", valor: "assets/img/proyectos/salas-maker/03-render-puestos.jpg", pie: "La línea de puestos de trabajo contra el ventanal." },
@@ -198,10 +199,11 @@ const SITE = {
       anio: "2024",
       tags: ["Divulgación", "Robótica", "Educación", "Prensa"],
       resumen:
-        "Feria de ciencia en el Hospital de Niños Dr. Luis Calvo Mackenna, con el stand de robótica de Ideo Maker. La jornada tuvo cobertura nacional.",
+        "Ferias maker y talleres de robótica en liceos y hospitales, cuatro veces al año. La jornada del Hospital de Niños Dr. Luis Calvo Mackenna tuvo cobertura nacional.",
       img: "assets/img/proyectos/congreso-futuro/01-adprensa.jpg",
       bloques: [
         { tipo: "texto", valor: "Congreso Futuro en tu comuna abrió su temporada 2024 en el hall del Servicio de Atención a las Personas del Hospital de Niños Dr. Luis Calvo Mackenna. Niñas y niños de atención ambulatoria participaron de una feria de ciencia con tres estaciones: Astronomía del Instituto Milenio de Astrofísica MAS, el Festival de Matemáticas de la Sociedad Matemática de Chile, y el stand de robótica de Ideo Maker." },
+        { tipo: "texto", valor: "Esa jornada es una de muchas. Ideo Maker participa en Congreso Futuro en tu comuna año tras año, con cuatro actividades por temporada en liceos y hospitales. Cada una combina una feria maker con un taller de Bicho-bot, el robot de MDF que también está en este catálogo." },
         { tipo: "texto", valor: "Llevar una actividad maker a un hospital cambia las restricciones. Los participantes llegan desde atención ambulatoria, los tiempos no se controlan y el espacio no es un aula. La actividad tiene que funcionar en sesiones cortas, entrar y salir sin montaje pesado, y sostenerse con lo que haya sobre una mesa." },
         { tipo: "cita", valor: "Este tipo de actividades le alegra el corazón a todos: a nuestros niños, a sus familias, a funcionarios y a toda la comunidad. El compromiso es que permanezca en el tiempo." },
         { tipo: "texto", valor: "La cita es de Michel Royer, director del Hospital de Niños Dr. Luis Calvo Mackenna." },
@@ -215,14 +217,17 @@ const SITE = {
       id: "kits-educativos",
       titulo: "Kits educativos Bicho-bot",
       cliente: "Ideo Maker",
-      anio: "2023",
+      anio: "2022 — 2023",
       tags: ["Producto", "STEAM", "Fabricación digital", "Robótica"],
       resumen:
-        "Kit de robótica de bajo costo para primer ciclo, diseñado para armarse sin herramientas y fabricarse por corte láser.",
+        "Un robot pedagógico que nació en cartón para los talleres y se convirtió en un kit de MDF, diseñado para fabricarse y calzar en su caja.",
       img: "assets/img/proyectos/kits-educativos/01-packaging.jpg",
       bloques: [
-        { tipo: "texto", valor: "Kit de robótica pensado para primer ciclo: se arma sin herramientas y sus piezas se fabrican por corte láser, que es lo que permite bajar el costo y reponer una pieza rota sin comprar el kit entero. De todo el proyecto se conserva el packaging, y es lo que se muestra acá." },
-        { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/01-packaging.jpg", pie: "El packaging del kit: Bicho BOT, aprender creando." }
+        { tipo: "texto", valor: "Bicho-bot nació en julio de 2022 como robot pedagógico para los talleres de Ideo Maker, hecho en cartón. Servía para enseñar, pero no se podía vender." },
+        { tipo: "texto", valor: "En 2023 lo transformamos en un kit. Se mejoró y se actualizó, pasó del cartón al MDF, y se diseñaron las piezas y la gráfica para que se pudiera fabricar y calzara en la caja. Pasar de prototipo de taller a producto no es cambiar de material: es resolver todo lo que el taller perdonaba y una caja no." },
+        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño para fabricación: piezas en MDF que calzan en la caja", "Gráfica del kit y del packaging"] },
+        { tipo: "texto", valor: "Desde entonces es el taller que Ideo Maker lleva a cada actividad de Congreso Futuro en tu comuna, en liceos y hospitales." },
+        { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/01-packaging.jpg", pie: "Montaje digital del packaging: Bicho BOT, aprender creando." }
       ]
     },
     {

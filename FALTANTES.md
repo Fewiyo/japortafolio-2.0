@@ -6,7 +6,7 @@ Todo lo que el sitio **no** dice porque todavía no lo sabemos. Antes esto viví
 Ninguna de estas líneas se publica. Cuando tengas el dato, se escribe en `js/data.js` y se borra
 de esta lista.
 
-Última revisión: 22 de septiembre de 2026 (noche).
+Última revisión: 24 de septiembre de 2026.
 
 ---
 
@@ -73,17 +73,19 @@ Cuando hagas público un repositorio, cambia ese `false` por `true` y el botón 
 
 ## 4. Datos que faltan, proyecto por proyecto
 
-**Sala Maker STEAM.** En qué establecimiento se implementó y en qué fecha. Qué quedó operando
-después. La página hoy muestra los renders y la foto de la sala construida, sin decir dónde es.
+**Sala Maker STEAM.** Ya dice dónde: dos liceos, en Baquedano y en Sierra Gorda, región de
+Antofagasta, y cuál fue tu rol. Falta el mes y qué quedó operando después. Hay documentos que
+resumen el proyecto; si los pasas, salen más detalles.
 
 **Plan Nacional RAM.** Para qué institución se hizo y qué más componía el encargo además del
 documento.
 
-**Kits educativos Bicho-bot.** Ya se sabe la historia: nace en julio de 2022 como robot
-pedagógico de cartón para los talleres, y en 2023 pasa a kit vendible en MDF, con gráfica y
-piezas pensadas para fabricarse y calzar en la caja. Desde entonces es el taller de cada
-actividad de Congreso Futuro. Está en `documentacion/casos-ideo-maker.md`. Faltan todavía el
-nivel, la electrónica y fotos del robot, de cartón y de MDF.
+**Kits educativos Bicho-bot.** La ficha ya cuenta la historia completa, del robot de cartón de
+2022 al kit de MDF de 2023. **La imagen de la caja no es la real: es un montaje digital.** La
+ficha ahora lo dice en el pie de foto, pero hay que reemplazarla por una foto de la caja
+verdadera, y es también la portada de la tarjeta en el catálogo. Déjala en
+`assets/img/proyectos/kits-educativos/` y avísame. Sirven además fotos del robot, de cartón y de
+MDF. Siguen faltando el nivel y la electrónica que lleva.
 
 **Eloísa.** El año, 2019, está deducido de la fecha de publicación en Behance (enero de 2020).
 Falta confirmarlo, saber en qué CESFAM se probó, si fue en equipo y con quiénes, y si el

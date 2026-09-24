@@ -14,7 +14,9 @@ lleva Antofagasta (María Elena, Taltal, Calama) y otro lleva Atacama (Copiapó)
 
 ## A. Ya publicados, ahora con los datos que les faltaban
 
-Los tres ya están en el sitio. Lo nuevo se agrega a la ficha existente, no hace falta crear nada.
+**Escritos en el sitio el 24 de septiembre de 2026.** Lo que sigue pendiente de estos tres está
+en `FALTANTES.md`, punto 4. En Bicho-bot la ficha anterior decía "primer ciclo", "sin
+herramientas" y "bajo costo": nada de eso estaba confirmado y se sacó.
 
 ### Sala Maker STEAM (`salas-maker`)
 
@@ -148,8 +150,8 @@ evidencia del servicio "fabricación digital", que hoy se ofrece en el sitio sin
 propio que lo respalde.
 
 **Qué falta:**
-- **El año.** En el primer mensaje venía bajo 2021, pero Vicente entró a Ideo Maker en julio de
-  2022. ¿Fue antes de entrar, por otro lado, o la fecha es posterior?
+- **El año.** Pendiente: Vicente lo va a revisar. Lo único seguro es que es posterior a julio
+  de 2022, como todo lo de Ideo Maker; el 2021 del primer mensaje estaba mal.
 - Fotos o video de la garra funcionando. Un video le sirve más que una foto: lo que la hace
   buena es el mecanismo, y eso se ve en movimiento.
 - Confirmar el nombre del espacio (CAOS) y si Fundación Mustakis permite mostrarlo.
