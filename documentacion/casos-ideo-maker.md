@@ -59,6 +59,40 @@ detalle está en `Ideo Maker/LEEME.md`. Lo que cambia respecto de lo que se sab�
 - **Mencionados en una propuesta, sin tu rol claro:** el laboratorio accesible para la
   Corporación Hipoacusia (2023 · 2024) y el Espacio Maker de Maturana 19 (2024).
 
+### Lo que apareció en la unidad compartida de la empresa
+
+La unidad compartida (`G:\Unidades compartidas\Ideo Maker`) mezcla trabajo de todo el equipo.
+Lo útil quedó en `Ideo Maker 2/`, en la raíz del portafolio, fuera de git; la guía está en
+`Ideo Maker 2/LEEME.md`. Lo que agrega a los casos:
+
+- **FCH Antofagasta 2025 tiene el registro completo:** co-diseño del 6 al 10 de abril de 2025
+  (entrevista a directivos, feria maker con encuesta a estudiantes, focus group docente,
+  levantamiento de medidas), mejoramiento de las salas (electricidad, pintura, climatización),
+  envío del mobiliario en camión desde Santiago, instalación, inauguración y capacitaciones por
+  tecnología. El liceo de María Elena es el **Liceo Técnico Profesional María Elena**. Las
+  salas se pintaron con la paleta de Ideo Maker: rojo #ce5546, verde #2d9c6e, amarillo #f2c061
+  y azul #2b7ba5.
+- **Sala Maker STEAM (País Digital):** además de las fotos, existe la **Guía STEAM Maker** de
+  34 páginas que se entregó con la sala: zona interactiva, zona creativa y zona de fabricación.
+  Hay un prototipo de esa guía en la carpeta personal "Ja", que parece ser tuya.
+- **American Spaces 2024, "Robotics Workshops":** un programa de 4 sesiones remotas más un
+  bootcamp presencial por región, para 100 estudiantes de enseñanza media y 25 docentes de las
+  regiones Metropolitana, Valparaíso, Maule, Araucanía y Los Ríos. Un robot móvil con Arduino y
+  sensor de proximidad, con pensamiento de diseño y sustentabilidad. Explica las fotos de los
+  bootcamps de Santiago, Valparaíso, Talca, Temuco y Valdivia. **Candidato nuevo fuerte.**
+- **Fotos de producto:** 95 fotos de Tecno cultivo y 63 de Bicho Bot, más Nave Toy, Foto Bot,
+  Semáforo, Zoótro Bot y Robotito. *Por confirmar:* si las tomaste tú.
+- **Corporación Hipoacusia, 2024:** fotos del taller, objetos fabricados y videos de un
+  "lenguaje maker de señas". Confirma que el laboratorio accesible existió; falta tu rol.
+- **Otros:** Día del Patrimonio 2024, cierre de talleres en la Corporación Santa Cruz, Hub
+  Providencia, renders del Espacio Maker de Ideo Maker, y la línea gráfica de la empresa (iconos,
+  stickers, kit de ventas para redes).
+
+**Lo que no es tuyo, y no se usa como propio:** la carpeta `javi` es el proyecto de título de
+otra persona; `Nelson` guarda el proyecto de Unreal que él optimizó, y los informes de taller del
+Colegio Andrés Bello están firmados por Nelson Mora y Jorge Garrido. En `Laser` hay carpetas por
+persona (Richi, Seba, Pati, Sara, Rafa y otras). Las tuyas parecen ser `ja` y `Ja`.
+
 ---
 
 ## A. Ya publicados, ahora con los datos que les faltaban
