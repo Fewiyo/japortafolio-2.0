@@ -354,14 +354,7 @@ ul{list-style:none; padding:0}
   font-size:15px; line-height:24px; color:var(--fg);
 }
 
-/* ---------- Galeria de un curso ---------- */
-.galeria{display:grid; gap:24px}
-@media (min-width:820px){ .galeria{grid-template-columns:1fr 1fr; gap:32px 24px} }
-.galeria figure{margin:0}
-.galeria img, .galeria svg, .galeria video{
-  width:100%; border-radius:16px; display:block;
-  aspect-ratio:4/3; object-fit:cover; background:var(--card);
-}
+/* La galeria de cursos y apps usa ahora la misma grilla .fotos de las fichas. */
 /* Contenedor de proporcion 16:9 para los videos incrustados */
 .video{
   position:relative; width:100%; aspect-ratio:16/9;
@@ -504,6 +497,56 @@ figcaption{font-size:13px; color:var(--fg); margin-top:12px}
   .js .rise{opacity:1; transform:none}
   html{scroll-behavior:auto}
 }
+
+/* ---------- Fotos de las fichas ----------
+   Las imagenes seguidas se juntan en una grilla de marcos iguales. La foto
+   se ENCAJA en el marco (contain), no se recorta: si es vertical quedan
+   franjas del color de fondo. Entera y en grande se ve al pincharla. */
+.fotos{display:grid; gap:24px; margin:56px 0}
+@media (min-width:820px){
+  .fotos{grid-template-columns:1fr 1fr; gap:32px 24px}
+  .fotos--una{grid-template-columns:1fr; max-width:calc(50% - 12px)}
+}
+/* Cada foto es una tarjeta del color --card (gris claro en el tema claro,
+   gris oscuro en el oscuro): arriba el marco con la foto entera,
+   abajo una franja con la descripcion. La franja va DEBAJO, no encima,
+   para no tapar nada de la imagen. En una fila todas quedan del mismo
+   alto aunque los textos midan distinto. */
+.fotos figure{
+  margin:0; display:flex; flex-direction:column;
+  background:var(--card); border-radius:16px; overflow:hidden;
+}
+.fotos img{width:100%; aspect-ratio:4/3; object-fit:contain; background:transparent}
+.fotos figcaption{
+  flex:1; margin:0; padding:12px 16px 14px;
+  color:var(--fg); font-size:13px; line-height:1.45;
+  border-top:1px solid var(--line);
+}
+.fotos svg, .fotos video{width:100%; aspect-ratio:4/3; display:block}
+.credito{display:block; margin-top:4px; opacity:.65}
+.ampliar{display:block; cursor:zoom-in}
+.ampliar:focus-visible{outline:2px solid var(--fg); outline-offset:4px}
+
+/* ---------- Visor: la foto en grande ---------- */
+.visor{
+  position:fixed; inset:0; z-index:200; background:rgba(8,8,8,.94);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:64px 64px 24px;
+}
+.visor[hidden]{display:none}
+.visor img{max-width:100%; max-height:calc(100vh - 150px); object-fit:contain; border-radius:6px}
+.visor__pie{color:#f5f4f2; font-size:13px; margin-top:14px; max-width:70ch; text-align:center}
+.visor button{
+  position:absolute; background:none; border:0; color:#f5f4f2; cursor:pointer;
+  font:inherit; font-size:30px; line-height:1; width:48px; height:48px; border-radius:50%;
+}
+.visor button:hover, .visor button:focus-visible{background:rgba(255,255,255,.12); outline:none}
+.visor__cerrar{top:12px; right:12px}
+.visor__ant{left:8px; top:50%; transform:translateY(-50%)}
+.visor__sig{right:8px; top:50%; transform:translateY(-50%)}
+.visor__ant[hidden], .visor__sig[hidden]{display:none}
+html.visor-abierto{overflow:hidden}
+@media (max-width:819px){ .visor{padding:56px 8px 16px} }
 
 /* ---------- Responsive ----------
    El aire se reduce proporcionalmente, pero se mantiene generoso. */

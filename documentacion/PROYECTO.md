@@ -127,6 +127,7 @@ En el array `proyectos` de `data.js`:
     { tipo: "texto",  valor: "Un párrafo." },
     { tipo: "texto",  titulo: "Con subtítulo", valor: "..." },
     { tipo: "imagen", valor: "assets/img/...", pie: "Pie de foto." },
+    { tipo: "imagen", valor: "assets/img/...", pie: "...", credito: "Alianza CCM-Eleva" },
     { tipo: "cita",   valor: "Una cita destacada." },
     { tipo: "lista",  titulo: "Mi rol", valor: ["Uno", "Dos"] }
   ]
@@ -134,6 +135,16 @@ En el array `proyectos` de `data.js`:
 ```
 
 Cursos y apps tienen su propia forma; el ejemplo más cercano está siempre en el mismo array.
+
+**Cómo se ven las fotos (desde el 24 de septiembre de 2026).** Las imágenes seguidas de una
+ficha se juntan solas en una grilla de dos columnas; las galerías de cursos y apps usan la misma.
+Cada foto es una tarjeta: arriba el marco, con la foto **entera** (se encaja, no se recorta; las
+verticales quedan con franjas del color de la tarjeta) y abajo una franja con el pie. Al
+pincharla se abre en grande en un visor con flechas y Esc; sin JavaScript, el enlace abre el
+archivo. La foto de portada también se abre.
+
+**Fotos de terceros:** el campo `credito` agrega "Foto: ..." bajo el pie. Se usa siempre que la
+foto sea de otro, aunque esté aprobada; en galerías de cursos y apps funciona igual.
 
 ### Esconder algo sin borrarlo
 

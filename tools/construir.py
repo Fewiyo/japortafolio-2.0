@@ -100,6 +100,13 @@ def portada_lisa(label, i):
     )
 
 
+def portada(src, label, i, pre=""):
+    """La foto grande del encabezado de una ficha. Tambien se abre al pincharla."""
+    if not src:
+        return media(src, label, i, pre)
+    return '<a class="ampliar" href="%s%s">%s</a>' % (pre, esc(src), media(src, label, i, pre))
+
+
 def media(src, label, i, pre=""):
     if not src:
         return portada_lisa(label, i)
@@ -187,6 +194,8 @@ def pieza(g, label, i, pre=""):
                   'title="%s" loading="lazy" allowfullscreen></iframe></div>' % (esc(g["src"]), esc(label)))
     elif g.get("tipo") == "video" and g.get("src"):
         cuerpo = '<video src="%s%s" controls preload="metadata" playsinline></video>' % (pre, esc(g["src"]))
+    elif g.get("src"):
+        return foto_ampliable(g["src"], g.get("pie"), label, pre, g.get("credito"))
     else:
         cuerpo = media(g.get("src"), label, i, pre)
     pie_txt = "<figcaption>%s</figcaption>" % esc(g["pie"]) if g.get("pie") else ""
@@ -404,21 +413,42 @@ def pagina_historia(sitio, hashes):
         imagen=h.get("retrato"), cuerpo=cuerpo, hashes=hashes, tipo_og="profile")
 
 
+def foto_ampliable(src, pie, label, pre="", credito=None):
+    """Una foto de ficha: se ve entera dentro de un marco parejo y se abre
+    en grande al pincharla. Sin JavaScript el enlace abre el archivo.
+    `credito` es para fotos de terceros: sale como "Foto: ..." bajo el pie."""
+    cred = '<span class="credito">Foto: %s</span>' % esc(credito) if credito else ""
+    pie_txt = "<figcaption>%s%s</figcaption>" % (esc(pie or ""), cred) if (pie or credito) else ""
+    return ('<figure class="rise"><a class="ampliar" href="%s%s">'
+            '<img src="%s%s" alt="%s" loading="lazy" decoding="async"></a>%s</figure>'
+            % (pre, esc(src), pre, esc(src), esc(pie or label), pie_txt))
+
+
 def pagina_proyecto(p, sig, idx, sitio, hashes):
     pre = "../../"
     trozos = []
+    fotos = []   # imagenes seguidas: se juntan en una grilla
+
+    def soltar_fotos():
+        if fotos:
+            clase = "fotos fotos--una" if len(fotos) == 1 else "fotos"
+            trozos.append('<div class="%s">%s</div>' % (clase, "".join(fotos)))
+            del fotos[:]
+
     for i, b in enumerate(p["bloques"]):
         t = "<h2>%s</h2>" % esc(b["titulo"]) if b.get("titulo") else ""
         if b["tipo"] == "imagen":
-            pie_txt = "<figcaption>%s</figcaption>" % esc(b["pie"]) if b.get("pie") else ""
-            trozos.append("<figure>%s%s</figure>" % (media(b["valor"], p["titulo"], idx + i, pre), pie_txt))
-        elif b["tipo"] == "cita":
+            fotos.append(foto_ampliable(b["valor"], b.get("pie"), p["titulo"], pre, b.get("credito")))
+            continue
+        soltar_fotos()
+        if b["tipo"] == "cita":
             trozos.append('<blockquote class="quote">%s</blockquote>' % esc(b["valor"]))
         elif b["tipo"] == "lista":
             trozos.append('<div class="prose">%s<ul>%s</ul></div>'
                           % (t, "".join("<li>%s</li>" % esc(v) for v in b["valor"])))
         else:
             trozos.append('<div class="prose">%s<p>%s</p></div>' % (t, esc(b["valor"])))
+    soltar_fotos()
     cuerpo = (
         nav("catalogo", pre, sitio)
         + '<header class="case-head"><div class="wrap">'
@@ -431,7 +461,7 @@ def pagina_proyecto(p, sig, idx, sitio, hashes):
         + "<div><span>Servicios</span>%s</div>" % " · ".join(esc(t) for t in p["tags"])
         + "</div></div></header>"
         + '<section class="section" style="padding-top:0"><div class="wrap">'
-        + '<figure style="margin-top:0">%s</figure>' % media(p.get("img"), p["titulo"], idx, pre)
+        + '<figure style="margin-top:0">%s</figure>' % portada(p.get("img"), p["titulo"], idx, pre)
         + "".join(trozos)
         + '<a class="next" href="%sproyectos/%s/">' % (pre, sig["id"])
         + '<span><span class="eyebrow" style="margin:0;display:block">Siguiente proyecto</span>'
@@ -472,11 +502,11 @@ def pagina_curso(c, sig, idx, sitio, hashes):
         + ('<p class="lead rise">%s</p>' % esc(c["resumen"]) if c.get("resumen") else "")
         + '<div class="case-facts rise">%s</div></div></header>' % facts
         + '<section class="section section--tight"><div class="wrap">'
-        + '<figure class="rise" style="margin-top:0">%s</figure>' % media(c.get("portada"), c["nombre"], idx, pre)
+        + '<figure class="rise" style="margin-top:0">%s</figure>' % portada(c.get("portada"), c["nombre"], idx, pre)
         + '<div class="prose rise">%s</div>' % "".join("<p>%s</p>" % esc(p) for p in c.get("descripcion", []))
         + ('<div class="notas">%s</div>' % destacados if destacados else "")
         + ('<h2 class="subhead">Temario</h2><ol class="temario">%s</ol>' % temario if temario else "")
-        + ('<h2 class="subhead">Registro</h2><div class="galeria">%s</div>' % galeria if galeria else "")
+        + ('<h2 class="subhead">Registro</h2><div class="fotos">%s</div>' % galeria if galeria else "")
         + '<a class="next" href="%scursos/%s/">' % (pre, sig["id"])
         + '<span><span class="eyebrow" style="margin:0;display:block">Siguiente curso</span>'
         + "<strong>%s</strong></span><span>&rarr;</span></a>" % esc(sig["nombre"])
@@ -515,7 +545,7 @@ def pagina_app(a, sig, idx, sitio, hashes):
         % (esc(b["fecha"]), esc(b["titulo"]),
            '<span class="temario__d">%s</span>' % esc(b["texto"]) if b.get("texto") else "")
         for b in a.get("bitacora", []))
-    galeria = "".join(pieza({"tipo": "imagen", "src": g.get("src"), "pie": g.get("pie")},
+    galeria = "".join(pieza({"tipo": "imagen", "src": g.get("src"), "pie": g.get("pie"), "credito": g.get("credito")},
                             a["titulo"], idx + n, pre) for n, g in enumerate(a.get("galeria", [])))
     chips = "".join('<span class="chip">%s</span>' % esc(t) for t in a.get("etiquetas", []))
     cuerpo = (
@@ -527,10 +557,10 @@ def pagina_app(a, sig, idx, sitio, hashes):
         + acciones
         + '<div class="case-facts rise">%s</div></div></header>' % facts
         + '<section class="section section--tight"><div class="wrap">'
-        + '<figure class="rise" style="margin-top:0">%s</figure>' % media(a.get("portada"), a["titulo"], idx, pre)
+        + '<figure class="rise" style="margin-top:0">%s</figure>' % portada(a.get("portada"), a["titulo"], idx, pre)
         + '<div class="prose rise">%s</div>' % "".join("<p>%s</p>" % esc(p) for p in a.get("descripcion", []))
         + ('<h2 class="subhead">Bitácora</h2><ol class="temario">%s</ol>' % bitacora if bitacora else "")
-        + ('<h2 class="subhead">Pantallas</h2><div class="galeria">%s</div>' % galeria if galeria else "")
+        + ('<h2 class="subhead">Pantallas</h2><div class="fotos">%s</div>' % galeria if galeria else "")
         + ('<h2 class="subhead">Etiquetas</h2><div class="chips rise">%s</div>' % chips if chips else "")
         + '<a class="next" href="%sapps/%s/">' % (pre, sig["id"])
         + '<span><span class="eyebrow" style="margin:0;display:block">Siguiente proyecto</span>'

@@ -89,6 +89,70 @@
   repasar();
   setTimeout(revelarTodo, 2000);
 
+  /* ---------- Visor de fotos ----------
+     Cada foto de ficha es un enlace a su propio archivo: sin JavaScript,
+     pincharla abre la imagen sola. Con JavaScript se abre encima de la
+     página, con flechas para pasar entre las fotos de esa misma ficha. */
+  var ampliables = [].slice.call(document.querySelectorAll("a.ampliar"));
+  if (ampliables.length) {
+    var visor = document.createElement("div");
+    visor.className = "visor";
+    visor.hidden = true;
+    visor.setAttribute("role", "dialog");
+    visor.setAttribute("aria-modal", "true");
+    visor.setAttribute("aria-label", "Foto ampliada");
+    visor.innerHTML =
+      '<img alt="">' +
+      '<p class="visor__pie"></p>' +
+      '<button type="button" class="visor__cerrar" aria-label="Cerrar">&times;</button>' +
+      '<button type="button" class="visor__ant" aria-label="Foto anterior">&lsaquo;</button>' +
+      '<button type="button" class="visor__sig" aria-label="Foto siguiente">&rsaquo;</button>';
+    document.body.appendChild(visor);
+
+    var vImg = visor.querySelector("img");
+    var vPie = visor.querySelector(".visor__pie");
+    var vAnt = visor.querySelector(".visor__ant");
+    var vSig = visor.querySelector(".visor__sig");
+    var actual = 0, volverA = null;
+
+    var mostrar = function (i) {
+      actual = (i + ampliables.length) % ampliables.length;
+      var a = ampliables[actual];
+      var pie = a.parentNode.querySelector("figcaption");
+      vImg.src = a.getAttribute("href");
+      vImg.alt = a.querySelector("img").alt;
+      vPie.textContent = pie ? pie.textContent : "";
+      vAnt.hidden = vSig.hidden = ampliables.length < 2;
+    };
+    var abrir = function (i) {
+      volverA = document.activeElement;
+      mostrar(i);
+      visor.hidden = false;
+      document.documentElement.classList.add("visor-abierto");
+      visor.querySelector(".visor__cerrar").focus();
+    };
+    var cerrar = function () {
+      visor.hidden = true;
+      vImg.removeAttribute("src");
+      document.documentElement.classList.remove("visor-abierto");
+      if (volverA) volverA.focus();
+    };
+
+    ampliables.forEach(function (a, i) {
+      a.addEventListener("click", function (e) { e.preventDefault(); abrir(i); });
+    });
+    visor.querySelector(".visor__cerrar").addEventListener("click", cerrar);
+    vAnt.addEventListener("click", function () { mostrar(actual - 1); });
+    vSig.addEventListener("click", function () { mostrar(actual + 1); });
+    visor.addEventListener("click", function (e) { if (e.target === visor) cerrar(); });
+    addEventListener("keydown", function (e) {
+      if (visor.hidden) return;
+      if (e.key === "Escape") cerrar();
+      else if (e.key === "ArrowLeft") mostrar(actual - 1);
+      else if (e.key === "ArrowRight") mostrar(actual + 1);
+    });
+  }
+
   /* ---------- Filtrado del catálogo ----------
      Trabaja sobre las tarjetas que ya vienen en el HTML: no genera nada.
      Cada tarjeta trae sus etiquetas en data-tags. Al mostrar una se la
