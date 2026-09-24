@@ -12,6 +12,55 @@ lleva Antofagasta (María Elena, Taltal, Calama) y otro lleva Atacama (Copiapó)
 
 ---
 
+## Lo que apareció en el Drive · 24 de septiembre de 2026
+
+Se revisó `G:\Mi unidad\Pegas\Ideo maker` y la unidad compartida de la empresa. Lo útil se
+copió, ordenado por proyecto, a `Ideo Maker/` en la raíz del portafolio (fuera de git); el
+detalle está en `Ideo Maker/LEEME.md`. Lo que cambia respecto de lo que se sabía:
+
+**Datos que se corrigen o se precisan**
+
+| Caso | Antes | Según el Drive |
+|---|---|---|
+| Tecno-cultivo | Año pendiente | **2023.** Está en `2023/Primer Semestre/Mustakis año/Tecnocultivo`, con el archivo `pieza final garra.stl`, y los stickers son del segundo semestre de 2023 |
+| Sala Maker STEAM | Baquedano y Sierra Gorda | **Escuela Baquedano y Escuela Caracoles** (Caracoles está en la comuna de Sierra Gorda). Las cotizaciones son del segundo semestre de 2023; la sala, de 2024 |
+| FCH Antofagasta | Likan Antay | **Colegio Likan Antai, San Pedro de Atacama.** El programa se llama **Impulsa 4.0**; en el cartel del aula aparecen BHP, Codelco, SQM, CCM y Eleva. El aula de María Elena se inauguró el 25 de agosto de 2025 |
+| FCH Antofagasta | "4 tecnologías" | Prototipado, robótica educativa, realidad virtual y aumentada, y codificación: 4 sesiones de cada una |
+| FCH 2026 | Taltal y Calama | **Liceo José Miguel Quiroz** (Taltal) y **Liceo B-10 Minero América** (Calama, "Aula Impulsa 4.0") |
+| FCH Copiapó | Copiapó | **Liceo Fernando Ariztía Ruiz, en Paipote**, dependiente del SLEP Atacama. Licitación "Aulas Atacama 4.0". Cuatro informes de etapa, más un módulo de capacitación en el brazo robótico industrial DOBOT CR5 |
+| Bicho-bot | Kit suelto | Es uno de **cuatro kits** de la línea "Aprender creando": Bicho Bot, Foto Bot, Nave Toy y Zoótro Bot, todos en MDF con piezas impresas en 3D. Nace en los talleres de Lo Barnechea: el archivo `final bicho para cortar` es del 15 de julio de 2022 |
+| Congreso Futuro | Año de inicio desconocido | La primera cotización a "Congreso del Futuro en tu Comuna" es del **2 de junio de 2023**: 8 Bicho-Bot. La relación parte, a más tardar, ahí |
+| MKBOT | | El manual final es de 2025 y dice que el kit es para estudiantes "desde segundo ciclo hasta enseñanza media", con Arduino UNO, sensores y piezas en MDF e impresión 3D. Hay un brochure de 2026 |
+
+**Material que antes no existía**
+
+- Fotos de estudio reales de los cuatro kits, y el arte impreso de la caja de Bicho Bot. Sigue
+  sin haber una foto de la caja física.
+- 34 fotos de la Sala Maker STEAM construida en el norte. Hoy la ficha tiene una sola.
+- Renders de Unreal de las aulas de FCH, incluidos Taltal y Calama.
+- La garra de Tecno-cultivo sosteniendo una papa, y la caja "TIERRA".
+
+**Candidatos nuevos, que no estaban en la lista**
+
+- **Asistente IA del Aula Impulsa 4.0** (septiembre de 2026): ocho GPT especializados, uno por
+  tecnología del aula de Calama, con fichas de seguridad, uso pedagógico y reglas para no
+  inventar datos. Calza con la línea de proyectos hechos con IA del catálogo.
+- **La línea de kits "Aprender creando"** (2022 · 2023): puede ser una ficha propia o ampliar la
+  de Bicho-bot.
+- **Fabricación digital para terceros** (2024): el portafolio de servicios de Ideo Maker
+  muestra, entre otros, el galardón "Partner Clave" de Samsung Solve for Tomorrow 2024, con la
+  Fundación Comeduc, y piezas para una productora audiovisual. *Por confirmar:* qué hiciste tú.
+- **Postulaciones a fondos:** Fondart Nacional 2023, "Diseño en acción, herramientas de
+  innovación para educadores", con Vicente como responsable; y Fondart de Investigación 2024,
+  "Aula Maker", con marco teórico y avance de investigación. Además, un proyecto Corfo.
+  *Por confirmar:* si alguna se adjudicó. Sirven para el CV y la línea de investigación.
+- **Talleres:** Lo Barnechea (2022 y 2023), Hub Providencia e Innovación para profesores
+  (2023), Explora (2023) y Mustakis en verano (2023). Van a la trayectoria.
+- **Mencionados en una propuesta, sin tu rol claro:** el laboratorio accesible para la
+  Corporación Hipoacusia (2023 · 2024) y el Espacio Maker de Maturana 19 (2024).
+
+---
+
 ## A. Ya publicados, ahora con los datos que les faltaban
 
 **Escritos en el sitio el 24 de septiembre de 2026.** Lo que sigue pendiente de estos tres está
@@ -69,7 +118,7 @@ Del más nuevo al más antiguo, que es el orden en que aparecerían en el catál
 |---|---|
 | Cliente | Ideo Maker, para Fundación Chile |
 | Año | 2025 · 2026 |
-| Liceos | 2025: Likan Antay y María Elena, proyecto semestral. 2026, primer semestre: Taltal y Calama |
+| Liceos | 2025: Colegio Likan Antai (San Pedro de Atacama) y María Elena, proyecto semestral. 2026, primer semestre: Liceo José Miguel Quiroz (Taltal) y Liceo B-10 Minero América (Calama) |
 | Tu rol | Habilitación, capacitaciones, logística, presupuestos, carta Gantt, diseño de los espacios, armado de muebles, instalación, capacitación docente en 4 tecnologías. Modelo 3D en Unreal Engine de los dos primeros liceos; Nelson lo optimizó y sobre esa base se hicieron los siguientes |
 
 ### B.2 · Aula Maker Fundación Chile, Copiapó
@@ -84,7 +133,7 @@ Queda separado de B.1 porque es otro equipo de Fundación Chile, otra región, y
 informes. Si prefieres contarlo como una sola historia que crece de liceo en liceo, se juntan.
 
 **Qué falta en B.1 y B.2:** fotos de los espacios (antes y después, si hay), qué se puede
-mostrar de cada liceo, y confirmar cómo se escribe Likan Antay y en qué comuna está.
+mostrar de cada liceo. Los renders y las propuestas ya están en `Ideo Maker/fch-antofagasta/`.
 
 ### B.3 · Plataforma de cursos para Fundación Chile
 
@@ -138,7 +187,7 @@ el Wayback Machine.
 | Campo | Valor propuesto |
 |---|---|
 | Cliente | Fundación Mustakis |
-| Año | **Por confirmar** (ver abajo) |
+| Año | 2023, según el Drive |
 | Dónde | CAOS, espacio de talleres en Recoleta |
 | Qué es | Una experiencia educativa sobre cultivo y tecnología. La garra robótica es uno de sus elementos |
 | Tu rol | Diseño y fabricación de la garra robótica: mecánicamente compleja, y funciona |
@@ -150,8 +199,7 @@ evidencia del servicio "fabricación digital", que hoy se ofrece en el sitio sin
 propio que lo respalde.
 
 **Qué falta:**
-- **El año.** Pendiente: Vicente lo va a revisar. Lo único seguro es que es posterior a julio
-  de 2022, como todo lo de Ideo Maker; el 2021 del primer mensaje estaba mal.
+- **El año.** Según el Drive, 2023. Falta que Vicente lo confirme.
 - Fotos o video de la garra funcionando. Un video le sirve más que una foto: lo que la hace
   buena es el mecanismo, y eso se ve en movimiento.
 - Confirmar el nombre del espacio (CAOS) y si Fundación Mustakis permite mostrarlo.
