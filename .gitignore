@@ -38,6 +38,12 @@ Penta UC/
 # en assets/files/.
 /CV_*.pdf
 
+# Material en bruto de los proyectos de Ideo Maker: fotos originales,
+# informes, manuales y videos. Es trabajo compartido con la empresa y sus
+# clientes, y puede traer fotos de menores. Al sitio solo entra lo que se
+# selecciona y optimiza en assets/img/proyectos/.
+Ideo Maker/
+
 # Briefs de trabajo y proyectos en cocina. No son contenido del sitio y
 # alguno es material privado que Vicente no quiere publicado.
 Prompt etapas/
