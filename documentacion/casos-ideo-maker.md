@@ -1,187 +1,204 @@
-# Casos Ideo Maker — qué falta para subir cada uno
+# Casos Ideo Maker · qué falta para subir cada uno
 
-Esto ordena lo que mandaste el 24 de septiembre de 2026: ocho años de trabajo en Ideo Maker,
-en un solo mensaje. Lo separé en cinco grupos. Para cada candidato a proyecto dejo los campos
-tal como los pide `js/data.js`, con lo que ya sé y lo que todavía falta.
+Ordena lo que Vicente contó el 24 de septiembre de 2026 sobre su trabajo en Ideo Maker, desde
+que entró en julio de 2022. Para cada candidato a proyecto quedan los campos tal como los pide
+`js/data.js`, con lo que ya se sabe y lo que todavía falta.
 
-Nada de esto se sube solo. La Fase C del plan dice que hay que resolver primero qué se puede
-publicar, porque es trabajo compartido con la empresa: revisa cada uno antes de que lo escriba.
+Nada de esto se sube solo. La Fase C del plan pide resolver primero qué se puede publicar,
+porque es trabajo compartido con la empresa y con sus clientes.
+
+**Glosario.** FCH es Fundación Chile. Trabaja por regiones con equipos separados: un equipo
+lleva Antofagasta (María Elena, Taltal, Calama) y otro lleva Atacama (Copiapó).
 
 ---
 
-## A. Ya publicado, solo le faltaba un dato
+## A. Ya publicados, ahora con los datos que les faltaban
+
+Los tres ya están en el sitio. Lo nuevo se agrega a la ficha existente, no hace falta crear nada.
 
 ### Sala Maker STEAM (`salas-maker`)
 
-Este es el único que no necesita nada nuevo tuyo. Lo que escribiste ahora responde exactamente
-lo que `FALTANTES.md` pedía en el punto 4: en qué establecimiento y con qué rol.
-
-| Campo | Lo que ya dice el sitio | Lo que agregaste ahora |
+| Campo | Hoy en el sitio | Dato nuevo |
 |---|---|---|
 | Cliente | Ideo Maker y Fundación País Digital | (coincide) |
 | Año | 2024 | (coincide) |
-| Establecimiento | No decía | Escuela Baquedano y Escuela Sierra Gorda, región de Antofagasta |
-| Tu rol | No estaba explícito | Modelado 3D en Unreal Engine del espacio, y definición completa del Espacio Maker Aula STEAM |
+| Dónde | No lo decía | Dos liceos, en Baquedano y en Sierra Gorda, región de Antofagasta |
+| Tu rol | No estaba explícito | Todo el proceso de implementación y capacitación; modelos 3D del espacio en Unreal Engine; definición del Espacio Maker Aula STEAM |
 
-Dijiste que hay documentos que resumen lo trabajado. Si me los pasas puedo sacar más detalle;
-si no, con esto ya alcanza para completar la ficha.
+Hay documentos que resumen lo trabajado. Si los pasas, salen más detalles; si no, con esto
+alcanza para cerrar el punto de `FALTANTES.md`.
 
-**¿Lo agrego a `js/data.js` ahora?** Es un solo bloque de texto nuevo, no toca nada más.
+### Bicho-bot (`kits-educativos`)
+
+La fecha del sitio, 2023, está bien: es el año del kit. Lo que faltaba es que el proyecto tiene
+dos etapas, y la ficha hoy solo cuenta la segunda.
+
+| Etapa | Qué pasó |
+|---|---|
+| Julio de 2022 | Nace como robot pedagógico para los talleres, en cartón. Es el mes en que Vicente entra a Ideo Maker |
+| 2023 | Se transforma en kit vendible: se mejora, se actualiza, pasa de cartón a MDF, y se diseñan la gráfica y las piezas para que se fabrique en serie y calce en la caja |
+| Desde entonces | Es el taller que Ideo Maker lleva a cada actividad de Congreso Futuro en tu comuna |
+
+Eso cambia la historia que cuenta la ficha: no es "un kit del que queda el packaging", es un
+prototipo de taller que se convirtió en producto. **Siguen faltando:** para qué nivel, qué
+electrónica lleva, y fotos del robot (de cartón y de MDF, si las hay).
+
+### Congreso Futuro en tu comuna (`congreso-futuro`)
+
+La ficha habla de una sola jornada, la del Hospital Calvo Mackenna en 2024. En realidad es un
+programa: unos tres años, cuatro actividades por año, en liceos y hospitales. Cada actividad es
+una feria maker más un taller de Bicho-bot en MDF, y a cambio Congreso Futuro les da presencia
+en prensa.
+
+La jornada del Calvo Mackenna puede seguir siendo el centro de la ficha, porque es la que tiene
+cobertura documentada. Se le agrega un bloque que diga que es parte de un programa de tres años.
+**Falta:** el año de inicio. Vicente no está seguro; se puede reconstruir buscando la cobertura
+de prensa de cada año.
 
 ---
 
-## B. Candidatos fuertes a proyecto nuevo
+## B. Candidatos a proyecto nuevo
 
-Para cada uno: los campos que pide el sitio, con lo que ya se puede llenar y lo que falta.
-El orden es el que tendrían en el catálogo, del más nuevo al más antiguo.
+Del más nuevo al más antiguo, que es el orden en que aparecerían en el catálogo.
 
-### B.1 — Plataforma de cursos y capacitaciones FCH
-
-| Campo | Valor propuesto |
-|---|---|
-| Cliente | Ideo Maker, para FCH *(¿qué sigla es? ver sección C)* |
-| Año | 2025 — 2026 |
-| Tu rol | Diseño de la plataforma y desarrollo de contenido; guiones de las clases grabadas |
-| Colaboradores | Elvis (programación), Diego López (grabación) |
-| Resumen borrador | Plataforma de cursos y capacitaciones para docentes, usada durante todo 2026 e integrada en 14 liceos. |
-
-**Qué necesito:** capturas de pantalla de la plataforma (mínimo 3-4, como en los demás
-proyectos), y confirmar si "diseñador de plataformas de Classroom" de 2026 es esta misma
-plataforma o es otra distinta.
-
-### B.2 — Aulas Maker FCH: Likantatay, María Elena, Taltal, Calama, Copiapó
-
-Esto es lo que la Fase C del plan llamaba "los casos de Ideo Maker: Atacama, Antofagasta,
-Taltal y Calama". Lo dejo como un solo caso con línea de tiempo, no cinco separados, porque es
-el mismo proyecto semestral escalando liceo por liceo. Si prefieres separarlos, dime y hago una
-ficha por liceo.
+### B.1 · Aulas Maker Fundación Chile, región de Antofagasta
 
 | Campo | Valor propuesto |
 |---|---|
-| Cliente | Ideo Maker, para FCH |
-| Año | 2025 — 2026 |
-| Tu rol | Habilitación, capacitaciones, logística, presupuestos, carta Gantt, diseño de espacios, montaje de mobiliario, capacitación en 4 tecnologías; modelado 3D en Unreal Engine de los dos primeros liceos (Nelson lo optimizó después para los tres siguientes) |
-| Línea de tiempo | 2025: Likantatay y María Elena (proyecto semestral completo). 2026, primer semestre: Taltal y Calama. 2026, segundo semestre: Copiapó |
-| Encargo adicional | Generación de informes del proyecto de Copiapó |
+| Cliente | Ideo Maker, para Fundación Chile |
+| Año | 2025 · 2026 |
+| Liceos | 2025: Likan Antay y María Elena, proyecto semestral. 2026, primer semestre: Taltal y Calama |
+| Tu rol | Habilitación, capacitaciones, logística, presupuestos, carta Gantt, diseño de los espacios, armado de muebles, instalación, capacitación docente en 4 tecnologías. Modelo 3D en Unreal Engine de los dos primeros liceos; Nelson lo optimizó y sobre esa base se hicieron los siguientes |
 
-**Qué necesito:** fotos de los espacios habilitados (antes/después si las tienes), los
-informes que mencionas si quieres que saque contenido de ahí, y confirmar qué se puede mostrar
-de cada liceo.
-
-### B.3 — Kit educativo MKBOT
+### B.2 · Aula Maker Fundación Chile, Copiapó
 
 | Campo | Valor propuesto |
 |---|---|
-| Cliente | Ideo Maker |
-| Año | 2024 |
-| Tu rol | Participación en el desarrollo del kit; diseño de los elementos gráficos y el sticker de la caja; capacitación a docentes en la Escuela de Chicureo (impresión 3D) como parte del bootcamp de lanzamiento |
-| Material de apoyo que generaste | Manual de MKBOT, guía de práctica |
+| Cliente | Ideo Maker, para Fundación Chile (equipo de Atacama) |
+| Año | 2026, segundo semestre |
+| Tu rol | El mismo trabajo de implementación, más la redacción de los informes del proyecto |
 
-**Qué necesito:** fotos del kit terminado, del packaging con el sticker, y confirmar qué tanto
-del manual se puede mostrar (aunque sea un extracto, como se hizo con el packaging de Bicho-bot).
+Queda separado de B.1 porque es otro equipo de Fundación Chile, otra región, y tu rol suma los
+informes. Si prefieres contarlo como una sola historia que crece de liceo en liceo, se juntan.
 
-### B.4 — Página web de Ideo Maker
+**Qué falta en B.1 y B.2:** fotos de los espacios (antes y después, si hay), qué se puede
+mostrar de cada liceo, y confirmar cómo se escribe Likan Antay y en qué comuna está.
 
-| Campo | Valor propuesto |
-|---|---|
-| Cliente | Ideo Maker |
-| Año | 2024 |
-| Estado | Ya no está mantenida |
-| Tu rol | Diseño y construcción completa del sitio |
-
-**Qué necesito:** capturas de pantalla (¿tienes el archivo, o hay que sacarlas de Wayback
-Machine si el sitio sigue en línea aunque abandonado?), y confirmar si sigue en línea en algún
-dominio para poder enlazarla o si ya no existe.
-
-### B.5 — Kit Auto Toy
+### B.3 · Plataforma de cursos para Fundación Chile
 
 | Campo | Valor propuesto |
 |---|---|
-| Cliente | Municipalidad de Lo Barnechea *(¿o Ideo Maker para la municipalidad? confirma)* |
+| Cliente | Ideo Maker, para Fundación Chile |
+| Año | 2025 · 2026 |
+| Tu rol | Diseño de la plataforma, desarrollo del contenido y guiones de las clases grabadas |
+| Con | Elvis (programación), Diego López (grabó parte de las clases) |
+| Resumen borrador | Plataforma de cursos para docentes, en uso durante todo 2026 y en proceso de integrarse en 14 liceos. |
+
+**Qué falta:** capturas de pantalla; confirmar la cifra de 14 liceos antes de publicarla; y si
+las plataformas de Classroom de 2026 para las capacitaciones son esta misma o una aparte.
+
+### B.4 · Kit Auto Toy
+
+| Campo | Valor propuesto |
+|---|---|
+| Cliente | Por confirmar: ¿Municipalidad de Lo Barnechea, o Ideo Maker para la municipalidad? |
 | Año | 2025 |
-| Contexto | Talleres de verano |
+| Contexto | Talleres de verano en Lo Barnechea |
 | Tu rol | Diseño del kit |
 
-**Qué necesito:** fotos del kit y del taller, y el cliente exacto.
+**Qué falta:** fotos del kit y del taller, y el cliente exacto.
+
+### B.5 · Kit educativo MKBOT
+
+| Campo | Valor propuesto |
+|---|---|
+| Cliente | Ideo Maker |
+| Año | 2024 |
+| Tu rol | Parte del desarrollo del kit; gráfica y sticker de la caja; manual de MKBOT y guía de práctica; bootcamp del robot |
+
+**Qué falta:** fotos del kit y del packaging, y cuánto del manual se puede mostrar (aunque sea
+un extracto, como se hizo con el packaging de Bicho-bot).
+
+### B.6 · Página web de Ideo Maker
+
+| Campo | Valor propuesto |
+|---|---|
+| Cliente | Ideo Maker |
+| Año | 2024 |
+| Estado | Hoy sin mantención |
+| Tu rol | Diseño y construcción del sitio |
+
+**Qué falta:** capturas. Si el sitio sigue en línea se sacan directo; si no, puede que estén en
+el Wayback Machine.
+
+### B.7 · Tecno-cultivo y la garra robótica · NUEVO
+
+| Campo | Valor propuesto |
+|---|---|
+| Cliente | Fundación Mustakis |
+| Año | **Por confirmar** (ver abajo) |
+| Dónde | CAOS, espacio de talleres en Recoleta |
+| Qué es | Una experiencia educativa sobre cultivo y tecnología. La garra robótica es uno de sus elementos |
+| Tu rol | Diseño y fabricación de la garra robótica: mecánicamente compleja, y funciona |
+
+Este merece atención aparte. Casi todo lo demás del catálogo muestra a Vicente guiando,
+planificando o capacitando. La garra es de las pocas piezas donde se sentó a diseñar un objeto y
+fabricarlo con impresora 3D y cortadora láser, y es de lo que más orgulloso está. Es la mejor
+evidencia del servicio "fabricación digital", que hoy se ofrece en el sitio sin un proyecto
+propio que lo respalde.
+
+**Qué falta:**
+- **El año.** En el primer mensaje venía bajo 2021, pero Vicente entró a Ideo Maker en julio de
+  2022. ¿Fue antes de entrar, por otro lado, o la fecha es posterior?
+- Fotos o video de la garra funcionando. Un video le sirve más que una foto: lo que la hace
+  buena es el mecanismo, y eso se ve en movimiento.
+- Confirmar el nombre del espacio (CAOS) y si Fundación Mustakis permite mostrarlo.
 
 ---
 
-## C. Necesito que aclares esto antes de seguir
+## C. Mejor como trayectoria, no como proyecto con fotos
 
-1. **¿Qué es FCH?** Aparece en tres casos (B.1, B.2, y la capacitación de Anglo American) y
-   nunca lo dijiste completo. Necesito el nombre de la institución para escribirlo bien la
-   primera vez que aparece.
-
-2. **Bicho-bot: hay una fecha que no calza.** El sitio ya tiene un proyecto Bicho-bot fechado
-   en 2023, con packaging como único material. Ahora describes para 2021 un "kit de Bicho-bot,
-   desarrollo de experiencia tecno-cultivo y garra robótica como producto". ¿Es:
-   - el mismo kit y la fecha correcta es 2021, no 2023, o
-   - dos cosas distintas: la garra robótica y el tecno-cultivo son módulos o versiones
-     separadas del mismo kit, o
-   - dos kits distintos que comparten nombre?
-
-   No lo voy a suponer: dime cuál es y corrijo `js/data.js` y `FALTANTES.md` juntos.
-
-3. **Congreso Futuro, ¿otra vez en 2025?** El sitio tiene la edición 2024 publicada. La
-   mencionas de nuevo en el bloque de 2025. ¿Participaste en una segunda edición con
-   novedades que valga la pena agregar, o es la misma actividad y la mencionaste de paso?
-
----
-
-## D. Mejor como trayectoria, no como proyecto con fotos
-
-Esto no necesita ficha propia: son cargos y actividades puntuales, del tipo que ya vive en la
-tabla de "Trayectoria" de la página Historia, no en el catálogo de proyectos.
+Son cargos y actividades puntuales. Van en la tabla de trayectoria de la página Historia.
 
 - **Profesor de robótica, Liceo de la Corporación Santa Cruz** (2024)
+- **Capacitación docente en impresión 3D**, escuela en Chicureo (2024)
 - **Ayudante en el proyecto Anglo American**, capacitaciones (2026)
-- **Talleres "en el Maker"**: gráficas, fidelización, afiches (2024)
-- **Charla como expositor en DUOC**, curso de Innovación basada en Desafíos, el viernes que
-  viene: agrégala a la trayectoria después de que pase, no antes.
-
-Si alguno de estos tiene una historia más grande detrás (por ejemplo, si el Liceo de la
-Corporación Santa Cruz fue donde probaste algo que después escalaste a los demás), avísame y
-lo paso al grupo B.
+- **Talleres del Maker**: gráficas, fidelización, afiches (2024)
+- **Expositor en DUOC**, curso de Innovación basada en Desafíos, con el caso de FabLabs en
+  liceos. Se agrega después de que pase, no antes.
 
 ---
 
-## E. Esto es transversal: es cómo trabajas, no un proyecto
+## D. Transversal: es cómo trabajas, no un proyecto
 
-Ninguna de estas cosas tiene fecha ni foto propia, porque las hiciste todo el tiempo, en todos
-los proyectos:
+Ninguna de estas cosas tiene fecha ni foto propia, porque se hicieron todo el tiempo:
 
-- Mejora de procesos internos de Ideo Maker: orden de archivos, Excel de organización, cartas
-  Gantt, protocolos de uso de IA, intento de bases de datos.
-- Creación y mejora de capacitaciones para FCH, y guías de contenido para que los docentes
+- Mejora de procesos de Ideo Maker: orden de archivos, planillas de organización, cartas Gantt,
+  protocolos de uso de IA, bases de datos.
+- Creación y mejora de las capacitaciones para Fundación Chile, con guías para que los docentes
   avancen solos.
-- Diseño gráfico de la mayoría de los kits hasta 2025, con un manual de continuidad para quien
-  siga.
-- Uso de Unreal Engine para maquetar espacios antes de construirlos.
+- Gran parte del diseño gráfico de la empresa hasta 2025, incluida la gráfica de los kits, y un
+  manual para que siga igual.
+- Diseño de stands para ferias.
+- Unreal Engine para modelar los espacios antes de construirlos.
 
-Esto no va al catálogo. Es exactamente la evidencia que le falta al punto 1 de
-`FALTANTES.md`, la lista de servicios: ahí es donde esto sirve, como argumento de por qué
-"diseño de servicios" es una categoría real y no decorativa en lo que ofreces.
-
----
-
-## F. Todavía no
-
-- **Proyecto de juego en Unreal** que conecta lo real con lo digital. Quedó guardado, sin
-  terminar. No hay nada que mostrar todavía; cuando retomes, ahí se evalúa.
+No va al catálogo. Es la evidencia que le falta al punto 1 de `FALTANTES.md`, la lista de
+servicios.
 
 ---
 
-## Qué necesito de ti para cada caso del grupo B
+## E. Todavía no
 
-Lo mismo en los cinco casos:
+- **Juego en Unreal** que conecta lo real con lo digital. Quedó guardado sin terminar.
 
-1. **Fotos o renders.** Mínimo tres o cuatro por caso, como en los proyectos ya publicados.
-   Sin imagen, la ficha no se puede armar (es la misma regla que dejó afuera a SKU y al
-   registro fotográfico de la OPS).
-2. **Confirmar qué se puede mostrar.** Es trabajo de Ideo Maker, no solo tuyo: nombres de
-   colegios, cifras, informes, todo pasa primero por esa pregunta.
-3. **Las respuestas de la sección C**, para no escribir con un dato que después hay que
-   corregir.
+---
 
-Cuando tengas eso para uno solo, dímelo y lo escribo — no hace falta esperar a tener los cinco
-listos.
+## Lo que se necesita para cada caso del grupo B
+
+1. **Fotos o renders.** Tres o cuatro por caso como mínimo. Sin imagen no hay ficha: es la
+   misma regla que dejó fuera del catálogo a SKU y al registro de la OPS.
+2. **Qué se puede mostrar.** Nombres de liceos, cifras e informes pasan primero por esa
+   pregunta.
+3. **Los datos marcados como "por confirmar"** en cada tabla.
+
+No hace falta tener los siete listos. Con uno completo, se escribe ese.

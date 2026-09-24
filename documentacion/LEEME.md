@@ -10,7 +10,7 @@ Qué hay en esta carpeta y para qué sirve cada cosa.
 | [`Proyecto-portafolio.docx`](Proyecto-portafolio.docx) | Estado del proyecto, hallazgos de la investigación, referentes, plan por fases y objetivos | Para leer o mandar. Tiene espacio para anotar la próxima actualización |
 | [`linea-base-2026-09-20.md`](linea-base-2026-09-20.md) | La medición del día en que el sitio empezó a entregar HTML de verdad. Búsqueda web y respuestas de tres IA, con el montaje para repetirla | Se compara contra la próxima medición |
 | [`Ideo-Maker-posicionamiento.docx`](Ideo-Maker-posicionamiento.docx) | Diagnóstico y pasos para Ideo Maker SPA, a partir de la misma medición | Para mandar a Ideo Maker |
-| [`casos-ideo-maker.md`](casos-ideo-maker.md) | Los ocho años de trabajo en Ideo Maker, ordenados en candidatos a proyecto, con lo que falta para subir cada uno | Vicente, para decidir qué se publica (Fase C del plan) |
+| [`casos-ideo-maker.md`](casos-ideo-maker.md) | El trabajo en Ideo Maker desde 2022, ordenado en candidatos a proyecto, con lo que falta para subir cada uno | Vicente, para decidir qué se publica (Fase C del plan) |
 
 Los pendientes vivos no están acá: están en [`../FALTANTES.md`](../FALTANTES.md), en la raíz.
 

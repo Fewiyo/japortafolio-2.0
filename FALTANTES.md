@@ -79,9 +79,11 @@ después. La página hoy muestra los renders y la foto de la sala construida, si
 **Plan Nacional RAM.** Para qué institución se hizo y qué más componía el encargo además del
 documento.
 
-**Kits educativos Bicho-bot.** Para qué nivel se diseñó, qué electrónica lleva, si llegó a
-producirse y en cuántos colegios se usó. Del proyecto solo se conserva el packaging, y eso es lo
-único que la ficha afirma hoy.
+**Kits educativos Bicho-bot.** Ya se sabe la historia: nace en julio de 2022 como robot
+pedagógico de cartón para los talleres, y en 2023 pasa a kit vendible en MDF, con gráfica y
+piezas pensadas para fabricarse y calzar en la caja. Desde entonces es el taller de cada
+actividad de Congreso Futuro. Está en `documentacion/casos-ideo-maker.md`. Faltan todavía el
+nivel, la electrónica y fotos del robot, de cartón y de MDF.
 
 **Eloísa.** El año, 2019, está deducido de la fecha de publicación en Behance (enero de 2020).
 Falta confirmarlo, saber en qué CESFAM se probó, si fue en equipo y con quiénes, y si el
