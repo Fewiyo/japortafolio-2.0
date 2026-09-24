@@ -15,7 +15,7 @@ sys.path.insert(0, AQUI)
 from formato_docx import Doc, SUAVE, ACENTO, ALERTA_HEX  # noqa: E402
 
 SALIDA = os.path.join(RAIZ, "documentacion", "Proyecto-portafolio.docx")
-FECHA = "21 de septiembre de 2026"
+FECHA = "24 de septiembre de 2026"
 C = Cm
 
 d = Doc("Proyecto Portafolio — estado y plan")
@@ -37,13 +37,15 @@ d.recuadro(
 # ============================== ENLACES ==============================
 d.h1("Enlaces")
 d.tabla([
-    ["Sitio en línea", "https://fewiyo.github.io/japortafolio-2.0/"],
+    ["Sitio en línea", "https://japortafolio.com"],
     ["Repositorio", "https://github.com/Fewiyo/japortafolio-2.0"],
-    ["Dominio propio", "japortafolio.com — hoy sirve el sitio ANTIGUO. Migración pendiente"],
+    ["Analítica", "https://vicentecaceresfarias.goatcounter.com"],
     ["En el disco", "C:\\Users\\vicen\\Documents\\Ia\\portafolio"],
     ["Pendientes vivos", "FALTANTES.md, en la raíz"],
     ["Documentación técnica", "documentacion/PROYECTO.md"],
     ["La medición completa", "documentacion/linea-base-2026-09-20.md"],
+    ["Casos de Ideo Maker", "documentacion/casos-ideo-maker.md"],
+    ["Oportunidades (extra)", "documentacion/oportunidades-2026.md"],
 ], [C(4.6), C(12.6)], encabezado=False)
 
 # ============================== ESTADO ==============================
@@ -210,25 +212,27 @@ d.salto()
 # ============================== PLAN ==============================
 d.h1("El plan, corregido tras la medición")
 
-d.paso("0.", "Limpiar  ·  esta semana  ·  fase nueva",
-       "Borrar los dos CV con RUT que siguen públicos en japortafolio.com y pedir la retirada "
-       "de cada URL en Search Console. Poner LinkedIn al día y tratarlo como parte del sistema, "
-       "no como un perfil abandonado. Instalar la analítica. Nada de esto es construir: es "
-       "sacar y ordenar. Es lo más barato y lo más urgente, y no existía en el plan anterior.")
+d.paso("0.", "Limpiar  ·  HECHA el 22 de septiembre",
+       "Los CV con RUT se borraron y Google los retiró de la búsqueda. LinkedIn quedó al día: "
+       "foto, fechas, URL y la tarjeta de Destacado. La analítica, GoatCounter, está instalada "
+       "en todas las páginas.")
 
 d.paso("A.", "El motor  ·  HECHA el 20 de septiembre",
        "La regla de documentación y la generación de HTML real en cada commit.")
 
-d.paso("B.", "El dominio  ·  sube desde el tercer lugar",
-       "Mover japortafolio.com al sitio nuevo. Ya no es cosmético: hoy ese dominio ES la "
-       "identidad pública de Vicente para las IA, y está sirviendo una versión equivocada. "
-       "Migrar reemplaza información mala por buena en la dirección que ya tiene autoridad. "
-       "Del lado del sitio es una línea en construir.py; el resto es DNS.")
+d.paso("B.", "El dominio  ·  HECHA el 20 de septiembre",
+       "japortafolio.com sirve el sitio nuevo. El WordPress antiguo se borró.")
 
-d.paso("C.", "Los casos de Ideo Maker",
-       "Atacama, Antofagasta, Taltal y Calama. Cambió de naturaleza: ya no es solo contenido "
-       "de Vicente, es trabajo compartido con la empresa, y él está adentro para empujarlo. "
-       "Requiere resolver antes qué se puede publicar.")
+d.paso("C.", "Los casos de Ideo Maker  ·  EN CURSO",
+       "El trabajo desde 2022 ya está ordenado en casos-ideo-maker.md: tres fichas publicadas "
+       "se completaron el 24 de septiembre, y hay siete candidatos a proyecto nuevo. Falta el "
+       "material: fotos, documentos y qué se puede mostrar de cada uno.")
+
+d.paso("CV.", "Un CV más completo  ·  después de C",
+       "Con los casos de Ideo Maker subidos, rehacer el CV para que cuente lo mismo que el "
+       "sitio. Dos versiones: una profesional y una académica, que es la que piden las "
+       "universidades. Ojo: si se postula a la UDP antes del 6 de octubre, la versión "
+       "académica no puede esperar a C y se arma con lo que ya está ordenado.")
 
 d.paso("D.", "Las tres piezas",
        "La guía del comprador, el mapa del ecosistema maker y los casos. Antes esta fase era "
@@ -251,6 +255,18 @@ d.paso("→", "En paralelo  ·  Ideo Maker",
 
 d.paso("↻", "Diciembre  ·  volver a medir",
        "Mismo montaje, las mismas seis preguntas, y se compara contra la línea base.")
+
+d.salto()
+d.h2("Extra  ·  docencia, investigación y cargos")
+d.p("Fuera de las fases. No depende del sitio, pero el sitio y el CV lo sostienen.",
+    color=SUAVE, despues=6)
+d.paso("★", "Octubre 2026  ·  postular a por lo menos tres universidades",
+       "Un curso de innovación o maker para el primer semestre de 2027. La única convocatoria "
+       "abierta que calza es la de la UDP, Laboratorio de Metodologías Creativas, que cierra "
+       "el 6 de octubre. Las otras dos, espontáneas: UTEM y Duoc son las mejores candidatas.")
+d.paso("+", "La búsqueda",
+       "Asignaturas que calzan con el perfil, investigación, y cargos públicos y privados. "
+       "Revisada el 24 de septiembre, con enlaces y fechas, en oportunidades-2026.md.")
 
 d.recuadro(
     "La decisión que ordena todo lo demás",
