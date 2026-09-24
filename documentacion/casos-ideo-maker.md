@@ -88,6 +88,18 @@ Lo útil quedó en `Ideo Maker 2/`, en la raíz del portafolio, fuera de git; la
   Providencia, renders del Espacio Maker de Ideo Maker, y la línea gráfica de la empresa (iconos,
   stickers, kit de ventas para redes).
 
+**Aprobaciones y datos de los carteles (24 de septiembre):**
+
+- **Las fotos de Fundación Chile están aprobadas para publicarse**, según Vicente. La selección
+  igual evita estudiantes reconocibles, salvo el corte de cinta, que queda marcado.
+- El espacio de Mustakis se escribe **KAOS**, con K.
+- Bicho-bot: para niñas y niños de 6 a 12 años, creado para la Corporación Cultural de Lo
+  Barnechea. MK-BOT: desde los 8 años, creado para talleres de robótica en colegios.
+- La Sala Maker STEAM fue una iniciativa de Fundación País Digital con Spence (BHP), con el
+  apoyo de Ideo Maker.
+- La selección de fotos para cada ficha está en `Ideo Maker/*/seleccion/`, con pies sugeridos
+  en `Ideo Maker/SELECCION.md`.
+
 **Lo que no es tuyo, y no se usa como propio:** la carpeta `javi` es el proyecto de título de
 otra persona; `Nelson` guarda el proyecto de Unreal que él optimizó, y los informes de taller del
 Colegio Andrés Bello están firmados por Nelson Mora y Jorge Garrido. En `Laser` hay carpetas por

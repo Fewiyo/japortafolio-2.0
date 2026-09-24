@@ -82,9 +82,10 @@ documento.
 
 **Kits educativos Bicho-bot.** La ficha ya cuenta la historia completa, del robot de cartón de
 2022 al kit de MDF de 2023. El montaje de la caja se reemplazó el 24 de septiembre por la foto
-real, que apareció en la unidad compartida de Ideo Maker. Hay muchas más fotos del robot en
-`Ideo Maker 2/productos-maker/bicho-bot/` para sumar a la ficha. Siguen faltando el nivel y la
-electrónica que lleva.
+real, que apareció en la unidad compartida de Ideo Maker. Hay muchas más fotos del robot, y una selección
+lista en `Ideo Maker/kits-educativos/seleccion/`. El nivel apareció en un cartel de Ideo Maker:
+niñas y niños de 6 a 12 años, creado para la Corporación Cultural de Lo Barnechea. Falta
+confirmarlo y la electrónica que lleva.
 
 **Eloísa.** El año, 2019, está deducido de la fecha de publicación en Behance (enero de 2020).
 Falta confirmarlo, saber en qué CESFAM se probó, si fue en equipo y con quiénes, y si el
