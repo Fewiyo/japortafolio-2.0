@@ -202,8 +202,11 @@ Del más nuevo al más antiguo, que es el orden en que aparecerían en el catál
 
 ### B.1 · Aulas Maker Fundación Chile, región de Antofagasta
 
-**Publicado el 24 de septiembre de 2026** como "Aulas Impulsa 4.0" (`aulas-impulsa`), con 12
-fotos. Equipo ejecutor confirmado por Vicente: Sebastián Higuera, Patricia Ramírez, Vicente
+**Publicado el 24 de septiembre de 2026.** Primero como una sola ficha; después, a pedido de
+Vicente, como **dos fichas**, una por liceo: "Liceo H.C. T.P. María Elena"
+(`aula-impulsa-maria-elena`) y "Liceo Bicentenario Agropecuario Likan Antai"
+(`aula-impulsa-likan-antai`), con las fotos oficiales de la Alianza CCM-Eleva y los renders de
+cada liceo. Equipo ejecutor confirmado por Vicente: Sebastián Higuera, Patricia Ramírez, Vicente
 Cáceres, Nelson Mora, Javiera Matus y Diego López (Elvis Andrade no participó en este).
 
 | Campo | Valor propuesto |
