@@ -7,6 +7,12 @@ que entró en julio de 2022. Para cada candidato a proyecto quedan los campos ta
 Nada de esto se sube solo. La Fase C del plan pide resolver primero qué se puede publicar,
 porque es trabajo compartido con la empresa y con sus clientes.
 
+**Cómo se atribuye (decidido por Vicente el 24 de septiembre de 2026).** Todo lo de Ideo Maker
+es de Ideo Maker, aunque sea trabajo colaborativo. En el portafolio aparece como **trabajo
+elaborado por Vicente para Ideo Maker**, y en cada proyecto se nombra al equipo ejecutor, que
+va cambiando. No se separa quién hizo cada render o cada pieza: se cuenta el rol de Vicente y
+con quién trabajó.
+
 **Glosario.** FCH es Fundación Chile. Trabaja por regiones con equipos separados: un equipo
 lleva Antofagasta (María Elena, Taltal, Calama) y otro lleva Atacama (Copiapó).
 
@@ -100,10 +106,11 @@ Lo útil quedó en `Ideo Maker 2/`, en la raíz del portafolio, fuera de git; la
 - La selección de fotos para cada ficha está en `Ideo Maker/*/seleccion/`, con pies sugeridos
   en `Ideo Maker/SELECCION.md`.
 
-**Lo que no es tuyo, y no se usa como propio:** la carpeta `javi` es el proyecto de título de
-otra persona; `Nelson` guarda el proyecto de Unreal que él optimizó, y los informes de taller del
-Colegio Andrés Bello están firmados por Nelson Mora y Jorge Garrido. En `Laser` hay carpetas por
-persona (Richi, Seba, Pati, Sara, Rafa y otras). Las tuyas parecen ser `ja` y `Ja`.
+**Lo que no entra al portafolio:** la carpeta `javi`, que es el proyecto de título de otra
+persona y no un trabajo de Ideo Maker. Lo demás, incluido el Unreal de Nelson y los informes de
+taller del Colegio Andrés Bello (firmados por Nelson Mora y Jorge Garrido), es trabajo de Ideo
+Maker y se muestra con la regla de atribución de arriba: el proyecto es de Ideo Maker y se nombra
+al equipo.
 
 ---
 
@@ -250,9 +257,9 @@ propio que lo respalde.
   buena es el mecanismo, y eso se ve en movimiento.
 - Confirmar el nombre del espacio y si Fundación Mustakis permite mostrarlo. Los carteles de
   Ideo Maker lo escriben **KAOS**.
-- **Hay renders 3D de tres herramientas:** garra, pala y gotero. Parecen compartir el mismo brazo
-  y cambiar solo la punta, es decir, un sistema modular. Confirmarlo: es la historia de diseño
-  de la ficha.
+- **Confirmado por Vicente:** la garra, la pala y el gotero usan **el mismo brazo** y solo
+  cambia la herramienta. Es un sistema modular, y esa es la historia de diseño de la ficha.
+  Hay renders 3D de las tres.
 
 ---
 
