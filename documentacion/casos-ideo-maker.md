@@ -34,8 +34,8 @@ detalle está en `Ideo Maker/LEEME.md`. Lo que cambia respecto de lo que se sab�
 
 **Material que antes no existía**
 
-- Fotos de estudio reales de los cuatro kits, y el arte impreso de la caja de Bicho Bot. Sigue
-  sin haber una foto de la caja física.
+- Fotos de estudio reales de los cuatro kits, y el arte impreso de la caja de Bicho Bot. La
+  foto de la caja física apareció después, en la unidad compartida, y ya está en el sitio.
 - 34 fotos de la Sala Maker STEAM construida en el norte. Hoy la ficha tiene una sola.
 - Renders de Unreal de las aulas de FCH, incluidos Taltal y Calama.
 - La garra de Tecno-cultivo sosteniendo una papa, y la caja "TIERRA".

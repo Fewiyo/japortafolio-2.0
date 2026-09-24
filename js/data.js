@@ -221,13 +221,13 @@ const SITE = {
       tags: ["Producto", "STEAM", "Fabricación digital", "Robótica"],
       resumen:
         "Un robot pedagógico que nació en cartón para los talleres y se convirtió en un kit de MDF, diseñado para fabricarse y calzar en su caja.",
-      img: "assets/img/proyectos/kits-educativos/01-packaging.jpg",
+      img: "assets/img/proyectos/kits-educativos/01-caja.jpg",
       bloques: [
         { tipo: "texto", valor: "Bicho-bot nació en julio de 2022 como robot pedagógico para los talleres de Ideo Maker, hecho en cartón. Servía para enseñar, pero no se podía vender." },
         { tipo: "texto", valor: "En 2023 lo transformamos en un kit. Se mejoró y se actualizó, pasó del cartón al MDF, y se diseñaron las piezas y la gráfica para que se pudiera fabricar y calzara en la caja." },
         { tipo: "lista", titulo: "Mi rol", valor: ["Diseño para fabricación: piezas en MDF que calzan en la caja", "Gráfica del kit y del packaging"] },
         { tipo: "texto", valor: "Desde entonces es el taller que Ideo Maker lleva a cada actividad de Congreso Futuro en tu comuna, en liceos y hospitales." },
-        { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/01-packaging.jpg", pie: "Montaje digital del packaging: Bicho BOT, aprender creando." }
+        { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/01-caja.jpg", pie: "La caja del kit: cartón kraft con el sello Kit Maker impreso en serigrafía." }
       ]
     },
     {

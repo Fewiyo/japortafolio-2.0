@@ -81,11 +81,10 @@ resumen el proyecto; si los pasas, salen más detalles.
 documento.
 
 **Kits educativos Bicho-bot.** La ficha ya cuenta la historia completa, del robot de cartón de
-2022 al kit de MDF de 2023. **La imagen de la caja no es la real: es un montaje digital.** La
-ficha ahora lo dice en el pie de foto, pero hay que reemplazarla por una foto de la caja
-verdadera, y es también la portada de la tarjeta en el catálogo. Déjala en
-`assets/img/proyectos/kits-educativos/` y avísame. Sirven además fotos del robot, de cartón y de
-MDF. Siguen faltando el nivel y la electrónica que lleva.
+2022 al kit de MDF de 2023. El montaje de la caja se reemplazó el 24 de septiembre por la foto
+real, que apareció en la unidad compartida de Ideo Maker. Hay muchas más fotos del robot en
+`Ideo Maker 2/productos-maker/bicho-bot/` para sumar a la ficha. Siguen faltando el nivel y la
+electrónica que lleva.
 
 **Eloísa.** El año, 2019, está deducido de la fecha de publicación en Behance (enero de 2020).
 Falta confirmarlo, saber en qué CESFAM se probó, si fue en equipo y con quiénes, y si el
