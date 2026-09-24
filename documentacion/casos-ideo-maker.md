@@ -124,8 +124,25 @@ Lo útil quedó en `Ideo Maker 2/`, en la raíz del portafolio, fuera de git; la
   Digital con Spence (BHP). Baquedano subió 44 puntos en el SIMCE de matemáticas en 2024.
 - Las fotos publicadas quedaron en `Ideo Maker/*/fotos-oficiales-fch` y `fotos-publicadas`.
 
-**Lo que no entra al portafolio:** la carpeta `javi`, que es el proyecto de título de otra
-persona y no un trabajo de Ideo Maker. Lo demás, incluido el Unreal de Nelson y los informes de
+**El equipo de Ideo Maker** (anexo del equipo ejecutor de la licitación a Fundación Chile, enero
+de 2025; solo nombres y cargos): Sebastián Higuera Villagrán, cofundador y CEO; Patricia Ramírez
+Bustamante, cofundadora y CTO; Vicente Cáceres Farías, director de Investigación y Desarrollo;
+Nelson Mora Bustamante, especialista en innovación tecnológica; Javiera Matus Araya, diseñadora;
+Diego López Merino, diseñador y desarrollador maker; Elvis Andrade Torres, especialista en
+electrónica y robótica educativa. En 2026 aparece además Lesly Maldonado. *Por confirmar:* quién
+ejecutó cada proyecto, porque el anexo es el equipo propuesto.
+
+**Experiencia de la empresa, según el mismo anexo:** mentores de experiencias pedagógicas en
+KAOS Espacio Creativo, Fundación Mustakis (2018 a 2025); talleres con MK-BOT en 25 colegios de
+Santiago, Valparaíso, Talca, Temuco y Valdivia, con Conciencia, la Universidad de Talca y American
+Corner (2024); formación en robótica con MK-BOT en tres colegios de la Corporación Santa Cruz,
+en Recoleta y Quinta Normal (2024); actividades de robótica adaptadas para el programa TEAdmiro
+(2024 y 2025); laboratorio accesible para la Corporación Hipoacusia (2022 a 2024); Fab Lab
+Austral en Puerto Williams (2018) y laboratorio de impresión 3D con la Fundación Don Bosco (2018
+a 2022). Lo de antes de julio de 2022 es de la empresa, no de Vicente.
+
+**Lo que no entra al portafolio:** la carpeta `javi`, que es el proyecto de título de Javiera
+Matus, del equipo, y no un trabajo de Ideo Maker. Lo demás, incluido el Unreal de Nelson y los informes de
 taller del Colegio Andrés Bello (firmados por Nelson Mora y Jorge Garrido), es trabajo de Ideo
 Maker y se muestra con la regla de atribución de arriba: el proyecto es de Ideo Maker y se nombra
 al equipo.
