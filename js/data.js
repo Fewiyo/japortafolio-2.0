@@ -499,6 +499,34 @@ const SITE = {
       ]
     },
     {
+      id: "mk-bot",
+      titulo: "MK-BOT",
+      cliente: "Ideo Maker",
+      anio: "2024 — 2026",
+      tags: ["Producto", "Robótica", "STEAM", "Fabricación digital", "Educación"],
+      resumen:
+        "Un kit de robótica modular con Arduino, pensado para armarse rápido y llegar pronto a lo importante: aprender a programar.",
+      img: "assets/img/proyectos/mk-bot/01-mkbot.jpg",
+      bloques: [
+        { tipo: "texto", valor: "MK-BOT es el kit de robótica educativa de Ideo Maker, con Arduino UNO, sensores y piezas en MDF e impresión 3D. Es modular y está pensado para que se arme rápido, de modo que la clase llegue pronto a lo importante: aprender a programar. Primero en bloques, con Tinkercad, y después en texto, con Arduino IDE. En el camino se trabaja el diseño de piezas nuevas en Tinkercad, el pensamiento de diseño, las metodologías ágiles y el pensamiento lógico matemático." },
+        { tipo: "lista", titulo: "Mi rol", valor: ["Parte del proceso de diseño, en las reuniones de mejora del kit", "Conceptos clave para el brief de diseño", "Gráficas del kit y primera versión de la pista de obstáculos", "Mejoras al puente H propio de Ideo Maker, para hacerlo más intuitivo", "Docencia con MK-BOT en talleres y cursos"] },
+        { tipo: "texto", titulo: "Un kit que se sigue mejorando", valor: "MK-BOT lleva varias versiones. Después del primer diseño llegaron practicantes que mejoraron el kit; Elvis Andrade armó una plataforma para ensamblarlo y Diego López hizo el modelado y la impresión 3D de las piezas, a partir de las observaciones del equipo. En el camino, el puente H comercial se reemplazó por uno diseñado por Ideo Maker, más específico, que hizo Nelson Mora y que después modifiqué para que fuera más fácil de entender. Cada actividad en que lo usamos deja algo que mejorar o adaptar." },
+        { tipo: "imagen", valor: "assets/img/proyectos/mk-bot/02-piezas.jpg", pie: "Las piezas del kit, listas para armar." },
+        { tipo: "imagen", valor: "assets/img/proyectos/mk-bot/03-kits-preparados.jpg", pie: "Kits preparados antes de un taller." },
+        { tipo: "imagen", valor: "assets/img/proyectos/mk-bot/04-sensor-ultrasonido.jpg", pie: "MK-BOT con su sensor de ultrasonido." },
+        { tipo: "imagen", valor: "assets/img/proyectos/mk-bot/05-en-pista.jpg", pie: "MK-BOT siguiendo una línea en la pista." },
+        { tipo: "texto", titulo: "En el aula", valor: "En 2025 hice con MK-BOT, junto a Nelson Mora, el taller de robótica de Ideo Maker en la Escuela Francisco Bilbao de Recoleta, de la Corporación Santa Cruz: dos cursos de seis meses cada uno. El kit también es la base de los bootcamps y de las capacitaciones docentes de las Aulas Impulsa." },
+        { tipo: "imagen", valor: "assets/img/proyectos/mk-bot/06-programacion.jpg", pie: "El robot junto al computador, en una clase de programación." },
+        { tipo: "imagen", valor: "assets/img/proyectos/mk-bot/07-programando.jpg", pie: "Programando MK-BOT desde el computador." },
+        { tipo: "imagen", valor: "assets/img/proyectos/mk-bot/08-ficha-tinkercad.jpg", pie: "La ficha de trabajo con Tinkercad, junto al robot." },
+        { tipo: "texto", titulo: "La gráfica", valor: "La gráfica del kit incluye la caja, en dos tamaños, la lista ilustrada de materiales y las láminas de la pista de obstáculos, donde el robot recorre una plaza, un parque o una ciudad. Hice la primera versión de la pista, y el equipo la fue mejorando." },
+        { tipo: "imagen", valor: "assets/img/proyectos/mk-bot/09-grafica-caja.jpg", pie: "La gráfica de la caja, en sus dos tamaños." },
+        { tipo: "imagen", valor: "assets/img/proyectos/mk-bot/10-materiales.jpg", pie: "La lista ilustrada de materiales del kit." },
+        { tipo: "imagen", valor: "assets/img/proyectos/mk-bot/11-pista-plaza.jpg", pie: "Una de las láminas de la pista de obstáculos." },
+        { tipo: "imagen", valor: "assets/img/proyectos/mk-bot/12-pista-animales.jpg", pie: "Los personajes de la pista." },
+      ]
+    },
+    {
       id: "eloisa",
       titulo: "Eloísa",
       cliente: "Proyecto universitario · CESFAM",
