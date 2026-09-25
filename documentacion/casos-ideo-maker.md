@@ -354,3 +354,5 @@ servicios.
 3. **Los datos marcados como "por confirmar"** en cada tabla.
 
 No hace falta tener los siete listos. Con uno completo, se escribe ese.
+
+**Fotos oficiales de Fundación Chile (Aulas Impulsa):** https://www.flickr.com/photos/alianza-ccm-eleva/albums/ . Se publican con crédito "Alianza CCM-Eleva", aunque salgan estudiantes (autorizado por Vicente el 25 de septiembre de 2026).

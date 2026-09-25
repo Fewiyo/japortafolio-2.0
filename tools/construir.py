@@ -492,6 +492,14 @@ def pagina_proyecto(p, sig, idx, sitio, hashes):
         soltar_fotos()
         if b["tipo"] == "cita":
             trozos.append('<blockquote class="quote">%s</blockquote>' % esc(b["valor"]))
+        elif b["tipo"] == "enlaces":
+            trozos.append(
+                '<div class="prose">%s</div><div class="enlaces">%s</div>'
+                % (t, "".join(
+                    '<a class="cv-doc" href="%s" target="_blank" rel="noopener">'
+                    '<span class="cv-doc__txt"><b>%s</b><span>%s</span></span>'
+                    '<span class="cv-doc__flecha" aria-hidden="true">↗</span></a>'
+                    % (esc(e["url"]), esc(e["texto"]), esc(e["fuente"])) for e in b["valor"])))
         elif b["tipo"] == "lista":
             trozos.append('<div class="prose">%s<ul>%s</ul></div>'
                           % (t, "".join("<li>%s</li>" % esc(v) for v in b["valor"])))

@@ -634,3 +634,5 @@ html.visor-abierto{overflow:hidden}
 .form__estado.es-error{color:#c0392b}
 .form__trampa{position:absolute; left:-9999px; width:1px; height:1px; opacity:0}
 button.btn{font:inherit; font-size:14px; border:0; cursor:pointer}
+.enlaces{display:grid; gap:12px; margin:0 0 48px}
+@media (min-width:820px){ .enlaces{grid-template-columns:1fr 1fr} }
