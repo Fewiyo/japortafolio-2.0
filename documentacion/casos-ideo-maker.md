@@ -356,3 +356,10 @@ servicios.
 No hace falta tener los siete listos. Con uno completo, se escribe ese.
 
 **Fotos oficiales de Fundación Chile (Aulas Impulsa):** https://www.flickr.com/photos/alianza-ccm-eleva/albums/ . Se publican con crédito "Alianza CCM-Eleva", aunque salgan estudiantes (autorizado por Vicente el 25 de septiembre de 2026).
+
+## Publicado el 25 de septiembre de 2026
+
+- **Aula Impulsa Taltal** (`aula-impulsa-taltal`) y **Aula Impulsa Calama** (`aula-impulsa-calama`): renders, planos, fotos oficiales de la Alianza CCM-Eleva y enlaces a la prensa. Equipo 2026: el de 2025 más Elvis Andrade y Lesly Maldonado. Taltal espera fotos propias del aula y del equipo; su portada es provisoria.
+- **MK-BOT** (`mk-bot`): rol de Vicente en diseño, brief, gráficas, puente H y primera pista; Elvis armó la plataforma de armado, Diego el modelado e impresión 3D, Nelson el puente H. Taller en la Escuela Francisco Bilbao (Corporación Santa Cruz, 2025) con Nelson.
+- **Salas de País Digital:** fotos oficiales de las notas de paisdigital.org (abril y mayo de 2024).
+- **Bloque nuevo "En la prensa"** (`tipo: "enlaces"` en `js/data.js`): tarjetas que abren la nota o el álbum oficial. Está en las fichas de las cuatro Aulas Impulsa, las dos salas de País Digital y Congreso Futuro en tu comuna.
