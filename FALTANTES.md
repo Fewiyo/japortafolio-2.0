@@ -175,3 +175,5 @@ habla de ti en primera persona. Es lo único del sitio que escribí poniéndote 
 **Bicho-bot.** Las fotos del sitio son prototipos. Falta la versión final del kit, con su caja final.
 
 **CV.** Falta el curso que dio en la UDD en 2025 (carrera o programa). Está oculto en los tres CV con la clase `pendiente`, en `cv/*.html`.
+
+**Vista previa en WhatsApp.** Al compartir japortafolio.com, la foto se ve muy cerca (25 de septiembre de 2026). Es la imagen para compartir del inicio, que hoy usa `assets/img/retrato.jpg`. Hay que hacer una imagen propia de 1200 × 630, con el retrato más lejos o con la marca y el nombre.
