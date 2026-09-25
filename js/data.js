@@ -392,6 +392,7 @@ const SITE = {
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/06-mesa-de-trabajo.jpg", pie: "La mesa de trabajo colaborativo." },
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/07-senal-steam.jpg", pie: "La señalética STEAM del espacio." },
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/08-zona-interactiva.jpg", pie: "Señalética de la zona interactiva." },
+        { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/08b-estudiante-electronica.jpg", pie: "Una estudiante armando un circuito en la sala, en abril de 2024.", credito: "Fundación País Digital" },
         { tipo: "texto", titulo: "La capacitación docente", valor: "En abril de 2024, al comenzar el segundo ciclo de MASXXI en Sierra Gorda, capacitamos a los docentes de la escuela para usar la sala y sus tecnologías." },
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/09-capacitacion-docentes.jpg", pie: "Docentes de la escuela y el equipo de Ideo Maker, en la capacitación de abril de 2024.", credito: "Fundación País Digital" },
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/10-capacitacion-3d.jpg", pie: "Capacitación de impresión 3D en otra sala del establecimiento, junto a Sebastián Higuera." },
@@ -400,6 +401,7 @@ const SITE = {
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/21-corte-de-cinta.jpg", pie: "El corte de cinta.", credito: "Fundación País Digital" },
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/22-inauguracion.jpg", pie: "Autoridades, equipos y la comunidad escolar.", credito: "Fundación País Digital" },
         { tipo: "enlaces", titulo: "En la prensa", valor: [
+          { texto: "Fundación País Digital facilita el acceso a la robótica en la pampa de Antofagasta", fuente: "Fundación País Digital · 26 de abril de 2024", url: "https://paisdigital.org/2024/04/26/fundacion-pais-digital-facilita-el-acceso-a-la-robotica-en-la-pampa-de-antofagasta/" },
           { texto: "Fundación País Digital comienza el segundo ciclo de MÁS XXI Sierra Gorda", fuente: "Fundación País Digital · 18 de abril de 2024", url: "https://paisdigital.org/2024/04/18/fundacion-pais-digital-comienza-el-segundo-ciclo-de-mas-xxi-sierra-gorda/" },
           { texto: "“Laboratorios del siglo XXI” apoyarán la transformación digital de estudiantes de Sierra Gorda y Baquedano", fuente: "Fundación País Digital · nota y fotos oficiales · 23 de mayo de 2024", url: "https://paisdigital.org/2024/05/23/laboratorios-del-siglo-xxi-apoyaran-la-transformacion-digital-de-estudiantes-de-sierra-gorda-y-baquedano/" }
         ] },
