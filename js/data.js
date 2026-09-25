@@ -105,6 +105,34 @@ const SITE = {
      ---------------------------------------------------------- */
   proyectos: [
     {
+      id: "tecno-cultivo",
+      titulo: "Tecno-cultivo",
+      cliente: "Ideo Maker, para Fundación Mustakis",
+      anio: "2023",
+      tags: ["Diseño de producto", "Fabricación digital", "Impresión 3D", "Educación"],
+      resumen:
+        "Una experiencia sobre cultivo y tecnología para KAOS, de Fundación Mustakis, construida alrededor de un brazo con tres herramientas intercambiables.",
+      img: "assets/img/proyectos/tecno-cultivo/02-garra-tierra.jpg",
+      bloques: [
+        { tipo: "texto", valor: "Tecno-cultivo es una experiencia educativa sobre cultivo y tecnología que Ideo Maker desarrolló para KAOS, el espacio creativo de la Fundación Mustakis. Los participantes recorren cuatro mesas y en cada una hacen una tarea del cultivo de la papa con un brazo mecánico: excavar la tierra, removerla, sembrar y regar." },
+        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño de la experiencia inicial, junto a Elvis Andrade", "Diseño de la garra robótica", "Fabricación con impresión 3D y corte láser", "Ayudante en algunos talleres"] },
+        { tipo: "lista", titulo: "Equipo Ideo Maker", valor: ["Vicente Cáceres", "Elvis Andrade", "Patricia Ramírez", "Sebastián Higuera", "Javiera Matus"] },
+        { tipo: "imagen", valor: "assets/img/proyectos/tecno-cultivo/01-garra-papa.jpg", pie: "La garra, sosteniendo una papa." },
+        { tipo: "texto", titulo: "Un brazo, tres herramientas", valor: "El centro de la experiencia es un solo brazo al que se le cambia la herramienta según la tarea: una pala para la tierra, una garra para tomar y sembrar las papas, y un gotero para regar. La garra es la pieza mecánicamente más compleja del conjunto." },
+        { tipo: "imagen", valor: "assets/img/proyectos/tecno-cultivo/08-render-garra.jpg", pie: "La garra, en el modelo 3D." },
+        { tipo: "imagen", valor: "assets/img/proyectos/tecno-cultivo/09-render-brazo-completo.jpg", pie: "El brazo completo con la garra." },
+        { tipo: "imagen", valor: "assets/img/proyectos/tecno-cultivo/10-render-gotero.jpg", pie: "El mismo brazo con el gotero." },
+        { tipo: "imagen", valor: "assets/img/proyectos/tecno-cultivo/11-render-pala.jpg", pie: "Y con la pala." },
+        { tipo: "texto", titulo: "La experiencia", valor: "La referencia fue Overcooked, el videojuego en que un equipo cocina repartiéndose estaciones. Aquí las estaciones son las cuatro mesas del cultivo. Cada mesa tiene seis brazos, uno de cada color, y al final del recorrido están los maceteros, ordenados por los mismos colores." },
+        { tipo: "imagen", valor: "assets/img/proyectos/tecno-cultivo/07-esquema.jpg", pie: "El recorrido: cuatro mesas, una tarea del cultivo en cada una." },
+        { tipo: "imagen", valor: "assets/img/proyectos/tecno-cultivo/03-garras-en-mesa.jpg", pie: "Los brazos, fijados a la mesa con prensas, antes de la actividad." },
+        { tipo: "imagen", valor: "assets/img/proyectos/tecno-cultivo/04-espacio-kaos.jpg", pie: "El Espacio KAOS, montado para Tecno-cultivo." },
+        { tipo: "imagen", valor: "assets/img/proyectos/tecno-cultivo/05-garra-y-tierra.jpg", pie: "El brazo con la pala, llevando tierra hasta un vaso." },
+        { tipo: "imagen", valor: "assets/img/proyectos/tecno-cultivo/06-operando-la-garra.jpg", pie: "El gotero en uso: se acciona con una jeringa." },
+        { tipo: "texto", titulo: "Cómo fue cambiando", valor: "El primer diseño lo hicimos con Elvis Andrade. Después lo mejoraron Patricia Ramírez y Sebastián Higuera, y se siguió afinando en los propios talleres, que dictaron Patricia Ramírez y Javiera Matus. Yo estuve como ayudante en algunos de ellos." }
+      ]
+    },
+    {
       id: "aula-impulsa-maria-elena",
       titulo: "Liceo H.C. T.P. María Elena",
       cliente: "Ideo Maker, para Fundación Chile",

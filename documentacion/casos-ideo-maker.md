@@ -294,7 +294,10 @@ evidencia del servicio "fabricación digital", que hoy se ofrece en el sitio sin
 propio que lo respalde.
 
 **Qué falta:**
-- **El año.** Según el Drive, 2023. Falta que Vicente lo confirme.
+- **Publicado el 24 de septiembre de 2026** (`tecno-cultivo`). Año 2023, confirmado por
+  Vicente. Diseño inicial de Vicente con Elvis Andrade; lo mejoraron Patricia Ramírez y
+  Sebastián Higuera; las talleristas fueron Patricia Ramírez y Javiera Matus, y Vicente fue
+  ayudante en algunos talleres. Referencia de diseño: el videojuego Overcooked.
 - Fotos o video de la garra funcionando. Un video le sirve más que una foto: lo que la hace
   buena es el mecanismo, y eso se ve en movimiento.
 - Confirmar el nombre del espacio y si Fundación Mustakis permite mostrarlo. Los carteles de
