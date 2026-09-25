@@ -349,13 +349,23 @@ const SITE = {
       anio: "2022 — 2023",
       tags: ["Producto", "STEAM", "Fabricación digital", "Robótica"],
       resumen:
-        "Un robot pedagógico que nació en cartón para los talleres y se convirtió en un kit de MDF, diseñado para fabricarse y calzar en su caja.",
-      img: "assets/img/proyectos/kits-educativos/01-caja.jpg",
+        "Un robot pedagógico que nació para los talleres de Lo Barnechea y se convirtió en un kit de MDF, diseñado para fabricarse y calzar en su caja.",
+      img: "assets/img/proyectos/kits-educativos/02-primera-version.jpg",
       bloques: [
-        { tipo: "texto", valor: "Bicho-bot nació en julio de 2022 como robot pedagógico para los talleres de Ideo Maker, hecho en cartón. Servía para enseñar, pero no se podía vender." },
-        { tipo: "texto", valor: "En 2023 lo transformamos en un kit. Se mejoró y se actualizó, pasó del cartón al MDF, y se diseñaron las piezas y la gráfica para que se pudiera fabricar y calzara en la caja." },
-        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño para fabricación: piezas en MDF que calzan en la caja", "Gráfica del kit y del packaging"] },
+        { tipo: "texto", valor: "Bicho-bot nació en julio de 2022 como robot pedagógico para los talleres de la Corporación Cultural de Lo Barnechea, para niñas y niños de 6 a 12 años. Fue mi primer proyecto dentro de Ideo Maker." },
+        { tipo: "texto", valor: "En 2023 lo transformamos en un kit de Ideo Maker, para venderse. Se mejoró y se actualizó, y se diseñaron las piezas y la gráfica para que se pudiera fabricar en serie y calzara en la caja." },
+        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño de producto", "Calces y fabricación digital: piezas en MDF que calzan en la caja", "Diseño de gráficas para la versión kit, junto a Patricia Ramírez"] },
         { tipo: "texto", valor: "Desde entonces es el taller que Ideo Maker lleva a cada actividad de Congreso Futuro en tu comuna, en liceos y hospitales." },
+        { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/02-primera-version.jpg", pie: "La primera versión, de MDF, en 2022." },
+        { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/03-despiece.jpg", pie: "El despiece del robot, en el modelo 3D." },
+        { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/04-piezas-mdf.jpg", pie: "Las piezas del kit, cortadas en MDF." },
+        { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/05-bicho-bot.jpg", pie: "Bicho-bot armado." },
+        { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/06-robot-sobre-caja.jpg", pie: "El robot sobre su caja." },
+        { tipo: "texto", titulo: "Las gráficas del kit", valor: "Las gráficas de la versión kit, la caja, el instructivo y las fichas, las diseñamos entre Patricia Ramírez y yo." },
+        { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/07-grafica-caja.jpg", pie: "La gráfica de la caja: Bicho Bot, Aprender creando." },
+        { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/08-instructivo.jpg", pie: "El instructivo que viene dentro del kit." },
+        { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/09-ficha-actividad.jpg", pie: "La ficha de actividad, impresa en tabloide." },
+        { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/10-tutorial-qr.jpg", pie: "La tarjeta con el código QR al video tutorial." },
         { tipo: "imagen", valor: "assets/img/proyectos/kits-educativos/01-caja.jpg", pie: "La caja del kit: cartón kraft con el sello Kit Maker impreso en serigrafía." }
       ]
     },

@@ -171,3 +171,5 @@ habla de ti en primera persona. Es lo único del sitio que escribí poniéndote 
 - **Revisar el sitemap en Search Console.** Se envió el 21 de septiembre y quedó en "No se ha
   podido obtener", que es el estado normal recién enviado. El archivo está bien: responde 200,
   es XML válido y trae las 24 URLs. Si en un par de días sigue igual, ahí sí hay algo que mirar.
+
+**Bicho-bot.** Las fotos del sitio son prototipos. Falta la versión final del kit, con su caja final.
