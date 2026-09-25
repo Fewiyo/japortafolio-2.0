@@ -119,6 +119,7 @@ def nav(activa, pre, sitio):
         ("Catálogo", "#catalogo" if activa == "home" else inicio + "#catalogo", "catalogo", False),
         ("Servicios", "#servicios" if activa == "home" else inicio + "#servicios", "servicios", False),
         ("Historia", pre + "historia.html", "historia", False),
+        ("CV", "#cv", "cv", False),
         (sitio["blog"]["texto"], sitio["blog"]["url"], "blog", True),
     ]
     partes = sitio["nombre"].split(" ")
@@ -150,6 +151,46 @@ def nav(activa, pre, sitio):
     )
 
 
+ICONOS = {
+    "LinkedIn": '<path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.5H3zM9.5 9.75h3.83v1.57h.05c.53-1 1.84-2.07 3.79-2.07 4.05 0 4.8 2.67 4.8 6.13v5.87h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.29h-4z"/>',
+    "Instagram": '<path d="M12 2.2c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.21 8.8 2.2 12 2.2zm0 4.86a4.94 4.94 0 1 0 0 9.88 4.94 4.94 0 0 0 0-9.88zm0 8.15a3.21 3.21 0 1 1 0-6.42 3.21 3.21 0 0 1 0 6.42zm5.14-9.5a1.15 1.15 0 1 0 0 2.3 1.15 1.15 0 0 0 0-2.3z"/>',
+    "GitHub": '<path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/>',
+    "Behance": '<path d="M8.2 11.3c.9-.4 1.5-1.1 1.5-2.3 0-2.3-1.7-2.9-3.7-2.9H0v12.3h6.2c2.3 0 4.4-1.1 4.4-3.6 0-1.6-.8-2.8-2.4-3.5zM2.7 8.2h2.6c1 0 1.9.3 1.9 1.4 0 1.1-.7 1.5-1.7 1.5H2.7zm2.9 7.9H2.7v-3.4h3c1.2 0 2 .5 2 1.8 0 1.3-1 1.6-2.1 1.6zM21.6 7.3h-5.9V5.9h5.9zM24 14.3c0-2.6-1.5-4.8-4.3-4.8-2.7 0-4.5 2-4.5 4.7 0 2.8 1.7 4.7 4.5 4.7 2.1 0 3.5-1 4.2-3h-2.2c-.2.8-1.2 1.2-1.9 1.2-1.4 0-2.1-.8-2.1-2.2h6.3v-.6zm-6.3-1c.1-1.1.8-1.8 1.9-1.8 1.2 0 1.8.7 1.9 1.8z"/>',
+}
+
+
+def icono_red(r):
+    """Enlace a una red como icono; si la red no tiene icono, va como texto."""
+    svg = ICONOS.get(r["nombre"])
+    externo = ' target="_blank" rel="noopener"' if r["url"].startswith("http") else ""
+    if not svg:
+        return '<a href="%s"%s>%s</a>' % (esc(r["url"]), externo, esc(r["nombre"]))
+    return ('<a class="red" href="%s"%s aria-label="%s" title="%s">'
+            '<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">%s</svg></a>'
+            % (esc(r["url"]), externo, esc(r["nombre"]), esc(r["nombre"]), svg))
+
+
+def formulario(sitio):
+    f = sitio["formulario"]
+    return (
+        '<dialog class="form-dialogo" id="form-contacto" aria-labelledby="form-titulo">'
+        '<form class="form" method="post" action="https://formsubmit.co/ajax/%s" data-enviado="%s" novalidate>'
+        '<button class="form__cerrar" type="button" data-cerrar-form aria-label="Cerrar">×</button>'
+        '<h2 id="form-titulo">%s</h2><p class="form__intro">%s</p>'
+        '<label>Nombre<input name="nombre" autocomplete="name" required></label>'
+        '<label>Correo<input name="email" type="email" autocomplete="email" required></label>'
+        '<label><span>Institución u organización <i>(opcional)</i></span><input name="institucion" autocomplete="organization"></label>'
+        '<label>Mensaje<textarea name="mensaje" rows="5" required></textarea></label>'
+        '<input type="text" name="_honey" class="form__trampa" tabindex="-1" autocomplete="off">'
+        '<input type="hidden" name="_subject" value="Nuevo mensaje desde japortafolio.com">'
+        '<input type="hidden" name="_template" value="table">'
+        '<p class="form__estado" role="status" aria-live="polite"></p>'
+        '<button class="btn" type="submit"><span class="dot"></span>Enviar mensaje</button>'
+        '</form></dialog>'
+        % (esc(sitio["email"]), esc(f["enviado"]), esc(f["titulo"]), esc(f["intro"]))
+    )
+
+
 def pie(pre, sitio):
     descargas = [d for d in sitio.get("descargas", []) if d.get("url")]
     bloque_desc = ""
@@ -163,22 +204,30 @@ def pie(pre, sitio):
             )
             + "</div>"
         )
-    redes = "".join(
-        '<a href="%s%s">%s</a>'
-        % (esc(r["url"]), ' target="_blank" rel="noopener"' if r["url"].startswith("http") else "", esc(r["nombre"]))
-        for r in sitio["redes"]
-    )
+    redes = "".join(icono_red(r) for r in sitio["redes"])
+    cvs = "".join(
+        '<a class="cv-doc" href="%s%s" target="_blank" rel="noopener">'
+        '<span class="cv-doc__ico" aria-hidden="true">PDF</span>'
+        '<span class="cv-doc__txt"><b>%s</b><span>%s</span></span>'
+        '<span class="cv-doc__flecha" aria-hidden="true">↗</span></a>'
+        % (pre, esc(c["url"]), esc(c["titulo"]), esc(c["detalle"]))
+        for c in sitio.get("cv", []))
+    bloque_cv = ('<div class="cv-bloque rise" id="cv"><p class="eyebrow">Currículum</p>'
+                 '<div class="cv-docs">%s</div></div>' % cvs) if cvs else ""
     return (
         '<footer class="footer" id="contacto"><div class="wrap">'
         '<p class="eyebrow">%s</p>'
         '<h2 class="rise">Escríbeme a <a href="mailto:%s">%s</a></h2>'
-        "%s"
+        '<div class="footer__acciones rise">'
+        '<button class="btn" type="button" data-abrir-form><span class="dot"></span>%s</button>'
+        '<div class="redes">%s</div></div>'
+        "%s%s"
         '<div class="footer__bottom">'
-        '<div class="footer__social">%s</div>'
         "<div>© %d %s</div>"
         "</div></div></footer>"
         % (esc(sitio["footer"]), esc(sitio["email"]), esc(sitio["email"]),
-           bloque_desc, redes, ANIO, esc(sitio["nombre"]))
+           esc(sitio["cta"]), redes, bloque_cv, bloque_desc, ANIO, esc(sitio["nombre"]))
+        + formulario(sitio)
     )
 
 
@@ -359,7 +408,7 @@ def pagina_inicio(sitio, hashes):
         + '<header class="hero"><div class="wrap">'
         + '<h1 class="rise">%s</h1>' % sitio["titular"]          # trae <em>, no se escapa
         + '<div class="hero__row rise">'
-        + '<a class="btn" href="#contacto"><span class="dot"></span>%s</a>' % esc(sitio["cta"])
+        + '<a class="btn" href="#contacto" data-abrir-form><span class="dot"></span>%s</a>' % esc(sitio["cta"])
         + '<p class="hero__note">%s</p>' % esc(sitio["bajada"])
         + "</div></div></header>"
         + '<section class="section" id="catalogo"><div class="wrap">'

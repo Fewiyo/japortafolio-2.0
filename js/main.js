@@ -198,4 +198,47 @@
         : "";
     });
   }
+
+  /* ---------- Formulario de contacto ----------
+     Sin JavaScript el botón del inicio baja al pie con el correo. */
+  var dialogo = document.getElementById("form-contacto");
+  if (dialogo && dialogo.showModal) {
+    var form = dialogo.querySelector("form");
+    var aviso = form.querySelector(".form__estado");
+    var enviar = form.querySelector('button[type="submit"]');
+
+    [].forEach.call(document.querySelectorAll("[data-abrir-form]"), function (b) {
+      b.addEventListener("click", function (e) {
+        e.preventDefault();
+        dialogo.showModal();
+        form.querySelector("input").focus();
+      });
+    });
+    form.querySelector("[data-cerrar-form]").addEventListener("click", function () { dialogo.close(); });
+    dialogo.addEventListener("click", function (e) { if (e.target === dialogo) dialogo.close(); });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      aviso.classList.remove("es-error");
+      if (!form.checkValidity()) {
+        aviso.textContent = "Completa tu nombre, un correo válido y el mensaje.";
+        aviso.classList.add("es-error");
+        return;
+      }
+      enviar.disabled = true;
+      aviso.textContent = "Enviando…";
+      fetch(form.action, {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: new FormData(form)
+      }).then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        form.reset();
+        aviso.textContent = form.dataset.enviado;
+      }).catch(function () {
+        aviso.textContent = "No se pudo enviar. Escríbeme directo a " + form.action.split("/").pop() + ".";
+        aviso.classList.add("es-error");
+      }).then(function () { enviar.disabled = false; });
+    });
+  }
 })();

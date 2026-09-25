@@ -567,3 +567,70 @@ html.visor-abierto{overflow:hidden}
   .section-head{margin-bottom:40px}
   .footer__bottom{margin-top:64px}
 }
+
+/* ---------- Contacto: redes, curriculum y formulario ---------- */
+.footer__acciones{display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px; margin-top:28px}
+.redes{display:flex; gap:8px}
+.red{
+  display:inline-grid; place-items:center;
+  width:40px; height:40px; border-radius:50%;
+  border:1px solid var(--line); color:var(--fg);
+  transition:border-color .2s var(--ease), transform .2s var(--ease);
+}
+.red:hover{border-color:var(--fg); transform:translateY(-1px)}
+.red svg{width:17px; height:17px}
+
+.cv-bloque{margin-top:56px}
+.cv-bloque .eyebrow{margin-bottom:16px}
+.cv-docs{display:grid; gap:12px}
+@media (min-width:820px){ .cv-docs{grid-template-columns:repeat(3,1fr)} }
+.cv-doc{
+  display:flex; align-items:center; gap:16px;
+  padding:18px 20px; border-radius:16px; background:var(--card);
+  color:var(--fg); transition:transform .25s var(--ease);
+}
+.cv-doc:hover{transform:translateY(-2px)}
+.cv-doc__ico{
+  flex:none; display:grid; place-items:center;
+  width:44px; height:54px; border-radius:6px;
+  background:var(--invert-bg); color:var(--invert-fg);
+  font-size:11px; font-weight:600; letter-spacing:.06em;
+}
+.cv-doc__txt{display:flex; flex-direction:column; gap:2px; min-width:0; flex:1}
+.cv-doc__txt b{font-weight:500; font-size:15px}
+.cv-doc__txt span{font-size:13px; color:var(--muted)}
+.cv-doc__flecha{color:var(--muted); font-size:18px}
+.cv-doc:hover .cv-doc__flecha{color:var(--fg)}
+
+.form-dialogo{
+  margin:auto; padding:0; border:0; border-radius:20px;
+  width:min(520px, calc(100vw - 32px)); max-height:calc(100dvh - 32px);
+  background:var(--bg); color:var(--fg);
+  box-shadow:0 24px 80px rgba(0,0,0,.35);
+}
+.form-dialogo::backdrop{background:rgba(0,0,0,.55); backdrop-filter:blur(3px)}
+.form{position:relative; display:grid; gap:14px; padding:32px 28px 28px}
+.form h2{font-family:var(--titulos); font-weight:400; font-size:28px; line-height:1.15; letter-spacing:-.02em; padding-right:32px}
+.form__intro{color:var(--muted); font-size:15px; margin-top:-6px}
+.form label{display:grid; gap:6px; font-size:13px; color:var(--muted)}
+.form label i{font-style:normal; opacity:.7}
+.form input, .form textarea{
+  font:inherit; font-size:15px; color:var(--fg);
+  background:var(--card); border:1px solid transparent; border-radius:10px;
+  padding:11px 13px; width:100%; resize:vertical;
+}
+.form input:focus, .form textarea:focus{outline:none; border-color:var(--fg)}
+.form .btn{justify-self:start; border:0; cursor:pointer; font:inherit; font-size:14px}
+.form .btn[disabled]{opacity:.5; cursor:wait}
+.form__cerrar{
+  position:absolute; top:16px; right:16px;
+  width:36px; height:36px; border-radius:50%;
+  border:1px solid var(--line); background:transparent; color:var(--fg);
+  font-size:20px; line-height:1; cursor:pointer;
+}
+.form__cerrar:hover{border-color:var(--fg)}
+.form__estado{font-size:14px; min-height:0}
+.form__estado:empty{display:none}
+.form__estado.es-error{color:#c0392b}
+.form__trampa{position:absolute; left:-9999px; width:1px; height:1px; opacity:0}
+button.btn{font:inherit; font-size:14px; border:0; cursor:pointer}

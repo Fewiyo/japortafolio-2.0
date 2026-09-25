@@ -17,7 +17,7 @@ const SITE = {
   bajada:
     "8 años entre docencia, diseño de servicios y fabricación digital. Desde el aula hasta la puesta en marcha de FabLabs.",
 
-  cta: "Conversemos un proyecto",
+  cta: "Conversemos tu proyecto",
 
   /* ---------- Blog ----------
      Pestana del menu que apunta a la otra plataforma.
@@ -59,9 +59,27 @@ const SITE = {
   /* ---------- Redes / enlaces ---------- */
   redes: [
     { nombre: "LinkedIn",  url: "https://www.linkedin.com/in/vicente-caceres-farias" },
+    { nombre: "Instagram", url: "https://www.instagram.com/proyectoja.cl/" },
     { nombre: "GitHub",    url: "https://github.com/Fewiyo" },
-    { nombre: "Behance",   url: "https://behance.net/vcntja" },
-    { nombre: "Instagram", url: "https://instagram.com/estudia3d" }
+    { nombre: "Behance",   url: "https://behance.net/vcntja" }
+  ],
+
+  /* ---------- Formulario de contacto ----------
+     El boton del inicio abre un formulario que llega a "email" por
+     FormSubmit. El primer mensaje manda un correo de activacion: hay
+     que confirmarlo una vez para que empiecen a llegar. */
+  formulario: {
+    titulo: "Conversemos tu proyecto",
+    intro: "Cuéntame qué tienes en mente y te respondo a tu correo.",
+    enviado: "Gracias, recibí tu mensaje. Te respondo pronto."
+  },
+
+  /* ---------- Curriculum ----------
+     Aparecen como tarjetas al final de cada pagina (id="cv"). */
+  cv: [
+    { titulo: "CV completo",    detalle: "Todo en detalle · 3 págs.",url: "assets/files/cv-vicente-caceres-completo.pdf" },
+    { titulo: "CV profesional", detalle: "Proyectos · 2 págs.",url: "assets/files/cv-vicente-caceres-profesional.pdf" },
+    { titulo: "CV académico",   detalle: "Formación y docencia · 2 págs.",url: "assets/files/cv-vicente-caceres-academico.pdf" }
   ],
 
   /* ---------- Descargas ----------
@@ -69,7 +87,6 @@ const SITE = {
      muestra, asi que no queda ningun enlace roto: sube el archivo a
      assets/files/ y pega el nombre aqui para que aparezca solo. */
   descargas: [
-    { nombre: "Descargar mi CV",     url: "assets/files/cv-vicente-caceres-2025.pdf" },
     { nombre: "Descargar portafolio", url: "" }
   ],
 
