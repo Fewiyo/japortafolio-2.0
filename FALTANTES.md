@@ -173,3 +173,5 @@ habla de ti en primera persona. Es lo único del sitio que escribí poniéndote 
   es XML válido y trae las 24 URLs. Si en un par de días sigue igual, ahí sí hay algo que mirar.
 
 **Bicho-bot.** Las fotos del sitio son prototipos. Falta la versión final del kit, con su caja final.
+
+**CV.** Falta el curso que dio en la UDD en 2025 (carrera o programa). Está oculto en los tres CV con la clase `pendiente`, en `cv/*.html`.
