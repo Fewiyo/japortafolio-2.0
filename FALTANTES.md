@@ -176,6 +176,6 @@ habla de ti en primera persona. Es lo único del sitio que escribí poniéndote 
 
 **CV.** Falta el curso que dio en la UDD en 2025 (carrera o programa). Está oculto en los tres CV con la clase `pendiente`, en `cv/*.html`.
 
-**Vista previa en WhatsApp.** Al compartir japortafolio.com, la foto se ve muy cerca (25 de septiembre de 2026). Es la imagen para compartir del inicio, que hoy usa `assets/img/retrato.jpg`. Hay que hacer una imagen propia de 1200 × 630, con el retrato más lejos o con la marca y el nombre.
+**Vista previa en WhatsApp. RESUELTO el 25 de septiembre de 2026** con `assets/img/compartir.jpg` (1200 × 630). Si se cambia el retrato, hay que rehacer esta imagen. Al compartir japortafolio.com, la foto se ve muy cerca (25 de septiembre de 2026). Es la imagen para compartir del inicio, que hoy usa `assets/img/retrato.jpg`. Hay que hacer una imagen propia de 1200 × 630, con el retrato más lejos o con la marca y el nombre.
 
 **Aula Impulsa Taltal.** El fotógrafo oficial no sacó fotos de la sala terminada ni del equipo de Ideo Maker. Hay que buscar fotos propias del aula (y del equipo) para sumarlas a la ficha `aula-impulsa-taltal`. La portada es provisoria (la foto oficial "En el aula, durante la inauguración"): cambiarla por una foto del aula terminada cuando la haya.

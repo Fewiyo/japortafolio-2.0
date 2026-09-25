@@ -432,7 +432,7 @@ def pagina_inicio(sitio, hashes):
                  ",".join('"%s"' % r["url"] for r in sitio["redes"] if r["url"].startswith("http"))))
     return documento(
         sitio=sitio, pre="", titulo="%s — %s" % (sitio["nombre"], sitio["rol"]),
-        descripcion=recortar(sitio["bajada"]), ruta="", imagen="assets/img/retrato.jpg",
+        descripcion=recortar(sitio["bajada"]), ruta="", imagen="assets/img/compartir.jpg",
         cuerpo=cuerpo, hashes=hashes, jsonld=jsonld, tipo_og="website")
 
 
@@ -459,7 +459,7 @@ def pagina_historia(sitio, hashes):
     return documento(
         sitio=sitio, pre="", titulo="Historia — %s" % sitio["nombre"],
         descripcion=recortar(h["parrafos"][0]), ruta="historia.html",
-        imagen=h.get("retrato"), cuerpo=cuerpo, hashes=hashes, tipo_og="profile")
+        imagen="assets/img/compartir.jpg", cuerpo=cuerpo, hashes=hashes, tipo_og="profile")
 
 
 def foto_ampliable(src, pie, label, pre="", credito=None):
