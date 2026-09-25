@@ -355,6 +355,13 @@ const SITE = {
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-sierra-gorda/14-mesa-de-trabajo.jpg", pie: "La mesa de trabajo." },
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-sierra-gorda/16-grafica-steam.jpg", pie: "Gráfica de la guía STEAM que se entregó con la sala." },
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-sierra-gorda/17-afiche-espacio-maker.jpg", pie: "El afiche del Espacio Maker Aula STEAM." },
+        { tipo: "texto", titulo: "La inauguración", valor: "Las salas de las dos escuelas se inauguraron juntas el 23 de mayo de 2024, con autoridades locales, representantes de Spence y la comunidad escolar. Esa jornada Ideo Maker montó una feria maker para estudiantes. Las fotos son de la jornada conjunta con la Escuela Estación Baquedano." },
+        { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-sierra-gorda/20-feria-maker.jpg", pie: "La feria maker de Ideo Maker, durante la inauguración.", credito: "Fundación País Digital" },
+        { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-sierra-gorda/21-corte-de-cinta.jpg", pie: "El corte de cinta.", credito: "Fundación País Digital" },
+        { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-sierra-gorda/22-inauguracion.jpg", pie: "Autoridades, equipos y la comunidad escolar.", credito: "Fundación País Digital" },
+        { tipo: "enlaces", titulo: "En la prensa", valor: [
+          { texto: "“Laboratorios del siglo XXI” apoyarán la transformación digital de estudiantes de Sierra Gorda y Baquedano", fuente: "Fundación País Digital · nota y fotos oficiales · 23 de mayo de 2024", url: "https://paisdigital.org/2024/05/23/laboratorios-del-siglo-xxi-apoyaran-la-transformacion-digital-de-estudiantes-de-sierra-gorda-y-baquedano/" }
+        ] },
       ]
     },
     {
@@ -377,7 +384,14 @@ const SITE = {
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/06-mesa-de-trabajo.jpg", pie: "La mesa de trabajo colaborativo." },
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/07-senal-steam.jpg", pie: "La señalética STEAM del espacio." },
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/08-zona-interactiva.jpg", pie: "Señalética de la zona interactiva." },
-        { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/10-capacitacion-3d.jpg", pie: "Capacitación de impresión 3D en otra sala del establecimiento, junto a Sebastián Higuera." }
+        { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/10-capacitacion-3d.jpg", pie: "Capacitación de impresión 3D en otra sala del establecimiento, junto a Sebastián Higuera." },
+        { tipo: "texto", titulo: "La inauguración", valor: "Las salas de las dos escuelas se inauguraron juntas el 23 de mayo de 2024, con autoridades locales, representantes de Spence y la comunidad escolar. Esa jornada Ideo Maker montó una feria maker para estudiantes. Las fotos son de la jornada conjunta con la Escuela Caracoles." },
+        { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/20-feria-maker.jpg", pie: "La feria maker de Ideo Maker, durante la inauguración.", credito: "Fundación País Digital" },
+        { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/21-corte-de-cinta.jpg", pie: "El corte de cinta.", credito: "Fundación País Digital" },
+        { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/22-inauguracion.jpg", pie: "Autoridades, equipos y la comunidad escolar.", credito: "Fundación País Digital" },
+        { tipo: "enlaces", titulo: "En la prensa", valor: [
+          { texto: "“Laboratorios del siglo XXI” apoyarán la transformación digital de estudiantes de Sierra Gorda y Baquedano", fuente: "Fundación País Digital · nota y fotos oficiales · 23 de mayo de 2024", url: "https://paisdigital.org/2024/05/23/laboratorios-del-siglo-xxi-apoyaran-la-transformacion-digital-de-estudiantes-de-sierra-gorda-y-baquedano/" }
+        ] },
       ]
     },
     {
