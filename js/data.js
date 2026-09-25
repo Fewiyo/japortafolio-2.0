@@ -180,6 +180,10 @@ const SITE = {
         { tipo: "imagen", valor: "assets/img/proyectos/aula-impulsa-maria-elena/20-equipo-habilitador.jpg", pie: "El equipo habilitador del modelo Aulas Impulsa, en la inauguración.", credito: "Alianza CCM-Eleva" },
         { tipo: "imagen", valor: "assets/img/proyectos/aula-impulsa-maria-elena/21-corte-de-cinta.jpg", pie: "El corte de cinta.", credito: "Alianza CCM-Eleva" },
         { tipo: "imagen", valor: "assets/img/proyectos/aula-impulsa-maria-elena/22-reconocimiento.jpg", pie: "La entrega del galardón del Aula Impulsa 4.0.", credito: "Alianza CCM-Eleva" },
+        { tipo: "enlaces", titulo: "En la prensa", valor: [
+          { texto: "Álbum de fotos de la inauguración", fuente: "Alianza CCM-Eleva · Flickr", url: "https://www.flickr.com/photos/alianza-ccm-eleva/albums/72177720328670393/" },
+          { texto: "Minería unida por la educación: cuatro compañías inauguran aulas tecnológicas de enseñanza STEM", fuente: "Portal Minero · 2 de septiembre de 2025", url: "https://www.portalminero.com/mineria-unida-por-la-educacion-cuatro-companias-inauguran-aulas-tecnologicas-de-ensenanza-stem-para-jovenes" }
+        ] },
       ]
     },
     {
@@ -297,6 +301,10 @@ const SITE = {
         { tipo: "imagen", valor: "assets/img/proyectos/aula-impulsa-likan-antai/21-impresion-3d-inauguracion.jpg", pie: "La zona de impresión 3D, el día de la inauguración.", credito: "Alianza CCM-Eleva" },
         { tipo: "imagen", valor: "assets/img/proyectos/aula-impulsa-likan-antai/22-grupo-impulsa.jpg", pie: "Asistentes a la inauguración.", credito: "Alianza CCM-Eleva" },
         { tipo: "imagen", valor: "assets/img/proyectos/aula-impulsa-likan-antai/23-autoridades-y-equipos.jpg", pie: "En el aula, durante la inauguración.", credito: "Alianza CCM-Eleva" },
+        { tipo: "enlaces", titulo: "En la prensa", valor: [
+          { texto: "Álbum de fotos de la inauguración", fuente: "Alianza CCM-Eleva · Flickr", url: "https://www.flickr.com/photos/alianza-ccm-eleva/albums/72177720328670613/" },
+          { texto: "Minería unida por la educación: cuatro compañías inauguran aulas tecnológicas de enseñanza STEM", fuente: "Portal Minero · 2 de septiembre de 2025", url: "https://www.portalminero.com/mineria-unida-por-la-educacion-cuatro-companias-inauguran-aulas-tecnologicas-de-ensenanza-stem-para-jovenes" }
+        ] },
       ]
     },
     {
@@ -447,6 +455,12 @@ const SITE = {
         { tipo: "cita", valor: "Este tipo de actividades le alegra el corazón a todos: a nuestros niños, a sus familias, a funcionarios y a toda la comunidad. El compromiso es que permanezca en el tiempo." },
         { tipo: "texto", valor: "La cita es de Michel Royer, director del Hospital de Niños Dr. Luis Calvo Mackenna." },
         { tipo: "texto", titulo: "Cobertura", valor: "La jornada fue cubierta por el Senado de Chile, Canal 13, El Mostrador, Radio Agricultura, Cooperativa y AdPrensa, entre otros." },
+        { tipo: "enlaces", titulo: "En la prensa", valor: [
+          { texto: "Congreso Futuro en tu comuna comenzó temporada 2024 en hospital Calvo Mackenna", fuente: "Senado de Chile · mayo de 2024", url: "https://www.senado.cl/comunicaciones/noticias/congreso-futuro-en-tu-comuna-comenzo-temporada-2024-en-hospital-calvo" },
+          { texto: "Ciencia interactiva de Congreso Futuro en tu comuna sorprendió a niños del hospital Calvo Mackenna", fuente: "El Mostrador · 16 de mayo de 2024", url: "https://www.elmostrador.cl/cultura/ciencia-cultura/2024/05/16/ciencia-interactiva-de-congreso-futuro-en-tu-comuna-sorprendio-a-ninos-del-hospital-calvo-mackenna/" },
+          { texto: "Innovadora apuesta de Congreso Futuro en tu comuna", fuente: "Canal 13 · mayo de 2024", url: "https://www.13.cl/programas/congreso-futuro/noticias/innovadora-apuesta-de-congreso-futuro-en-tu-comuna-llevo-la" },
+          { texto: "La ciencia se tomó los pasillos del Hospital Calvo Mackenna", fuente: "El Desconcierto · 10 de mayo de 2025, tercer año consecutivo", url: "https://eldesconcierto.cl/2025/05/10/la-ciencia-se-tomo-los-pasillos-del-hospital-calvo-mackenna-con-talleres-didacticos-para-ninos-pacientes" }
+        ] },
         { tipo: "imagen", valor: "assets/img/proyectos/congreso-futuro/02-agricultura.jpg", pie: "Radio Agricultura." },
         { tipo: "imagen", valor: "assets/img/proyectos/congreso-futuro/03-cooperativa.jpg", pie: "Cooperativa.cl." },
         { tipo: "texto", titulo: "Sobre las imágenes", valor: "Esta página muestra solo los titulares de la cobertura. Las fotografías que acompañaban esas notas son de niñas y niños en un hospital, y no se publican acá." }
