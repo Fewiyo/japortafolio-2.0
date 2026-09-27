@@ -14,15 +14,18 @@
 (function () {
   "use strict";
 
-  /* ---------- Tema claro/oscuro (por defecto sigue al sistema) ---------- */
+  /* ---------- Tema claro/oscuro (por defecto oscuro) ---------- */
   var btn = document.getElementById("theme");
   if (btn) {
+    var marcar = function () {
+      btn.setAttribute("aria-checked", document.documentElement.dataset.theme === "dark" ? "true" : "false");
+    };
+    marcar();
     btn.addEventListener("click", function () {
-      var actual = document.documentElement.dataset.theme ||
-        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-      var next = actual === "dark" ? "light" : "dark";
+      var next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
       document.documentElement.dataset.theme = next;
       try { localStorage.setItem("tema", next); } catch (e) {}
+      marcar();
     });
   }
 

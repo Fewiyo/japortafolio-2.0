@@ -142,9 +142,8 @@ def nav(activa, pre, sitio):
         '<span class="nav__name-resto"> %s</span>'
         '<span class="nav__name-rol"> — %s</span></a>'
         '<div class="nav__links">%s'
-        '<button class="theme-btn" id="theme" type="button" aria-label="Cambiar tema">'
-        '<span class="theme-btn__txt">Tema</span>'
-        '<span class="theme-btn__ico" aria-hidden="true">◐</span>'
+        '<button class="theme-btn" id="theme" type="button" role="switch" aria-checked="true" aria-label="Modo oscuro">'
+        '<span class="switch" aria-hidden="true"><span class="switch__knob"></span></span>'
         "</button>"
         "</div></div></nav>"
         % (esc(inicio), esc(pila), esc(apellidos), esc(sitio["rol"]), "".join(trozos))
@@ -372,7 +371,7 @@ def documento(sitio, pre, titulo, descripcion, ruta, imagen, cuerpo, hashes, jso
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="%(pre)scss/style.css?v=%(hcss)s">
-%(jsonld)s<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("tema");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+%(jsonld)s<script>document.documentElement.classList.add("js");var t="dark";try{t=localStorage.getItem("tema")||"dark";}catch(e){}document.documentElement.dataset.theme=t;</script>
 </head>
 <body>
 <div id="app">%(cuerpo)s</div>
