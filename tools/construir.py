@@ -143,7 +143,10 @@ def nav(activa, pre, sitio):
         '<span class="nav__name-rol"> — %s</span></a>'
         '<div class="nav__links">%s'
         '<button class="theme-btn" id="theme" type="button" role="switch" aria-checked="true" aria-label="Modo oscuro">'
-        '<span class="switch" aria-hidden="true"><span class="switch__knob"></span></span>'
+        '<span class="switch" aria-hidden="true"><span class="switch__knob">'
+        '<svg class="ico-sol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></g></svg>'
+        '<svg class="ico-luna" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg>'
+        '</span></span>'
         "</button>"
         "</div></div></nav>"
         % (esc(inicio), esc(pila), esc(apellidos), esc(sitio["rol"]), "".join(trozos))
