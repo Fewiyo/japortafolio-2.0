@@ -12,13 +12,7 @@ de esta lista.
 
 ## 1. Servicios
 
-Quedaste de mandarme la lista. Hoy el sitio ofrece cuatro: diseño de servicios, creación de
-FabLabs, docencia y STEAM, y fabricación digital.
-
-Mirando tu propio catálogo, hay tres cosas que haces y que no aparecen como servicio: el
-desarrollo de aplicaciones y plataformas web (diez proyectos, lo que más peso tiene hoy), la
-fotografía (OPS y HAALUR) y el diseño editorial y de información (Plan Nacional RAM, Eloísa).
-Dime cuáles van y con qué palabras, o pásame las tuyas.
+Resuelto el 26 de septiembre de 2026: se sumaron aplicaciones y plataformas web, diseño editorial y de información, y fotografía. Son siete servicios.
 
 ---
 
@@ -26,8 +20,7 @@ Dime cuáles van y con qué palabras, o pásame las tuyas.
 
 Desde el 25 de septiembre de 2026 el sitio tiene tres CV (completo, profesional y académico),
 generados desde `cv/*.html` y publicados en `assets/files/`, sin RUT, dirección, fecha de
-nacimiento ni teléfono. El CV antiguo, `assets/files/cv-vicente-caceres-2025.pdf`, ya no está
-enlazado desde ninguna página, pero sigue en el servidor por si alguien tenía el enlace.
+nacimiento ni teléfono. El CV antiguo de 2025 se borró del servidor el 26 de septiembre de 2026.
 
 | Qué | Estado |
 |---|---|
@@ -78,7 +71,7 @@ confirmarlo y la electrónica que lleva.
 Falta confirmarlo, saber en qué CESFAM se probó, si fue en equipo y con quiénes, y si el
 material quedó en uso.
 
-**Al tablero y Robots (curso 7). RESUELTO el 26 de septiembre de 2026: IV medio.** A qué nivel se impartió. El campo está vacío, así que la ficha
+**Al tablero y Robots (curso 7). RESUELTO el 26 de septiembre de 2026: IV medio, 12 sesiones, segundo semestre de 2025.** A qué nivel se impartió. El campo está vacío, así que la ficha
 simplemente no muestra esa fila. Faltan también las sesiones del temario y los resultados, porque
 el curso está en marcha.
 

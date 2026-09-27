@@ -111,6 +111,21 @@ const SITE = {
       titulo: "Fabricación digital",
       texto:
         "Modelado 3D, impresión, corte láser y electrónica aplicada. Prototipos funcionales y piezas didácticas listas para uso en aula."
+    },
+    {
+      titulo: "Aplicaciones y plataformas web",
+      texto:
+        "Herramientas digitales a partir de un problema concreto: acompañamiento en salud mental, entrenamiento, tareas del hogar o la búsqueda de un postgrado. Diez proyectos construidos con IA, del prototipo a algo que se usa todos los días."
+    },
+    {
+      titulo: "Diseño editorial y de información",
+      texto:
+        "Publicaciones, guías, instructivos e infografías que hacen legible un contenido técnico. Del manual de un kit a un plan nacional de salud impreso."
+    },
+    {
+      titulo: "Fotografía",
+      texto:
+        "Registro de proyectos, procesos y actividades, para informes, prensa y portafolio. He fotografiado para la CEPAL y la Organización Panamericana de la Salud."
     }
   ],
 
@@ -221,12 +236,12 @@ const SITE = {
         { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/17-sala-terminada.jpg", pie: "El aula terminada." },
         { tipo: "texto", titulo: "El lanzamiento", valor: "MakerSTEM se lanzó en abril de 2026 con autoridades regionales, Fundación Chile, Assist International y la Fundación Caterpillar." },
         { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/20-lanzamiento.jpg", pie: "Autoridades en el lanzamiento de MakerSTEM.", credito: "Reporte Minero" },
-        { tipo: "texto", titulo: "La inauguración", valor: "El aula, la primera Aula MakerSTEM de la región, se inauguró en septiembre de 2026 con autoridades regionales, el ecosistema educativo y el sector productivo. Son más de 100 m² remodelados, con robótica, prototipado, programación y realidad aumentada, y seguirá con acompañamiento pedagógico y formación docente." },
+        { tipo: "texto", titulo: "La inauguración", valor: "El aula, la primera Aula MakerSTEM de la región, se inauguró el 1 de septiembre de 2026 con autoridades regionales, el ecosistema educativo y el sector productivo. Son más de 100 m² remodelados, con robótica, prototipado, programación y realidad aumentada, y seguirá con acompañamiento pedagógico y formación docente." },
         { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/21-inauguracion-realidad-virtual.jpg", pie: "Probando la realidad virtual el día de la inauguración, junto a la ficha de uso del aula.", credito: "Fundación Chile" },
         { tipo: "enlaces", titulo: "En la prensa", valor: [
           { texto: "Atacama inaugura su primera Aula MakerSTEM para fortalecer la educación técnico-profesional", fuente: "Fundación Chile · nota oficial · 22 de septiembre de 2026", url: "https://fch.cl/noticias/atacama-inaugura-su-primera-aula-makerstem-para-fortalecer-la-educacion-tecnico-profesional/" },
           { texto: "Inauguración del Aula MakerSTEM en Paipote", fuente: "Fundación Chile · Instagram · septiembre de 2026", url: "https://www.instagram.com/p/Ddj3sxMHGva/" },
-          { texto: "Inauguración de la nueva Aula MakerSTEM", fuente: "Miguel Vargas, gobernador regional de Atacama · Instagram · septiembre de 2026", url: "https://www.instagram.com/reels/Dcwcs86JT6D/" },
+          { texto: "Inauguración de la nueva Aula MakerSTEM", fuente: "Miguel Vargas, gobernador regional de Atacama · Instagram · 1 de septiembre de 2026", url: "https://www.instagram.com/reels/Dcwcs86JT6D/" },
           { texto: "MakerSTEM: Fundación Chile impulsa educación STEM en Atacama", fuente: "Reporte Minero · 30 de junio de 2026", url: "https://www.reporteminero.cl/noticia/noticias/2026/06/makerstem-educacion-atacama-paipote-industria-4-0" },
           { texto: "Proyecto MakerSTEM impulsa la futura fuerza laboral de Atacama", fuente: "Guía Minera · 2 de julio de 2026", url: "https://www.guiaminera.cl/proyecto-makerstem-impulsa-la-futura-fuerza-laboral-de-atacama-con-innovadora-aula-con-tecnologias-aplicadas-en-paipote/" }
         ] }
@@ -947,7 +962,7 @@ const SITE = {
       cargo: "Profesor titular y creador del curso",
       institucion: "PENTA UC",
       nivel: "IV medio",
-      duracion: "Segundo semestre de 2025",
+      duracion: "12 sesiones",
       equipo: "",
       resumen: "Robots que juegan: programación por bloques y código, diseño centrado en el usuario y tableros construidos por los propios equipos para poner a prueba cada máquina.",
       portada: "assets/img/cursos/robots-juegos-portada.jpg",
