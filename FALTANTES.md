@@ -6,7 +6,7 @@ Todo lo que el sitio **no** dice porque todavía no lo sabemos. Antes esto viví
 Ninguna de estas líneas se publica. Cuando tengas el dato, se escribe en `js/data.js` y se borra
 de esta lista.
 
-Última revisión: 24 de septiembre de 2026.
+Última revisión: 26 de septiembre de 2026.
 
 ---
 
@@ -24,26 +24,14 @@ Dime cuáles van y con qué palabras, o pásame las tuyas.
 
 ## 2. Archivos que no existen todavía
 
-Los dos botones de descarga están programados pero no se dibujan mientras no haya archivo, así
-que por ahora no hay ningún enlace roto. Para activarlos: deja el PDF en `assets/files/` y pega
-el nombre en `descargas` dentro de `js/data.js`.
+Desde el 25 de septiembre de 2026 el sitio tiene tres CV (completo, profesional y académico),
+generados desde `cv/*.html` y publicados en `assets/files/`, sin RUT, dirección, fecha de
+nacimiento ni teléfono. El CV antiguo, `assets/files/cv-vicente-caceres-2025.pdf`, ya no está
+enlazado desde ninguna página, pero sigue en el servidor por si alguien tenía el enlace.
 
 | Qué | Estado |
 |---|---|
-| CV en PDF | Listo. `assets/files/cv-vicente-caceres-2025.pdf` |
-| Portafolio en PDF | Falta. Déjalo en `assets/files/portafolio-vicente-caceres.pdf` |
-
-El CV publicado **no es el mismo archivo** que tienes en el escritorio. Al original se le
-borraron cuatro datos que no pueden quedar a descarga libre: RUT, dirección, fecha de nacimiento
-y WhatsApp. Es redacción de verdad, no un rectángulo encima: el texto no se puede copiar ni
-extraer. Quedan huecos visibles donde estaban esas líneas, y también se fue la etiqueta
-"Portafolio:" porque compartía renglón con el RUT.
-
-Cuando reexportes el CV desde Illustrator sin esas líneas, el reemplazo queda sin huecos.
-**Al hacerlo, revisa que el archivo nuevo tampoco traiga esos datos antes de subirlo.**
-
-El CV con los datos completos está en la raíz del proyecto y lo cubre la regla `/CV_*.pdf` del
-`.gitignore`, para que no se suba por accidente.
+| Portafolio en PDF | Falta. Déjalo en `assets/files/portafolio-vicente-caceres.pdf` y pégalo en `descargas` |
 
 ---
 
