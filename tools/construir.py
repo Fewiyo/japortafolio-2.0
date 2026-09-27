@@ -271,7 +271,8 @@ def catalogo(sitio, pre=""):
             continue
         items.append({
             "href": pre + "apps/%s/" % a["id"], "img": a.get("portada"), "titulo": a["titulo"],
-            "etiquetas": [v for v in (a.get("tipo"), a.get("anio"), a.get("herramienta")) if v],
+            "etiquetas": [v for v in (a.get("tipo"), a.get("anio")) if v]
+                         + [h for h in (a.get("herramienta") or "").split(" y ") if h],
             "meta": [mayus(a.get("estado")), a.get("dominio")], "anio": a.get("anio"),
         })
     items.sort(key=lambda x: -ultimo_anio(x["anio"]))
