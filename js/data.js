@@ -430,15 +430,16 @@ const SITE = {
     {
       id: "diseno-editorial",
       titulo: "Plan Nacional RAM",
-      cliente: "Converso",
+      cliente: "Converso, para el Ministerio de Salud",
       anio: "2021",
       tags: ["Editorial", "Diseño gráfico", "Salud pública", "Infografía"],
       resumen:
-        "Diseño editorial del Plan Nacional contra la Resistencia a los Antimicrobianos 2021-2025, desarrollado como jefe de diseño gráfico en Converso.",
+        "Diseño editorial del Plan Nacional contra la Resistencia a los Antimicrobianos 2021-2025 del Ministerio de Salud, como jefe de diseño de Converso. Se imprimieron 500 copias.",
       img: "assets/img/proyectos/diseno-editorial/01-portada.jpg",
       bloques: [
         { tipo: "lista", titulo: "Mi rol", valor: ["Jefe de Diseño Gráfico en Converso", "Diagramación de la publicación completa", "Infografías y sistema de color"] },
         { tipo: "texto", valor: "Diseño editorial del Chilean National Plan on Antimicrobial Resistance 2021-2025. Un documento de política pública tiene un problema de diseño particular: el contenido es técnico y extenso, pero el lector al que hay que convencer no siempre es técnico. La diagramación tiene que dejar entrar por la infografía a quien no va a leer las setenta páginas." },
+        { tipo: "texto", valor: "Converso era un emprendimiento que trabajaba como equipo externo para el Ministerio de Salud. Como jefe de diseño, diseñé editorialmente el librillo completo, que se imprimió en 500 copias." },
         { tipo: "imagen", valor: "assets/img/proyectos/diseno-editorial/02-interior.jpg", pie: "Doble página interior: texto a dos columnas con fotografía de apoyo." },
         { tipo: "imagen", valor: "assets/img/proyectos/diseno-editorial/03-infografia.jpg", pie: "El plan de acción global resumido en una infografía." },
         { tipo: "imagen", valor: "assets/img/proyectos/diseno-editorial/04-doble-pagina.jpg", pie: "Sistema de color por sección, aplicado al pie de cada página." }

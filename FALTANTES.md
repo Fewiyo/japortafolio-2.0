@@ -77,8 +77,7 @@ Cuando hagas público un repositorio, cambia ese `false` por `true` y el botón 
 Antofagasta, y cuál fue tu rol. Falta el mes y qué quedó operando después. Hay documentos que
 resumen el proyecto; si los pasas, salen más detalles.
 
-**Plan Nacional RAM.** Para qué institución se hizo y qué más componía el encargo además del
-documento.
+**Plan Nacional RAM. Resuelto el 26 de septiembre de 2026:** para el Ministerio de Salud, con Converso como equipo externo; se imprimieron 500 copias. **Falta:** una foto real del librillo impreso, si Vicente encuentra alguna.
 
 **Kits educativos Bicho-bot.** La ficha ya cuenta la historia completa, del robot de cartón de
 2022 al kit de MDF de 2023. El montaje de la caja se reemplazó el 24 de septiembre por la foto
