@@ -87,7 +87,7 @@ lista en `Ideo Maker/kits-educativos/seleccion/`. El nivel apareció en un carte
 niñas y niños de 6 a 12 años, creado para la Corporación Cultural de Lo Barnechea. Falta
 confirmarlo y la electrónica que lleva.
 
-**Eloísa.** El año, 2019, está deducido de la fecha de publicación en Behance (enero de 2020).
+**Eloísa. RESUELTO el 26 de septiembre de 2026: primer semestre de 2018.** El año, 2019, está deducido de la fecha de publicación en Behance (enero de 2020).
 Falta confirmarlo, saber en qué CESFAM se probó, si fue en equipo y con quiénes, y si el
 material quedó en uso.
 

@@ -530,7 +530,7 @@ const SITE = {
       id: "eloisa",
       titulo: "Eloísa",
       cliente: "Proyecto universitario · CESFAM",
-      anio: "2019",
+      anio: "2018",
       tags: ["Diseño de servicios", "Salud pública", "Diseño de información", "Migración"],
       resumen:
         "Sistema de traducción español-créole para mujeres haitianas en el CESFAM: acceso a salud sexual y métodos anticonceptivos cuando el idioma es la primera barrera.",
