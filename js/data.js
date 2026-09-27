@@ -187,6 +187,52 @@ const SITE = {
       ]
     },
     {
+      id: "aula-maker-copiapo",
+      titulo: "Liceo Fernando Ariztía Ruiz de Paipote",
+      cliente: "Ideo Maker, para Fundación Chile",
+      anio: "2026",
+      tags: ["FabLab", "Diseño de espacios", "Capacitación docente", "Modelado 3D", "Educación"],
+      resumen:
+        "Un Aula Maker STEM para el liceo técnico-profesional más grande de la región de Atacama: de taller de artes deteriorado a aula de fabricación digital, robótica y realidad virtual.",
+      img: "assets/img/proyectos/aula-maker-copiapo/17-sala-terminada.jpg",
+      bloques: [
+        { tipo: "texto", valor: "Un Aula Maker STEM para el Liceo Fernando Ariztía Ruiz, en Paipote, Copiapó, el liceo técnico-profesional más grande de la región de Atacama, con más de 1.500 estudiantes. Es parte de MakerSTEM, un proyecto de Fundación Chile con Assist International y la Fundación Caterpillar, que se lanzó en abril de 2026. Ideo Maker ejecutó el aula completa, desde el levantamiento y el co-diseño hasta la capacitación de los docentes." },
+        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño del espacio y modelo 3D en Unreal Engine", "Presupuestos, carta Gantt y logística", "Habilitación en terreno: armado e instalación del mobiliario", "Capacitación docente en las tecnologías del aula", "Redacción de los informes del proyecto"] },
+        { tipo: "lista", titulo: "Equipo Ideo Maker", valor: ["Sebastián Higuera", "Patricia Ramírez", "Vicente Cáceres", "Elvis Andrade", "Nelson Mora", "Julio Higuera", "Diego López"] },
+        { tipo: "texto", titulo: "El punto de partida", valor: "La sala asignada era un antiguo taller de artes, en avanzado estado de deterioro: el suelo en malas condiciones y tanto mobiliario acumulado que no se podía recorrer entera para medirla. A favor tenía superficie, estructura sólida, luz natural, conexiones eléctricas y salida directa a un patio." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/01-antes.jpg", pie: "La sala asignada, un antiguo taller de artes, antes de intervenir." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/02-antes-mesones.jpg", pie: "Los mesones y el mobiliario acumulado, durante el levantamiento." },
+        { tipo: "texto", titulo: "El co-diseño", valor: "El diseño partió de una entrevista con el equipo directivo, una feria maker con encuesta a estudiantes y un focus group con docentes. De ahí salió la zonificación: mesas modulares de trabajo colaborativo al centro, zonas diferenciadas por tecnología y el patio como zona de pruebas para robótica móvil y de espera mientras corren la impresión 3D o el corte láser." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/03-focus-docentes.jpg", pie: "El focus group con docentes." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/04-planta.jpg", pie: "La planta del aula en el modelo, con sus zonas." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/05-render-mesas.jpg", pie: "Las mesas de trabajo colaborativo, en el modelo." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/06-render-laser.jpg", pie: "La zona de corte láser, en el modelo." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/07-render-realidad-virtual.jpg", pie: "La zona de realidad virtual, en el modelo." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/08-render-panol.jpg", pie: "El pañol, en el modelo." },
+        { tipo: "texto", titulo: "La habilitación", valor: "El proyecto sumó obras de infraestructura, instalación eléctrica, muros, pavimento, señalética y seguridad a la instalación del mobiliario y los equipos. El recinto quedó con las zonas de trabajo diferenciadas, la circulación ordenada y listo para empezar la capacitación docente. El propio liceo, junto a sus estudiantes, recuperó el patio contiguo." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/09-llegada-camion.jpg", pie: "La llegada del mobiliario y el equipamiento." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/10-equipamiento.jpg", pie: "El equipamiento, recién recibido." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/11-pintura.jpg", pie: "La sala pintada con la paleta del aula." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/12-pantalla.jpg", pie: "Instalación de la pantalla interactiva." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/13-laser.jpg", pie: "La cortadora láser, con su ficha de uso." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/14-senaletica.jpg", pie: "Señalética de seguridad junto al acceso." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/15-impresoras-3d.jpg", pie: "La zona de impresión 3D." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/16-sala.jpg", pie: "La sala habilitada." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/17-sala-terminada.jpg", pie: "El aula terminada." },
+        { tipo: "texto", titulo: "El lanzamiento", valor: "MakerSTEM se lanzó en abril de 2026 con autoridades regionales, Fundación Chile, Assist International y la Fundación Caterpillar." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/20-lanzamiento.jpg", pie: "Autoridades en el lanzamiento de MakerSTEM.", credito: "Reporte Minero" },
+        { tipo: "texto", titulo: "La inauguración", valor: "El aula, la primera Aula MakerSTEM de la región, se inauguró en septiembre de 2026 con autoridades regionales, el ecosistema educativo y el sector productivo. Son más de 100 m² remodelados, con robótica, prototipado, programación y realidad aumentada, y seguirá con acompañamiento pedagógico y formación docente." },
+        { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/21-inauguracion-realidad-virtual.jpg", pie: "Probando la realidad virtual el día de la inauguración, junto a la ficha de uso del aula.", credito: "Fundación Chile" },
+        { tipo: "enlaces", titulo: "En la prensa", valor: [
+          { texto: "Atacama inaugura su primera Aula MakerSTEM para fortalecer la educación técnico-profesional", fuente: "Fundación Chile · nota oficial · 22 de septiembre de 2026", url: "https://fch.cl/noticias/atacama-inaugura-su-primera-aula-makerstem-para-fortalecer-la-educacion-tecnico-profesional/" },
+          { texto: "Inauguración del Aula MakerSTEM en Paipote", fuente: "Fundación Chile · Instagram · septiembre de 2026", url: "https://www.instagram.com/p/Ddj3sxMHGva/" },
+          { texto: "Inauguración de la nueva Aula MakerSTEM", fuente: "Miguel Vargas, gobernador regional de Atacama · Instagram · septiembre de 2026", url: "https://www.instagram.com/reels/Dcwcs86JT6D/" },
+          { texto: "MakerSTEM: Fundación Chile impulsa educación STEM en Atacama", fuente: "Reporte Minero · 30 de junio de 2026", url: "https://www.reporteminero.cl/noticia/noticias/2026/06/makerstem-educacion-atacama-paipote-industria-4-0" },
+          { texto: "Proyecto MakerSTEM impulsa la futura fuerza laboral de Atacama", fuente: "Guía Minera · 2 de julio de 2026", url: "https://www.guiaminera.cl/proyecto-makerstem-impulsa-la-futura-fuerza-laboral-de-atacama-con-innovadora-aula-con-tecnologias-aplicadas-en-paipote/" }
+        ] }
+      ]
+    },
+    {
       id: "aula-impulsa-taltal",
       titulo: "Liceo José Miguel Quiroz de Taltal",
       cliente: "Ideo Maker, para Fundación Chile",
@@ -1297,31 +1343,63 @@ const SITE = {
     titular: "Diseño experiencias a la medida del usuario.",
     retrato: "assets/img/retrato.jpg",
     parrafos: [
-      "Estudié diseño industrial en la Universidad Diego Portales. Empecé diseñando objetos y terminé diseñando los lugares donde se hacen los objetos: laboratorios de fabricación digital, programas de curso, kits que un profesor puede usar sin que yo esté al lado.",
-      "Desde 2022 soy director de investigación, desarrollo e innovación en Ideo Maker, donde he armado salas maker para colegios y fundaciones, del plano al primer prototipo. En paralelo creé y dicté siete cursos en el Programa PENTA UC de la Universidad Católica, sobre robótica, diseño de juegos y tecnología, para estudiantes de enseñanza básica y media. Los siete son de creación propia: propuesta, programa, metodología y material.",
+      "Estudié diseño industrial en la Universidad Diego Portales y hoy curso el Magíster en Ciencias del Diseño en la Universidad Adolfo Ibáñez. Empecé diseñando objetos y terminé diseñando los lugares donde se hacen los objetos: laboratorios de fabricación digital, programas de curso, kits que un profesor puede usar sin que yo esté al lado.",
+      "Desde 2022 soy director de investigación, desarrollo e innovación en Ideo Maker. Ahí he diseñado, instalado y puesto en marcha aulas maker para Fundación Chile en Antofagasta y Atacama, y para Fundación País Digital en Sierra Gorda: del levantamiento con la comunidad al modelo 3D, la sala construida y los docentes capacitados. También diseño kits educativos, como Bicho-bot y MK-BOT. Entre 2022 y 2025 creé y dicté siete cursos en el Programa PENTA UC de la Universidad Católica, sobre robótica, diseño de juegos y tecnología, todos de creación propia.",
       "Lo que me interesa es la parte que nadie fotografía. Que el FabLab siga funcionando tres años después de la inauguración. Que el protocolo de seguridad esté escrito. Que el profesor pueda dar la clase sin mí. Un espacio maker que depende de quien lo instaló no es un espacio maker, es una demostración.",
-      "Antes de eso fui jefe de diseño en Converso, diseñador gráfico en el INFAS de la Universidad Alberto Hurtado y fotógrafo para la CEPAL y la Organización Panamericana de la Salud. Hoy sumo a todo eso el desarrollo de aplicaciones y plataformas web, casi siempre a partir de un problema concreto: un entrenamiento que quería medir, un inventario que se llevaba en papel, una barrera de idioma en una consulta médica. Busco proyectos donde el diseño tenga que quedar operando, y no solamente entregado."
+      "Antes de eso fui jefe de diseño en Converso, diseñador gráfico en el INFAS de la Universidad Alberto Hurtado y fotógrafo para la CEPAL y la Organización Panamericana de la Salud. Hoy sumo a todo eso la ciencia de datos y el desarrollo de aplicaciones y plataformas web, casi siempre a partir de un problema concreto: un entrenamiento que quería medir, un inventario que se llevaba en papel, una barrera de idioma en una consulta médica. Busco proyectos donde el diseño tenga que quedar operando, y no solamente entregado."
     ],
     /* Trayectoria: [años, cargo, organización] */
     trayectoria: [
-      ["2022 — hoy",  "Director de Investigación, Desarrollo e Innovación", "Ideo Maker"],
-      ["2022 — 2025", "Docente",                                            "PENTA UC, Pontificia Universidad Católica de Chile"],
-      ["2025",        "Profesor del taller de robótica",                    "Escuela Francisco Bilbao, Recoleta"],
+      ["2022 – hoy",  "Director de Investigación, Desarrollo e Innovación", "Ideo Maker"],
+      ["2026",        "Capacitador en talleres",                            "Ideo Maker, para Anglo American"],
+      ["2022 – 2025", "Docente, siete cursos de creación propia",           "PENTA UC, Pontificia Universidad Católica de Chile"],
+      ["2025",        "Profesional de apoyo, Taller de Exploración Tecnológica y Prototipado", "Universidad del Desarrollo"],
       ["2025",        "Docente, Exploración Espacial y Robótica",           "Programa CREA UC"],
+      ["2025",        "Profesor del taller de robótica, con MK-BOT",        "Escuela Francisco Bilbao, Recoleta"],
       ["2024",        "Diseñador de Investigación y Desarrollo",            "Atacama Biomaterials"],
       ["2024",        "Docente, Robótica y Design Thinking",                "Colegio Andrés Bello"],
       ["2023",        "Consultor de Diseño Instruccional",                  "TICAL"],
       ["2023",        "Fotógrafo",                                          "CEPAL y Organización Panamericana de la Salud"],
-      ["2022 — 2023", "Docente de robótica",                                "Municipalidad de Lo Barnechea"],
+      ["2022 – 2023", "Docente de robótica",                                "Corporación Cultural de Lo Barnechea"],
       ["2021",        "Jefe de Diseño",                                     "Converso"],
       ["2021",        "Diseñador gráfico",                                  "INFAS, Universidad Alberto Hurtado"],
-      ["2019 — 2021", "Integrante de la Mesa de Salud Mental",              "Universidad Diego Portales"]
+      ["2020",        "Práctica profesional",                               "Laboratorio de Exploración Gráfica, UDP"],
+      ["2020",        "Práctica profesional",                               "Amercanda, museografía"],
+      ["2019 – 2021", "Integrante de la Mesa de Salud Mental",              "Universidad Diego Portales"],
+      ["2019",        "Voluntario",                                         "The Heart of London Living, Londres"],
+      ["2018",        "Equipo Solar UDP, auto solar Haalur",                "Carrera Solar Atacama"],
+      ["2017",        "Vicepresidente del Centro de Estudiantes de Diseño", "Universidad Diego Portales"]
     ],
+    /* Formación: [años, programa, institución] */
+    formacion: [
+      ["2026 – hoy",  "Magíster en Ciencias del Diseño",                    "Universidad Adolfo Ibáñez"],
+      ["2025 – 2026", "Ciencia de Datos",                                   "Desafío Latam"],
+      ["2015 – 2021", "Diseño Industrial, aprobado con distinción",         "Universidad Diego Portales"],
+      ["2024",        "Métricas de Impacto: ESG + Innovación para Startups","COLAB, Centro de Innovación UC"],
+      ["2022",        "Unreal Engine 5 para Realidad Aumentada y Virtual",  "Núcleo Escuela"],
+      ["2021 – 2022", "Semi-Intensive English Program",                     "International Language Institute, Washington DC"],
+      ["2019",        "Intensive English, Callan Method",                   "English Express, Londres"],
+      ["2017",        "Intensivo de actuación",                             "Pontificia Universidad Católica de Chile"]
+    ],
+    /* Herramientas: [grupo, [programas]] */
+    herramientas: [
+      ["3D y fabricación", ["Rhinoceros 3D", "Fusion 360", "Blender", "Unreal Engine", "AutoCAD", "V-Ray", "Tinkercad", "Arduino"]],
+      ["Gráfica y video",  ["Illustrator", "Photoshop", "InDesign", "Adobe XD", "After Effects", "Premiere Pro"]],
+      ["Datos",            ["Python", "Google Colab", "Excel"]],
+      ["Educación y trabajo", ["Moodle", "Articulate 360", "Miro", "WordPress", "Google Workspace", "Office 365"]]
+    ],
+    reconocimientos: [
+      ["2021", "Proyecto de título AnsioSOS, aprobado con distinción", "Universidad Diego Portales"],
+      ["2018", "Primer lugar, Carrera Solar Atacama, categoría Cruiser", "Equipo Solar UDP, auto solar Haalur"]
+    ],
+    idiomas: ["Español nativo", "Inglés B2"],
     colaboraciones: [
-      "Ideo Maker", "PENTA UC", "CREA UC", "Universidad Diego Portales",
-      "Universidad Alberto Hurtado", "Atacama Biomaterials", "CEPAL", "OPS/PAHO",
-      "País Digital", "Colegio Andrés Bello", "Corporación Santa Cruz",
-      "Municipalidad de Lo Barnechea", "TICAL", "LH&A London"
+      "Ideo Maker", "Fundación Chile", "Fundación País Digital", "Fundación Mustakis",
+      "Congreso Futuro en tu comuna", "Anglo American", "Ministerio de Salud",
+      "PENTA UC", "CREA UC", "Universidad del Desarrollo", "Universidad Diego Portales",
+      "Universidad Adolfo Ibáñez", "Universidad Alberto Hurtado", "Atacama Biomaterials",
+      "CEPAL", "OPS/PAHO", "Colegio Andrés Bello", "Corporación Santa Cruz",
+      "Corporación Cultural de Lo Barnechea", "TICAL", "Converso", "LH&A London"
     ]
   },
 

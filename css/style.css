@@ -637,3 +637,6 @@ html.visor-abierto{overflow:hidden}
 button.btn{font:inherit; font-size:14px; border:0; cursor:pointer}
 .enlaces{display:grid; gap:12px; margin:0 0 48px}
 @media (min-width:820px){ .enlaces{grid-template-columns:1fr 1fr} }
+.herramientas{display:grid; gap:28px}
+@media (min-width:820px){ .herramientas{grid-template-columns:1fr 1fr; gap:36px 24px} }
+.herr h3{font-size:13px; font-weight:400; color:var(--muted); letter-spacing:.12em; text-transform:uppercase; margin-bottom:12px}

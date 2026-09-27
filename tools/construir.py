@@ -446,6 +446,15 @@ def pagina_historia(sitio, hashes):
         '<div class="row rise"><span class="yr">%s</span><span>%s</span><span class="org">%s</span></div>'
         % (esc(r[0]), esc(r[1]), esc(r[2])) for r in h["trayectoria"])
     chips = "".join('<span class="chip">%s</span>' % esc(c) for c in h["colaboraciones"])
+    def filas_de(lista):
+        return "".join(
+            '<div class="row rise"><span class="yr">%s</span><span>%s</span><span class="org">%s</span></div>'
+            % (esc(r[0]), esc(r[1]), esc(r[2])) for r in lista)
+    herramientas = "".join(
+        '<div class="herr rise"><h3>%s</h3><div class="chips">%s</div></div>'
+        % (esc(grupo), "".join('<span class="chip">%s</span>' % esc(x) for x in xs))
+        for grupo, xs in h.get("herramientas", []))
+    idiomas = "".join('<span class="chip">%s</span>' % esc(x) for x in h.get("idiomas", []))
     cuerpo = (
         nav("historia", "", sitio)
         + '<header class="case-head"><div class="wrap"><h1 class="rise">%s</h1></div></header>' % esc(h["titular"])
@@ -453,6 +462,10 @@ def pagina_historia(sitio, hashes):
         + '<div class="bio"><div class="prose rise">'
         + "".join("<p>%s</p>" % esc(p) for p in h["parrafos"]) + "</div>" + retrato + "</div>"
         + '<h2 class="subhead">Trayectoria</h2><div class="rows">%s</div>' % filas
+        + '<h2 class="subhead">Formación</h2><div class="rows">%s</div>' % filas_de(h.get("formacion", []))
+        + '<h2 class="subhead">Herramientas</h2><div class="herramientas">%s</div>' % herramientas
+        + '<h2 class="subhead">Reconocimientos</h2><div class="rows">%s</div>' % filas_de(h.get("reconocimientos", []))
+        + '<h2 class="subhead">Idiomas</h2><div class="chips rise">%s</div>' % idiomas
         + '<h2 class="subhead">Instituciones</h2><div class="chips rise">%s</div>' % chips
         + "</div></section>" + pie("", sitio)
     )
