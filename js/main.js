@@ -14,6 +14,20 @@
 (function () {
   "use strict";
 
+  /* Textos de la interfaz en el idioma de la pagina (lang del <html>). */
+  var EN = document.documentElement.lang === "en";
+  var T = EN ? {
+    foto: "Enlarged photo", cerrar: "Close", ant: "Previous photo", sig: "Next photo",
+    menos: "Show fewer tags", otras: "Show the other ", uno: " project", varios: " projects",
+    con: " tagged ", completa: "Please add your name, a valid email and a message.",
+    enviando: "Sending…", error: "It could not be sent. Write to me directly at "
+  } : {
+    foto: "Foto ampliada", cerrar: "Cerrar", ant: "Foto anterior", sig: "Foto siguiente",
+    menos: "Ver menos etiquetas", otras: "Ver las otras ", uno: " proyecto", varios: " proyectos",
+    con: " con la etiqueta ", completa: "Completa tu nombre, un correo válido y el mensaje.",
+    enviando: "Enviando…", error: "No se pudo enviar. Escríbeme directo a "
+  };
+
   /* ---------- Tema claro/oscuro (por defecto oscuro) ---------- */
   var btn = document.getElementById("theme");
   if (btn) {
@@ -103,13 +117,13 @@
     visor.hidden = true;
     visor.setAttribute("role", "dialog");
     visor.setAttribute("aria-modal", "true");
-    visor.setAttribute("aria-label", "Foto ampliada");
+    visor.setAttribute("aria-label", T.foto);
     visor.innerHTML =
       '<img alt="">' +
       '<p class="visor__pie"></p>' +
-      '<button type="button" class="visor__cerrar" aria-label="Cerrar">&times;</button>' +
-      '<button type="button" class="visor__ant" aria-label="Foto anterior">&lsaquo;</button>' +
-      '<button type="button" class="visor__sig" aria-label="Foto siguiente">&rsaquo;</button>';
+      '<button type="button" class="visor__cerrar" aria-label="' + T.cerrar + '">&times;</button>' +
+      '<button type="button" class="visor__ant" aria-label="' + T.ant + '">&lsaquo;</button>' +
+      '<button type="button" class="visor__sig" aria-label="' + T.sig + '">&rsaquo;</button>';
     document.body.appendChild(visor);
 
     var vImg = visor.querySelector("img");
@@ -174,8 +188,8 @@
         var abierto = barra.classList.toggle("muestra-todo");
         boton.setAttribute("aria-expanded", abierto ? "true" : "false");
         boton.textContent = abierto
-          ? "Ver menos etiquetas"
-          : "Ver las otras " + barra.querySelectorAll(".filtro--extra").length;
+          ? T.menos
+          : T.otras + barra.querySelectorAll(".filtro--extra").length;
         return;
       }
 
@@ -197,7 +211,7 @@
       });
 
       estado.textContent = tag
-        ? visibles + (visibles === 1 ? " proyecto" : " proyectos") + " con la etiqueta " + tag
+        ? visibles + (visibles === 1 ? T.uno : T.varios) + T.con + tag
         : "";
     });
   }
@@ -224,12 +238,12 @@
       e.preventDefault();
       aviso.classList.remove("es-error");
       if (!form.checkValidity()) {
-        aviso.textContent = "Completa tu nombre, un correo válido y el mensaje.";
+        aviso.textContent = T.completa;
         aviso.classList.add("es-error");
         return;
       }
       enviar.disabled = true;
-      aviso.textContent = "Enviando…";
+      aviso.textContent = T.enviando;
       fetch(form.action, {
         method: "POST",
         headers: { "Accept": "application/json" },
@@ -239,7 +253,7 @@
         form.reset();
         aviso.textContent = form.dataset.enviado;
       }).catch(function () {
-        aviso.textContent = "No se pudo enviar. Escríbeme directo a " + form.action.split("/").pop() + ".";
+        aviso.textContent = T.error + form.action.split("/").pop() + ".";
         aviso.classList.add("es-error");
       }).then(function () { enviar.disabled = false; });
     });

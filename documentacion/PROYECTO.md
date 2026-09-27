@@ -347,3 +347,20 @@ estudiando uno.
 
 Eso cambia el objetivo del portafolio: no es convertir un pago con tarjeta, es ganar una
 conversación con un sostenedor o con una empresa del rubro.
+
+## El sitio en inglés (desde el 27 de septiembre de 2026)
+
+El sitio se construye dos veces: en español en la raíz y en inglés dentro de `en/`, con la misma
+estructura de direcciones (`/proyectos/mk-bot/` y `/en/proyectos/mk-bot/`). Cada página enlaza a
+su par con `hreflang`, y el botón ES / EN del menú lleva a la misma página en el otro idioma.
+
+- **El contenido en inglés no vive en `data.js`.** Vive en `i18n/en.json`: un diccionario que va
+  de cada texto en español a su traducción. `construir.py` copia los datos y reemplaza cada texto
+  que encuentra en el diccionario.
+- **Si cambias o agregas un texto en español**, el constructor avisa en consola cuántos quedaron
+  sin traducir y los deja en `i18n/sin-traducir.txt`. Hay que agregarlos a `en.json` con su
+  traducción; mientras tanto, esa frase aparece en español dentro del sitio en inglés.
+- **Los textos fijos de la interfaz** (menú, formulario, "Volver al catálogo") están en el
+  diccionario `UI` de `construir.py`, y los que arma el navegador, en `T` de `js/main.js`.
+- Nombres propios, títulos de cursos y titulares de prensa se quedan en español a propósito.
+- Los tres CV siguen en español; en la versión inglesa, sus tarjetas lo dicen.
