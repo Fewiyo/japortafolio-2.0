@@ -95,7 +95,7 @@ material quedó en uso.
 simplemente no muestra esa fila. Faltan también las sesiones del temario y los resultados, porque
 el curso está en marcha.
 
-**SKU.** Para qué inventario se hizo, si está en uso y si llegó a desplegarse.
+**SKU.** Se queda oculto por decisión de Vicente (26 de septiembre de 2026). No hace falta completar sus datos.
 
 ---
 
