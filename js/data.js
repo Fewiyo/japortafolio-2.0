@@ -1399,9 +1399,10 @@ const SITE = {
     /* Herramientas: [grupo, [programas]] */
     herramientas: [
       ["3D y fabricación", ["Rhinoceros 3D", "Fusion 360", "Blender", "Unreal Engine", "AutoCAD", "V-Ray", "Tinkercad", "Arduino"]],
-      ["Gráfica y video",  ["Illustrator", "Photoshop", "InDesign", "Adobe XD", "After Effects", "Premiere Pro"]],
-      ["Datos",            ["Python", "Google Colab", "Excel"]],
-      ["Educación y trabajo", ["Moodle", "Articulate 360", "Miro", "WordPress", "Google Workspace", "Office 365"]]
+      ["Gráfica, video e interacción", ["Illustrator", "Photoshop", "InDesign", "Figma", "Adobe XD", "Canva", "Midjourney", "After Effects", "Premiere Pro", "TouchDesigner"]],
+      ["Datos", ["Python", "Jupyter Notebook", "Google Colab", "Tableau Public", "Google Analytics", "Excel"]],
+      ["Desarrollo con IA", ["Claude Code", "Codex", "Visual Studio Code", "cPanel", "WordPress"]],
+      ["Educación y trabajo", ["Moodle", "Articulate 360", "Miro", "Notion", "Obsidian", "Slack", "Discord", "Google Workspace", "Office 365"]]
     ],
     reconocimientos: [
       ["2021", "Proyecto de título AnsioSOS, aprobado con distinción", "Universidad Diego Portales"],
