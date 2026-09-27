@@ -901,7 +901,7 @@ const SITE = {
       cargo: "Profesor titular y creador del curso",
       institucion: "PENTA UC",
       nivel: "IV medio",
-      duracion: "En curso",
+      duracion: "Segundo semestre de 2025",
       equipo: "",
       resumen: "Robots que juegan: programación por bloques y código, diseño centrado en el usuario y tableros construidos por los propios equipos para poner a prueba cada máquina.",
       portada: "assets/img/cursos/robots-juegos-portada.jpg",
