@@ -91,7 +91,7 @@ confirmarlo y la electrónica que lleva.
 Falta confirmarlo, saber en qué CESFAM se probó, si fue en equipo y con quiénes, y si el
 material quedó en uso.
 
-**Al tablero y Robots (curso 7).** A qué nivel se impartió. El campo está vacío, así que la ficha
+**Al tablero y Robots (curso 7). RESUELTO el 26 de septiembre de 2026: IV medio.** A qué nivel se impartió. El campo está vacío, así que la ficha
 simplemente no muestra esa fila. Faltan también las sesiones del temario y los resultados, porque
 el curso está en marcha.
 
