@@ -58,7 +58,6 @@ UI = {
     "asunto": ("Nuevo mensaje desde japortafolio.com", "New message from japortafolio.com (English site)"),
     "enviar": ("Enviar mensaje", "Send message"),
     "curriculum": ("Currículum", "Résumé"),
-    "cv_espanol": ("", " · in Spanish"),
     "escribeme": ("Escríbeme a", "Write to me at"),
     "ver_otras": ("Ver las otras", "Show the other"), "todo": ("Todo", "All"),
     "volver": ("Volver al catálogo", "Back to the catalog"),
@@ -264,7 +263,8 @@ def pie(pre, sitio):
         '<span class="cv-doc__ico" aria-hidden="true">PDF</span>'
         '<span class="cv-doc__txt"><b>%s</b><span>%s</span></span>'
         '<span class="cv-doc__flecha" aria-hidden="true">↗</span></a>'
-        % (pre, esc(c["url"]), esc(c["titulo"]), esc(c["detalle"] + tr("cv_espanol")))
+        % (pre, esc(c["url"] if LANG == "es" else c["url"].replace(".pdf", "-en.pdf")),
+           esc(c["titulo"]), esc(c["detalle"]))
         for c in sitio.get("cv", []))
     bloque_cv = ('<div class="cv-bloque rise" id="cv"><p class="eyebrow">%s</p>'
                  '<div class="cv-docs">%s</div></div>' % (tr("curriculum"), cvs)) if cvs else ""

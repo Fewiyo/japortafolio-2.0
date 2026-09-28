@@ -362,5 +362,5 @@ su par con `hreflang`, y el botón ES / EN del menú lleva a la misma página en
   traducción; mientras tanto, esa frase aparece en español dentro del sitio en inglés.
 - **Los textos fijos de la interfaz** (menú, formulario, "Volver al catálogo") están en el
   diccionario `UI` de `construir.py`, y los que arma el navegador, en `T` de `js/main.js`.
-- Nombres propios, títulos de cursos y titulares de prensa se quedan en español a propósito.
-- Los tres CV siguen en español; en la versión inglesa, sus tarjetas lo dicen.
+- Todo está en inglés, incluidos los nombres de cursos, liceos y titulares de prensa. Solo se quedan igual los nombres propios de personas, marcas y organizaciones con nombre oficial (Fundación Chile, Congreso Futuro en tu comuna).
+- Los CV en inglés son `cv/*-en.html`, generados por `cv/traducir_cv.py` desde los CV en español. Si cambias un CV, agrega la frase nueva a ese script, córrelo y exporta los PDF `*-en.pdf`.
