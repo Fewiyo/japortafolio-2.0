@@ -52,6 +52,31 @@
     a.addEventListener("click", function (e) { e.preventDefault(); });
   });
 
+  /* ---------- Menú del celular ----------
+     El botón abre y cierra el panel. Se cierra al elegir un destino,
+     con Escape, al tocar fuera o si la ventana pasa a tamaño escritorio. */
+  var menuBtn = document.getElementById("menu-btn");
+  var navMenu = document.getElementById("nav");
+  if (menuBtn && navMenu) {
+    var abrirMenu = function (si) {
+      navMenu.classList.toggle("menu-abierto", si);
+      menuBtn.setAttribute("aria-expanded", si ? "true" : "false");
+    };
+    menuBtn.addEventListener("click", function () {
+      abrirMenu(!navMenu.classList.contains("menu-abierto"));
+    });
+    navMenu.querySelectorAll(".nav__menu a").forEach(function (a) {
+      a.addEventListener("click", function () { abrirMenu(false); });
+    });
+    addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && navMenu.classList.contains("menu-abierto")) { abrirMenu(false); menuBtn.focus(); }
+    });
+    document.addEventListener("click", function (e) {
+      if (!navMenu.contains(e.target)) abrirMenu(false);
+    });
+    addEventListener("resize", function () { if (innerWidth >= 820) abrirMenu(false); }, { passive: true });
+  }
+
   /* ---------- Borde de la barra al hacer scroll ---------- */
   var navEl = document.getElementById("nav");
   if (navEl) {

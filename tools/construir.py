@@ -48,7 +48,8 @@ LANG, SUB, PREF, RUTA = "es", "", "", ""
 
 UI = {
     "catalogo": ("Catálogo", "Catalog"), "servicios": ("Servicios", "Services"),
-    "historia": ("Historia", "About"), "cv": ("CV", "CV"),
+    "historia": ("Sobre mí", "About"), "cv": ("CV", "CV"), "menu": ("Menú", "Menu"),
+    "ver_proyectos": ("Ver proyectos", "See projects"),
     "oscuro": ("Modo oscuro", "Dark mode"),
     "otro_idioma": ("English version", "Versión en español"),
     "proximamente": ("Próximamente", "Coming soon"),
@@ -254,15 +255,20 @@ def nav(activa, pre, sitio):
         '<span class="nav__marca" aria-hidden="true"></span>%s'
         '<span class="nav__name-resto"> %s</span>'
         '<span class="nav__name-rol"> — %s</span></a>'
-        '<div class="nav__links">%s%s'
+        # En el celular los destinos van en un panel que abre este boton
+        # (referente: rots.cl); en el escritorio el boton no se ve.
+        '<button class="nav__burger" id="menu-btn" type="button" aria-expanded="false" '
+        'aria-controls="nav-menu" aria-label="%s"><span></span><span></span><span></span></button>'
+        '<div class="nav__links" id="nav-menu"><div class="nav__menu">%s</div>'
+        '<div class="nav__ctrl">%s'
         '<button class="theme-btn" id="theme" type="button" role="switch" aria-checked="true" aria-label="%s">'
         '<span class="switch" aria-hidden="true"><span class="switch__knob">'
         '<svg class="ico-sol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></g></svg>'
         '<svg class="ico-luna" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg>'
         '</span></span>'
         "</button>"
-        "</div></div></nav>"
-        % (esc(inicio), esc(pila), esc(apellidos), esc(sitio["rol"]), "".join(trozos),
+        "</div></div></div></nav>"
+        % (esc(inicio), esc(pila), esc(apellidos), esc(sitio["rol"]), tr("menu"), "".join(trozos),
            enlace_idioma(pre), tr("oscuro"))
     )
 
@@ -581,10 +587,14 @@ def pagina_inicio(sitio, hashes):
     cuerpo = (
         nav("home", pre, sitio)
         + '<header class="hero"><div class="wrap">'
+        + ('<img class="hero__foto rise" src="%s%s" alt="%s" width="96" height="96">'
+           % (pre, esc(sitio["historia"]["retrato"]), esc(sitio["nombre"])) if sitio["historia"].get("retrato") else "")
         + '<h1 class="rise">%s</h1>' % sitio["titular"]          # trae <em>, no se escapa
-        + '<div class="hero__row rise">'
-        + '<a class="btn" href="#contacto" data-abrir-form><span class="dot"></span>%s</a>' % esc(sitio["cta"])
-        + '<p class="hero__note">%s</p>' % esc(sitio["bajada"])
+        + '<p class="hero__note rise">%s</p>' % esc(sitio["bajada"])
+        # Dos salidas desde la portada: bajar directo a los proyectos, o escribir.
+        + '<div class="hero__acciones rise">'
+        + '<a class="btn" href="#catalogo">%s <span aria-hidden="true">&darr;</span></a>' % tr("ver_proyectos")
+        + '<a class="btn btn--linea" href="#contacto" data-abrir-form><span class="dot"></span>%s</a>' % esc(sitio["cta"])
         + "</div></div></header>"
         + ahora(sitio)
         + '<section class="section" id="catalogo"><div class="wrap">'
