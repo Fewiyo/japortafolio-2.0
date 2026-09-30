@@ -397,6 +397,7 @@ const SITE = {
     {
       id: "haalur",
       titulo: "HAALUR",
+      sello: "Proyecto universitario UDP",
       cliente: "Universidad Diego Portales",
       anio: "2018",
       tags: ["Vehículo solar", "Diseño industrial", "Fotografía", "Competencia"],
@@ -501,6 +502,7 @@ const SITE = {
     {
       id: "salud-mental",
       titulo: "AnsioSOS: proyecto de título",
+      sello: "Proyecto universitario UDP",
       cliente: "Universidad Diego Portales",
       anio: "2021",
       tags: ["Proyecto de título", "Diseño de servicios", "Salud mental", "Plataforma digital"],
@@ -521,7 +523,9 @@ const SITE = {
     {
       id: "diseno-editorial",
       titulo: "Plan Nacional RAM",
-      cliente: "Converso, para el Ministerio de Salud",
+      estudio: "Converso",
+      cliente: "para el Ministerio de Salud",
+      participacion: "Diseño editorial de la publicación completa, como jefe de diseño",
       anio: "2021",
       tags: ["Editorial", "Diseño gráfico", "Salud pública", "Infografía"],
       resumen:
@@ -627,7 +631,8 @@ const SITE = {
     {
       id: "eloisa",
       titulo: "Eloísa",
-      cliente: "Proyecto universitario · CESFAM",
+      sello: "Proyecto universitario UDP",
+      cliente: "CESFAM",
       anio: "2018",
       tags: ["Diseño de servicios", "Salud pública", "Diseño de información", "Migración"],
       resumen:

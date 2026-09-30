@@ -62,7 +62,7 @@ UI = {
     "ver_otras": ("Ver las otras", "Show the other"), "todo": ("Todo", "All"),
     "volver": ("Volver al catálogo", "Back to the catalog"),
     "cliente": ("Cliente", "Client"), "anio": ("Año", "Year"),
-    "proyecto_de": ("Proyecto de", "A project by"), "curso_para": ("Curso para", "A course for"), "mi_rol": ("Mi rol", "My role"),
+    "proyecto_de": ("Proyecto de", "A project by"), "proyecto_propio": ("Proyecto propio", "Personal project"), "curso_para": ("Curso para", "A course for"), "mi_rol": ("Mi rol", "My role"),
     "actualmente": ("Actualmente", "Currently"), "aprendizaje": ("Aprendizaje", "What I learned"),
     "autoria": ("Este es un proyecto de %s, hecho por su equipo. Aquí muestro la parte en que participé.",
                 "This is a project by %s, made by its team. Here I show the part I worked on."),
@@ -383,7 +383,7 @@ def catalogo(sitio, pre=""):
             "href": pre + "proyectos/%s/" % p["id"], "img": p.get("img"), "titulo": p["titulo"],
             "etiquetas": ([estudio] if estudio else []) + p.get("tags", []),
             "meta": [mayus(p.get("cliente")), p.get("anio")], "anio": p.get("anio"),
-            "sello": "%s %s" % (tr("proyecto_de"), estudio) if estudio else "",
+            "sello": sello_proyecto(p),
             "participacion": p.get("participacion"),
         })
     for c in sitio.get("cursos", []):
@@ -402,6 +402,7 @@ def catalogo(sitio, pre=""):
             "etiquetas": [v for v in (a.get("tipo"), a.get("anio")) if v]
                          + [h for h in re.split(r" y | and ", a.get("herramienta") or "") if h],
             "meta": [mayus(a.get("estado")), a.get("dominio")], "anio": a.get("anio"),
+            "sello": a.get("sello") or tr("proyecto_propio"),
         })
     items.sort(key=lambda x: -ultimo_anio(x["anio"]))
     return items
@@ -661,6 +662,16 @@ def foto_ampliable(src, pie, label, pre="", credito=None):
             % (pre, esc(src), imagen(src, pie or label, pre), pie_txt))
 
 
+def sello_proyecto(p):
+    """De quien es el proyecto, sobre el titulo: "Proyecto de Ideo Maker" si
+    tiene estudio, o el sello propio del dato ("Proyecto universitario UDP")."""
+    if p.get("sello"):
+        return p["sello"]
+    if p.get("estudio"):
+        return "%s %s" % (tr("proyecto_de"), p["estudio"])
+    return ""
+
+
 def pagina_proyecto(p, sig, idx, sitio, hashes):
     pre = SUB + "../../"
     estudio = p.get("estudio")
@@ -713,7 +724,7 @@ def pagina_proyecto(p, sig, idx, sitio, hashes):
         nav("catalogo", pre, sitio)
         + '<header class="case-head"><div class="wrap">'
         + '<a class="back" href="%s%sindex.html#catalogo">&larr; %s</a>' % (pre, PREF, tr("volver"))
-        + ('<p class="case-estudio rise">%s %s</p>' % (tr("proyecto_de"), esc(estudio)) if estudio else "")
+        + ('<p class="case-estudio rise">%s</p>' % esc(sello_proyecto(p)) if sello_proyecto(p) else "")
         + '<h1 class="rise">%s</h1>' % esc(p["titulo"])
         + '<p class="lead rise">%s</p>' % esc(p["resumen"])
         + '<div class="case-facts rise">'
@@ -824,6 +835,7 @@ def pagina_app(a, sig, idx, sitio, hashes):
         nav("catalogo", pre, sitio)
         + '<header class="case-head"><div class="wrap">'
         + '<a class="back" href="%s%sindex.html#catalogo">&larr; %s</a>' % (pre, PREF, tr("volver"))
+        + '<p class="case-estudio rise">%s</p>' % esc(a.get("sello") or tr("proyecto_propio"))
         + '<h1 class="rise">%s</h1>' % esc(a["titulo"])
         + ('<p class="lead rise">%s</p>' % esc(a["resumen"]) if a.get("resumen") else "")
         + acciones
