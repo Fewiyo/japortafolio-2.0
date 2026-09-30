@@ -364,3 +364,46 @@ su par con `hreflang`, y el botón ES / EN del menú lleva a la misma página en
   diccionario `UI` de `construir.py`, y los que arma el navegador, en `T` de `js/main.js`.
 - Todo está en inglés, incluidos los nombres de cursos, liceos y titulares de prensa. Solo se quedan igual los nombres propios de personas, marcas y organizaciones con nombre oficial (Fundación Chile, Congreso Futuro en tu comuna).
 - Los CV en inglés son `cv/*-en.html`, generados por `cv/traducir_cv.py` desde los CV en español. Si cambias un CV, agrega la frase nueva a ese script, córrelo y exporta los PDF `*-en.pdf`.
+
+## Autoría, organizaciones y celular (29 y 30 de septiembre de 2026)
+
+**De quién es cada proyecto.** Vicente le mostró el portafolio a su jefe de Ideo Maker y los
+proyectos parecían suyos. Desde entonces cada tarjeta y cada ficha dice de quién es el trabajo,
+sobre el título:
+
+- **Proyectos de Ideo Maker** (y el de Converso): en `data.js` llevan `estudio: "Ideo Maker"`,
+  `cliente` con la relación ("para Fundación Chile") y `participacion` (el rol de Vicente en una
+  línea). El constructor pone "Proyecto de Ideo Maker", el rol en la tarjeta y en la ficha, una nota
+  de autoría y, en el JSON-LD, a la organización como `creator` y a Vicente como `contributor`.
+- **Otros sellos:** `sello: "Proyecto universitario UDP"` en HAALUR, AnsioSOS y Eloísa; los cursos
+  dicen "Curso para PENTA UC" (sale de `institucion`) y las aplicaciones "Proyecto propio".
+- **Regla de redacción:** Vicente no "crea laboratorios"; es experto en laboratorios maker,
+  educación STEAM e innovación, y capacita y asesora. El modelo 3D en Unreal lo hizo solo en María
+  Elena, Likan Antai y Escuela Caracoles; en Paipote, Taltal y Calama su rol es habilitación,
+  logística y capacitación.
+
+**Filtros por organización.** La lista `organizaciones` de `data.js` (Ideo Maker, PENTA UC, FAAD
+UDP, Converso, Proyectos propios) es la fila principal del catálogo. Cada tarjeta cae en una sola:
+por su `estudio`, por `org` (los de la UDP) o por tipo (cursos en `penta-uc`, apps en `propios`).
+Al elegir una aparece bajo los filtros su texto, sus enlaces y el cargo de Vicente con fechas, y la
+dirección cambia a `#id` (`japortafolio.com/#ideo-maker` abre ya filtrado). Los temas quedan en
+"Más filtros". Los textos de PENTA UC, FAAD, Converso y Propios son borrador: ver `FALTANTES.md`.
+
+**Fichas como caso de estudio.** Las secciones con título van numeradas (01, 02...). Existe el
+bloque `{ tipo: "aprendizaje", valor: "..." }` para cerrar una ficha con una reflexión; todavía no
+se usa, espera los textos de Vicente.
+
+**Portada y celular.** Retrato sobre el titular, botones "Ver proyectos" (baja al catálogo) y
+"Conversemos tu proyecto", y el bloque "Actualmente" (`actualmente` en `data.js`). En el celular
+el menú es un botón que abre un panel (referente: rots.cl); "Historia" se llama "Sobre mí". Las
+tarjetas del celular son filas con miniatura.
+
+**Fotos livianas y versión.** El constructor genera copias WebP de 480 y 960 px en `assets/min/`
+(requiere Pillow) y cada `<img>` las ofrece con `srcset`, ancho y alto. Todas las direcciones de
+fotos llevan `?v=` con la huella del archivo: si una imagen cambia con el mismo nombre, el
+navegador la vuelve a bajar. `construir.py` no reescribe páginas que no cambiaron (en Windows,
+reescribirlas durante `git commit` fallaba con "Invalid argument").
+
+**Mockups.** Las apps de celular van dentro de un teléfono; las plataformas web y Maker Lab, dentro
+de un notebook con el mismo fondo, marco y sombra: `python tools/mockup_notebook.py <capturas>`.
+El script reescribe cada archivo en su lugar, así que se corre sobre la captura cruda.
