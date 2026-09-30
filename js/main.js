@@ -216,48 +216,78 @@
 
   /* ---------- Filtrado del catálogo ----------
      Trabaja sobre las tarjetas que ya vienen en el HTML: no genera nada.
-     Cada tarjeta trae sus etiquetas en data-tags. Al mostrar una se la
-     revela de inmediato, porque el observador ya la soltó. */
+     Hay dos clases de filtro: la organización (data-org: Ideo Maker,
+     PENTA UC...) y el tema (data-tag), detrás de "Más filtros". Hay uno
+     activo a la vez. Al elegir una organización aparece su presentación
+     y la dirección cambia a #su-id, para poder compartirla. */
   var barra = document.getElementById("filtros");
   if (barra) {
     var grilla = document.getElementById("projects");
     var estado = document.getElementById("filtros-estado");
+    var temas = document.getElementById("filtros-temas");
+    var temasBtn = document.getElementById("filtros-temas-btn");
     var tarjetas = [].slice.call(grilla.querySelectorAll(".card"));
+    var paneles = [].slice.call(document.querySelectorAll(".org[data-org]"));
+
+    var aplicar = function (org, tag) {
+      [].forEach.call(barra.querySelectorAll(".filtro[data-org], .filtro[data-tag]"), function (x) {
+        var puesto = org ? x.dataset.org === org : (tag ? x.dataset.tag === tag : x.dataset.tag === "" && x.dataset.org === "");
+        x.classList.toggle("is-on", puesto);
+        x.setAttribute("aria-pressed", puesto ? "true" : "false");
+      });
+      var visibles = 0;
+      tarjetas.forEach(function (c) {
+        var entra = org ? c.dataset.org === org : (!tag || c.dataset.tags.split("|").indexOf(tag) > -1);
+        c.hidden = !entra;
+        if (entra) { visibles++; c.classList.add("in"); }
+      });
+      paneles.forEach(function (p) { p.hidden = p.dataset.org !== org; });
+      estado.textContent = tag ? visibles + (visibles === 1 ? T.uno : T.varios) + T.con + tag : "";
+      if (history.replaceState) {
+        var eraOrg = paneles.some(function (p) { return "#" + p.dataset.org === location.hash; });
+        if (org) history.replaceState(null, "", "#" + org);
+        else if (eraOrg) history.replaceState(null, "", "#catalogo");
+      }
+    };
 
     barra.addEventListener("click", function (e) {
       var boton = e.target.closest(".filtro");
       if (!boton) return;
 
+      if (boton === temasBtn) {
+        var abiertos = temas.hidden;
+        temas.hidden = !abiertos;
+        temasBtn.setAttribute("aria-expanded", abiertos ? "true" : "false");
+        return;
+      }
       if (boton.id === "filtros-mas") {
-        var abierto = barra.classList.toggle("muestra-todo");
+        var abierto = temas.classList.toggle("muestra-todo");
         boton.setAttribute("aria-expanded", abierto ? "true" : "false");
         boton.textContent = abierto
           ? T.menos
-          : T.otras + barra.querySelectorAll(".filtro--extra").length;
+          : T.otras + temas.querySelectorAll(".filtro--extra").length;
         return;
       }
 
-      var tag = boton.dataset.tag;
-      /* segundo clic sobre la etiqueta ya elegida: se suelta */
-      if (tag && boton.classList.contains("is-on")) tag = "";
-
-      [].forEach.call(barra.querySelectorAll(".filtro"), function (x) {
-        var puesto = x.dataset.tag === tag;
-        x.classList.toggle("is-on", puesto);
-        x.setAttribute("aria-pressed", puesto ? "true" : "false");
-      });
-
-      var visibles = 0;
-      tarjetas.forEach(function (c) {
-        var entra = !tag || c.dataset.tags.split("|").indexOf(tag) > -1;
-        c.hidden = !entra;
-        if (entra) { visibles++; c.classList.add("in"); }
-      });
-
-      estado.textContent = tag
-        ? visibles + (visibles === 1 ? T.uno : T.varios) + T.con + tag
-        : "";
+      var org = boton.dataset.org || "";
+      var tag = org ? "" : (boton.dataset.tag || "");
+      /* segundo clic sobre el filtro ya elegido: se suelta */
+      if ((org || tag) && boton.classList.contains("is-on")) { org = ""; tag = ""; }
+      aplicar(org, tag);
     });
+
+    /* Si se llega con #ideo-maker (o cualquier organización) en la
+       dirección, se abre ya filtrado y se baja al catálogo. */
+    var desdeHash = function () {
+      var id = decodeURIComponent(location.hash.slice(1));
+      if (id && barra.querySelector('.filtro[data-org="' + id + '"]')) {
+        aplicar(id, "");
+        var cat = document.getElementById("catalogo");
+        if (cat) cat.scrollIntoView();
+      }
+    };
+    desdeHash();
+    addEventListener("hashchange", desdeHash);
   }
 
   /* ---------- Formulario de contacto ----------

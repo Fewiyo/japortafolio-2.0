@@ -77,6 +77,17 @@ el curso está en marcha.
 
 **SKU.** Se queda oculto por decisión de Vicente (26 de septiembre de 2026). No hace falta completar sus datos.
 
+**HAALUR. Falta el equipo (pedido el 30 de septiembre de 2026).** La ficha no nombra a nadie del Equipo Solar UDP. Faltan los nombres, y si se puede, el rol de cada uno, para sumar una lista "Equipo" como en los proyectos de Ideo Maker. El proyecto es de la FAAD.
+
+**Textos de las organizaciones del catálogo (publicados el 30 de septiembre de 2026 como borrador).** El de Ideo Maker lo entregó Vicente (pasado a tercera persona). Faltan por revisar y corregir, en `organizaciones` de `js/data.js`:
+- **PENTA UC:** texto armado con noticias de uc.cl. Faltan sus redes (Instagram, LinkedIn); el sitio academiadetalentos.uc.cl bloqueó la lectura.
+- **FAAD UDP:** texto tomado de faad.udp.cl. No tiene LinkedIn enlazado.
+- **Converso:** no aparece en internet. Texto mínimo y sin enlaces; confirmar si tiene sitio o LinkedIn.
+- **Proyectos propios:** texto propio, revisar el tono.
+- **Cargos y fechas** de cada una (sobre todo "Profesor titular y creador de siete cursos", 2022 – 2025).
+
+**Equipos de Ideo Maker que faltan.** Escuela Caracoles, Escuela Estación Baquedano, Congreso Futuro en tu comuna, Bicho-bot y MK-BOT todavía no tienen la lista "Equipo Ideo Maker".
+
 ---
 
 ## 5. Proyectos escondidos hasta que tengan imagen

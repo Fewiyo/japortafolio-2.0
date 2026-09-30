@@ -28,6 +28,69 @@ const SITE = {
     { area: "Formación", texto: "Ciencia de Datos en Desafío Latam" }
   ],
 
+  /* ---------- Organizaciones ----------
+     Son los filtros principales del catálogo. Al elegir una, bajo los
+     filtros aparece su presentación, sus enlaces y mi cargo ahí.
+     id: tambien es la direccion para compartir (japortafolio.com/#ideo-maker).
+     Cada tarjeta cae en una sola: los proyectos por su "estudio" u "org",
+     los cursos en penta-uc y las aplicaciones en propios. */
+  organizaciones: [
+    {
+      id: "ideo-maker",
+      nombre: "Ideo Maker",
+      texto: "Empresa de innovación social dedicada al diseño e implementación de experiencias educativas basadas en tecnología, innovación y cultura maker. Desarrolla programas educativos, laboratorios de fabricación digital, aulas maker y recursos pedagógicos que integran la robótica, la programación, la electrónica y la fabricación digital a comunidades educativas, promoviendo el aprendizaje práctico, la experimentación y la resolución creativa de desafíos.",
+      enlaces: [
+        { texto: "ideomaker.cl", url: "https://www.ideomaker.cl" },
+        { texto: "LinkedIn", url: "https://cl.linkedin.com/company/ideo-maker" },
+        { texto: "Instagram", url: "https://www.instagram.com/ideo.maker/" },
+        { texto: "YouTube", url: "https://www.youtube.com/@ideomaker4274" }
+      ],
+      cargo: "Director de Investigación, Desarrollo e Innovación",
+      fechas: "2022 – hoy"
+    },
+    {
+      id: "penta-uc",
+      nombre: "PENTA UC",
+      texto: "Programa de la Pontificia Universidad Católica de Chile para estudiantes con talento académico, de 6º básico a IV medio, creado en 2001. Desde enero de 2025 forma parte de la Academia de Desarrollo de Talentos UC Rolando Chuaqui, junto al programa CREA UC.",
+      enlaces: [
+        { texto: "academiadetalentos.uc.cl", url: "https://academiadetalentos.uc.cl/" }
+      ],
+      cargo: "Profesor titular y creador de siete cursos",
+      fechas: "2022 – 2025"
+    },
+    {
+      id: "faad-udp",
+      nombre: "FAAD UDP",
+      texto: "La Facultad de Arquitectura, Arte y Diseño de la Universidad Diego Portales es parte de un campus-ciudad abierto en el centro de Santiago. Con más de 1.200 estudiantes, impulsa la interdisciplina, la diversidad y la producción de conocimiento que impacta en la ciudad y la sociedad.",
+      enlaces: [
+        { texto: "faad.udp.cl", url: "https://faad.udp.cl/" },
+        { texto: "Escuela de Diseño", url: "https://diseno.udp.cl/" },
+        { texto: "Instagram", url: "https://www.instagram.com/faad_udp/" }
+      ],
+      cargo: "Estudiante de Diseño Industrial, titulado con distinción",
+      fechas: "2015 – 2021"
+    },
+    {
+      id: "converso",
+      nombre: "Converso",
+      texto: "Agencia de comunicaciones que trabajaba como equipo externo para el Ministerio de Salud.",
+      enlaces: [],
+      cargo: "Jefe de Diseño",
+      fechas: "Segundo semestre de 2021"
+    },
+    {
+      id: "propios",
+      nombre: "Proyectos propios",
+      texto: "Aplicaciones y plataformas que construyo con IA a partir de un problema concreto: entrenamiento, salud mental, tareas del hogar, compras públicas o la búsqueda de un posgrado.",
+      enlaces: [
+        { texto: "LinkedIn", url: "https://www.linkedin.com/in/vicente-caceres-farias" },
+        { texto: "GitHub", url: "https://github.com/Fewiyo" }
+      ],
+      cargo: "",
+      fechas: ""
+    }
+  ],
+
   /* ---------- Blog ----------
      Pestana del menu que apunta a la otra plataforma.
      Pega la URL aqui cuando la tengas y el enlace se activa solo
@@ -398,6 +461,7 @@ const SITE = {
       id: "haalur",
       titulo: "HAALUR",
       sello: "Proyecto universitario UDP",
+      org: "faad-udp",
       cliente: "Universidad Diego Portales",
       anio: "2018",
       tags: ["Vehículo solar", "Diseño industrial", "Fotografía", "Competencia"],
@@ -503,6 +567,7 @@ const SITE = {
       id: "salud-mental",
       titulo: "AnsioSOS: proyecto de título",
       sello: "Proyecto universitario UDP",
+      org: "faad-udp",
       cliente: "Universidad Diego Portales",
       anio: "2021",
       tags: ["Proyecto de título", "Diseño de servicios", "Salud mental", "Plataforma digital"],
@@ -632,6 +697,7 @@ const SITE = {
       id: "eloisa",
       titulo: "Eloísa",
       sello: "Proyecto universitario UDP",
+      org: "faad-udp",
       cliente: "CESFAM",
       anio: "2018",
       tags: ["Diseño de servicios", "Salud pública", "Diseño de información", "Migración"],

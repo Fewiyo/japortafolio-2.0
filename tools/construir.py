@@ -50,6 +50,7 @@ UI = {
     "catalogo": ("Catálogo", "Catalog"), "servicios": ("Servicios", "Services"),
     "historia": ("Sobre mí", "About"), "cv": ("CV", "CV"), "menu": ("Menú", "Menu"),
     "ver_proyectos": ("Ver proyectos", "See projects"),
+    "mas_filtros": ("Más filtros", "More filters"), "mi_cargo": ("Mi cargo", "My role"),
     "oscuro": ("Modo oscuro", "Dark mode"),
     "otro_idioma": ("English version", "Versión en español"),
     "proximamente": ("Próximamente", "Coming soon"),
@@ -380,6 +381,8 @@ def pieza(g, label, i, pre=""):
 
 def catalogo(sitio, pre=""):
     items = []
+    # nombre del estudio -> id de la organizacion ("Ideo Maker" -> "ideo-maker")
+    por_nombre = {o["nombre"]: o["id"] for o in sitio.get("organizaciones", [])}
     for p in sitio.get("proyectos", []):
         # Los proyectos de Ideo Maker se muestran como de Ideo Maker: el
         # estudio va sobre el titulo, el cliente en la meta y abajo la
@@ -387,7 +390,8 @@ def catalogo(sitio, pre=""):
         estudio = p.get("estudio")
         items.append({
             "href": pre + "proyectos/%s/" % p["id"], "img": p.get("img"), "titulo": p["titulo"],
-            "etiquetas": ([estudio] if estudio else []) + p.get("tags", []),
+            "etiquetas": p.get("tags", []),
+            "org": p.get("org") or por_nombre.get(estudio, ""),
             "meta": [mayus(p.get("cliente")), p.get("anio")], "anio": p.get("anio"),
             "sello": sello_proyecto(p),
             "participacion": p.get("participacion"),
@@ -398,6 +402,7 @@ def catalogo(sitio, pre=""):
             "etiquetas": [v for v in (c.get("etiqueta"), c.get("anio"), c.get("nivel")) if v],
             # igual que los proyectos de Ideo Maker: de quien es va primero
             "sello": "%s %s" % (tr("curso_para"), c["institucion"]) if c.get("institucion") else "",
+            "org": c.get("org", "penta-uc"),
             "meta": [c.get("cargo"), c.get("anio")], "anio": c.get("anio"),
         })
     for a in sitio.get("apps", []):
@@ -409,6 +414,7 @@ def catalogo(sitio, pre=""):
                          + [h for h in re.split(r" y | and ", a.get("herramienta") or "") if h],
             "meta": [mayus(a.get("estado")), a.get("dominio")], "anio": a.get("anio"),
             "sello": a.get("sello") or tr("proyecto_propio"),
+            "org": a.get("org", "propios"),
         })
     items.sort(key=lambda x: -ultimo_anio(x["anio"]))
     return items
@@ -429,13 +435,13 @@ def tarjeta(it, i, pre=""):
     if it.get("participacion"):
         rol = '<p class="card__rol"><span>%s:</span> %s</p>' % (tr("mi_rol"), esc(it["participacion"]))
     return (
-        '<a class="card rise" href="%s" data-tags="%s">'
+        '<a class="card rise" href="%s" data-org="%s" data-tags="%s">'
         '<div class="card__media">%s</div>'
         '<div class="card__info">'
         '<div class="card__bar"><span class="card__title">%s%s</span>'
         '<span class="card__meta">%s</span></div>'
         "%s%s</div></a>"
-        % (esc(it["href"]), esc("|".join(it["etiquetas"])),
+        % (esc(it["href"]), esc(it.get("org", "")), esc("|".join(it["etiquetas"])),
            media(it["img"], it["titulo"], i, pre), estudio, esc(it["titulo"]), meta, rol, etiquetas)
     )
 
@@ -443,15 +449,23 @@ def tarjeta(it, i, pre=""):
 VISIBLES = 7
 
 
-def barra_filtros(items):
+def barra_filtros(items, sitio):
+    """Dos niveles de filtro. Arriba, las organizaciones: cada tarjeta
+    pertenece a una sola, asi que se leen como pestañas (Ideo Maker, PENTA
+    UC, FAAD UDP...). Al elegir una, aparece bajo la fila su presentacion,
+    sus enlaces y mi cargo ahi. Los temas (Educacion, FabLab, 2026...)
+    quedan detras de "Mas filtros". Referente: la seccion Experiencia de
+    LinkedIn (organizacion, cargo con fechas y luego los proyectos)."""
     cuenta = {}
+    por_org = {}
     for it in items:
         for t in it["etiquetas"]:
             cuenta[t] = cuenta.get(t, 0) + 1
+        if it.get("org"):
+            por_org[it["org"]] = por_org.get(it["org"], 0) + 1
     tags = sorted(cuenta, key=lambda t: (-cuenta[t], t.lower()))
-    # A la vista quedan solo las 7 etiquetas mas usadas (VISIBLES), en una fila:
-    # con todas las repetidas eran 24 botones en tres filas antes de ver
-    # un solo proyecto. El resto se despliega con "Ver las otras".
+    # De los temas quedan a la vista los 7 mas usados (VISIBLES); el resto
+    # se despliega con "Ver las otras".
     repetidas = [t for t in tags if cuenta[t] > 1][:VISIBLES]
     unicas = [t for t in tags if t not in repetidas]
 
@@ -460,18 +474,43 @@ def barra_filtros(items):
                 '<span class="filtro__n">%d</span></button>'
                 % (" filtro--extra" if extra else "", esc(t), esc(t), cuenta[t]))
 
+    orgs = [o for o in sitio.get("organizaciones", []) if por_org.get(o["id"])]
+    chips_org = "".join(
+        '<button class="filtro filtro--org" type="button" aria-pressed="false" data-org="%s">%s'
+        '<span class="filtro__n">%d</span></button>' % (esc(o["id"]), esc(o["nombre"]), por_org[o["id"]])
+        for o in orgs)
+
+    def panel(o):
+        enlaces = "".join('<a href="%s" target="_blank" rel="noopener">%s <span aria-hidden="true">&#8599;</span></a>'
+                          % (esc(e["url"]), esc(e["texto"])) for e in o.get("enlaces", []))
+        cargo = ""
+        if o.get("cargo"):
+            cargo = ('<p class="org__cargo"><span>%s</span>%s%s</p>'
+                     % (tr("mi_cargo"), esc(o["cargo"]),
+                        ' <span class="org__fechas">· %s</span>' % esc(o["fechas"]) if o.get("fechas") else ""))
+        return ('<section class="org" id="org-%s" data-org="%s" aria-label="%s" hidden>'
+                '<h3 class="org__nombre">%s</h3><p class="org__texto">%s</p>%s%s</section>'
+                % (esc(o["id"]), esc(o["id"]), esc(o["nombre"]), esc(o["nombre"]), esc(o["texto"]),
+                   '<p class="org__enlaces">%s</p>' % enlaces if enlaces else "", cargo))
+
     mas = ""
     if unicas:
         mas = ('<button class="filtro filtro--mas" type="button" id="filtros-mas" aria-expanded="false">'
                "%s %d</button>" % (tr("ver_otras"), len(unicas)))
     return (
-        '<div class="filtros rise" id="filtros">'
-        '<button class="filtro is-on" type="button" aria-pressed="true" data-tag="">%s'
-        '<span class="filtro__n">%d</span></button>'
-        "%s%s%s</div>"
+        '<div class="filtros-caja rise" id="filtros">'
+        '<div class="filtros">'
+        '<button class="filtro is-on" type="button" aria-pressed="true" data-tag="" data-org="">%s'
+        '<span class="filtro__n">%d</span></button>%s'
+        '<button class="filtro filtro--temas" type="button" id="filtros-temas-btn" aria-expanded="false" '
+        'aria-controls="filtros-temas">%s</button></div>'
+        '<div class="filtros filtros--temas" id="filtros-temas" hidden>%s%s%s</div>'
+        '</div>'
         '<p class="filtros__estado" id="filtros-estado" role="status"></p>'
-        % (tr("todo"), len(items), "".join(chip(t, False) for t in repetidas),
-           "".join(chip(t, True) for t in unicas), mas)
+        '%s'
+        % (tr("todo"), len(items), chips_org, tr("mas_filtros"),
+           "".join(chip(t, False) for t in repetidas), "".join(chip(t, True) for t in unicas), mas,
+           "".join(panel(o) for o in orgs))
     )
 
 
@@ -599,7 +638,7 @@ def pagina_inicio(sitio, hashes):
         + ahora(sitio)
         + '<section class="section" id="catalogo"><div class="wrap">'
         + encabezado_seccion(sitio["secciones"]["catalogo"])
-        + barra_filtros(items)
+        + barra_filtros(items, sitio)
         + '<div class="projects" id="projects">%s</div>' % tarjetas
         + "</div></section>"
         + '<section class="section" id="servicios"><div class="wrap">'
@@ -940,7 +979,7 @@ def traducir(v, dic, faltan, clave=None):
     return v
 
 
-NO_TRADUCIR = {"id", "img", "src", "url", "link", "repo", "portada", "retrato", "email", "codigo", "fecha"}
+NO_TRADUCIR = {"id", "img", "src", "url", "link", "repo", "portada", "retrato", "email", "codigo", "fecha", "org"}
 ESTRUCTURA = {"imagen", "texto", "lista", "cita", "enlaces", "video", "youtube"}
 
 

@@ -810,3 +810,38 @@ button.btn{font:inherit; font-size:14px; border:0; cursor:pointer}
   .hero__foto{width:72px; height:72px; margin-bottom:22px}
   .hero__note{font-size:17px}
 }
+
+/* ---------- Filtros por organizacion ----------
+   Arriba las organizaciones (una por tarjeta, como pestañas) y "Mas
+   filtros", que abre la fila de temas. Al elegir una organizacion
+   aparece su presentacion bajo los filtros, a la vista: si cambiara el
+   titular de arriba, quedaria fuera de pantalla y no se notaria. */
+.filtros-caja{margin:0 0 28px}
+.filtros-caja .filtros{margin:0}
+.filtros[hidden], .org[hidden]{display:none}
+.filtros--temas{margin-top:10px !important}
+.filtro--temas{border-style:dashed}
+.filtro--temas[aria-expanded="true"]{border-style:solid; border-color:var(--fg); color:var(--fg)}
+
+.org{
+  margin:4px 0 40px; padding:28px 0 24px;
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+}
+.org__nombre{
+  font-family:var(--titulos); font-weight:400;
+  font-size:clamp(26px, 3.2vw, 36px); line-height:1.1; letter-spacing:-.02em;
+}
+.org__texto{margin-top:14px; max-width:68ch; font-size:16px; line-height:1.6; color:var(--muted)}
+.org__enlaces{display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:16px; font-size:14px}
+.org__enlaces a{color:var(--fg); border-bottom:1px solid var(--line); padding:6px 0; transition:border-color .2s var(--ease)}
+.org__enlaces a:hover{border-color:var(--fg)}
+.org__cargo{margin-top:20px; font-size:15px; color:var(--fg)}
+.org__cargo > span:first-child{
+  display:block; margin-bottom:6px;
+  font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--faint);
+}
+.org__fechas{color:var(--muted)}
+@media (max-width:819px){
+  .org{margin-bottom:28px; padding:22px 0 20px}
+  .org__texto{font-size:15px}
+}
