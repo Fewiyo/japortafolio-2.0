@@ -11,11 +11,11 @@ const SITE = {
 
   /* Titular del inicio. El texto entre <em> queda en gris. */
   titular:
-    "Hola, soy Vicente, diseñador industrial que crea <em>laboratorios, servicios y experiencias de aprendizaje</em> para instituciones educativas.",
+    "Hola, soy Vicente, diseñador industrial experto en <em>laboratorios maker, educación STEM y metodologías ágiles y de diseño</em>.",
 
   /* Frase corta bajo el botón */
   bajada:
-    "8 años entre docencia, diseño de servicios y fabricación digital. Desde el aula hasta la puesta en marcha de FabLabs.",
+    "8 años entre docencia, diseño de servicios y fabricación digital. Capacito equipos docentes y asesoro a instituciones en innovación STEM y maker.",
 
   cta: "Conversemos tu proyecto",
 
@@ -60,7 +60,7 @@ const SITE = {
     },
     servicios: {
       eyebrow: "02 / Servicios",
-      titulo: "Todo lo que una institución necesita para sostener un espacio maker.",
+      titulo: "Capacitación y consultoría en innovación STEM, maker y metodologías de diseño.",
       intro: ""
     }
   },
@@ -102,24 +102,29 @@ const SITE = {
   /* ---------- Servicios ---------- */
   servicios: [
     {
+      titulo: "Consultoría en innovación STEM y maker",
+      texto:
+        "Acompaño a colegios, liceos y fundaciones a planificar y aprovechar un laboratorio maker: diagnóstico, uso pedagógico del espacio, selección de tecnologías, protocolos de seguridad y plan de uso."
+    },
+    {
+      titulo: "Capacitación docente",
+      texto:
+        "Formación práctica en fabricación digital, robótica educativa, programación y realidad virtual, con sesiones presenciales y bitácoras, para que el equipo docente use el laboratorio sin depender de nadie."
+    },
+    {
+      titulo: "Metodologías ágiles y de diseño",
+      texto:
+        "Talleres y facilitación en design thinking, co-diseño y metodologías ágiles, para equipos que necesitan pasar de la idea al prototipo, y de ahí a un proyecto que avanza por ciclos."
+    },
+    {
+      titulo: "Programas y kits educativos",
+      texto:
+        "Cursos, talleres y kits educativos diseñados con design thinking, con prototipos hechos en impresión 3D, corte láser y electrónica, listos para usar en el aula."
+    },
+    {
       titulo: "Diseño de servicios",
       texto:
         "Mapeo de experiencia, arquitectura de la propuesta y modelos de gestión. Aterrizo procesos complejos en servicios que una institución puede operar de verdad."
-    },
-    {
-      titulo: "Creación de FabLabs",
-      texto:
-        "Del plano al primer prototipo: layout, selección de maquinaria, protocolos de seguridad, presupuesto y formación del equipo que quedará a cargo."
-    },
-    {
-      titulo: "Docencia y STEAM",
-      texto:
-        "Diseño de programas y kits educativos con metodología Design Thinking. Clases, talleres y material para docentes que replican el modelo."
-    },
-    {
-      titulo: "Fabricación digital",
-      texto:
-        "Modelado 3D, impresión, corte láser y electrónica aplicada. Prototipos funcionales y piezas didácticas listas para uso en aula."
     },
     {
       titulo: "Aplicaciones y plataformas web",
@@ -219,7 +224,7 @@ const SITE = {
       titulo: "Liceo Fernando Ariztía Ruiz de Paipote",
       estudio: "Ideo Maker",
       cliente: "para Fundación Chile",
-      participacion: "Diseño del espacio, modelo 3D, habilitación y capacitación docente",
+      participacion: "Diseño del espacio, habilitación y capacitación docente",
       anio: "2026",
       tags: ["FabLab", "Diseño de espacios", "Capacitación docente", "Modelado 3D", "Educación"],
       resumen:
@@ -227,7 +232,7 @@ const SITE = {
       img: "assets/img/proyectos/aula-maker-copiapo/17-sala-terminada.jpg",
       bloques: [
         { tipo: "texto", valor: "Un Aula Maker STEM para el Liceo Fernando Ariztía Ruiz, en Paipote, Copiapó, el liceo técnico-profesional más grande de la región de Atacama, con más de 1.500 estudiantes. Es parte de MakerSTEM, un proyecto de Fundación Chile con Assist International y la Fundación Caterpillar, que se lanzó en abril de 2026. Ideo Maker ejecutó el aula completa, desde el levantamiento y el co-diseño hasta la capacitación de los docentes." },
-        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño del espacio y modelo 3D en Unreal Engine", "Presupuestos, carta Gantt y logística", "Habilitación en terreno: armado e instalación del mobiliario", "Capacitación docente en las tecnologías del aula", "Redacción de los informes del proyecto"] },
+        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño del espacio", "Presupuestos, carta Gantt y logística", "Habilitación en terreno: armado e instalación del mobiliario", "Capacitación docente en las tecnologías del aula", "Redacción de los informes del proyecto"] },
         { tipo: "lista", titulo: "Equipo Ideo Maker", valor: ["Sebastián Higuera", "Patricia Ramírez", "Vicente Cáceres", "Elvis Andrade", "Nelson Mora", "Julio Higuera", "Diego López"] },
         { tipo: "texto", titulo: "El punto de partida", valor: "La sala asignada era un antiguo taller de artes, en avanzado estado de deterioro: el suelo en malas condiciones y tanto mobiliario acumulado que no se podía recorrer entera para medirla. A favor tenía superficie, estructura sólida, luz natural, conexiones eléctricas y salida directa a un patio." },
         { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/01-antes.jpg", pie: "La sala asignada, un antiguo taller de artes, antes de intervenir." },
@@ -267,7 +272,7 @@ const SITE = {
       titulo: "Liceo José Miguel Quiroz de Taltal",
       estudio: "Ideo Maker",
       cliente: "para Fundación Chile",
-      participacion: "Diseño del espacio, modelo 3D, habilitación y capacitación docente",
+      participacion: "Diseño del espacio, habilitación y capacitación docente",
       anio: "2026",
       tags: ["FabLab", "Diseño de espacios", "Capacitación docente", "Modelado 3D", "Educación"],
       resumen:
@@ -276,7 +281,7 @@ const SITE = {
       img_credito: "Alianza CCM-Eleva",
       bloques: [
         { tipo: "texto", valor: "Un Aula Impulsa para el Liceo Técnico-Profesional José Miguel Quiroz, en Taltal. Impulsa 4.0 es un programa de Fundación Chile que financian Antofagasta Minerals, BHP, Codelco, Novandino Litio y SQM, y que busca acercar a estudiantes y docentes a cuatro tecnologías de la industria 4.0: robótica, realidad virtual y aumentada, programación y prototipado. Ideo Maker ejecutó el proyecto completo, desde el diseño hasta la capacitación de los docentes, en paralelo con el aula del Liceo B-10 Minero América de Calama." },
-        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño del espacio y modelo 3D en Unreal Engine", "Presupuestos, carta Gantt y logística", "Habilitación en terreno: armado e instalación del mobiliario", "Capacitación docente en las cuatro tecnologías"] },
+        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño del espacio", "Presupuestos, carta Gantt y logística", "Habilitación en terreno: armado e instalación del mobiliario", "Capacitación docente en las cuatro tecnologías"] },
         { tipo: "lista", titulo: "Equipo Ideo Maker", valor: ["Sebastián Higuera", "Patricia Ramírez", "Vicente Cáceres", "Nelson Mora", "Javiera Matus", "Diego López", "Elvis Andrade", "Lesly Maldonado"] },
         { tipo: "texto", titulo: "El espacio", valor: "La sala asignada está en el sector central del liceo, con acceso directo desde el pasillo principal, y mide cerca de 5,8 por 7,3 metros. El diseño reparte esa superficie en zonas de trabajo, una por tecnología, y deja el centro para mesas de trabajo colaborativo. La propuesta buscó que el aula conversara con Taltal, su borde costero, la pesca y su patrimonio, para que los proyectos de los estudiantes partieran de su propia comunidad." },
         { tipo: "imagen", valor: "assets/img/proyectos/aula-impulsa-taltal/05-planta.jpg", pie: "La planta del aula, con sus zonas de trabajo." },
@@ -305,7 +310,7 @@ const SITE = {
       titulo: "Liceo B-10 Minero América de Calama",
       estudio: "Ideo Maker",
       cliente: "para Fundación Chile",
-      participacion: "Diseño del espacio, modelo 3D, habilitación y capacitación docente",
+      participacion: "Diseño del espacio, habilitación y capacitación docente",
       anio: "2026",
       tags: ["FabLab", "Diseño de espacios", "Capacitación docente", "Modelado 3D", "Educación"],
       resumen:
@@ -314,7 +319,7 @@ const SITE = {
       img_credito: "Alianza CCM-Eleva",
       bloques: [
         { tipo: "texto", valor: "Un Aula Impulsa para el Liceo B-10 Minero América, en Calama. Impulsa 4.0 es un programa de Fundación Chile que financian Antofagasta Minerals, BHP, Codelco, Novandino Litio y SQM, y que busca acercar a estudiantes y docentes a cuatro tecnologías de la industria 4.0: robótica, realidad virtual y aumentada, programación y prototipado. Ideo Maker ejecutó el proyecto completo, desde el diseño hasta la capacitación de los docentes, en paralelo con el aula del Liceo José Miguel Quiroz de Taltal." },
-        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño del espacio y modelo 3D en Unreal Engine", "Presupuestos, carta Gantt y logística", "Habilitación en terreno: armado e instalación del mobiliario", "Capacitación docente en las cuatro tecnologías"] },
+        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño del espacio", "Presupuestos, carta Gantt y logística", "Habilitación en terreno: armado e instalación del mobiliario", "Capacitación docente en las cuatro tecnologías"] },
         { tipo: "lista", titulo: "Equipo Ideo Maker", valor: ["Sebastián Higuera", "Patricia Ramírez", "Vicente Cáceres", "Nelson Mora", "Javiera Matus", "Diego López", "Elvis Andrade", "Lesly Maldonado"] },
         { tipo: "texto", titulo: "El espacio", valor: "La sala está en el primer piso del liceo, junto a un área de uso común, y mide cerca de 7,7 por 6 metros. Antes de diseñar se levantó el plano con la superficie de la sala, la vía de evacuación y las fuentes de ventilación, y con eso se distribuyeron las zonas de trabajo alrededor de un centro de mesas colaborativas." },
         { tipo: "imagen", valor: "assets/img/proyectos/aula-impulsa-calama/07-plano-liceo.jpg", pie: "El plano del primer piso del liceo, con la sala marcada." },
@@ -1389,8 +1394,8 @@ const SITE = {
     titular: "Diseño experiencias a la medida del usuario.",
     retrato: "assets/img/retrato.jpg",
     parrafos: [
-      "Estudié diseño industrial en la Universidad Diego Portales y hoy curso el Magíster en Ciencias del Diseño en la Universidad Adolfo Ibáñez. Empecé diseñando objetos y terminé diseñando los lugares donde se hacen los objetos: laboratorios de fabricación digital, programas de curso, kits que un profesor puede usar sin que yo esté al lado.",
-      "Desde 2022 soy director de investigación, desarrollo e innovación en Ideo Maker. Ahí he diseñado, instalado y puesto en marcha aulas maker para Fundación Chile en Antofagasta y Atacama, y para Fundación País Digital en Sierra Gorda: del levantamiento con la comunidad al modelo 3D, la sala construida y los docentes capacitados. También diseño kits educativos, como Bicho-bot y MK-BOT. Entre 2022 y 2025 creé y dicté siete cursos en el Programa PENTA UC de la Universidad Católica, sobre robótica, diseño de juegos y tecnología, todos de creación propia.",
+      "Estudié diseño industrial en la Universidad Diego Portales y hoy curso el Magíster en Ciencias del Diseño en la Universidad Adolfo Ibáñez. Empecé diseñando objetos y terminé especializándome en los lugares donde se aprende haciendo: laboratorios maker, programas de curso y kits que un profesor puede usar sin que yo esté al lado.",
+      "Desde 2022 soy director de investigación, desarrollo e innovación en Ideo Maker. Ahí formo parte del equipo que diseña, instala y pone en marcha aulas maker para Fundación Chile en Antofagasta y Atacama, y para Fundación País Digital en Sierra Gorda. Mi parte va del levantamiento con la comunidad y el modelo 3D a la capacitación de los docentes. También diseñé Bicho-bot y participo en el desarrollo de MK-BOT, dos kits educativos de Ideo Maker. Entre 2022 y 2025 creé y dicté siete cursos en el Programa PENTA UC de la Universidad Católica, sobre robótica, diseño de juegos y tecnología, todos de creación propia.",
       "Lo que me interesa es la parte que nadie fotografía. Que el FabLab siga funcionando tres años después de la inauguración. Que el protocolo de seguridad esté escrito. Que el profesor pueda dar la clase sin mí. Un espacio maker que depende de quien lo instaló no es un espacio maker, es una demostración.",
       "Antes de eso fui jefe de diseño en Converso, diseñador gráfico en el INFAS de la Universidad Alberto Hurtado y fotógrafo para la CEPAL y la Organización Panamericana de la Salud. Hoy sumo a todo eso la ciencia de datos y el desarrollo de aplicaciones y plataformas web, casi siempre a partir de un problema concreto: un entrenamiento que quería medir, un inventario que se llevaba en papel, una barrera de idioma en una consulta médica. Busco proyectos donde el diseño tenga que quedar operando, y no solamente entregado."
     ],
