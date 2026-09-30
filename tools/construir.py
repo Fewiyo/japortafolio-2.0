@@ -63,6 +63,7 @@ UI = {
     "volver": ("Volver al catálogo", "Back to the catalog"),
     "cliente": ("Cliente", "Client"), "anio": ("Año", "Year"),
     "proyecto_de": ("Proyecto de", "A project by"), "mi_rol": ("Mi rol", "My role"),
+    "actualmente": ("Actualmente", "Currently"), "aprendizaje": ("Aprendizaje", "What I learned"),
     "autoria": ("Este es un proyecto de %s, hecho por su equipo. Aquí muestro la parte en que participé.",
                 "This is a project by %s, made by its team. Here I show the part I worked on."),
     "sig_proyecto": ("Siguiente proyecto", "Next project"), "sig_curso": ("Siguiente curso", "Next course"),
@@ -530,11 +531,34 @@ def documento(sitio, pre, titulo, descripcion, ruta, imagen, cuerpo, hashes, jso
 def escribir(ruta_rel, contenido):
     destino = os.path.join(RAIZ, ruta_rel)
     os.makedirs(os.path.dirname(destino), exist_ok=True)
-    io.open(destino, "w", encoding="utf-8", newline="\n").write(contenido)
+    # Si el archivo ya dice lo mismo no se toca. Ademas de ahorrar
+    # escrituras, evita un error de Windows: durante `git commit` git
+    # puede tener el archivo mapeado en memoria y reescribirlo falla con
+    # "Invalid argument" (Errno 22).
+    if os.path.exists(destino):
+        with io.open(destino, encoding="utf-8", newline="") as f:
+            if f.read() == contenido:
+                return ruta_rel
+    with io.open(destino, "w", encoding="utf-8", newline="\n") as f:
+        f.write(contenido)
     return ruta_rel
 
 
 # ---------------------------------------------------------------- paginas
+
+def ahora(sitio):
+    """Bloque "Actualmente" bajo el titular: quien soy hoy, en tres lineas.
+    Referente: rots.cl, que abre con los cargos vigentes."""
+    filas = sitio.get("actualmente") or []
+    if not filas:
+        return ""
+    return (
+        '<section class="ahora"><div class="wrap"><div class="ahora__in rise">'
+        '<p class="eyebrow">%s</p><dl class="ahora__lista">%s</dl></div></div></section>'
+        % (tr("actualmente"), "".join(
+            "<div><dt>%s</dt><dd>%s</dd></div>" % (esc(f["area"]), esc(f["texto"])) for f in filas))
+    )
+
 
 def pagina_inicio(sitio, hashes):
     pre = SUB
@@ -552,6 +576,7 @@ def pagina_inicio(sitio, hashes):
         + '<a class="btn" href="#contacto" data-abrir-form><span class="dot"></span>%s</a>' % esc(sitio["cta"])
         + '<p class="hero__note">%s</p>' % esc(sitio["bajada"])
         + "</div></div></header>"
+        + ahora(sitio)
         + '<section class="section" id="catalogo"><div class="wrap">'
         + encabezado_seccion(sitio["secciones"]["catalogo"])
         + barra_filtros(items)
@@ -639,13 +664,27 @@ def pagina_proyecto(p, sig, idx, sitio, hashes):
             trozos.append('<div class="%s">%s</div>' % (clase, "".join(fotos)))
             del fotos[:]
 
+    # Las secciones del relato van numeradas (01, 02...), como un caso de
+    # estudio: se lee el recorrido del proyecto de principio a fin. Se
+    # numeran los textos con titulo y "Mi rol"; los equipos, la prensa y
+    # las fichas tecnicas son datos de consulta y quedan sin numero.
+    n = 0
     for i, b in enumerate(p["bloques"]):
-        t = "<h2>%s</h2>" % esc(b["titulo"]) if b.get("titulo") else ""
+        t = ""
+        if b.get("titulo"):
+            if b["tipo"] == "texto" or b["titulo"] in ("Mi rol", "My role"):
+                n += 1
+                t = '<h2><span class="num">%02d</span>%s</h2>' % (n, esc(b["titulo"]))
+            else:
+                t = "<h2>%s</h2>" % esc(b["titulo"])
         if b["tipo"] == "imagen":
             fotos.append(foto_ampliable(b["valor"], b.get("pie"), p["titulo"], pre, b.get("credito")))
             continue
         soltar_fotos()
-        if b["tipo"] == "cita":
+        if b["tipo"] == "aprendizaje":
+            trozos.append('<blockquote class="quote aprendizaje"><span class="eyebrow">%s</span>%s</blockquote>'
+                          % (tr("aprendizaje"), esc(b["valor"])))
+        elif b["tipo"] == "cita":
             trozos.append('<blockquote class="quote">%s</blockquote>' % esc(b["valor"]))
         elif b["tipo"] == "enlaces":
             trozos.append(

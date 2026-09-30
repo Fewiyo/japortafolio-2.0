@@ -19,6 +19,15 @@ const SITE = {
 
   cta: "Conversemos tu proyecto",
 
+  /* ---------- Actualmente ----------
+     Lo que hago hoy, bajo el titular del inicio. Se actualiza a mano
+     cuando cambia un cargo o termina un programa. */
+  actualmente: [
+    { area: "Dirección I+D+i", texto: "Director de Investigación, Desarrollo e Innovación en Ideo Maker" },
+    { area: "Posgrado", texto: "Magíster en Ciencias del Diseño, Universidad Adolfo Ibáñez" },
+    { area: "Formación", texto: "Ciencia de Datos en Desafío Latam" }
+  ],
+
   /* ---------- Blog ----------
      Pestana del menu que apunta a la otra plataforma.
      Pega la URL aqui cuando la tengas y el enlace se activa solo
@@ -46,7 +55,7 @@ const SITE = {
        ordenada del año más reciente al más antiguo. */
     catalogo: {
       eyebrow: "01 / Catálogo",
-      titulo: "Todo lo que he hecho, de lo más reciente a lo más antiguo.",
+      titulo: "Proyectos, cursos y aplicaciones, de lo más reciente a lo más antiguo.",
       intro: "Siete cursos de creación propia para el Programa PENTA UC de la Pontificia Universidad Católica de Chile, diez aplicaciones y plataformas web construidas con IA, los proyectos de Ideo Maker en que participé como parte de su equipo y otros proyectos de diseño."
     },
     servicios: {

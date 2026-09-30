@@ -438,6 +438,30 @@ ul{list-style:none; padding:0}
   border-left:2px solid var(--fg); padding-left:28px;
   margin:72px 0; max-width:34ch;
 }
+/* Numero de seccion en las fichas: 01, 02... sobre cada titulo */
+.prose h2 .num{
+  display:block; margin-bottom:8px;
+  font-size:13px; line-height:1; letter-spacing:.14em; color:var(--muted);
+  font-variant-numeric:tabular-nums;
+}
+/* Aprendizaje: la reflexion que cierra un caso */
+.aprendizaje .eyebrow{display:block; margin-bottom:16px; font-size:12px; line-height:1}
+
+/* ---------- Actualmente ----------
+   Referente: rots.cl. Etiqueta a la izquierda y los cargos en columnas,
+   bajo el titular; en el celular, uno bajo otro. */
+.ahora{padding-top:clamp(64px, 8vw, 112px)}
+.ahora__in{border-top:1px solid var(--line); padding-top:24px}
+.ahora__in .eyebrow{margin-bottom:20px}
+.ahora__lista{display:grid; gap:20px}
+.ahora__lista dt{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:6px}
+.ahora__lista dd{margin:0; font-size:15px; line-height:1.45; color:var(--fg); max-width:34ch}
+@media (min-width:820px){
+  .ahora__in{display:grid; grid-template-columns:170px minmax(0,1fr); gap:24px}
+  .ahora__in .eyebrow{margin:0}
+  .ahora__lista{grid-template-columns:repeat(3, minmax(0,1fr)); gap:24px}
+}
+
 figure{margin:72px 0}
 figure img, figure svg{border-radius:16px; width:100%}
 figcaption{font-size:13px; color:var(--fg); margin-top:12px}
