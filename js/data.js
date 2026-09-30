@@ -437,7 +437,7 @@ const SITE = {
         "Sala maker para la Escuela Caracoles, en la comuna de Sierra Gorda, modelada y recorrida en 3D antes de construirse, e inaugurada en mayo de 2024.",
       img: "assets/img/proyectos/sala-maker-sierra-gorda/13-sala-completa.jpg",
       bloques: [
-        { tipo: "texto", valor: "Sala Maker STEAM para la Escuela Caracoles, en la comuna de Sierra Gorda, región de Antofagasta, desarrollada en conjunto entre el equipo de Ideo Maker y la Fundación País Digital. Es parte de MASXXI, el programa de transformación educativa de Fundación País Digital, financiado por Spence, de BHP. El proyecto tuvo dos etapas: primero el espacio modelado y recorrido en 3D, y después la sala construida e inaugurada, con los docentes capacitados para usarla." },
+        { tipo: "texto", valor: "Sala Maker STEAM para la Escuela Caracoles, en la comuna de Sierra Gorda, región de Antofagasta, desarrollada por Ideo Maker para la Fundación País Digital. Es parte de MASXXI, el programa de transformación educativa de Fundación País Digital, financiado por Spence, de BHP. El proyecto tuvo dos etapas: primero el espacio modelado y recorrido en 3D, y después la sala construida e inaugurada, con los docentes capacitados para usarla." },
         { tipo: "lista", titulo: "Mi rol", valor: ["Modelo 3D del espacio en Unreal Engine", "Definición del Espacio Maker Aula STEAM, junto al equipo", "Proceso de implementación y capacitación"] },
         { tipo: "texto", valor: "Modelar la sala antes de construirla no es un ejercicio de presentación. Permite discutir circulaciones, ubicación de maquinaria y zonas de trabajo con la institución en el momento en que mover una mesa cuesta un clic y no una obra. Cuando el colegio ve el espacio recorrido en primera persona, las observaciones que aparecen son otras." },
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-sierra-gorda/02-render-sala.jpg", pie: "Vista general: mesas de trabajo colaborativo al centro y puestos de computador en el perímetro." },
@@ -474,7 +474,7 @@ const SITE = {
         "Sala maker para la Escuela Estación Baquedano, en la comuna de Sierra Gorda, inaugurada el 23 de mayo de 2024.",
       img: "assets/img/proyectos/sala-maker-baquedano/01-sala.jpg",
       bloques: [
-        { tipo: "texto", valor: "Sala Maker STEAM para la Escuela Estación Baquedano, en la comuna de Sierra Gorda, región de Antofagasta, desarrollada en conjunto entre el equipo de Ideo Maker y la Fundación País Digital. Es parte de MASXXI, el programa de transformación educativa de Fundación País Digital, financiado por Spence, de BHP. Se inauguró el 23 de mayo de 2024, el mismo día que la sala de la Escuela Caracoles." },
+        { tipo: "texto", valor: "Sala Maker STEAM para la Escuela Estación Baquedano, en la comuna de Sierra Gorda, región de Antofagasta, desarrollada por Ideo Maker para la Fundación País Digital. Es parte de MASXXI, el programa de transformación educativa de Fundación País Digital, financiado por Spence, de BHP. Se inauguró el 23 de mayo de 2024, el mismo día que la sala de la Escuela Caracoles." },
         { tipo: "lista", titulo: "Mi rol", valor: ["Proceso de implementación y capacitación"] },
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/01-sala.jpg", pie: "La sala, con la zona de impresión 3D y la estantería de kits." },
         { tipo: "imagen", valor: "assets/img/proyectos/sala-maker-baquedano/02-acceso.jpg", pie: "El acceso, con el afiche del Espacio Maker." },
