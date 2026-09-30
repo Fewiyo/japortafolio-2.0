@@ -11,7 +11,7 @@ const SITE = {
 
   /* Titular del inicio. El texto entre <em> queda en gris. */
   titular:
-    "Hola, soy Vicente, diseñador industrial experto en <em>laboratorios maker, educación STEAM y metodologías ágiles</em>.",
+    "Hola, soy Vicente, diseñador industrial experto en <em>laboratorios maker, educación STEAM e innovación</em>.",
 
   /* Frase corta bajo el botón */
   bajada:
