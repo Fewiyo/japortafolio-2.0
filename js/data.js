@@ -224,7 +224,7 @@ const SITE = {
       titulo: "Liceo Fernando Ariztía Ruiz de Paipote",
       estudio: "Ideo Maker",
       cliente: "para Fundación Chile",
-      participacion: "Diseño del espacio, habilitación y capacitación docente",
+      participacion: "Habilitación en terreno y capacitación docente",
       anio: "2026",
       tags: ["FabLab", "Diseño de espacios", "Capacitación docente", "Modelado 3D", "Educación"],
       resumen:
@@ -232,7 +232,7 @@ const SITE = {
       img: "assets/img/proyectos/aula-maker-copiapo/17-sala-terminada.jpg",
       bloques: [
         { tipo: "texto", valor: "Un Aula Maker STEM para el Liceo Fernando Ariztía Ruiz, en Paipote, Copiapó, el liceo técnico-profesional más grande de la región de Atacama, con más de 1.500 estudiantes. Es parte de MakerSTEM, un proyecto de Fundación Chile con Assist International y la Fundación Caterpillar, que se lanzó en abril de 2026. Ideo Maker ejecutó el aula completa, desde el levantamiento y el co-diseño hasta la capacitación de los docentes." },
-        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño del espacio", "Presupuestos, carta Gantt y logística", "Habilitación en terreno: armado e instalación del mobiliario", "Capacitación docente en las tecnologías del aula", "Redacción de los informes del proyecto"] },
+        { tipo: "lista", titulo: "Mi rol", valor: ["Presupuestos, carta Gantt y logística", "Habilitación en terreno: armado e instalación del mobiliario", "Capacitación docente en las tecnologías del aula", "Redacción de los informes del proyecto"] },
         { tipo: "lista", titulo: "Equipo Ideo Maker", valor: ["Sebastián Higuera", "Patricia Ramírez", "Vicente Cáceres", "Elvis Andrade", "Nelson Mora", "Julio Higuera", "Diego López"] },
         { tipo: "texto", titulo: "El punto de partida", valor: "La sala asignada era un antiguo taller de artes, en avanzado estado de deterioro: el suelo en malas condiciones y tanto mobiliario acumulado que no se podía recorrer entera para medirla. A favor tenía superficie, estructura sólida, luz natural, conexiones eléctricas y salida directa a un patio." },
         { tipo: "imagen", valor: "assets/img/proyectos/aula-maker-copiapo/01-antes.jpg", pie: "La sala asignada, un antiguo taller de artes, antes de intervenir." },
@@ -272,7 +272,7 @@ const SITE = {
       titulo: "Liceo José Miguel Quiroz de Taltal",
       estudio: "Ideo Maker",
       cliente: "para Fundación Chile",
-      participacion: "Diseño del espacio, habilitación y capacitación docente",
+      participacion: "Habilitación en terreno y capacitación docente",
       anio: "2026",
       tags: ["FabLab", "Diseño de espacios", "Capacitación docente", "Modelado 3D", "Educación"],
       resumen:
@@ -281,7 +281,7 @@ const SITE = {
       img_credito: "Alianza CCM-Eleva",
       bloques: [
         { tipo: "texto", valor: "Un Aula Impulsa para el Liceo Técnico-Profesional José Miguel Quiroz, en Taltal. Impulsa 4.0 es un programa de Fundación Chile que financian Antofagasta Minerals, BHP, Codelco, Novandino Litio y SQM, y que busca acercar a estudiantes y docentes a cuatro tecnologías de la industria 4.0: robótica, realidad virtual y aumentada, programación y prototipado. Ideo Maker ejecutó el proyecto completo, desde el diseño hasta la capacitación de los docentes, en paralelo con el aula del Liceo B-10 Minero América de Calama." },
-        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño del espacio", "Presupuestos, carta Gantt y logística", "Habilitación en terreno: armado e instalación del mobiliario", "Capacitación docente en las cuatro tecnologías"] },
+        { tipo: "lista", titulo: "Mi rol", valor: ["Presupuestos, carta Gantt y logística", "Habilitación en terreno: armado e instalación del mobiliario", "Capacitación docente en las cuatro tecnologías"] },
         { tipo: "lista", titulo: "Equipo Ideo Maker", valor: ["Sebastián Higuera", "Patricia Ramírez", "Vicente Cáceres", "Nelson Mora", "Javiera Matus", "Diego López", "Elvis Andrade", "Lesly Maldonado"] },
         { tipo: "texto", titulo: "El espacio", valor: "La sala asignada está en el sector central del liceo, con acceso directo desde el pasillo principal, y mide cerca de 5,8 por 7,3 metros. El diseño reparte esa superficie en zonas de trabajo, una por tecnología, y deja el centro para mesas de trabajo colaborativo. La propuesta buscó que el aula conversara con Taltal, su borde costero, la pesca y su patrimonio, para que los proyectos de los estudiantes partieran de su propia comunidad." },
         { tipo: "imagen", valor: "assets/img/proyectos/aula-impulsa-taltal/05-planta.jpg", pie: "La planta del aula, con sus zonas de trabajo." },
@@ -310,7 +310,7 @@ const SITE = {
       titulo: "Liceo B-10 Minero América de Calama",
       estudio: "Ideo Maker",
       cliente: "para Fundación Chile",
-      participacion: "Diseño del espacio, habilitación y capacitación docente",
+      participacion: "Habilitación en terreno y capacitación docente",
       anio: "2026",
       tags: ["FabLab", "Diseño de espacios", "Capacitación docente", "Modelado 3D", "Educación"],
       resumen:
@@ -319,7 +319,7 @@ const SITE = {
       img_credito: "Alianza CCM-Eleva",
       bloques: [
         { tipo: "texto", valor: "Un Aula Impulsa para el Liceo B-10 Minero América, en Calama. Impulsa 4.0 es un programa de Fundación Chile que financian Antofagasta Minerals, BHP, Codelco, Novandino Litio y SQM, y que busca acercar a estudiantes y docentes a cuatro tecnologías de la industria 4.0: robótica, realidad virtual y aumentada, programación y prototipado. Ideo Maker ejecutó el proyecto completo, desde el diseño hasta la capacitación de los docentes, en paralelo con el aula del Liceo José Miguel Quiroz de Taltal." },
-        { tipo: "lista", titulo: "Mi rol", valor: ["Diseño del espacio", "Presupuestos, carta Gantt y logística", "Habilitación en terreno: armado e instalación del mobiliario", "Capacitación docente en las cuatro tecnologías"] },
+        { tipo: "lista", titulo: "Mi rol", valor: ["Presupuestos, carta Gantt y logística", "Habilitación en terreno: armado e instalación del mobiliario", "Capacitación docente en las cuatro tecnologías"] },
         { tipo: "lista", titulo: "Equipo Ideo Maker", valor: ["Sebastián Higuera", "Patricia Ramírez", "Vicente Cáceres", "Nelson Mora", "Javiera Matus", "Diego López", "Elvis Andrade", "Lesly Maldonado"] },
         { tipo: "texto", titulo: "El espacio", valor: "La sala está en el primer piso del liceo, junto a un área de uso común, y mide cerca de 7,7 por 6 metros. Antes de diseñar se levantó el plano con la superficie de la sala, la vía de evacuación y las fuentes de ventilación, y con eso se distribuyeron las zonas de trabajo alrededor de un centro de mesas colaborativas." },
         { tipo: "imagen", valor: "assets/img/proyectos/aula-impulsa-calama/07-plano-liceo.jpg", pie: "El plano del primer piso del liceo, con la sala marcada." },

@@ -35,8 +35,8 @@ EN = {
     "Director de Investigación, Desarrollo e Innovación": "Director of Research, Development and Innovation",
     "Ideo Maker SPA · Robótica educativa y cultura maker": "Ideo Maker SPA · Educational robotics and maker culture",
     "Aulas Maker STEM, Fundación Chile.": "STEM Maker Classrooms, Fundación Chile.",
-    "Diseño, implementación y capacitación docente en liceos de la región de Antofagasta: Likan Antai y María Elena (2025), con el modelado en Unreal Engine, y Taltal y Calama (2026).":
-        "Design, implementation and teacher training at high schools in the Antofagasta region: Likan Antai and María Elena (2025), including the Unreal Engine modeling, and Taltal and Calama (2026).",
+    "Liceos de la región de Antofagasta. Likan Antai y María Elena (2025): diseño, modelado en Unreal Engine, implementación y capacitación docente. Taltal y Calama (2026): implementación y capacitación docente.":
+        "High schools in the Antofagasta region. Likan Antai and María Elena (2025): design, Unreal Engine modeling, implementation and teacher training. Taltal and Calama (2026): implementation and teacher training.",
     "Salas Maker STEAM, Fundación País Digital y Spence de BHP.": "STEAM Maker Rooms, País Digital Foundation and BHP's Spence mine.",
     "Escuela Caracoles y Escuela Estación Baquedano, Sierra Gorda, programa MASXXI. Inauguradas en mayo de 2024.": "Caracoles School and Estación Baquedano School, Sierra Gorda, MASXXI program. Opened in May 2024.",
     "Kits educativos.": "Educational kits.",
