@@ -15,7 +15,7 @@ const SITE = {
 
   /* Frase corta bajo el botón */
   bajada:
-    "8 años entre docencia, diseño de servicios y fabricación digital. Capacito equipos docentes y asesoro a instituciones en innovación STEM y maker.",
+    "8 años entre docencia, diseño de servicios y fabricación digital. Capacito equipos docentes y asesoro a instituciones en innovación STEAM y maker.",
 
   cta: "Conversemos tu proyecto",
 
@@ -60,7 +60,7 @@ const SITE = {
     },
     servicios: {
       eyebrow: "02 / Servicios",
-      titulo: "Capacitación y consultoría en innovación STEM, maker y metodologías de diseño.",
+      titulo: "Capacitación y consultoría en innovación STEAM, maker y metodologías de diseño.",
       intro: ""
     }
   },
@@ -102,7 +102,7 @@ const SITE = {
   /* ---------- Servicios ---------- */
   servicios: [
     {
-      titulo: "Consultoría en innovación STEM y maker",
+      titulo: "Consultoría en innovación STEAM y maker",
       texto:
         "Acompaño a colegios, liceos y fundaciones a planificar y aprovechar un laboratorio maker: diagnóstico, uso pedagógico del espacio, selección de tecnologías, protocolos de seguridad y plan de uso."
     },
