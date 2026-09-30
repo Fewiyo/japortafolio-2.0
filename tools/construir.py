@@ -62,7 +62,7 @@ UI = {
     "ver_otras": ("Ver las otras", "Show the other"), "todo": ("Todo", "All"),
     "volver": ("Volver al catálogo", "Back to the catalog"),
     "cliente": ("Cliente", "Client"), "anio": ("Año", "Year"),
-    "proyecto_de": ("Proyecto de", "A project by"), "mi_rol": ("Mi rol", "My role"),
+    "proyecto_de": ("Proyecto de", "A project by"), "curso_para": ("Curso para", "A course for"), "mi_rol": ("Mi rol", "My role"),
     "actualmente": ("Actualmente", "Currently"), "aprendizaje": ("Aprendizaje", "What I learned"),
     "autoria": ("Este es un proyecto de %s, hecho por su equipo. Aquí muestro la parte en que participé.",
                 "This is a project by %s, made by its team. Here I show the part I worked on."),
@@ -383,13 +383,16 @@ def catalogo(sitio, pre=""):
             "href": pre + "proyectos/%s/" % p["id"], "img": p.get("img"), "titulo": p["titulo"],
             "etiquetas": ([estudio] if estudio else []) + p.get("tags", []),
             "meta": [mayus(p.get("cliente")), p.get("anio")], "anio": p.get("anio"),
-            "estudio": estudio, "participacion": p.get("participacion"),
+            "sello": "%s %s" % (tr("proyecto_de"), estudio) if estudio else "",
+            "participacion": p.get("participacion"),
         })
     for c in sitio.get("cursos", []):
         items.append({
             "href": pre + "cursos/%s/" % c["id"], "img": c.get("portada"), "titulo": c["nombre"],
             "etiquetas": [v for v in (c.get("etiqueta"), c.get("anio"), c.get("nivel")) if v],
-            "meta": [c.get("cargo"), c.get("institucion")], "anio": c.get("anio"),
+            # igual que los proyectos de Ideo Maker: de quien es va primero
+            "sello": "%s %s" % (tr("curso_para"), c["institucion"]) if c.get("institucion") else "",
+            "meta": [c.get("cargo"), c.get("anio")], "anio": c.get("anio"),
         })
     for a in sitio.get("apps", []):
         if a.get("oculto"):
@@ -413,8 +416,8 @@ def tarjeta(it, i, pre=""):
     # en escritorio cada dato va en su linea; en el celular, en una sola
     meta = '<span class="card__sep"></span>'.join(esc(m) for m in it["meta"] if m)
     estudio = ""
-    if it.get("estudio"):
-        estudio = '<span class="card__estudio">%s %s</span>' % (tr("proyecto_de"), esc(it["estudio"]))
+    if it.get("sello"):
+        estudio = '<span class="card__estudio">%s</span>' % esc(it["sello"])
     rol = ""
     if it.get("participacion"):
         rol = '<p class="card__rol"><span>%s:</span> %s</p>' % (tr("mi_rol"), esc(it["participacion"]))
@@ -765,6 +768,7 @@ def pagina_curso(c, sig, idx, sitio, hashes):
         nav("catalogo", pre, sitio)
         + '<header class="case-head"><div class="wrap">'
         + '<a class="back" href="%s%sindex.html#catalogo">&larr; %s</a>' % (pre, PREF, tr("volver"))
+        + ('<p class="case-estudio rise">%s %s</p>' % (tr("curso_para"), esc(c["institucion"])) if c.get("institucion") else "")
         + '<h1 class="rise">%s</h1>' % esc(c["nombre"])
         + ('<p class="subtitulo rise">%s</p>' % esc(c["subtitulo"]) if c.get("subtitulo") else "")
         + ('<p class="lead rise">%s</p>' % esc(c["resumen"]) if c.get("resumen") else "")
