@@ -158,7 +158,7 @@ def portada(src, label, i, pre=""):
     """La foto grande del encabezado de una ficha. Tambien se abre al pincharla."""
     if not src:
         return media(src, label, i, pre)
-    return '<a class="ampliar" href="%s%s">%s</a>' % (pre, esc(src), media(src, label, i, pre, TAM_ANCHA))
+    return '<a class="ampliar" href="%s%s%s">%s</a>' % (pre, esc(src), version(src), media(src, label, i, pre, TAM_ANCHA))
 
 
 def media(src, label, i, pre="", tam=None):
@@ -216,6 +216,11 @@ def _copias(src):
     return res
 
 
+def version(src):
+    """?v=huella para archivos locales, vacio si no existe el archivo."""
+    return "?v=" + hash_de(src) if os.path.isfile(os.path.join(RAIZ, src)) else ""
+
+
 def imagen(src, alt, pre="", tam=TAM_FICHA):
     """Un <img> con copias livianas, medidas (para que la pagina no salte
     mientras carga) y carga diferida."""
@@ -223,9 +228,13 @@ def imagen(src, alt, pre="", tam=TAM_FICHA):
     if not datos:
         return '<img src="%s%s" alt="%s" loading="lazy" decoding="async">' % (pre, esc(src), esc(alt))
     (w, h), copias = datos
-    srcset = ", ".join("%s%s %dw" % (pre, esc(r), a) for r, a in copias + [(src, w)])
-    return ('<img src="%s%s" srcset="%s" sizes="%s" width="%d" height="%d" alt="%s" loading="lazy" decoding="async">'
-            % (pre, esc(src), srcset, tam, w, h, esc(alt)))
+    # ?v= con la huella del original: si la foto cambia (por ejemplo, un
+    # mockup nuevo con el mismo nombre), cambia la direccion y el navegador
+    # no sigue mostrando la version guardada en cache.
+    v = version(src)
+    srcset = ", ".join("%s%s%s %dw" % (pre, esc(r), v, a) for r, a in copias + [(src, w)])
+    return ('<img src="%s%s%s" srcset="%s" sizes="%s" width="%d" height="%d" alt="%s" loading="lazy" decoding="async">'
+            % (pre, esc(src), v, srcset, tam, w, h, esc(alt)))
 
 
 def nav(activa, pre, sitio):
@@ -707,8 +716,8 @@ def foto_ampliable(src, pie, label, pre="", credito=None):
     `credito` es para fotos de terceros: sale como "Foto: ..." bajo el pie."""
     cred = '<span class="credito">%s: %s</span>' % (tr("foto"), esc(credito)) if credito else ""
     pie_txt = "<figcaption>%s%s</figcaption>" % (esc(pie or ""), cred) if (pie or credito) else ""
-    return ('<figure class="rise"><a class="ampliar" href="%s%s">%s</a>%s</figure>'
-            % (pre, esc(src), imagen(src, pie or label, pre), pie_txt))
+    return ('<figure class="rise"><a class="ampliar" href="%s%s%s">%s</a>%s</figure>'
+            % (pre, esc(src), version(src), imagen(src, pie or label, pre), pie_txt))
 
 
 def sello_proyecto(p):
