@@ -29,6 +29,6 @@ fi
 
 # sumar al commit todo lo que el constructor haya reescrito
 git add -- ./*.html sitemap.xml robots.txt 2>/dev/null
-git add -- proyectos cursos apps en i18n 2>/dev/null
+git add -- proyectos cursos apps en i18n assets/min 2>/dev/null
 
 exit 0

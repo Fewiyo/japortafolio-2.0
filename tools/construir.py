@@ -62,6 +62,9 @@ UI = {
     "ver_otras": ("Ver las otras", "Show the other"), "todo": ("Todo", "All"),
     "volver": ("Volver al catálogo", "Back to the catalog"),
     "cliente": ("Cliente", "Client"), "anio": ("Año", "Year"),
+    "proyecto_de": ("Proyecto de", "A project by"), "mi_rol": ("Mi rol", "My role"),
+    "autoria": ("Este es un proyecto de %s, hecho por su equipo. Aquí muestro la parte en que participé.",
+                "This is a project by %s, made by its team. Here I show the part I worked on."),
     "sig_proyecto": ("Siguiente proyecto", "Next project"), "sig_curso": ("Siguiente curso", "Next course"),
     "foto": ("Foto", "Photo"),
     "periodo": ("Periodo", "Period"), "institucion": ("Institución", "Institution"),
@@ -152,13 +155,74 @@ def portada(src, label, i, pre=""):
     """La foto grande del encabezado de una ficha. Tambien se abre al pincharla."""
     if not src:
         return media(src, label, i, pre)
-    return '<a class="ampliar" href="%s%s">%s</a>' % (pre, esc(src), media(src, label, i, pre))
+    return '<a class="ampliar" href="%s%s">%s</a>' % (pre, esc(src), media(src, label, i, pre, TAM_ANCHA))
 
 
-def media(src, label, i, pre=""):
+def media(src, label, i, pre="", tam=None):
     if not src:
         return portada_lisa(label, i)
-    return '<img src="%s%s" alt="%s" loading="lazy">' % (pre, esc(src), esc(label))
+    return imagen(src, label, pre, tam or TAM_TARJETA)
+
+
+# ---------------------------------------------------------------- fotos livianas
+# Las fotos originales miden hasta 1600 px y pesan hasta 500 KB. En un
+# celular una tarjeta se ve a ~100 px y una foto de ficha a ~340 px, asi
+# que el navegador bajaba 5 MB solo en la portada. Por cada foto se
+# generan copias WebP de 480 y 960 px en assets/min/ (misma ruta que en
+# assets/img/), y el <img> las ofrece con srcset para que el navegador
+# elija la mas chica que le sirva. El original queda para el visor.
+# Solo se regenera una copia si falta o si el original es mas nuevo.
+# Sin Pillow el sitio se construye igual, con las fotos originales.
+try:
+    from PIL import Image
+except ImportError:
+    Image = None
+
+ANCHOS = (480, 960)
+# cuanto ocupa cada foto en pantalla, para que el navegador elija copia
+TAM_TARJETA = "(min-width:1100px) 380px, (min-width:820px) 50vw, 104px"
+TAM_FICHA = "(min-width:1200px) 576px, (min-width:820px) 50vw, 100vw"
+TAM_ANCHA = "(min-width:1200px) 1152px, 100vw"
+_medidas = {}
+
+
+def _copias(src):
+    """Devuelve ((ancho, alto), [(ruta_copia, ancho), ...]) o None."""
+    if src in _medidas:
+        return _medidas[src]
+    res = None
+    origen = os.path.join(RAIZ, src)
+    if (Image and src.startswith("assets/img/") and os.path.isfile(origen)
+            and src.lower().endswith((".jpg", ".jpeg", ".png"))):
+        with Image.open(origen) as im:
+            w, h = im.size
+            copias = []
+            for ancho in ANCHOS:
+                if ancho >= w * 0.9:
+                    continue
+                rel = "assets/min/" + os.path.splitext(src[len("assets/img/"):])[0] + "-%d.webp" % ancho
+                destino = os.path.join(RAIZ, rel)
+                if not os.path.exists(destino) or os.path.getmtime(destino) < os.path.getmtime(origen):
+                    os.makedirs(os.path.dirname(destino), exist_ok=True)
+                    chica = im.convert("RGBA" if im.mode in ("RGBA", "LA", "P") else "RGB")
+                    chica = chica.resize((ancho, round(h * ancho / w)), Image.LANCZOS)
+                    chica.save(destino, "WEBP", quality=78, method=6)
+                copias.append((rel, ancho))
+        res = ((w, h), copias)
+    _medidas[src] = res
+    return res
+
+
+def imagen(src, alt, pre="", tam=TAM_FICHA):
+    """Un <img> con copias livianas, medidas (para que la pagina no salte
+    mientras carga) y carga diferida."""
+    datos = _copias(src)
+    if not datos:
+        return '<img src="%s%s" alt="%s" loading="lazy" decoding="async">' % (pre, esc(src), esc(alt))
+    (w, h), copias = datos
+    srcset = ", ".join("%s%s %dw" % (pre, esc(r), a) for r, a in copias + [(src, w)])
+    return ('<img src="%s%s" srcset="%s" sizes="%s" width="%d" height="%d" alt="%s" loading="lazy" decoding="async">'
+            % (pre, esc(src), srcset, tam, w, h, esc(alt)))
 
 
 def nav(activa, pre, sitio):
@@ -310,9 +374,15 @@ def pieza(g, label, i, pre=""):
 def catalogo(sitio, pre=""):
     items = []
     for p in sitio.get("proyectos", []):
+        # Los proyectos de Ideo Maker se muestran como de Ideo Maker: el
+        # estudio va sobre el titulo, el cliente en la meta y abajo la
+        # parte en que participe. Ademas suman la etiqueta del estudio.
+        estudio = p.get("estudio")
         items.append({
             "href": pre + "proyectos/%s/" % p["id"], "img": p.get("img"), "titulo": p["titulo"],
-            "etiquetas": p.get("tags", []), "meta": [p.get("cliente"), p.get("anio")], "anio": p.get("anio"),
+            "etiquetas": ([estudio] if estudio else []) + p.get("tags", []),
+            "meta": [mayus(p.get("cliente")), p.get("anio")], "anio": p.get("anio"),
+            "estudio": estudio, "participacion": p.get("participacion"),
         })
     for c in sitio.get("cursos", []):
         items.append({
@@ -339,16 +409,23 @@ def tarjeta(it, i, pre=""):
         etiquetas = ('<div class="card__tags">'
                      + "".join('<span class="tag">%s</span>' % esc(t) for t in it["etiquetas"])
                      + "</div>")
-    meta = "<br>".join(esc(m) for m in it["meta"] if m)
+    # en escritorio cada dato va en su linea; en el celular, en una sola
+    meta = '<span class="card__sep"></span>'.join(esc(m) for m in it["meta"] if m)
+    estudio = ""
+    if it.get("estudio"):
+        estudio = '<span class="card__estudio">%s %s</span>' % (tr("proyecto_de"), esc(it["estudio"]))
+    rol = ""
+    if it.get("participacion"):
+        rol = '<p class="card__rol"><span>%s:</span> %s</p>' % (tr("mi_rol"), esc(it["participacion"]))
     return (
         '<a class="card rise" href="%s" data-tags="%s">'
         '<div class="card__media">%s</div>'
         '<div class="card__info">'
-        '<div class="card__bar"><span class="card__title">%s</span>'
+        '<div class="card__bar"><span class="card__title">%s%s</span>'
         '<span class="card__meta">%s</span></div>'
-        "%s</div></a>"
+        "%s%s</div></a>"
         % (esc(it["href"]), esc("|".join(it["etiquetas"])),
-           media(it["img"], it["titulo"], i, pre), esc(it["titulo"]), meta, etiquetas)
+           media(it["img"], it["titulo"], i, pre), estudio, esc(it["titulo"]), meta, rol, etiquetas)
     )
 
 
@@ -410,6 +487,7 @@ def documento(sitio, pre, titulo, descripcion, ruta, imagen, cuerpo, hashes, jso
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0b0b">
 <title>%(titulo)s</title>
 <meta name="description" content="%(desc)s">
 <link rel="canonical" href="%(canonica)s">
@@ -431,7 +509,7 @@ def documento(sitio, pre, titulo, descripcion, ruta, imagen, cuerpo, hashes, jso
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="%(pre)scss/style.css?v=%(hcss)s">
-%(jsonld)s<script>document.documentElement.classList.add("js");var t="dark";try{t=localStorage.getItem("tema")||"dark";}catch(e){}document.documentElement.dataset.theme=t;</script>
+%(jsonld)s<script>document.documentElement.classList.add("js");var t="dark";try{t=localStorage.getItem("tema")||"dark";}catch(e){}document.documentElement.dataset.theme=t;if(t=="light")document.querySelector('meta[name="theme-color"]').content="#ffffff";</script>
 </head>
 <body>
 <div id="app">%(cuerpo)s</div>
@@ -504,8 +582,8 @@ def pagina_historia(sitio, hashes):
     pre = SUB
     retrato = ""
     if h.get("retrato"):
-        retrato = ('<figure class="retrato rise"><img src="%s%s" alt="%s" loading="lazy" decoding="async"></figure>'
-                   % (pre, esc(h["retrato"]), esc(sitio["nombre"])))
+        retrato = ('<figure class="retrato rise">%s</figure>'
+                   % imagen(h["retrato"], sitio["nombre"], pre, "300px"))
     filas = "".join(
         '<div class="row rise"><span class="yr">%s</span><span>%s</span><span class="org">%s</span></div>'
         % (esc(r[0]), esc(r[1]), esc(r[2])) for r in h["trayectoria"])
@@ -545,13 +623,13 @@ def foto_ampliable(src, pie, label, pre="", credito=None):
     `credito` es para fotos de terceros: sale como "Foto: ..." bajo el pie."""
     cred = '<span class="credito">%s: %s</span>' % (tr("foto"), esc(credito)) if credito else ""
     pie_txt = "<figcaption>%s%s</figcaption>" % (esc(pie or ""), cred) if (pie or credito) else ""
-    return ('<figure class="rise"><a class="ampliar" href="%s%s">'
-            '<img src="%s%s" alt="%s" loading="lazy" decoding="async"></a>%s</figure>'
-            % (pre, esc(src), pre, esc(src), esc(pie or label), pie_txt))
+    return ('<figure class="rise"><a class="ampliar" href="%s%s">%s</a>%s</figure>'
+            % (pre, esc(src), imagen(src, pie or label, pre), pie_txt))
 
 
 def pagina_proyecto(p, sig, idx, sitio, hashes):
     pre = SUB + "../../"
+    estudio = p.get("estudio")
     trozos = []
     fotos = []   # imagenes seguidas: se juntan en una grilla
 
@@ -587,13 +665,18 @@ def pagina_proyecto(p, sig, idx, sitio, hashes):
         nav("catalogo", pre, sitio)
         + '<header class="case-head"><div class="wrap">'
         + '<a class="back" href="%s%sindex.html#catalogo">&larr; %s</a>' % (pre, PREF, tr("volver"))
+        + ('<p class="case-estudio rise">%s %s</p>' % (tr("proyecto_de"), esc(estudio)) if estudio else "")
         + '<h1 class="rise">%s</h1>' % esc(p["titulo"])
         + '<p class="lead rise">%s</p>' % esc(p["resumen"])
         + '<div class="case-facts rise">'
-        + "<div><span>%s</span>%s</div>" % (tr("cliente"), esc(p["cliente"]))
+        + ("<div><span>%s</span>%s</div>" % (tr("proyecto_de"), esc(estudio + (", " + p["cliente"] if p.get("cliente") else "")))
+           if estudio else "<div><span>%s</span>%s</div>" % (tr("cliente"), esc(p["cliente"])))
         + "<div><span>%s</span>%s</div>" % (tr("anio"), esc(p["anio"]))
+        + ("<div><span>%s</span>%s</div>" % (tr("mi_rol"), esc(p["participacion"])) if p.get("participacion") else "")
         + "<div><span>%s</span>%s</div>" % (tr("servicios"), " · ".join(esc(t) for t in p["tags"]))
-        + "</div></div></header>"
+        + "</div>"
+        + ('<p class="case-autoria rise">%s</p>' % (tr("autoria") % esc(estudio)) if estudio else "")
+        + "</div></header>"
         + '<section class="section" style="padding-top:0"><div class="wrap">'
         + '<figure style="margin-top:0">%s%s</figure>' % (
             portada(p.get("img"), p["titulo"], idx, pre),
@@ -604,10 +687,14 @@ def pagina_proyecto(p, sig, idx, sitio, hashes):
         + "<strong>%s</strong></span><span>&rarr;</span></a>" % esc(sig["titulo"])
         + "</div></section>" + pie(pre, sitio)
     )
+    autor = '{"@type":"Person","name":"%s"}' % sitio["nombre"]
+    if estudio:
+        autor = ('{"@type":"Organization","name":"%s"},"contributor":{"@type":"Person","name":"%s"}'
+                 % (estudio, sitio["nombre"]))
     jsonld = ('{"@context":"https://schema.org","@type":"CreativeWork",'
-              '"name":"%s","description":"%s","creator":{"@type":"Person","name":"%s"},'
+              '"name":"%s","description":"%s","creator":%s,'
               '"dateCreated":"%s","url":"%s/proyectos/%s/","keywords":"%s"}'
-              % (p["titulo"], recortar(p["resumen"], 200), sitio["nombre"],
+              % (p["titulo"], recortar(p["resumen"], 200), autor,
                  str(p["anio"])[:4], BASE, p["id"], ", ".join(p["tags"])))
     return documento(
         sitio=sitio, pre=pre, titulo="%s — %s" % (p["titulo"], sitio["nombre"]),

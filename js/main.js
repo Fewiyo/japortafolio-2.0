@@ -30,9 +30,13 @@
 
   /* ---------- Tema claro/oscuro (por defecto oscuro) ---------- */
   var btn = document.getElementById("theme");
+  var colorBarra = document.querySelector('meta[name="theme-color"]');
   if (btn) {
     var marcar = function () {
-      btn.setAttribute("aria-checked", document.documentElement.dataset.theme === "dark" ? "true" : "false");
+      var oscuro = document.documentElement.dataset.theme === "dark";
+      btn.setAttribute("aria-checked", oscuro ? "true" : "false");
+      /* la barra del navegador en el celular toma el fondo del tema */
+      if (colorBarra) colorBarra.content = oscuro ? "#0b0b0b" : "#ffffff";
     };
     marcar();
     btn.addEventListener("click", function () {
@@ -162,6 +166,21 @@
     vAnt.addEventListener("click", function () { mostrar(actual - 1); });
     vSig.addEventListener("click", function () { mostrar(actual + 1); });
     visor.addEventListener("click", function (e) { if (e.target === visor) cerrar(); });
+
+    /* En el celular: deslizar hacia el lado pasa de foto, hacia abajo
+       cierra, como en la app de fotos del telefono. */
+    var x0 = null, y0 = null;
+    visor.addEventListener("touchstart", function (e) {
+      if (e.touches.length !== 1) { x0 = null; return; }
+      x0 = e.touches[0].clientX; y0 = e.touches[0].clientY;
+    }, { passive: true });
+    visor.addEventListener("touchend", function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+      x0 = null;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) mostrar(actual + (dx < 0 ? 1 : -1));
+      else if (dy > 80 && dy > Math.abs(dx)) cerrar();
+    }, { passive: true });
     addEventListener("keydown", function (e) {
       if (visor.hidden) return;
       if (e.key === "Escape") cerrar();

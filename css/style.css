@@ -80,7 +80,7 @@ body{
   text-rendering:optimizeLegibility;
 }
 a{color:inherit; text-decoration:none}
-img{max-width:100%; display:block}
+img{max-width:100%; height:auto; display:block}
 h1,h2,h3,p,ul,figure,blockquote{margin:0}
 ul{list-style:none; padding:0}
 ::selection{background:var(--fg); color:var(--bg)}
@@ -464,6 +464,27 @@ figcaption{font-size:13px; color:var(--fg); margin-top:12px}
   letter-spacing:.14em; text-transform:uppercase; margin-bottom:8px;
 }
 
+/* Autoria de los proyectos de Ideo Maker: el estudio va primero, sobre
+   el titulo, como en los creditos de una agencia; mi parte va despues,
+   nombrada como "Mi rol". Asi se lee de quien es el proyecto antes de
+   leer que hice yo. */
+.case-estudio{
+  font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--muted); margin-bottom:16px;
+}
+.case-autoria{
+  max-width:60ch; margin:-16px 0 clamp(40px, 5vw, 64px);
+  padding-left:14px; border-left:2px solid var(--line);
+  font-size:14px; line-height:1.55; color:var(--muted);
+}
+.card__estudio{
+  display:block; margin-bottom:4px;
+  font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted);
+}
+.card__sep{display:block}
+.card__rol{margin-top:10px; font-size:13px; line-height:1.45; color:var(--muted)}
+.card__rol span{color:var(--fg)}
+
 .back{
   display:inline-block; font-size:13px; color:var(--muted);
   margin-bottom:32px; transition:color .2s var(--ease);
@@ -666,3 +687,49 @@ button.btn{font:inherit; font-size:14px; border:0; cursor:pointer}
   padding:6px 9px; transition:color .2s var(--ease), border-color .2s var(--ease);
 }
 .lang-btn:hover{color:var(--fg) !important; border-color:var(--fg)}
+
+/* ---------- Zonas de toque de la barra ----------
+   Los enlaces miden 17 px de alto y "CV" 16 px de ancho: faciles de
+   errar con el dedo. Se agranda solo la zona que recibe el toque, sin
+   mover nada de lo que se ve, hasta unos 44 px (Apple HIG; WCAG 2.2
+   pide 24 px como minimo, criterio 2.5.8). */
+.nav__links a:not(.lang-btn){padding:13px 4px; margin:0 -4px}
+.lang-btn, .theme-btn{position:relative}
+.lang-btn::after, .theme-btn::after{content:""; position:absolute; inset:-9px -4px}
+
+/* ---------- Catalogo en el celular ----------
+   Con tarjetas de foto grande el catalogo media 14.000 px: 17 pantallas
+   antes de llegar a Servicios. En el celular cada tarjeta pasa a ser una
+   fila con miniatura, como las listas de la App Store o Spotify, y baja
+   de 465 a ~110 px. Las etiquetas se van: siguen en la ficha y el filtro. */
+@media (max-width:819px){
+  .projects{gap:8px}
+  .card{display:grid; grid-template-columns:104px minmax(0,1fr); align-items:center; border-radius:12px}
+  .card:hover{transform:none}
+  .card__media{aspect-ratio:auto; align-self:stretch; min-height:104px}
+  .card__media img, .card__media svg{position:absolute; inset:0}
+  .card__info{padding:12px 16px}
+  .card__bar{flex-direction:column; align-items:flex-start; gap:4px}
+  .card__title{font-size:15px; line-height:1.3}
+  .card__meta{text-align:left; font-size:12.5px; line-height:1.4}
+  .card__tags{display:none}
+  .card__estudio{font-size:10.5px}
+  .card__sep{display:inline}
+  .card__sep::before{content:" · "}
+  .card__rol{
+    margin-top:6px; font-size:12.5px; line-height:1.4;
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+  }
+
+  /* Filtros en una sola fila que se desliza: antes ocupaban 454 px,
+     mas de media pantalla. El chip cortado en el borde avisa que hay
+     mas hacia el lado. Al abrir "Ver las otras" vuelven a varias filas. */
+  .filtros{
+    flex-wrap:nowrap; overflow-x:auto; overscroll-behavior-x:contain;
+    margin:0 calc(-1 * var(--pad)) 28px; padding:2px var(--pad);
+    scrollbar-width:none;
+  }
+  .filtros::-webkit-scrollbar{display:none}
+  .filtro{flex:none}
+  .filtros.muestra-todo{flex-wrap:wrap; overflow:visible}
+}

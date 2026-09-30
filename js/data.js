@@ -47,7 +47,7 @@ const SITE = {
     catalogo: {
       eyebrow: "01 / Catálogo",
       titulo: "Todo lo que he hecho, de lo más reciente a lo más antiguo.",
-      intro: "Siete cursos de creación propia para el Programa PENTA UC de la Pontificia Universidad Católica de Chile, diez aplicaciones y plataformas web construidas con IA, y proyectos de diseño de servicios y fabricación digital."
+      intro: "Siete cursos de creación propia para el Programa PENTA UC de la Pontificia Universidad Católica de Chile, diez aplicaciones y plataformas web construidas con IA, los proyectos de Ideo Maker en que participé como parte de su equipo y otros proyectos de diseño."
     },
     servicios: {
       eyebrow: "02 / Servicios",
@@ -139,7 +139,9 @@ const SITE = {
     {
       id: "tecno-cultivo",
       titulo: "Tecno-cultivo",
-      cliente: "Ideo Maker, para Fundación Mustakis",
+      estudio: "Ideo Maker",
+      cliente: "para Fundación Mustakis",
+      participacion: "Diseño de la experiencia y de la garra robótica",
       anio: "2023",
       tags: ["Diseño de producto", "Fabricación digital", "Impresión 3D", "Educación"],
       resumen:
@@ -167,7 +169,9 @@ const SITE = {
     {
       id: "aula-impulsa-maria-elena",
       titulo: "Liceo H.C. T.P. María Elena",
-      cliente: "Ideo Maker, para Fundación Chile",
+      estudio: "Ideo Maker",
+      cliente: "para Fundación Chile",
+      participacion: "Diseño del espacio, modelo 3D, habilitación y capacitación docente",
       anio: "2025",
       tags: ["FabLab", "Diseño de espacios", "Capacitación docente", "Modelado 3D", "Educación"],
       resumen:
@@ -204,7 +208,9 @@ const SITE = {
     {
       id: "aula-maker-copiapo",
       titulo: "Liceo Fernando Ariztía Ruiz de Paipote",
-      cliente: "Ideo Maker, para Fundación Chile",
+      estudio: "Ideo Maker",
+      cliente: "para Fundación Chile",
+      participacion: "Diseño del espacio, modelo 3D, habilitación y capacitación docente",
       anio: "2026",
       tags: ["FabLab", "Diseño de espacios", "Capacitación docente", "Modelado 3D", "Educación"],
       resumen:
@@ -250,7 +256,9 @@ const SITE = {
     {
       id: "aula-impulsa-taltal",
       titulo: "Liceo José Miguel Quiroz de Taltal",
-      cliente: "Ideo Maker, para Fundación Chile",
+      estudio: "Ideo Maker",
+      cliente: "para Fundación Chile",
+      participacion: "Diseño del espacio, modelo 3D, habilitación y capacitación docente",
       anio: "2026",
       tags: ["FabLab", "Diseño de espacios", "Capacitación docente", "Modelado 3D", "Educación"],
       resumen:
@@ -286,7 +294,9 @@ const SITE = {
     {
       id: "aula-impulsa-calama",
       titulo: "Liceo B-10 Minero América de Calama",
-      cliente: "Ideo Maker, para Fundación Chile",
+      estudio: "Ideo Maker",
+      cliente: "para Fundación Chile",
+      participacion: "Diseño del espacio, modelo 3D, habilitación y capacitación docente",
       anio: "2026",
       tags: ["FabLab", "Diseño de espacios", "Capacitación docente", "Modelado 3D", "Educación"],
       resumen:
@@ -329,7 +339,9 @@ const SITE = {
     {
       id: "aula-impulsa-likan-antai",
       titulo: "Liceo Bicentenario Agropecuario Likan Antai",
-      cliente: "Ideo Maker, para Fundación Chile",
+      estudio: "Ideo Maker",
+      cliente: "para Fundación Chile",
+      participacion: "Diseño del espacio, modelo 3D, habilitación y capacitación docente",
       anio: "2025",
       tags: ["FabLab", "Diseño de espacios", "Capacitación docente", "Modelado 3D", "Educación"],
       resumen:
@@ -401,7 +413,9 @@ const SITE = {
     {
       id: "sala-maker-sierra-gorda",
       titulo: "Escuela Caracoles, Sierra Gorda",
-      cliente: "Ideo Maker y Fundación País Digital",
+      estudio: "Ideo Maker",
+      cliente: "junto a Fundación País Digital",
+      participacion: "Modelo 3D, definición del espacio e implementación",
       anio: "2024",
       tags: ["FabLab", "Diseño de espacios", "Modelado 3D", "Educación"],
       resumen:
@@ -436,7 +450,9 @@ const SITE = {
     {
       id: "sala-maker-baquedano",
       titulo: "Escuela Estación Baquedano",
-      cliente: "Ideo Maker y Fundación País Digital",
+      estudio: "Ideo Maker",
+      cliente: "junto a Fundación País Digital",
+      participacion: "Implementación y capacitación docente",
       anio: "2024",
       tags: ["FabLab", "Diseño de espacios", "Modelado 3D", "Educación"],
       resumen:
@@ -509,7 +525,9 @@ const SITE = {
     {
       id: "congreso-futuro",
       titulo: "Congreso Futuro en tu comuna",
-      cliente: "Ideo Maker",
+      estudio: "Ideo Maker",
+      cliente: "",
+      participacion: "Ferias maker y talleres de Bicho-bot",
       anio: "2024",
       tags: ["Divulgación", "Robótica", "Educación", "Prensa"],
       resumen:
@@ -536,7 +554,9 @@ const SITE = {
     {
       id: "kits-educativos",
       titulo: "Kits educativos Bicho-bot",
-      cliente: "Ideo Maker",
+      estudio: "Ideo Maker",
+      cliente: "",
+      participacion: "Diseño de producto y gráficas del kit",
       anio: "2022 — 2023",
       tags: ["Producto", "STEAM", "Fabricación digital", "Robótica"],
       resumen:
@@ -563,7 +583,9 @@ const SITE = {
     {
       id: "mk-bot",
       titulo: "MK-BOT",
-      cliente: "Ideo Maker",
+      estudio: "Ideo Maker",
+      cliente: "",
+      participacion: "Proceso de diseño, gráficas del kit y talleres",
       anio: "2024 — 2026",
       tags: ["Producto", "Robótica", "STEAM", "Fabricación digital", "Educación"],
       resumen:
