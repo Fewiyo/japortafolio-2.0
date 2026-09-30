@@ -430,14 +430,20 @@ def tarjeta(it, i, pre=""):
     )
 
 
+VISIBLES = 7
+
+
 def barra_filtros(items):
     cuenta = {}
     for it in items:
         for t in it["etiquetas"]:
             cuenta[t] = cuenta.get(t, 0) + 1
     tags = sorted(cuenta, key=lambda t: (-cuenta[t], t.lower()))
-    repetidas = [t for t in tags if cuenta[t] > 1]
-    unicas = [t for t in tags if cuenta[t] == 1]
+    # A la vista quedan solo las 7 etiquetas mas usadas (VISIBLES), en una fila:
+    # con todas las repetidas eran 24 botones en tres filas antes de ver
+    # un solo proyecto. El resto se despliega con "Ver las otras".
+    repetidas = [t for t in tags if cuenta[t] > 1][:VISIBLES]
+    unicas = [t for t in tags if t not in repetidas]
 
     def chip(t, extra):
         return ('<button class="filtro%s" type="button" aria-pressed="false" data-tag="%s">%s'

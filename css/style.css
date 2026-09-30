@@ -33,7 +33,7 @@
   --measure-text:400px;  /* ancho de las columnas de texto de servicios */
 
   /* Ritmo vertical */
-  --air-hero:340px;      /* aire sobre el titular */
+  --air-hero:200px;      /* aire sobre el titular (era 340: se llegaba tarde a los proyectos) */
   --air-section:200px;   /* aire sobre cada titulo de seccion */
   --gap-card:12px;       /* separacion entre tarjetas */
 
@@ -450,7 +450,20 @@ ul{list-style:none; padding:0}
 /* ---------- Actualmente ----------
    Referente: rots.cl. Etiqueta a la izquierda y los cargos en columnas,
    bajo el titular; en el celular, uno bajo otro. */
-.ahora{padding-top:clamp(64px, 8vw, 112px)}
+.ahora{padding-top:clamp(40px, 5vw, 72px)}
+/* El catalogo es lo que se viene a ver: entra antes que las demas
+   secciones, con menos aire y el encabezado mas pegado a los filtros. */
+#catalogo{padding-top:clamp(64px, 8vw, 112px)}
+#catalogo .section-head{margin-bottom:32px}
+#catalogo .section-head h2{max-width:none}
+@media (max-width:819px){
+  /* en el celular cada cargo va en una fila: area a la izquierda */
+  .ahora__lista{gap:12px}
+  .ahora__lista div{display:grid; grid-template-columns:96px minmax(0,1fr); gap:12px; align-items:baseline}
+  .ahora__lista dt{font-size:11px; margin:0}
+  .ahora__lista dd{font-size:14px}
+  #catalogo .section-head .intro{font-size:17px; margin-top:16px}
+}
 .ahora__in{border-top:1px solid var(--line); padding-top:24px}
 .ahora__in .eyebrow{margin-bottom:20px}
 .ahora__lista{display:grid; gap:20px}
@@ -611,10 +624,10 @@ html.visor-abierto{overflow:hidden}
 /* ---------- Responsive ----------
    El aire se reduce proporcionalmente, pero se mantiene generoso. */
 @media (max-width:1023px){
-  :root{--air-hero:200px; --air-section:128px}
+  :root{--air-hero:168px; --air-section:128px}
 }
 @media (max-width:819px){
-  :root{--air-hero:148px; --air-section:96px; --pad:20px}
+  :root{--air-hero:112px; --air-section:96px; --pad:20px}
   .nav__name{font-size:12px}
   /* en movil queda solo el nombre de pila: hay cinco destinos que ubicar */
   .nav__name-resto, .nav__name-rol{display:none}

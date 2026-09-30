@@ -55,8 +55,8 @@ const SITE = {
        ordenada del año más reciente al más antiguo. */
     catalogo: {
       eyebrow: "01 / Catálogo",
-      titulo: "Proyectos, cursos y aplicaciones, de lo más reciente a lo más antiguo.",
-      intro: "Siete cursos de creación propia para el Programa PENTA UC de la Pontificia Universidad Católica de Chile, diez aplicaciones y plataformas web construidas con IA, los proyectos de Ideo Maker en que participé como parte de su equipo y otros proyectos de diseño."
+      titulo: "Proyectos, cursos y aplicaciones.",
+      intro: "Cursos para PENTA UC, aplicaciones hechas con IA y proyectos de Ideo Maker en que participé como parte de su equipo, del más reciente al más antiguo."
     },
     servicios: {
       eyebrow: "02 / Servicios",
