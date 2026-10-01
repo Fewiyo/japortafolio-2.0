@@ -6,16 +6,16 @@
 const SITE = {
   /* ---------- Identidad ---------- */
   nombre: "Vicente Cáceres Farías",
-  rol: "Diseñador industrial",
+  rol: "Diseñador industrial · Innovación educativa",
   email: "vicentecfarias@gmail.com",
 
   /* Titular del inicio. El texto entre <em> queda en gris. */
   titular:
-    "Hola, soy Vicente, diseñador industrial experto en <em>laboratorios maker, educación STEAM e innovación</em>.",
+    "Hola, soy Vicente, diseñador industrial experto en <em>innovación educativa, laboratorios maker y STEAM</em>.",
 
   /* Frase corta bajo el botón */
   bajada:
-    "8 años entre docencia, diseño de servicios y fabricación digital. Capacito equipos docentes y asesoro a instituciones en innovación STEAM y maker.",
+    "8 años entre docencia, diseño de servicios y fabricación digital. Capacito equipos docentes y asesoro a instituciones en innovación educativa, STEAM y maker.",
 
   cta: "Conversemos tu proyecto",
 
