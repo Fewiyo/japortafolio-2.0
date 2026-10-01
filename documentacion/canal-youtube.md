@@ -41,12 +41,12 @@ Reglas para que sirva de evidencia:
 | | |
 |---|---|
 | Nombre del canal | **Proyecto Ja** |
-| Usuario sugerido | `@japortafolio`, que coincide con el dominio |
-| Alternativa | `@proyectoja`, si el primero estuviera tomado |
+| Usuario | **`@japortafolio`** (decidido el 1 de octubre), que coincide con el dominio |
+| Correo del proyecto | proyectoja.edu@gmail.com, ya creado. Es la cuenta con la que se abre el canal |
 
 `youtube.com/@japortafolio` respondió 404 el 1 de octubre, lo que sugiere que está libre, pero
-**no es concluyente**: se confirma al crear el canal. Hay que reservar el mismo usuario en
-Instagram y LinkedIn (página) el mismo día, aunque no se usen todavía.
+**no es concluyente**: se confirma al crear el canal con el correo del proyecto. Hay que reservar
+el mismo usuario en Instagram y LinkedIn (página) el mismo día, aunque no se usen todavía.
 
 Por qué no el nombre propio: hay al menos dos colisiones con "Vicente Cáceres" (un futbolista y
 un luchador). La marca Ja ya existe en el sitio y desambigua.
@@ -141,7 +141,7 @@ Si una semana no alcanza, se sigue con la siguiente. La regularidad pesa más qu
 
 ## 9. Qué sigue, en orden
 
-1. Confirmar el usuario `@japortafolio` y crear el canal, con el mismo nombre en las otras redes.
+1. Crear el canal con proyectoja.edu@gmail.com, confirmar el usuario `@japortafolio` y reservarlo con el mismo nombre en las otras redes.
 2. Confirmar el modelo de iPhone y el receptor del micrófono.
 3. Grabar los videos 1, 2 y 6.
 4. Construir la sección de blog en el sitio antes de publicar el primero.
