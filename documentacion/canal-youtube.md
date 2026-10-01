@@ -16,6 +16,26 @@ Documentar en público dos cosas que Vicente ya está haciendo:
 Encaja con la posición que la medición del 20 de septiembre dejó vacía: **el practicante que
 documenta**. Nadie la ocupa; Pedro Hepp estudia el fenómeno, Vicente lo hace.
 
+### El canal como origen de las charlas
+
+Vicente nunca ha dado una charla (decisión del 1 de octubre, en `plan-experto.md`). El canal es
+el camino para llegar a darlas: cada video prueba un tema ante público real, y los que mejor
+funcionen se convierten en charla. Es la fase 4 de ese plan, que **no parte cuando el portafolio
+esté listo, sino ahora**, y no es un canal aparte: es el mismo.
+
+| Tema de charla | Cómo se prueba en el canal |
+|---|---|
+| Cultura maker en Chile y cómo se unen educación y tecnología a través del diseño | Serie corta, ligada a los videos del magíster |
+| Inteligencia artificial aplicada a la creación de proyectos maker | Serie "IA en el taller": los videos 6 y 7, y los que vengan |
+
+Reglas para que sirva de evidencia:
+- Cada video termina con una pregunta o un hallazgo que pueda convertirse en una sección de charla.
+- Los videos de estas series se enlazan desde las fichas de charla del sitio, como prueba.
+- El sitio **no dice que ya se dieron charlas** hasta que exista una. Los videos son evidencia de
+  que el tema se domina, no de que se dictó.
+- Los videos de la serie de IA van etiquetados con herramienta y fecha: lo que hoy funciona
+  cambia en meses.
+
 ## 2. Nombre y dirección
 
 | | |
@@ -40,7 +60,7 @@ video, para que buscadores e IA lo asocien.
 - Un video por semana, grabado en tanda un solo día (ver rutina).
 - Cada video termina con una sola invitación: la página del blog con el resumen y los enlaces.
 
-## 4. Primeros diez videos
+## 4. Primeros doce videos
 
 Ordenados para que el canal parta con lo que ya tienes material y suba de a poco.
 
@@ -56,8 +76,11 @@ Ordenados para que el canal parta con lo que ya tienes material y suba de a poco
 | 8 | Mi flujo para documentar un proceso (grabar, resumir, publicar) | Proceso |
 | 9 | Qué aprendí en el primer mes de canal | Bitácora |
 | 10 | Pregunta de la audiencia | Comunidad |
+| 11 | Cultura maker en Chile: de dónde viene y hacia dónde va | Charla 1 |
+| 12 | IA para crear proyectos maker: qué sí y qué no | Charla 2 |
 
-Los videos 6 y 7 son los más fuertes: el material ya existe y es verificable. Conviene
+Los videos 11 y 12 son el borrador hablado de las dos charlas: conviene grabarlos cuando ya haya
+público que comente. Los videos 6 y 7 son los más fuertes: el material ya existe y es verificable. Conviene
 grabarlos temprano aunque el orden dice 6 y 7.
 
 Los temas del magíster son provisorios. Hay que ajustarlos al programa real, sin adelantar

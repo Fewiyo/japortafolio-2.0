@@ -254,7 +254,8 @@ d.paso("G.", "Canal Proyecto Ja  ·  NUEVA",
        "innovaciones e integraciones de IA, hablando a cámara con fondo maker. Cada video tiene "
        "su entrada en el blog del sitio, así que primero hay que construir el blog. Es la "
        "aplicación directa de la fase E y de la posición «el practicante que documenta». "
-       "Nombre, primeros diez videos, equipo y rutina en canal-youtube.md.")
+       "Nombre, primeros doce videos, equipo y rutina en canal-youtube.md. Es también el camino a las charlas: "
+       "los dos temas se prueban ahí y de él salen.")
 
 d.paso("→", "En paralelo  ·  Ideo Maker",
        "El documento con el diagnóstico y los seis pasos ya está listo para levantarlo adentro "

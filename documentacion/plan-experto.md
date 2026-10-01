@@ -114,7 +114,7 @@ instituciones sin fondos SEP no la requieren.
 | **1. Postular** | UDP antes del 6 de octubre; UTEM y Duoc espontáneas en octubre; alertas de cargos en LinkedIn y Empleos Públicos | Vicente aún no decide si postula a la UDP. Cierra el 6 de octubre |
 | **2. Posicionar** | Reescribir titular, servicios y CV con el enfoque de experto en cargos; sumar charlas y docencia | **Hecha el 1 de octubre** en el sitio y en los CV completo y profesional. Falta el CV académico y LinkedIn |
 | **3. Historia de trabajos** | Completar los proyectos para que cuenten una progresión (de la UDP a la dirección de I+D+i), con equipos, fechas y resultados. Es la antigua Fase C, ahora vista como evidencia para un cargo | En curso |
-| **4. Evidencia de experto** | Videos de YouTube sobre los dos temas de charla, cada uno con su página escrita en el sitio. Es la "etapa 2": parte cuando el portafolio esté más o menos listo | Por hacer |
+| **4. Evidencia de experto** | El canal de YouTube **Proyecto Ja**, con videos sobre los dos temas de charla, cada uno con su página escrita en el sitio. De él salen las charlas. Plan completo en `canal-youtube.md`. **Parte ahora** (decisión del 1 de octubre; se adelanta a "cuando el portafolio esté listo") | Por hacer |
 | **5. Habilitación** | Magíster, certificado y evaluaciones docentes de PENTA UC | Continua |
 | **Diciembre** | Volver a medir con el mismo montaje de la línea base | Mantiene |
 
@@ -198,6 +198,6 @@ y STEAM sí calzan con la formación.
 3. **CV académico:** revisar si conviene alinear su perfil con el nuevo enfoque.
 4. **UDP:** decidir antes del 6 de octubre. Si va, pedir ya a PENTA UC el certificado de docencia y
    las evaluaciones.
-5. **Videos de YouTube** (fase 4), cuando el portafolio esté listo.
+5. **Videos de YouTube** (fase 4): es el canal Proyecto Ja, que parte ahora. Ver `canal-youtube.md`.
 6. **Pendientes de contenido** de siempre, en `FALTANTES.md`: equipo de HAALUR, textos de
    organizaciones, retrato en alta resolución, portafolio en PDF, URL del blog.
