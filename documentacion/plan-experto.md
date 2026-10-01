@@ -111,10 +111,10 @@ instituciones sin fondos SEP no la requieren.
 |---|---|---|
 | 0, A, B | Limpiar, motor, dominio | Hechas |
 | CV | Tres versiones, en español e inglés | Hecho |
-| **1. Postular** | UDP antes del 6 de octubre; UTEM y Duoc espontáneas en octubre; alertas de cargos en LinkedIn y Empleos Públicos | **Urgente** |
-| **2. Posicionar** | Reescribir titular, servicios y CV con el enfoque de experto en cargos; sumar charlas y docencia | Por hacer |
+| **1. Postular** | UDP antes del 6 de octubre; UTEM y Duoc espontáneas en octubre; alertas de cargos en LinkedIn y Empleos Públicos | Vicente aún no decide si postula a la UDP. Cierra el 6 de octubre |
+| **2. Posicionar** | Reescribir titular, servicios y CV con el enfoque de experto en cargos; sumar charlas y docencia | **Hecha el 1 de octubre** en el sitio y en los CV completo y profesional. Falta el CV académico y LinkedIn |
 | **3. Historia de trabajos** | Completar los proyectos para que cuenten una progresión (de la UDP a la dirección de I+D+i), con equipos, fechas y resultados. Es la antigua Fase C, ahora vista como evidencia para un cargo | En curso |
-| **4. Evidencia de experto** | Una o dos piezas escritas con tu firma (qué aprendí armando salas maker, metodologías ágiles aplicadas a un laboratorio) y un video corto de una charla | Por hacer |
+| **4. Evidencia de experto** | Videos de YouTube sobre los dos temas de charla, cada uno con su página escrita en el sitio. Es la "etapa 2": parte cuando el portafolio esté más o menos listo | Por hacer |
 | **5. Habilitación** | Magíster, certificado y evaluaciones docentes de PENTA UC | Continua |
 | **Diciembre** | Volver a medir con el mismo montaje de la línea base | Mantiene |
 
@@ -164,15 +164,40 @@ instituciones sin fondos SEP no la requieren.
 
 ## 6. Hecho en el sitio el 1 de octubre
 
-- Se sumaron dos servicios: **Charlas y conferencias** y **Docencia en educación superior**, con
-  traducción al inglés.
-- El título de la sección pasó a "Charlas, clases, asesoría y capacitación en innovación STEAM,
-  maker y metodologías de diseño."
+Todo está en `main` (fusión directa a las 14:55, commit `b1cf216`), así que japortafolio.com ya lo
+publica.
+
+- **Servicios:** se sumaron **Charlas y conferencias** y **Docencia en educación superior**, con
+  traducción al inglés. El título de la sección pasó a "Charlas, clases, asesoría y capacitación
+  en innovación STEAM, maker y metodologías de diseño."
+- **Rol bajo el nombre:** "Diseñador industrial · Experiencias de aprendizaje".
+- **Titular:** "Hola, soy Vicente, diseñador industrial experto en *diseño de experiencias de
+  aprendizaje, laboratorios maker y STEAM*."
+- **Bajada:** sigue hablando de "innovación STEAM y maker", para no repetir la frase del titular.
+- **CV completo y profesional:** el perfil dice "Especialista en diseño de experiencias de
+  aprendizaje, laboratorios maker y educación STEAM". Los seis PDF (español e inglés) se
+  regeneraron. El CV académico no cambió: su perfil está redactado distinto.
+- Se revisó el inicio en celular (390 px) y escritorio (1280 px): el titular cabe en ambos.
+
+### Una decisión sobre la palabra
+
+Se probó "innovación educativa", pero Vicente notó que no estudió pedagogía y que la expresión
+sonaba a título de otro campo. Se eligió **"diseño de experiencias de aprendizaje"**: deja claro
+que el oficio es el diseño y que la educación es el destino. Implicación para los cargos:
+**asesor técnico-pedagógico** (ATP) en un SLEP suele pedir título de profesor; hay que leer cada
+llamado antes de postular. Los cargos de fablab, diseño de experiencias, coordinación de proyectos
+y STEAM sí calzan con la formación.
 
 ## 7. Falta
 
-- Decidir el titular del inicio y el rol bajo el nombre ("Diseñador industrial") según los cargos
-  de arriba.
-- Reescribir los tres CV con el enfoque por eje.
-- Escribir las dos páginas de charla, o las fichas de los dos videos, cuando existan.
-- Postular a la UDP antes del 6 de octubre.
+1. **LinkedIn:** hoy dice "Diseñador Industrial / MAKER / Docente STEAM". Se edita a mano. Propuesta:
+   "Diseñador industrial | Diseño de experiencias de aprendizaje | Fablabs y STEAM".
+2. **Fichas de las dos charlas** en el sitio: título, de qué trata, a quién va dirigida, duración y
+   formato, con un lugar para el video cuando exista. Sin afirmar que ya se dieron y sin publicar
+   las horas disponibles.
+3. **CV académico:** revisar si conviene alinear su perfil con el nuevo enfoque.
+4. **UDP:** decidir antes del 6 de octubre. Si va, pedir ya a PENTA UC el certificado de docencia y
+   las evaluaciones.
+5. **Videos de YouTube** (fase 4), cuando el portafolio esté listo.
+6. **Pendientes de contenido** de siempre, en `FALTANTES.md`: equipo de HAALUR, textos de
+   organizaciones, retrato en alta resolución, portafolio en PDF, URL del blog.
