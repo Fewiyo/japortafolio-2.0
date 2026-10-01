@@ -15,7 +15,7 @@ const SITE = {
 
   /* Frase corta bajo el botón */
   bajada:
-    "8 años entre docencia, diseño de servicios y fabricación digital. Capacito equipos docentes y asesoro a instituciones en diseño de experiencias de aprendizaje, STEAM y maker.",
+    "8 años entre docencia, diseño de servicios y fabricación digital. Capacito equipos docentes y asesoro a instituciones en innovación STEAM y maker.",
 
   cta: "Conversemos tu proyecto",
 
