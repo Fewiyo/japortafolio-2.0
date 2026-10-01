@@ -2,7 +2,7 @@
 
 Qué hay en esta carpeta y para qué sirve cada cosa.
 
-**Actualizado al 24 de septiembre de 2026.**
+**Actualizado al 1 de octubre de 2026.**
 
 | Archivo | Para qué | Para quién |
 |---|---|---|
@@ -12,6 +12,7 @@ Qué hay en esta carpeta y para qué sirve cada cosa.
 | [`Ideo-Maker-posicionamiento.docx`](Ideo-Maker-posicionamiento.docx) | Diagnóstico y pasos para Ideo Maker SPA, a partir de la misma medición | Para mandar a Ideo Maker |
 | [`casos-ideo-maker.md`](casos-ideo-maker.md) | El trabajo en Ideo Maker desde 2022, ordenado en candidatos a proyecto, con lo que falta para subir cada uno | Vicente, para decidir qué se publica (Fase C del plan) |
 | [`oportunidades-2026.md`](oportunidades-2026.md) | Extra del plan: convocatorias docentes, investigación y cargos públicos y privados, revisadas el 24 de septiembre de 2026, con la meta de postular a tres universidades en octubre | Vicente |
+| [`canal-youtube.md`](canal-youtube.md) | Fase G del plan: el canal Proyecto Ja, con nombre, formato, primeros diez videos, equipo y rutina semanal | Vicente |
 
 Los pendientes vivos no están acá: están en [`../FALTANTES.md`](../FALTANTES.md), en la raíz.
 

@@ -170,3 +170,9 @@ habla de ti en primera persona. Es lo único del sitio que escribí poniéndote 
 **Vista previa en WhatsApp. RESUELTO el 25 de septiembre de 2026** con `assets/img/compartir.jpg` (1200 × 630). Si se cambia el retrato, hay que rehacer esta imagen. Al compartir japortafolio.com, la foto se ve muy cerca (25 de septiembre de 2026). Es la imagen para compartir del inicio, que hoy usa `assets/img/retrato.jpg`. Hay que hacer una imagen propia de 1200 × 630, con el retrato más lejos o con la marca y el nombre.
 
 **Aula Impulsa Taltal.** El fotógrafo oficial no sacó fotos de la sala terminada ni del equipo de Ideo Maker. Hay que buscar fotos propias del aula (y del equipo) para sumarlas a la ficha `aula-impulsa-taltal`. La portada es provisoria (la foto oficial "En el aula, durante la inauguración"): cambiarla por una foto del aula terminada cuando la haya.
+
+**Canal Proyecto Ja (fase G, plan en `documentacion/canal-youtube.md`).**
+- Confirmar el usuario `@japortafolio` en YouTube y reservarlo en Instagram y LinkedIn.
+- Confirmar el modelo de iPhone: el Boya BY-V2 es Lightning y no enchufa directo a un iPhone 15 o posterior.
+- Construir la sección de blog en el sitio (`SITE.blog.url` sigue vacía; el blog vive dentro del sitio).
+- Ajustar los temas de los videos del magíster al programa real y confirmar qué se puede mostrar.

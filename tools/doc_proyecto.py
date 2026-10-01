@@ -15,7 +15,7 @@ sys.path.insert(0, AQUI)
 from formato_docx import Doc, SUAVE, ACENTO, ALERTA_HEX  # noqa: E402
 
 SALIDA = os.path.join(RAIZ, "documentacion", "Proyecto-portafolio.docx")
-FECHA = "24 de septiembre de 2026"
+FECHA = "1 de octubre de 2026"
 C = Cm
 
 d = Doc("Proyecto Portafolio — estado y plan")
@@ -46,6 +46,7 @@ d.tabla([
     ["La medición completa", "documentacion/linea-base-2026-09-20.md"],
     ["Casos de Ideo Maker", "documentacion/casos-ideo-maker.md"],
     ["Oportunidades (extra)", "documentacion/oportunidades-2026.md"],
+    ["Canal de YouTube", "documentacion/canal-youtube.md"],
 ], [C(4.6), C(12.6)], encabezado=False)
 
 # ============================== ESTADO ==============================
@@ -248,6 +249,13 @@ d.paso("F.", "Vender, sin construir",
        "revisar, no como decisión: la rotación es de 8% a 18% mensual y lo que retiene son las "
        "llamadas en vivo semanales, o sea es un negocio de presencia, lo contrario de esto.")
 
+d.paso("G.", "Canal Proyecto Ja  ·  NUEVA",
+       "Canal de YouTube para documentar el Magíster en Ciencias del Diseño (UAI) y las "
+       "innovaciones e integraciones de IA, hablando a cámara con fondo maker. Cada video tiene "
+       "su entrada en el blog del sitio, así que primero hay que construir el blog. Es la "
+       "aplicación directa de la fase E y de la posición «el practicante que documenta». "
+       "Nombre, primeros diez videos, equipo y rutina en canal-youtube.md.")
+
 d.paso("→", "En paralelo  ·  Ideo Maker",
        "El documento con el diagnóstico y los seis pasos ya está listo para levantarlo adentro "
        "de la empresa. Si Ideo Maker documenta y Vicente documenta, se refuerzan: la empresa "
@@ -285,7 +293,8 @@ d.vinieta("mudarse a japortafolio.com para dejar de competir consigo mismo.", "D
 d.vinieta("los tres casos de Ideo Maker, previa confirmación de qué se puede publicar.", "Contenido: ")
 d.vinieta("escribir la guía del comprador, que es la pieza más fácil y la más citable.", "Primera pieza: ")
 d.vinieta("definir la lista de servicios, que hoy no refleja todo lo que realmente hace.")
-d.vinieta("cerrar las dos decisiones pendientes: las fotos con menores, y si el blog vive dentro o fuera.")
+d.vinieta("cerrar la decisión pendiente de las fotos con menores. El blog vive dentro del sitio (decidido el 1 de octubre).")
+d.vinieta("crear el canal Proyecto Ja, construir la sección de blog y publicar el primer video con su página.", "Canal: ")
 
 d.h1("Objetivos a largo plazo")
 d.p("De un año en adelante.", color=SUAVE, despues=6)
@@ -322,6 +331,8 @@ d.tabla([
     ["Caras de personas adultas sí", "El trabajo se ve hecho por gente y no por objetos"],
     ["Cero marcadores publicados", "Lo que falta se saca del sitio y se anota en FALTANTES.md"],
     ["No construir plataforma de venta", "Se prevende primero; si funciona, se cobra con un servicio externo"],
+    ["El blog vive dentro del sitio", "Cada video del canal tiene su página; la página queda y es lo que se cita"],
+    ["El canal se llama Proyecto Ja", "Ja es la marca del sitio; el nombre propio choca con un futbolista y un luchador"],
     ["No ponerse en el mapa del ecosistema", "El nombre pega más como autor que como ítem de la lista"],
 ], [C(6.0), C(11.2)])
 
@@ -331,7 +342,7 @@ d.p("Espacio para anotar qué cambió desde el " + FECHA + ".", color=SUAVE, des
 d.lineas_para_escribir([("Fecha", 1), ("Qué se hizo", 2), ("Qué se aprendió", 2), ("Qué sigue", 2)])
 
 d.pie("Documento generado el " + FECHA + "  ·  Versión técnica en documentacion/PROYECTO.md  ·  "
-      "Medición completa en documentacion/linea-base-2026-09-20.md  ·  "
+      "Medición completa en documentacion/linea-base-2026-09-20.md  ·  Canal en documentacion/canal-youtube.md  ·  "
       "Pendientes vivos en FALTANTES.md")
 
 d.guardar(SALIDA)
