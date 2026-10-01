@@ -121,6 +121,17 @@ const SITE = {
       titulo: "Proyectos, cursos y aplicaciones.",
       intro: "Cursos para PENTA UC, aplicaciones hechas con IA y proyectos de Ideo Maker en que participé como parte de su equipo, del más reciente al más antiguo."
     },
+    /* El blog reúne mis proyectos maker abiertos: se pueden copiar y
+       adaptar, con la licencia a la vista en cada uno. */
+    blog: {
+      eyebrow: "Blog",
+      titulo: "Proyectos maker abiertos.",
+      intro: "Proyectos propios que armo, grabo y comparto para que cualquiera los copie y los mejore. Cada uno indica su licencia.",
+      construccion: "Las fichas con la etiqueta Ejemplo son de muestra, para ver cómo se verán los proyectos reales cuando los suba.",
+      licenciaTitulo: "Licencias: qué puedes hacer con estos proyectos",
+      licenciaIntro: "Todo lo que publico aquí es abierto. Puedes copiarlo, compartirlo y adaptarlo, incluso en tu trabajo o en clases. A cambio te pido una sola cosa: que me menciones. Cada proyecto indica qué licencia usa y se resume así.",
+      licenciaEjemplo: "Cómo mencionarme: «Nombre del proyecto» de Vicente Cáceres Farías, japortafolio.com, licencia CC BY 4.0."
+    },
     servicios: {
       eyebrow: "02 / Servicios",
       titulo: "Charlas, clases, asesoría y capacitación en innovación STEAM, maker y metodologías de diseño.",
@@ -1535,6 +1546,238 @@ const SITE = {
       "Corporación Cultural de Lo Barnechea", "TICAL", "Converso", "LH&A London"
     ]
   },
+
+  /* ---------- Licencias ----------
+     Cada proyecto abierto declara dos cosas: la licencia de lo que se lee
+     y se ve (instrucciones, diseños, fotos, video) y, si lleva programa,
+     la de su código. Creative Commons desaconseja sus propias licencias
+     para software, por eso el código va aparte.
+     Referente: Instructables y Printables muestran la licencia en cada
+     proyecto. Criterio: creativecommons.org/faq (software y hardware). */
+  licencias: {
+    "cc-by": {
+      nombre: "CC BY 4.0",
+      url: "https://creativecommons.org/licenses/by/4.0/deed.es",
+      para: "Instrucciones, diseños, fotos y videos",
+      resumen: "Puedes copiar, compartir y adaptar este proyecto, incluso para vender lo que hagas con él. La única condición es que me menciones.",
+      permite: ["Copiar y compartir el proyecto", "Adaptarlo y mejorarlo", "Usarlo en clases, talleres o con fines comerciales"],
+      pide: ["Mencionarme como autor: Vicente Cáceres Farías", "Enlazar la licencia", "Avisar si cambiaste algo"]
+    },
+    "mit": {
+      nombre: "MIT",
+      url: "https://opensource.org/license/mit",
+      para: "Código del proyecto",
+      resumen: "Puedes usar, copiar y modificar el código sin pedirme permiso. Solo debes conservar el aviso con mi nombre.",
+      permite: ["Usar el código en cualquier proyecto", "Modificarlo y compartirlo"],
+      pide: ["Conservar el aviso de copyright con mi nombre"]
+    }
+  },
+
+  /* ---------- Blog: proyectos abiertos ----------
+     Proyectos maker propios y abiertos. Cada uno nace de un video (YouTube,
+     Short, Reel o TikTok) y se puede replicar en Instructables, Tinkercad o
+     MakerWorld con un enlace de vuelta a esta pagina, que es el origen.
+     La pestaña "Blog" del menu se activa sola cuando hay al menos uno
+     visible (sin "oculto: true"); mientras tanto sigue apuntando a blog.url.
+
+     Estructura de una ficha, tomada de las notas de Maggie Appleton
+     (maggieappleton.com/ai-enlightenment) y ampliada con video:
+
+     Datos de consulta
+       titulo, resumen    lo que sale en la tarjeta y bajo el titular
+       etapa              Semilla (idea), Brote (en construccion) o Maduro (terminado)
+       fecha              cuando lo plante; "actualizado" cuando lo retome
+       serie              "IA en el taller", "Hecho en un minuto"...
+       tipo, nivel, tiempo, herramienta
+       licencia           id de "licencias" para instrucciones y diseños
+       licenciaCodigo     id de "licencias" para el codigo (opcional)
+       paraQuien          una linea: a quien le sirve
+       formatos           donde ver el video: [{ nombre, url }] (YouTube, Short, Reel, TikTok)
+       publicado          donde mas esta: [{ nombre, url }] (Instructables, Tinkercad, MakerWorld)
+       relacionados       ids de otras fichas
+       posdata            lo que falló, lo que falta, creditos
+     Cuerpo: "bloques", en el orden en que se cuenta. Cada bloque con
+     "titulo" entra al indice de contenido de la ficha.
+       { tipo: "texto",    titulo, valor: ["parrafo", ...] }
+       { tipo: "video",    titulo, formato: "horizontal" | "vertical", src: "ID_YOUTUBE", pie }
+       { tipo: "imagen",   src, pie }
+       { tipo: "lista",    titulo, valor: ["...", ...] }
+       { tipo: "pasos",    titulo, valor: [{ titulo, texto }] }
+       { tipo: "archivos", titulo, valor: [{ texto, url }] }
+       { tipo: "cita",     valor }
+       { tipo: "nota",     valor }   va al margen, junto al bloque anterior
+     "ejemplo: true" marca una ficha de muestra: sale con la etiqueta
+     Ejemplo. Borrala cuando la ficha sea real.
+     ---------------------------------------------------------- */
+  abiertos: [
+    {
+      id: "ejemplo-robot-seguidor-de-linea",
+      ejemplo: true,
+      titulo: "Robot seguidor de línea con Arduino",
+      resumen: "Un robot de cartón y motores baratos que sigue una línea negra. Sirve para enseñar sensores y control en clases.",
+      etapa: "Maduro",
+      fecha: "2026-10-03",
+      actualizado: "2026-10-20",
+      serie: "Robots en el taller",
+      tipo: "Robótica",
+      nivel: "Principiante",
+      tiempo: "3 horas",
+      herramienta: "",
+      anio: "2026",
+      portada: "",
+      etiquetas: ["Robótica", "Arduino", "Principiante", "Robots en el taller"],
+      licencia: "cc-by",
+      licenciaCodigo: "mit",
+      paraQuien: "Docentes y estudiantes que arman su primer robot y quieren entender cómo funciona un sensor, no solo copiar un esquema.",
+      formatos: [
+        { nombre: "YouTube", url: "https://www.youtube.com/@japortafolio" },
+        { nombre: "YouTube Shorts", url: "https://www.youtube.com/@japortafolio" }
+      ],
+      publicado: [
+        { nombre: "Instructables", url: "https://www.instructables.com/" },
+        { nombre: "Tinkercad", url: "https://www.tinkercad.com/" }
+      ],
+      relacionados: ["ejemplo-medidor-de-humedad-con-ia", "ejemplo-soporte-de-celular-laser"],
+      bloques: [
+        { tipo: "texto", titulo: "Por qué lo armé", valor: [
+          "Texto de ejemplo. Aquí cuento de dónde sale la idea: un taller, una pregunta de un estudiante o un problema que quise resolver.",
+          "Segundo párrafo de ejemplo. Cada párrafo trata una sola idea, y lo más importante va primero."
+        ] },
+        { tipo: "nota", valor: "Nota al margen de ejemplo: un dato extra, una fuente o una aclaración que no corta el relato." },
+        { tipo: "video", titulo: "El video completo", formato: "horizontal", src: "", pie: "Video principal, de 6 a 8 minutos, hablando a cámara en el taller." },
+        { tipo: "lista", titulo: "Materiales", valor: ["Arduino Nano", "Dos motores con ruedas", "Sensor infrarrojo de línea", "Cartón o MDF", "Batería de 9 V"] },
+        { tipo: "pasos", titulo: "Armado paso a paso", valor: [
+          { titulo: "Montar el chasis", texto: "Texto de ejemplo del primer paso." },
+          { titulo: "Conectar los motores", texto: "Texto de ejemplo del segundo paso." },
+          { titulo: "Calibrar el sensor", texto: "Texto de ejemplo del tercer paso." },
+          { titulo: "Cargar el código y probar", texto: "Texto de ejemplo del cuarto paso." }
+        ] },
+        { tipo: "imagen", src: "", pie: "Foto de ejemplo: el robot terminado sobre la pista." },
+        { tipo: "cita", valor: "Cita o frase de ejemplo: lo que dijo un estudiante al verlo andar." },
+        { tipo: "texto", titulo: "Qué falló y cómo lo arreglé", valor: [
+          "Texto de ejemplo. Contar los errores es lo que vuelve útil el proyecto: quien lo copie evita los mismos tropiezos."
+        ] },
+        { tipo: "archivos", titulo: "Descargas", valor: [
+          { texto: "Código en GitHub", url: "https://github.com/Fewiyo" },
+          { texto: "Esquema de conexión (PDF)", url: "https://github.com/Fewiyo" }
+        ] }
+      ],
+      posdata: "Posdata de ejemplo: lo que no alcancé a probar, a quién agradezco y qué cambiaría en una segunda versión."
+    },
+    {
+      id: "ejemplo-soporte-de-celular-laser",
+      ejemplo: true,
+      titulo: "Soporte de celular en corte láser",
+      resumen: "Un soporte plegable que se corta de una sola plancha de MDF en menos de un minuto de láser.",
+      etapa: "Brote",
+      fecha: "2026-10-12",
+      serie: "Hecho en un minuto",
+      tipo: "Corte láser",
+      nivel: "Principiante",
+      tiempo: "30 minutos",
+      herramienta: "",
+      anio: "2026",
+      portada: "",
+      etiquetas: ["Corte láser", "Principiante", "Hecho en un minuto"],
+      licencia: "cc-by",
+      paraQuien: "Quien tiene acceso a una cortadora láser, en un colegio o en un fablab, y quiere un proyecto rápido para una primera clase.",
+      formatos: [
+        { nombre: "YouTube Shorts", url: "https://www.youtube.com/@japortafolio" },
+        { nombre: "Instagram", url: "https://www.instagram.com/proyectoja.cl/" },
+        { nombre: "TikTok", url: "https://www.tiktok.com/" }
+      ],
+      publicado: [],
+      relacionados: ["ejemplo-robot-seguidor-de-linea"],
+      bloques: [
+        { tipo: "video", formato: "vertical", src: "", pie: "Versión corta, vertical, de menos de un minuto. Es la misma que va a Reels y TikTok." },
+        { tipo: "texto", titulo: "La idea", valor: [
+          "Texto de ejemplo. En los proyectos cortos el video cuenta casi todo, y esta página guarda los datos que no caben en 60 segundos."
+        ] },
+        { tipo: "nota", valor: "Nota al margen de ejemplo: ajustes de potencia y velocidad según la máquina." },
+        { tipo: "lista", titulo: "Materiales", valor: ["Plancha de MDF de 3 mm", "Archivo de corte (SVG)"] },
+        { tipo: "pasos", titulo: "Pasos", valor: [
+          { titulo: "Abrir el archivo en la cortadora", texto: "Texto de ejemplo." },
+          { titulo: "Cortar y retirar las piezas", texto: "Texto de ejemplo." },
+          { titulo: "Plegar y encajar", texto: "Texto de ejemplo." }
+        ] },
+        { tipo: "archivos", titulo: "Descargas", valor: [{ texto: "Archivo SVG de corte", url: "https://github.com/Fewiyo" }] }
+      ],
+      posdata: "Posdata de ejemplo: falta probarlo con acrílico y con otros grosores."
+    },
+    {
+      id: "ejemplo-medidor-de-humedad-con-ia",
+      ejemplo: true,
+      titulo: "Medidor de humedad con ESP32 programado con IA",
+      resumen: "Un sensor de humedad de suelo con ESP32 que avisa al celular. El código lo escribí con ayuda de una IA, y aquí cuento qué hizo ella y qué hice yo.",
+      etapa: "Brote",
+      fecha: "2026-10-15",
+      serie: "IA en el taller",
+      tipo: "Electrónica",
+      nivel: "Intermedio",
+      tiempo: "4 horas",
+      herramienta: "Claude Code, octubre de 2026",
+      anio: "2026",
+      portada: "",
+      etiquetas: ["Electrónica", "ESP32", "Intermedio", "IA en el taller"],
+      licencia: "cc-by",
+      licenciaCodigo: "mit",
+      paraQuien: "Quien arma proyectos maker y quiere saber, con un caso real, hasta dónde sirve una IA para programar la electrónica.",
+      formatos: [
+        { nombre: "YouTube", url: "https://www.youtube.com/@japortafolio" },
+        { nombre: "YouTube Shorts", url: "https://www.youtube.com/@japortafolio" },
+        { nombre: "TikTok", url: "https://www.tiktok.com/" }
+      ],
+      publicado: [{ nombre: "Instructables", url: "https://www.instructables.com/" }],
+      relacionados: ["ejemplo-robot-seguidor-de-linea"],
+      bloques: [
+        { tipo: "texto", titulo: "La pregunta", valor: [
+          "Texto de ejemplo. Qué quise saber: si una IA puede llevarme de una idea a un circuito que funciona, y dónde necesito saber yo."
+        ] },
+        { tipo: "video", titulo: "El video", formato: "horizontal", src: "", pie: "Video de la serie IA en el taller. Va con la herramienta y la fecha, porque lo que hoy funciona cambia en meses." },
+        { tipo: "cita", valor: "Ejemplo de la instrucción que le di a la IA, escrita tal cual." },
+        { tipo: "lista", titulo: "Qué hizo la IA", valor: ["Escribió la primera versión del código", "Propuso la conexión de los pines", "Explicó los errores del monitor serie"] },
+        { tipo: "lista", titulo: "Qué hice yo", valor: ["Elegí los componentes", "Revisé cada línea antes de cargarla", "Probé el sensor con tierra seca y húmeda"] },
+        { tipo: "nota", valor: "Nota al margen de ejemplo: versión y fecha de la herramienta usada." },
+        { tipo: "texto", titulo: "Lo que no funcionó", valor: [
+          "Texto de ejemplo. Aquí va el error de la IA que habría quemado un componente si no lo hubiera revisado."
+        ] },
+        { tipo: "archivos", titulo: "Descargas", valor: [{ texto: "Código en GitHub", url: "https://github.com/Fewiyo" }] }
+      ],
+      posdata: "Posdata de ejemplo: la herramienta y su versión cambian rápido, así que esta ficha lleva fecha y se actualiza."
+    },
+    {
+      id: "ejemplo-lampara-parametrica",
+      ejemplo: true,
+      titulo: "Lámpara paramétrica impresa en 3D",
+      resumen: "Una lámpara cuya forma cambia con tres números. Todavía es una idea y falta imprimir la primera prueba.",
+      etapa: "Semilla",
+      fecha: "2026-10-28",
+      tipo: "Impresión 3D",
+      nivel: "Intermedio",
+      tiempo: "Por definir",
+      herramienta: "",
+      anio: "2026",
+      portada: "",
+      etiquetas: ["Impresión 3D", "Intermedio", "Diseño paramétrico"],
+      licencia: "cc-by",
+      paraQuien: "Quien imprime en 3D y quiere ver cómo se documenta un proyecto desde la idea, antes de que funcione.",
+      formatos: [{ nombre: "Instagram", url: "https://www.instagram.com/proyectoja.cl/" }],
+      publicado: [
+        { nombre: "MakerWorld", url: "https://makerworld.com/" },
+        { nombre: "Tinkercad", url: "https://www.tinkercad.com/" }
+      ],
+      relacionados: [],
+      bloques: [
+        { tipo: "texto", titulo: "La idea", valor: [
+          "Texto de ejemplo. Una ficha en etapa de semilla muestra poco: la idea, un boceto y lo que falta."
+        ] },
+        { tipo: "imagen", src: "", pie: "Boceto de ejemplo." },
+        { tipo: "lista", titulo: "Lo que falta probar", valor: ["Primera impresión de prueba", "Grosor mínimo de pared", "Tipo de filamento translúcido"] },
+        { tipo: "nota", valor: "Nota al margen de ejemplo: referencias que inspiraron la idea." }
+      ],
+      posdata: "Posdata de ejemplo: esta ficha se irá completando a medida que avance el proyecto."
+    }
+  ],
 
   footer: "Actualmente abierto a colaboraciones"
 };

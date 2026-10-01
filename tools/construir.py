@@ -78,6 +78,24 @@ UI = {
     "abrir": ("Abrir el proyecto", "Open the project"), "codigo": ("Ver el código en GitHub", "View the code on GitHub"),
     "bitacora": ("Bitácora", "Log"), "pantallas": ("Pantallas", "Screens"), "etiquetas": ("Etiquetas", "Tags"),
     "trayectoria": ("Trayectoria", "Experience"), "formacion": ("Formación", "Education"),
+    "volver_blog": ("Volver al blog", "Back to the blog"),
+    "video_vacio": ("Aquí va el video", "The video goes here"),
+    "herramienta": ("Herramienta", "Tool"), "plantado": ("Plantado", "Planted"),
+    "actualizado": ("Actualizado", "Updated"), "serie": ("Serie", "Series"),
+    "para_quien": ("Para quién es:", "Who it is for:"), "contenido": ("Contenido", "Contents"),
+    "posdata": ("Posdata", "Postscript"), "relacionados": ("Relacionados", "Related"),
+    "ejemplo": ("Ejemplo", "Example"), "en_construccion": ("En construcción.", "Under construction."),
+    "ficha_ejemplo": ("Ficha de ejemplo: el texto y los datos son de muestra, para ver cómo se verá un proyecto real.",
+                      "Sample entry: the text and data are placeholders, to show how a real project will look."), "licencia": ("Licencia", "License"),
+    "licencia_codigo": ("Licencia del código", "Code license"), "tiempo": ("Tiempo", "Time"),
+    "materiales": ("Materiales", "Materials"), "pasos": ("Paso a paso", "Step by step"),
+    "archivos": ("Archivos", "Files"), "publicado": ("También está en", "Also on"),
+    "permite": ("Puedes", "You can"), "pide": ("Te pido", "I ask you to"),
+    "abierto": ("Proyecto abierto", "Open project"),
+    "mencion_ficha": ("Este proyecto es abierto: puedes copiarlo y adaptarlo si me mencionas.",
+                      "This project is open: you can copy and adapt it if you credit me."),
+    "ver_licencias": ("Qué significa esta licencia", "What this license means"),
+    "sig_abierto": ("Siguiente proyecto abierto", "Next open project"),
     "herramientas": ("Herramientas", "Tools"), "reconocimientos": ("Reconocimientos", "Awards"),
     "idiomas": ("Idiomas", "Languages"), "instituciones": ("Instituciones", "Institutions"),
 }
@@ -237,6 +255,10 @@ def imagen(src, alt, pre="", tam=TAM_FICHA):
             % (pre, esc(src), v, srcset, tam, w, h, esc(alt)))
 
 
+def abiertos_visibles(sitio):
+    return [a for a in sitio.get("abiertos", []) if not a.get("oculto")]
+
+
 def nav(activa, pre, sitio):
     inicio = pre + PREF + "index.html"
     enlaces = [
@@ -244,7 +266,8 @@ def nav(activa, pre, sitio):
         (tr("servicios"), "#servicios" if activa == "home" else inicio + "#servicios", "servicios", False),
         (tr("historia"), pre + PREF + "historia.html", "historia", False),
         (tr("cv"), "#cv", "cv", False),
-        (sitio["blog"]["texto"], sitio["blog"]["url"], "blog", True),
+        ((sitio["blog"]["texto"], pre + PREF + "blog/", "blog", False) if abiertos_visibles(sitio)
+         else (sitio["blog"]["texto"], sitio["blog"]["url"], "blog", True)),
     ]
     partes = sitio["nombre"].split(" ")
     pila, apellidos = partes[0], " ".join(partes[1:])
@@ -441,6 +464,8 @@ def tarjeta(it, i, pre=""):
     if it.get("sello"):
         estudio = '<span class="card__estudio">%s</span>' % esc(it["sello"])
     rol = ""
+    if it.get("desc"):
+        rol = '<p class="card__desc">%s</p>' % esc(it["desc"])
     if it.get("participacion"):
         rol = '<p class="card__rol"><span>%s:</span> %s</p>' % (tr("mi_rol"), esc(it["participacion"]))
     return (
@@ -920,6 +945,256 @@ def pagina_app(a, sig, idx, sitio, hashes):
         imagen=a.get("portada"), cuerpo=cuerpo, hashes=hashes, jsonld=jsonld, tipo_og="article")
 
 
+# ---------------------------------------------------------------- blog
+
+def licencia_chip(sitio, lid):
+    """Nombre de una licencia, para el sello de la tarjeta."""
+    l = sitio.get("licencias", {}).get(lid)
+    return l["nombre"] if l else ""
+
+
+def items_blog(sitio):
+    items = []
+    for a in abiertos_visibles(sitio):
+        items.append({
+            "href": a["id"] + "/", "img": a.get("portada"), "titulo": a["titulo"],
+            "etiquetas": a.get("etiquetas", []), "org": "",
+            "meta": [a.get("etapa"), a.get("tipo")], "anio": a.get("anio"),
+            "sello": " · ".join(x for x in (tr("ejemplo") if a.get("ejemplo") else "",
+                                            licencia_chip(sitio, a.get("licencia"))) if x),
+            "desc": a.get("resumen"),
+        })
+    items.sort(key=lambda x: -ultimo_anio(x["anio"]))
+    return items
+
+
+def barra_blog(items):
+    """Los mismos filtros del catalogo, sin organizaciones: solo temas.
+    Reusa los ids de la barra para que main.js los maneje igual."""
+    cuenta = {}
+    for it in items:
+        for t in it["etiquetas"]:
+            cuenta[t] = cuenta.get(t, 0) + 1
+    tags = sorted(cuenta, key=lambda t: (-cuenta[t], t.lower()))
+    chips = "".join(
+        '<button class="filtro" type="button" aria-pressed="false" data-tag="%s">%s'
+        '<span class="filtro__n">%d</span></button>' % (esc(t), esc(t), cuenta[t]) for t in tags)
+    return (
+        '<div class="filtros-caja rise" id="filtros"><div class="filtros">'
+        '<button class="filtro is-on" type="button" aria-pressed="true" data-tag="" data-org="">%s'
+        '<span class="filtro__n">%d</span></button>%s</div></div>'
+        '<p class="filtros__estado" id="filtros-estado" role="status"></p>'
+        % (tr("todo"), len(items), chips))
+
+
+def bloque_licencias(sitio):
+    b = sitio["secciones"]["blog"]
+    tarjetas = ""
+    for lid, l in sitio.get("licencias", {}).items():
+        tarjetas += (
+            '<article class="licencia rise" id="licencia-%s"><p class="licencia__para">%s</p>'
+            '<h3><a href="%s" target="_blank" rel="noopener">%s <span aria-hidden="true">&#8599;</span></a></h3>'
+            '<p>%s</p>'
+            '<p class="licencia__lista"><strong>%s</strong></p><ul>%s</ul>'
+            '<p class="licencia__lista"><strong>%s</strong></p><ul>%s</ul></article>'
+            % (esc(lid), esc(l["para"]), esc(l["url"]), esc(l["nombre"]), esc(l["resumen"]),
+               tr("permite"), "".join("<li>%s</li>" % esc(x) for x in l["permite"]),
+               tr("pide"), "".join("<li>%s</li>" % esc(x) for x in l["pide"])))
+    return (
+        '<section class="section" id="licencia"><div class="wrap">'
+        '<div class="section-head rise"><h2>%s</h2><p class="intro">%s</p></div>'
+        '<div class="licencias">%s</div>'
+        '<p class="licencia__ejemplo rise">%s</p></div></section>'
+        % (esc(b["licenciaTitulo"]), esc(b["licenciaIntro"]), tarjetas, esc(b["licenciaEjemplo"])))
+
+
+def pagina_blog(sitio, hashes):
+    pre = SUB + "../"
+    items = items_blog(sitio)
+    tarjetas = "".join(tarjeta(it, i, pre) for i, it in enumerate(items))
+    b = sitio["secciones"]["blog"]
+    cuerpo = (
+        nav("blog", pre, sitio)
+        + '<section class="section" id="blog"><div class="wrap">'
+        + encabezado_seccion(b)
+        + ('<p class="aviso-construccion rise"><strong>%s</strong> %s</p>' % (tr("en_construccion"), esc(b["construccion"]))
+           if b.get("construccion") else "")
+        + (barra_blog(items) + '<div class="projects" id="projects">%s</div>' % tarjetas
+           if items else '<p class="intro">%s</p>' % tr("proximamente"))
+        + "</div></section>"
+        + (bloque_licencias(sitio) if sitio.get("licencias") else "")
+        + pie(pre, sitio)
+    )
+    return documento(
+        sitio=sitio, pre=pre, titulo="%s | %s" % (b["titulo"].rstrip("."), sitio["nombre"]),
+        descripcion=recortar(b["intro"]), ruta="blog/", imagen="assets/img/compartir.jpg",
+        cuerpo=cuerpo, hashes=hashes, tipo_og="website")
+
+
+def video_abierto(b, titulo, pre):
+    """Un video del proyecto. Horizontal (YouTube) o vertical (Short, Reel,
+    TikTok). Sin `src` se ve el marco vacio, para ver como queda."""
+    vertical = b.get("formato") == "vertical"
+    clase = "video video--vertical" if vertical else "video"
+    if b.get("src"):
+        marco = ('<div class="%s"><iframe src="https://www.youtube-nocookie.com/embed/%s" title="%s" '
+                 'loading="lazy" allowfullscreen></iframe></div>' % (clase, esc(b["src"]), esc(titulo)))
+    else:
+        marco = '<div class="%s video--vacio"><span>%s</span></div>' % (clase, tr("video_vacio"))
+    pie_txt = "<figcaption>%s</figcaption>" % esc(b["pie"]) if b.get("pie") else ""
+    return '<figure class="rise">%s%s</figure>' % (marco, pie_txt)
+
+
+def pagina_abierto(a, sig, idx, sitio, hashes):
+    pre = SUB + "../../"
+    lic = sitio.get("licencias", {})
+    l = lic.get(a.get("licencia"))
+    lc = lic.get(a.get("licenciaCodigo"))
+
+    def enlace_lic(x):
+        return '<a href="%s" target="_blank" rel="noopener">%s</a>' % (esc(x["url"]), esc(x["nombre"]))
+
+    # Datos de consulta, bajo el titular (como los de un caso de estudio).
+    datos = [(tr("tipo"), esc(a.get("tipo") or "")), (tr("nivel"), esc(a.get("nivel") or "")),
+             (tr("tiempo"), esc(a.get("tiempo") or "")), (tr("herramienta"), esc(a.get("herramienta") or "")),
+             (tr("licencia"), enlace_lic(l) if l else ""),
+             (tr("licencia_codigo"), enlace_lic(lc) if lc else "")]
+    facts = "".join("<div><span>%s</span>%s</div>" % (k, v) for k, v in datos if v)
+
+    # Linea de crecimiento: etapa del proyecto y fechas, como en las
+    # notas de Maggie Appleton (budding, planted, tended).
+    crecimiento = ""
+    if a.get("etapa"):
+        fechas = " · ".join(x for x in (
+            "%s %s" % (tr("plantado"), esc(a["fecha"])) if a.get("fecha") else "",
+            "%s %s" % (tr("actualizado"), esc(a["actualizado"])) if a.get("actualizado") else "") if x)
+        crecimiento = ('<p class="crecimiento rise"><span class="etapa etapa--%s">%s</span>%s%s</p>'
+                       % (esc(a["etapa"].lower()), esc(a["etapa"]),
+                          '<span>%s</span>' % fechas if fechas else "",
+                          '<span>%s: %s</span>' % (tr("serie"), esc(a["serie"])) if a.get("serie") else ""))
+
+    para = ('<p class="para-quien rise"><span>%s</span> %s</p>' % (tr("para_quien"), esc(a["paraQuien"]))
+            if a.get("paraQuien") else "")
+
+    # Donde ver el video (YouTube, Short, Reel, TikTok) y donde mas esta publicado.
+    def botones(lista, campo):
+        return "".join('<a class="btn btn--linea" href="%s" target="_blank" rel="noopener">%s</a>'
+                       % (esc(x["url"]), esc(x[campo])) for x in lista)
+
+    formatos = ""
+    if a.get("formatos"):
+        formatos = '<p class="acciones rise">%s</p>' % botones(a["formatos"], "nombre")
+
+    # Cuerpo: bloques en el orden en que se cuentan. Una nota va al margen
+    # junto al bloque anterior; el titulo de cada bloque entra al indice.
+    trozos, indice = [], []
+    n = 0
+    for b in a.get("bloques", []):
+        t = ""
+        if b.get("titulo"):
+            n += 1
+            indice.append(("s%d" % n, b["titulo"]))
+            t = '<h2 id="s%d">%s</h2>' % (n, esc(b["titulo"]))
+        k = b["tipo"]
+        if k == "nota":
+            if trozos:
+                trozos[-1][1].append('<aside class="nota-margen">%s</aside>' % esc(b["valor"]))
+            continue
+        if k == "texto":
+            v = b["valor"] if isinstance(b["valor"], list) else [b["valor"]]
+            html_b = '<div class="prose">%s%s</div>' % (t, "".join("<p>%s</p>" % esc(p) for p in v))
+        elif k == "lista":
+            html_b = '<div class="prose">%s<ul>%s</ul></div>' % (t, "".join("<li>%s</li>" % esc(x) for x in b["valor"]))
+        elif k == "pasos":
+            html_b = '<div class="prose">%s</div><ol class="temario">%s</ol>' % (t, "".join(
+                '<li><span class="temario__n">%d</span><span class="temario__t">%s%s</span></li>'
+                % (i + 1, esc(x["titulo"]), '<span class="temario__d">%s</span>' % esc(x["texto"]) if x.get("texto") else "")
+                for i, x in enumerate(b["valor"])))
+        elif k == "archivos":
+            html_b = '<div class="prose">%s</div><p class="acciones">%s</p>' % (t, botones(b["valor"], "texto"))
+        elif k == "cita":
+            html_b = '<blockquote class="quote">%s</blockquote>' % esc(b["valor"])
+        elif k == "video":
+            html_b = (('<div class="prose">%s</div>' % t if t else "") + video_abierto(b, a["titulo"], pre))
+        elif k == "imagen":
+            pie_txt = "<figcaption>%s</figcaption>" % esc(b["pie"]) if b.get("pie") else ""
+            cuerpo_img = (foto_ampliable(b["src"], b.get("pie"), a["titulo"], pre) if b.get("src")
+                          else '<figure class="rise">%s%s</figure>' % (portada_lisa(a["titulo"], idx * 10 + len(trozos)), pie_txt))
+            html_b = cuerpo_img
+        else:
+            continue
+        trozos.append([html_b, []])
+    cuerpo_html = "".join('<div class="fila rise"><div class="fila__col">%s</div>%s</div>'
+                          % (h, "".join(notas)) for h, notas in trozos)
+
+    posdata = ""
+    if a.get("posdata"):
+        posdata = ('<div class="posdata rise" id="posdata"><h2>%s</h2><p>%s</p></div>'
+                   % (tr("posdata"), esc(a["posdata"])))
+        indice.append(("posdata", tr("posdata")))
+    publicado = ""
+    if a.get("publicado"):
+        publicado = ('<h2 class="subhead" id="publicado">%s</h2><p class="acciones rise">%s</p>'
+                     % (tr("publicado"), botones(a["publicado"], "nombre")))
+        indice.append(("publicado", tr("publicado")))
+    por_id = {x["id"]: x for x in sitio.get("abiertos", [])}
+    rel = [por_id[i] for i in a.get("relacionados", []) if i in por_id]
+    relacionados = ""
+    if rel:
+        # Cada relacionado lleva su portada, como una tarjeta del blog.
+        relacionados = ('<h2 class="subhead" id="relacionados">%s</h2><ul class="relacionados rise">%s</ul>' % (
+            tr("relacionados"), "".join(
+                '<li><a href="%s%sblog/%s/"><div class="card__media">%s</div>'
+                '<strong>%s</strong><span>%s</span></a></li>'
+                % (pre, PREF, x["id"], media(x.get("portada"), x["titulo"], 700 + idx * 10 + k, pre),
+                   esc(x["titulo"]), esc(x.get("resumen", ""))) for k, x in enumerate(rel))))
+        indice.append(("relacionados", tr("relacionados")))
+
+    # Indice flotante a la derecha: lleva los titulos de cada parte y marca
+    # la que se esta leyendo (main.js). En el celular pasa arriba del texto.
+    toc = ""
+    if indice:
+        toc = ('<aside class="toc-flotante" aria-label="%s"><nav><p class="eyebrow">%s</p><ol>%s</ol></nav></aside>'
+               % (tr("contenido"), tr("contenido"),
+                  "".join('<li><a href="#%s">%s</a></li>' % (i, esc(t)) for i, t in indice)))
+    chips = "".join('<span class="chip">%s</span>' % esc(t) for t in a.get("etiquetas", []))
+    aviso_lic = ""
+    if l:
+        aviso_lic = ('<p class="case-autoria rise">%s <a href="%s%sblog/#licencia">%s</a></p>'
+                     % (esc(tr("mencion_ficha")), pre, PREF, tr("ver_licencias")))
+    aviso_ej = '<p class="aviso-construccion rise">%s</p>' % esc(tr("ficha_ejemplo")) if a.get("ejemplo") else ""
+    siguiente = ""
+    if sig and sig["id"] != a["id"]:
+        siguiente = ('<a class="next" href="%s%sblog/%s/"><span><span class="eyebrow" style="margin:0;display:block">%s</span>'
+                     '<strong>%s</strong></span><span>&rarr;</span></a>'
+                     % (pre, PREF, sig["id"], tr("sig_abierto"), esc(sig["titulo"])))
+    cuerpo = (
+        nav("blog", pre, sitio)
+        + '<header class="case-head"><div class="wrap">'
+        + '<a class="back" href="%s%sblog/">&larr; %s</a>' % (pre, PREF, tr("volver_blog"))
+        + '<p class="case-estudio rise">%s</p>' % tr("abierto")
+        + '<h1 class="rise">%s</h1>' % esc(a["titulo"])
+        + crecimiento
+        + ('<p class="lead rise">%s</p>' % esc(a["resumen"]) if a.get("resumen") else "")
+        + para + formatos
+        + '<div class="case-facts rise">%s</div></div></header>' % facts
+        + '<section class="section section--tight"><div class="wrap abierto"><div class="abierto__cols">'
+        + '<div class="abierto__main">'
+        + aviso_ej + aviso_lic + cuerpo_html + posdata + publicado + relacionados
+        + ('<h2 class="subhead">%s</h2><div class="chips rise">%s</div>' % (tr("etiquetas"), chips) if chips else "")
+        + siguiente
+        + "</div>" + toc + "</div></div></section>" + pie(pre, sitio)
+    )
+    jsonld = ('{"@context":"https://schema.org","@type":"CreativeWork","name":"%s","description":"%s",'
+              '"author":{"@type":"Person","name":"%s"},"url":"%s/blog/%s/","inLanguage":"%s"%s}'
+              % (a["titulo"], recortar(a.get("resumen", ""), 200), sitio["nombre"], BASE, a["id"], LANG,
+                 ',"license":"%s"' % l["url"] if l else ""))
+    return documento(
+        sitio=sitio, pre=pre, titulo="%s | %s" % (a["titulo"], sitio["nombre"]),
+        descripcion=recortar(a.get("resumen") or a["titulo"]), ruta="blog/%s/" % a["id"],
+        imagen=a.get("portada"), cuerpo=cuerpo, hashes=hashes, jsonld=jsonld, tipo_og="article")
+
+
 # ---------------------------------------------------------------- redirecciones
 
 def redireccion(destino_rel, titulo):
@@ -988,8 +1263,10 @@ def traducir(v, dic, faltan, clave=None):
     return v
 
 
-NO_TRADUCIR = {"id", "img", "src", "url", "link", "repo", "portada", "retrato", "email", "codigo", "fecha", "org"}
-ESTRUCTURA = {"imagen", "texto", "lista", "cita", "enlaces", "video", "youtube"}
+NO_TRADUCIR = {"id", "img", "src", "url", "link", "repo", "portada", "retrato", "email", "codigo", "fecha", "org", "licencia", "licenciaCodigo"}
+ESTRUCTURA = {"imagen", "texto", "lista", "cita", "enlaces", "video", "youtube",
+              "YouTube", "YouTube Shorts", "Instagram", "TikTok", "Instructables", "Tinkercad",
+              "MakerWorld", "GitHub", "Printables", "nota", "pasos", "archivos", "horizontal", "vertical"}
 
 
 def construir_idioma(sitio, hashes, escritos, rutas):
@@ -1027,6 +1304,22 @@ def construir_idioma(sitio, hashes, escritos, rutas):
         RUTA = "apps/%s/" % a["id"]
         escritos.append(escribir(PREF + RUTA + "index.html", pagina_app(a, sig, i, sitio, hashes)))
         # las escondidas existen pero no entran al sitemap
+        if not a.get("oculto"):
+            ruta(RUTA)
+
+    # blog: proyectos maker abiertos. Escondidos o no, las paginas existen;
+    # solo las visibles entran al sitemap.
+    abiertos = sitio.get("abiertos", [])
+    vis = abiertos_visibles(sitio)
+    RUTA = "blog/"
+    escritos.append(escribir(PREF + RUTA + "index.html", pagina_blog(sitio, hashes)))
+    if vis:
+        ruta(RUTA)
+    for i, a in enumerate(abiertos):
+        pos = next((k for k, x in enumerate(vis) if x["id"] == a["id"]), -1)
+        sig = vis[(pos + 1) % len(vis)] if pos >= 0 else (vis[0] if vis else a)
+        RUTA = "blog/%s/" % a["id"]
+        escritos.append(escribir(PREF + RUTA + "index.html", pagina_abierto(a, sig, i, sitio, hashes)))
         if not a.get("oculto"):
             ruta(RUTA)
 

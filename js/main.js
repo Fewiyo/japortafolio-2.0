@@ -290,6 +290,25 @@
     addEventListener("hashchange", desdeHash);
   }
 
+  /* ---------- Indice flotante de las fichas del blog ----------
+     Marca en el indice la parte que se esta leyendo. Sin JavaScript el
+     indice sigue funcionando como enlaces a cada titulo. */
+  var tocLinks = [].slice.call(document.querySelectorAll(".toc-flotante a[href^='#']"));
+  if (tocLinks.length) {
+    var partes = tocLinks.map(function (a) { return document.getElementById(a.getAttribute("href").slice(1)); });
+    /* La parte activa es la última cuyo título ya pasó la altura de la barra. */
+    var marcarParte = function () {
+      var actual = -1;
+      partes.forEach(function (p, i) { if (p && p.getBoundingClientRect().top <= 140) actual = i; });
+      tocLinks.forEach(function (a, i) {
+        if (i === actual) a.setAttribute("aria-current", "true");
+        else a.removeAttribute("aria-current");
+      });
+    };
+    addEventListener("scroll", marcarParte, { passive: true });
+    marcarParte();
+  }
+
   /* ---------- Formulario de contacto ----------
      Sin JavaScript el botón del inicio baja al pie con el correo. */
   var dialogo = document.getElementById("form-contacto");

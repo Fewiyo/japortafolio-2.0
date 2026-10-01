@@ -1,0 +1,97 @@
+3 horas
+30 minutos
+4 horas
+Abrir el archivo en la cortadora
+Archivo SVG de corte
+Archivo de corte (SVG)
+Arduino Nano
+Armado paso a paso
+Batería de 9 V
+Boceto de ejemplo.
+Brote
+Calibrar el sensor
+Cargar el código y probar
+Cartón o MDF
+Cita o frase de ejemplo: lo que dijo un estudiante al verlo andar.
+Claude Code, octubre de 2026
+Conectar los motores
+Cortar y retirar las piezas
+Corte láser
+Código en GitHub
+Descargas
+Diseño paramétrico
+Docentes y estudiantes que arman su primer robot y quieren entender cómo funciona un sensor, no solo copiar un esquema.
+Dos motores con ruedas
+Ejemplo de la instrucción que le di a la IA, escrita tal cual.
+El video
+El video completo
+Elegí los componentes
+Escribió la primera versión del código
+Esquema de conexión (PDF)
+Explicó los errores del monitor serie
+Foto de ejemplo: el robot terminado sobre la pista.
+Grosor mínimo de pared
+Hecho en un minuto
+IA en el taller
+Intermedio
+La idea
+La pregunta
+Las fichas con la etiqueta Ejemplo son de muestra, para ver cómo se verán los proyectos reales cuando los suba.
+Lo que falta probar
+Lo que no funcionó
+Lámpara paramétrica impresa en 3D
+Maduro
+Materiales
+Medidor de humedad con ESP32 programado con IA
+Montar el chasis
+Nota al margen de ejemplo: ajustes de potencia y velocidad según la máquina.
+Nota al margen de ejemplo: referencias que inspiraron la idea.
+Nota al margen de ejemplo: un dato extra, una fuente o una aclaración que no corta el relato.
+Nota al margen de ejemplo: versión y fecha de la herramienta usada.
+Pasos
+Plancha de MDF de 3 mm
+Plegar y encajar
+Por definir
+Por qué lo armé
+Posdata de ejemplo: esta ficha se irá completando a medida que avance el proyecto.
+Posdata de ejemplo: falta probarlo con acrílico y con otros grosores.
+Posdata de ejemplo: la herramienta y su versión cambian rápido, así que esta ficha lleva fecha y se actualiza.
+Posdata de ejemplo: lo que no alcancé a probar, a quién agradezco y qué cambiaría en una segunda versión.
+Primera impresión de prueba
+Probé el sensor con tierra seca y húmeda
+Propuso la conexión de los pines
+Quien arma proyectos maker y quiere saber, con un caso real, hasta dónde sirve una IA para programar la electrónica.
+Quien imprime en 3D y quiere ver cómo se documenta un proyecto desde la idea, antes de que funcione.
+Quien tiene acceso a una cortadora láser, en un colegio o en un fablab, y quiere un proyecto rápido para una primera clase.
+Qué falló y cómo lo arreglé
+Qué hice yo
+Qué hizo la IA
+Revisé cada línea antes de cargarla
+Robot seguidor de línea con Arduino
+Robots en el taller
+Segundo párrafo de ejemplo. Cada párrafo trata una sola idea, y lo más importante va primero.
+Semilla
+Sensor infrarrojo de línea
+Soporte de celular en corte láser
+Texto de ejemplo del cuarto paso.
+Texto de ejemplo del primer paso.
+Texto de ejemplo del segundo paso.
+Texto de ejemplo del tercer paso.
+Texto de ejemplo.
+Texto de ejemplo. Aquí cuento de dónde sale la idea: un taller, una pregunta de un estudiante o un problema que quise resolver.
+Texto de ejemplo. Aquí va el error de la IA que habría quemado un componente si no lo hubiera revisado.
+Texto de ejemplo. Contar los errores es lo que vuelve útil el proyecto: quien lo copie evita los mismos tropiezos.
+Texto de ejemplo. En los proyectos cortos el video cuenta casi todo, y esta página guarda los datos que no caben en 60 segundos.
+Texto de ejemplo. Qué quise saber: si una IA puede llevarme de una idea a un circuito que funciona, y dónde necesito saber yo.
+Texto de ejemplo. Una ficha en etapa de semilla muestra poco: la idea, un boceto y lo que falta.
+Tipo de filamento translúcido
+Un robot de cartón y motores baratos que sigue una línea negra. Sirve para enseñar sensores y control en clases.
+Un sensor de humedad de suelo con ESP32 que avisa al celular. El código lo escribí con ayuda de una IA, y aquí cuento qué hizo ella y qué hice yo.
+Un soporte plegable que se corta de una sola plancha de MDF en menos de un minuto de láser.
+Una lámpara cuya forma cambia con tres números. Todavía es una idea y falta imprimir la primera prueba.
+Versión corta, vertical, de menos de un minuto. Es la misma que va a Reels y TikTok.
+Video de la serie IA en el taller. Va con la herramienta y la fecha, porque lo que hoy funciona cambia en meses.
+Video principal, de 6 a 8 minutos, hablando a cámara en el taller.
+ejemplo-medidor-de-humedad-con-ia
+ejemplo-robot-seguidor-de-linea
+ejemplo-soporte-de-celular-laser

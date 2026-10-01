@@ -845,3 +845,88 @@ button.btn{font:inherit; font-size:14px; border:0; cursor:pointer}
   .org{margin-bottom:28px; padding:22px 0 20px}
   .org__texto{font-size:15px}
 }
+
+/* ---------- Blog: proyectos abiertos y licencias ----------
+   Las tarjetas son las mismas del catalogo; aqui solo la descripcion
+   corta y el bloque que explica cada licencia. */
+.card__desc{margin-top:10px; font-size:14px; line-height:1.45; color:var(--muted)}
+.licencias{display:grid; grid-template-columns:repeat(2, 1fr); gap:var(--gap-card)}
+.licencia{background:var(--card); padding:28px}
+.licencia__para{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:10px}
+.licencia h3{font-family:var(--titulos); font-size:28px; line-height:1.2; margin-bottom:12px}
+.licencia p{font-size:15px; line-height:1.55}
+.licencia__lista{margin-top:18px; font-size:13px; color:var(--muted)}
+.licencia ul{margin:6px 0 0 18px; font-size:15px; line-height:1.55}
+.licencia__ejemplo{margin-top:24px; max-width:62ch; font-size:14px; line-height:1.55; color:var(--muted)}
+@media (max-width:819px){
+  .licencias{grid-template-columns:1fr}
+}
+
+/* ---------- Blog: ficha de proyecto abierto ----------
+   Estructura tomada de las notas de Maggie Appleton: etapa y fechas bajo
+   el titulo, para quien es, indice de contenido, notas al margen y
+   posdata. Aqui ademas el video es una pieza mas del relato. */
+.aviso-construccion{
+  max-width:62ch; margin:0 0 28px; padding:14px 16px;
+  border:1px dashed var(--faint); border-radius:10px;
+  font-size:14px; line-height:1.5; color:var(--muted);
+}
+.aviso-construccion strong{color:var(--fg); font-weight:600}
+.crecimiento{
+  display:flex; flex-wrap:wrap; align-items:center; gap:8px 18px;
+  margin-top:18px; font-size:13px; color:var(--muted);
+}
+.etapa{
+  display:inline-flex; align-items:center; gap:8px; padding:4px 12px;
+  border:1px solid var(--line); border-radius:999px; color:var(--fg);
+  font-size:12px; letter-spacing:.12em; text-transform:uppercase;
+}
+.etapa::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--fg)}
+.etapa--semilla::before,.etapa--seed::before{background:transparent; border:1px solid var(--fg)}
+.etapa--brote::before,.etapa--sprout::before{background:linear-gradient(90deg, var(--fg) 50%, transparent 50%); border:1px solid var(--fg)}
+.para-quien{max-width:52ch; margin-top:18px; font-size:15px; line-height:1.55; color:var(--muted)}
+.para-quien span{color:var(--fg)}
+
+/* Dos columnas: el relato a la izquierda y el indice flotante a la derecha. */
+.abierto__cols{display:grid; grid-template-columns:minmax(0,720px) 240px; column-gap:96px; align-items:start}
+.abierto__main{min-width:0}
+.toc-flotante{position:sticky; top:96px; align-self:start}
+.toc-flotante .eyebrow{margin-bottom:14px}
+.toc-flotante ol{list-style:none; counter-reset:toc; display:grid; margin:0; padding:0; border-left:1px solid var(--line)}
+.toc-flotante li{counter-increment:toc}
+.toc-flotante a{
+  display:block; padding:7px 0 7px 16px; margin-left:-1px; border-left:2px solid transparent;
+  font-size:14px; line-height:1.4; color:var(--muted);
+  transition:color .2s var(--ease), border-color .2s var(--ease);
+}
+.toc-flotante a:hover{color:var(--fg)}
+.toc-flotante a[aria-current="true"]{color:var(--fg); border-left-color:var(--fg)}
+.abierto [id]{scroll-margin-top:96px}
+/* Cada bloque va seguido de sus notas, en el mismo ancho del texto. */
+.fila{margin-bottom:72px}
+.fila__col{min-width:0}
+.fila .video{border-radius:12px}
+.nota-margen{
+  max-width:62ch; margin-top:18px; padding-left:14px; border-left:2px solid var(--line);
+  font-size:13px; line-height:1.55; color:var(--muted);
+}
+.video--vertical{aspect-ratio:9/16; max-width:300px}
+.video--vacio{display:flex; align-items:center; justify-content:center; border:1px dashed var(--faint)}
+.video--vacio span{font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--faint)}
+.fila figure figcaption{margin-top:10px; font-size:13px; color:var(--muted)}
+.posdata{max-width:62ch; margin-top:48px; padding-top:24px; border-top:1px solid var(--line)}
+.posdata h2{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); font-weight:400; margin-bottom:12px}
+.posdata p{font-size:15px; line-height:1.6}
+.relacionados{list-style:none; display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:var(--gap-card); padding:0}
+.relacionados a{display:block}
+.relacionados .card__media{margin-bottom:12px; border-radius:12px; overflow:hidden}
+.relacionados strong{display:block; font-weight:500; line-height:1.3}
+.relacionados span{display:block; margin-top:4px; font-size:14px; line-height:1.45; color:var(--muted)}
+@media (max-width:999px){
+  .abierto__cols{grid-template-columns:minmax(0,1fr)}
+  .toc-flotante{position:static; order:-1; margin-bottom:40px}
+  .relacionados{grid-template-columns:1fr}
+}
+.abierto .prose h2{margin-top:0}
+.abierto .fila{margin-bottom:72px}
+.abierto .quote{margin:0}
