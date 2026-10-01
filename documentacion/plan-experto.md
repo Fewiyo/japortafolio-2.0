@@ -145,7 +145,14 @@ instituciones sin fondos SEP no la requieren.
 - **Disponibilidad:** unas 10 horas semanales para asesorías y charlas, **pero no se publica**:
   el sitio no menciona horas, para poder adaptarse a lo que pida cada cliente.
 - **Etapa 2 del plan:** videos en YouTube sobre esos dos temas, para ir armando público. Parte
-  cuando el portafolio esté más o menos listo.
+  cuando el portafolio esté más o menos listo. **Actualizado el 1 de octubre:** parte ahora y es un
+  solo canal, ver "El canal" más abajo.
+- **El canal (1 de octubre de 2026):** se llama **Proyecto Ja**, usuario `@japortafolio`, con
+  el correo del proyecto proyectoja.edu@gmail.com (ya creado). Cubre el Magíster en Ciencias del
+  Diseño de la UAI y las innovaciones e integraciones de IA, hablando a cámara con fondo maker.
+  Es el origen de las charlas: los dos temas se prueban en el canal y de él salen. Cada video
+  lleva su página en el blog del sitio, que vive dentro del sitio y aún no existe. Plan completo
+  en [`canal-youtube.md`](canal-youtube.md).
 
 ### Qué cambia por esto
 
@@ -189,6 +196,10 @@ llamado antes de postular. Los cargos de fablab, diseño de experiencias, coordi
 y STEAM sí calzan con la formación.
 
 ## 7. Falta
+
+0. **Canal Proyecto Ja:** crearlo con el correo del proyecto, confirmar `@japortafolio`, reservar
+   el mismo usuario en Instagram y LinkedIn, confirmar que el micrófono Boya BY-V2 (Lightning)
+   sirve con el iPhone, y construir la sección de blog en el sitio antes del primer video.
 
 1. **LinkedIn:** hoy dice "Diseñador Industrial / MAKER / Docente STEAM". Se edita a mano. Propuesta:
    "Diseñador industrial | Diseño de experiencias de aprendizaje | Fablabs y STEAM".
