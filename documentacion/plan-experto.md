@@ -130,11 +130,49 @@ instituciones sin fondos SEP no la requieren.
 
 ---
 
-## 5. Lo que necesito de Vicente
+## 5. Decisiones de Vicente (1 de octubre de 2026)
 
-1. ¿Ya enviaste la postulación a la UDP?
-2. ¿Qué cargos de la lista te interesan más, en orden? Con eso se ajusta el titular y el CV.
-3. ¿Ofreces charlas? ¿Sobre qué temas y en qué formato? ¿Has dado alguna?
-4. ¿Cuánto tiempo de tu semana puedes dedicar a asesorías, además del trabajo en Ideo Maker?
-5. ¿Qué cobras o piensas cobrar por charla y por hora de clases? Eso no se publica, pero ayuda a
-   armar los textos.
+- **UDP:** todavía no postula. Cierra el 6 de octubre.
+- **Cargos que le interesan** (sin orden dentro de la lista): coordinador de proyectos de
+  innovación educativa, jefe de proyectos en fundaciones, asesor técnico-pedagógico,
+  investigador aplicado, conferencista invitado, profesor por hora en universidades e
+  institutos, jefe de fablab, jefe de diseño de experiencias, diseñador de servicios, jefe de
+  diseño web y producto digital, encargado de laboratorio de prototipado, coordinador STEAM o
+  de innovación, diseñador instruccional.
+- **Charlas:** nunca ha dado una. Los temas son (1) la cultura maker en Chile y cómo se unen la
+  educación y la tecnología a través del diseño, y (2) inteligencia artificial aplicada a la
+  creación de proyectos maker. El sitio no debe decir que ya dio charlas.
+- **Disponibilidad:** unas 10 horas semanales para asesorías y charlas, **pero no se publica**:
+  el sitio no menciona horas, para poder adaptarse a lo que pida cada cliente.
+- **Etapa 2 del plan:** videos en YouTube sobre esos dos temas, para ir armando público. Parte
+  cuando el portafolio esté más o menos listo.
+
+### Qué cambia por esto
+
+1. **Los cargos se agrupan en tres ejes**, y el sitio y el CV se arman en torno a ellos:
+   - *Proyectos y educación:* coordinador de proyectos, jefe de proyectos en fundaciones, ATP,
+     coordinador STEAM o de innovación, diseñador instruccional.
+   - *Fablab y diseño:* jefe de fablab, encargado de laboratorio de prototipado, jefe de diseño
+     de experiencias, diseñador de servicios, jefe de diseño web y producto digital.
+   - *Conocimiento:* investigador aplicado, profesor por hora, conferencista invitado.
+2. **Fase 4 queda definida:** son los videos de YouTube. Cada video lleva su página escrita en el
+   sitio, porque la página es lo que citan los buscadores y las IA; el video se hunde en el feed
+   en pocos días. Los dos primeros: "Cultura maker en Chile" y "IA para crear proyectos maker".
+3. **Las charlas se pueden ofrecer sin haber dado ninguna**, si el sitio muestra el tema, a
+   quién va dirigida y, cuando existan, los videos como prueba. Los videos son la evidencia que
+   hoy falta.
+
+## 6. Hecho en el sitio el 1 de octubre
+
+- Se sumaron dos servicios: **Charlas y conferencias** y **Docencia en educación superior**, con
+  traducción al inglés.
+- El título de la sección pasó a "Charlas, clases, asesoría y capacitación en innovación STEAM,
+  maker y metodologías de diseño."
+
+## 7. Falta
+
+- Decidir el titular del inicio y el rol bajo el nombre ("Diseñador industrial") según los cargos
+  de arriba.
+- Reescribir los tres CV con el enfoque por eje.
+- Escribir las dos páginas de charla, o las fichas de los dos videos, cuando existan.
+- Postular a la UDP antes del 6 de octubre.
