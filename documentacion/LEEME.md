@@ -8,6 +8,7 @@ Qué hay en esta carpeta y para qué sirve cada cosa.
 |---|---|---|
 | [`PROYECTO.md`](PROYECTO.md) | Traspaso técnico completo. Arquitectura y por qué es así, mapa de archivos, cómo agregar contenido, reglas de privacidad, qué hay instalado, y las trampas conocidas | Otra IA, otra persona, o Vicente en seis meses |
 | [`Proyecto-portafolio.docx`](Proyecto-portafolio.docx) | Estado del proyecto, hallazgos de la investigación, referentes, plan por fases y objetivos | Para leer o mandar. Tiene espacio para anotar la próxima actualización |
+| [`plan-experto.md`](plan-experto.md) | **Plan vigente desde el 1 de octubre de 2026.** Reorienta el portafolio a Vicente como persona experta: cargos a los que postular, servicios como persona, fases nuevas. Reemplaza el enfoque comercial del docx | Vicente |
 | [`linea-base-2026-09-20.md`](linea-base-2026-09-20.md) | La medición del día en que el sitio empezó a entregar HTML de verdad. Búsqueda web y respuestas de tres IA, con el montaje para repetirla | Se compara contra la próxima medición |
 | [`Ideo-Maker-posicionamiento.docx`](Ideo-Maker-posicionamiento.docx) | Diagnóstico y pasos para Ideo Maker SPA, a partir de la misma medición | Para mandar a Ideo Maker |
 | [`casos-ideo-maker.md`](casos-ideo-maker.md) | El trabajo en Ideo Maker desde 2022, ordenado en candidatos a proyecto, con lo que falta para subir cada uno | Vicente, para decidir qué se publica (Fase C del plan) |

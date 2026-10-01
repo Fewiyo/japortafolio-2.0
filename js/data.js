@@ -6,12 +6,12 @@
 const SITE = {
   /* ---------- Identidad ---------- */
   nombre: "Vicente Cáceres Farías",
-  rol: "Diseñador industrial",
+  rol: "Diseñador industrial · Experiencias de aprendizaje",
   email: "vicentecfarias@gmail.com",
 
   /* Titular del inicio. El texto entre <em> queda en gris. */
   titular:
-    "Hola, soy Vicente, diseñador industrial experto en <em>laboratorios maker, educación STEAM e innovación</em>.",
+    "Hola, soy Vicente, diseñador industrial experto en <em>diseño de experiencias de aprendizaje, laboratorios maker y STEAM</em>.",
 
   /* Frase corta bajo el botón */
   bajada:
@@ -123,7 +123,7 @@ const SITE = {
     },
     servicios: {
       eyebrow: "02 / Servicios",
-      titulo: "Capacitación y consultoría en innovación STEAM, maker y metodologías de diseño.",
+      titulo: "Charlas, clases, asesoría y capacitación en innovación STEAM, maker y metodologías de diseño.",
       intro: ""
     }
   },
@@ -164,6 +164,16 @@ const SITE = {
 
   /* ---------- Servicios ---------- */
   servicios: [
+    {
+      titulo: "Charlas y conferencias",
+      texto:
+        "Charlas sobre la cultura maker en Chile, sobre cómo se unen la educación y la tecnología a través del diseño, y sobre inteligencia artificial aplicada a la creación de proyectos maker. Para congresos, colegios, universidades y equipos."
+    },
+    {
+      titulo: "Docencia en educación superior",
+      texto:
+        "Clases y talleres de prototipado, fabricación digital, innovación y metodologías de diseño en universidades e institutos, desde una sesión invitada hasta una asignatura completa."
+    },
     {
       titulo: "Consultoría en innovación STEAM y maker",
       texto:
