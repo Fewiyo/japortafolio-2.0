@@ -607,6 +607,46 @@ const SITE = {
       ]
     },
     {
+      id: "molde-cnc-yeso",
+      titulo: "Un molde, dos métodos de fabricación",
+      sello: "Ejercicio de fabricación digital",
+      cliente: "",
+      participacion: "Modelado, fabricación y registro del proceso",
+      anio: "2026",
+      tags: ["Fabricación digital", "CNC", "Impresión 3D", "Moldes", "Modelado 3D"],
+      resumen:
+        "Una misma pieza modelada en Rhinoceros y fabricada por dos caminos: fresada en madera para vaciar cemento, e impresa en 3D para vaciar yeso.",
+      img: "assets/img/proyectos/molde-cnc-yeso/11-pieza-cemento.jpg",
+      bloques: [
+        { tipo: "texto", valor: "Una pieza de caras facetadas, modelada una sola vez y fabricada de dos maneras para comparar cómo se comporta cada método. De un lado, un molde tallado en madera con CNC router, para vaciar cemento. Del otro, moldes impresos en 3D, para vaciar yeso." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/01-rhino.jpg", pie: "El modelo en Rhinoceros. De él salen las dos ramas." },
+        { tipo: "texto", titulo: "Método A: CNC router y cemento", valor: "Se imprime en 3D el modelo para verlo en la mano y se prepara el archivo que lee la máquina CNC. Sobre la cama de sacrificio, un tablero de pino asegurado a la máquina, se fresa en madera la contraforma de la pieza, es decir su negativo." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/02-impresion-3d.jpg", pie: "Impresión 3D a partir del archivo de Rhino." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/03-archivo-cnc.jpg", pie: "Preparación del archivo: el modelo 3D pasa al formato que lee la CNC." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/04-cama-de-sacrificio.jpg", pie: "Se asegura la cama de sacrificio sobre la máquina." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/05-inicio-cnc.jpg", pie: "Inicio del fresado." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/06-cnc-en-proceso.jpg", pie: "La CNC tallando la contraforma en madera de pino." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/07-molde-de-madera.jpg", pie: "El molde de madera terminado." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/08-vaciado-cemento.jpg", pie: "Vaciado de cemento en el molde de madera." },
+        { tipo: "texto", titulo: "El desmolde difícil", valor: "El cemento quedó muy adherido a la madera. Hubo que usar una sierra de banda para reducir el material de madera y retirarlo poco a poco." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/09-desmolde-cemento.jpg", pie: "Retirando el cemento con ayuda de la sierra de banda." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/10-pieza-retirada.jpg", pie: "La pieza, ya fuera del molde." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/11-pieza-cemento.jpg", pie: "La pieza final en cemento, con pigmento amarillo para un acabado amarillo natural." },
+        { tipo: "texto", titulo: "Método B: molde impreso en 3D y yeso", valor: "Aquí los moldes se imprimen directamente desde el modelo de Rhino. Se vacía yeso en el molde impreso, se retira el primer molde y se extrae la pieza. El proceso es más directo." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/12-moldes-3d.jpg", pie: "Los moldes impresos en 3D." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/13-vaciado-yeso.jpg", pie: "Vaciado de yeso dentro del molde impreso." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/14-retiro-molde.jpg", pie: "Retiro del primer molde." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/15-pieza-extraida.jpg", pie: "La pieza, extraída." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/16-pieza-yeso-1.jpg", pie: "La pieza final en yeso." },
+        { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/17-pieza-yeso-2.jpg", pie: "La pieza final en yeso, otra vista." },
+        { tipo: "texto", titulo: "Qué comparar", valor: "El método A, con CNC y cemento, exige más herramientas y tiene un desmolde complicado. El método B, con impresión 3D y yeso, es más directo." },
+        { tipo: "enlaces", titulo: "Descargas", valor: [
+          { texto: "Lámina explicativa del proceso (PDF)", fuente: "Los dos métodos, paso a paso", url: "assets/files/lamina-proceso-molde.pdf" },
+          { texto: "Modelo 3D de la pieza (Rhinoceros, .3dm)", fuente: "Para abrir en Rhino y fabricar la pieza", url: "assets/files/molde-rhino.3dm" }
+        ] }
+      ]
+    },
+    {
       id: "diseno-editorial",
       titulo: "Plan Nacional RAM",
       estudio: "Converso",

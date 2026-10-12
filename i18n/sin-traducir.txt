@@ -2,6 +2,8 @@
 30 minutos
 4 horas
 Abrir el archivo en la cortadora
+Análisis de datos
+Aquí los moldes se imprimen directamente desde el modelo de Rhino. Se vacía yeso en el molde impreso, se retira el primer molde y se extrae la pieza. El proceso es más directo.
 Archivo SVG de corte
 Archivo de corte (SVG)
 Arduino Nano
@@ -12,17 +14,27 @@ Brote
 Calibrar el sensor
 Cargar el código y probar
 Cartón o MDF
+Ciencia de datos
 Cita o frase de ejemplo: lo que dijo un estudiante al verlo andar.
 Claude Code, octubre de 2026
 Conectar los motores
 Cortar y retirar las piezas
 Corte láser
 Código en GitHub
+Datos abiertos
+Datos, Educación
 Descargas
 Diseño paramétrico
 Docentes y estudiantes que arman su primer robot y quieren entender cómo funciona un sensor, no solo copiar un esquema.
+Dos miradas al gasto del Estado con datos abiertos: hacia dónde se mueve el presupuesto y qué compras se salen de lo normal.
 Dos motores con ruedas
 Ejemplo de la instrucción que le di a la IA, escrita tal cual.
+Ejercicio de fabricación digital
+El cemento quedó muy adherido a la madera. Hubo que usar una sierra de banda para reducir el material de madera y retirarlo poco a poco.
+El desmolde difícil
+El modelo en Rhinoceros. De él salen las dos ramas.
+El molde de madera terminado.
+El método A, con CNC y cemento, exige más herramientas y tiene un desmolde complicado. El método B, con impresión 3D y yeso, es más directo.
 El video
 El video completo
 Elegí los componentes
@@ -30,24 +42,43 @@ Escribió la primera versión del código
 Esquema de conexión (PDF)
 Explicó los errores del monitor serie
 Foto de ejemplo: el robot terminado sobre la pista.
+Gasto público en Chile, con datos abiertos
 Grosor mínimo de pared
 Hecho en un minuto
 IA en el taller
+Impresión 3D a partir del archivo de Rhino.
+Inicio del fresado.
 Intermedio
+La CNC tallando la contraforma en madera de pino.
 La idea
+La pieza final en cemento, con pigmento amarillo para un acabado amarillo natural.
+La pieza final en yeso, otra vista.
+La pieza final en yeso.
+La pieza, extraída.
+La pieza, ya fuera del molde.
 La pregunta
 Las fichas con la etiqueta Ejemplo son de muestra, para ver cómo se verán los proyectos reales cuando los suba.
 Lo que falta probar
 Lo que no funcionó
+Los datos se ordenan con SQL en Postgres, el análisis y los modelos van en Python y los resultados se muestran en Tableau Public. El código y la metodología quedan en GitHub.
+Los dos métodos, paso a paso
+Los moldes impresos en 3D.
+Lámina explicativa del proceso (PDF)
 Lámpara paramétrica impresa en 3D
 Maduro
 Materiales
 Medidor de humedad con ESP32 programado con IA
+Modelado, fabricación y registro del proceso
+Modelo 3D de la pieza (Rhinoceros, .3dm)
+Moldes
 Montar el chasis
+Método A: CNC router y cemento
+Método B: molde impreso en 3D y yeso
 Nota al margen de ejemplo: ajustes de potencia y velocidad según la máquina.
 Nota al margen de ejemplo: referencias que inspiraron la idea.
 Nota al margen de ejemplo: un dato extra, una fuente o una aclaración que no corta el relato.
 Nota al margen de ejemplo: versión y fecha de la herramienta usada.
+Para abrir en Rhino y fabricar la pieza
 Pasos
 Plancha de MDF de 3 mm
 Plegar y encajar
@@ -57,18 +88,27 @@ Posdata de ejemplo: esta ficha se irá completando a medida que avance el proyec
 Posdata de ejemplo: falta probarlo con acrílico y con otros grosores.
 Posdata de ejemplo: la herramienta y su versión cambian rápido, así que esta ficha lleva fecha y se actualiza.
 Posdata de ejemplo: lo que no alcancé a probar, a quién agradezco y qué cambiaría en una segunda versión.
+Postgres
+Preparación del archivo: el modelo 3D pasa al formato que lee la CNC.
 Primera impresión de prueba
 Probé el sensor con tierra seca y húmeda
 Propuso la conexión de los pines
 Quien arma proyectos maker y quiere saber, con un caso real, hasta dónde sirve una IA para programar la electrónica.
 Quien imprime en 3D y quiere ver cómo se documenta un proyecto desde la idea, antes de que funcione.
 Quien tiene acceso a una cortadora láser, en un colegio o en un fablab, y quiere un proyecto rápido para una primera clase.
+Qué comparar
 Qué falló y cómo lo arreglé
 Qué hice yo
 Qué hizo la IA
+Retirando el cemento con ayuda de la sierra de banda.
+Retiro del primer molde.
 Revisé cada línea antes de cargarla
 Robot seguidor de línea con Arduino
 Robots en el taller
+SQL, Python y Tableau Public
+Se asegura la cama de sacrificio sobre la máquina.
+Se define el alcance en dos partes, macro con Dipres y micro con ChileCompra, y las reglas para no confundir lo atípico con lo irregular.
+Se imprime en 3D el modelo para verlo en la mano y se prepara el archivo que lee la máquina CNC. Sobre la cama de sacrificio, un tablero de pino asegurado a la máquina, se fresa en madera la contraforma de la pieza, es decir su negativo.
 Segundo párrafo de ejemplo. Cada párrafo trata una sola idea, y lo más importante va primero.
 Semilla
 Sensor infrarrojo de línea
@@ -84,11 +124,19 @@ Texto de ejemplo. Contar los errores es lo que vuelve útil el proyecto: quien l
 Texto de ejemplo. En los proyectos cortos el video cuenta casi todo, y esta página guarda los datos que no caben en 60 segundos.
 Texto de ejemplo. Qué quise saber: si una IA puede llevarme de una idea a un circuito que funciona, y dónde necesito saber yo.
 Texto de ejemplo. Una ficha en etapa de semilla muestra poco: la idea, un boceto y lo que falta.
+Tiene dos partes. La mirada macro usa datos de la Dipres para ver hacia dónde se mueve el gasto por ministerio y programa: cuánto se ejecuta, qué cambia entre el presupuesto inicial y el vigente, y cómo se compara con los mismos meses de años anteriores, en pesos reales. Educación entra como un sector más. La mirada micro usa datos de ChileCompra para buscar compras atípicas con estadística y modelos, por ejemplo montos fuera de rango para su categoría o compras directas donde normalmente hay competencia.
 Tipo de filamento translúcido
+Un molde, dos métodos de fabricación
+Un proyecto de ciencia de datos con datos públicos de Chile, inspirado en Serenata de Amor, el proyecto brasileño de Open Knowledge Brasil que usa un robot, Rosie, para revisar los gastos de los parlamentarios y publicar los que se salen de lo normal. Aquí el objetivo es parecido, pero con otras fuentes y otro método.
 Un robot de cartón y motores baratos que sigue una línea negra. Sirve para enseñar sensores y control en clases.
 Un sensor de humedad de suelo con ESP32 que avisa al celular. El código lo escribí con ayuda de una IA, y aquí cuento qué hizo ella y qué hice yo.
 Un soporte plegable que se corta de una sola plancha de MDF en menos de un minuto de láser.
+Una advertencia que es parte del diseño: atípico no significa irregular. Se comparan varios años y gobiernos con el mismo método, se publican resultados agregados por institución y categoría, y cada resultado dice qué se puede concluir y qué no. El proyecto parte como cierre práctico del curso de Ciencia de Datos de Desafío Latam y se documenta en una serie del canal Proyecto Ja.
 Una lámpara cuya forma cambia con tres números. Todavía es una idea y falta imprimir la primera prueba.
+Una misma pieza modelada en Rhinoceros y fabricada por dos caminos: fresada en madera para vaciar cemento, e impresa en 3D para vaciar yeso.
+Una pieza de caras facetadas, modelada una sola vez y fabricada de dos maneras para comparar cómo se comporta cada método. De un lado, un molde tallado en madera con CNC router, para vaciar cemento. Del otro, moldes impresos en 3D, para vaciar yeso.
+Vaciado de cemento en el molde de madera.
+Vaciado de yeso dentro del molde impreso.
 Versión corta, vertical, de menos de un minuto. Es la misma que va a Reels y TikTok.
 Video de la serie IA en el taller. Va con la herramienta y la fecha, porque lo que hoy funciona cambia en meses.
 Video principal, de 6 a 8 minutos, hablando a cámara en el taller.
