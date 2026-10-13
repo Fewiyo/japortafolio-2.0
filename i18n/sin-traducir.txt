@@ -170,6 +170,7 @@ Texto de ejemplo. Qué quise saber: si una IA puede llevarme de una idea a un ci
 Texto de ejemplo. Una ficha en etapa de semilla muestra poco: la idea, un boceto y lo que falta.
 Tiene dos partes. La mirada macro usa datos de la Dipres para ver hacia dónde se mueve el gasto por ministerio y programa: cuánto se ejecuta, qué cambia entre el presupuesto inicial y el vigente, y cómo se compara con los mismos meses de años anteriores, en pesos reales. Educación entra como un sector más. La mirada micro usa datos de ChileCompra para buscar compras atípicas con estadística y modelos, por ejemplo montos fuera de rango para su categoría o compras directas donde normalmente hay competencia.
 Tipo de filamento translúcido
+Trabajo en pareja con Juan Pablo
 Trabajo individual
 Un molde, dos métodos de fabricación
 Un proyecto de ciencia de datos con datos públicos de Chile, inspirado en Serenata de Amor, el proyecto brasileño de Open Knowledge Brasil que usa un robot, Rosie, para revisar los gastos de los parlamentarios y publicar los que se salen de lo normal. Aquí el objetivo es parecido, pero con otras fuentes y otro método.
