@@ -71,6 +71,16 @@ const SITE = {
       fechas: "2015 – 2021"
     },
     {
+      id: "magister-uai",
+      nombre: "Magíster UAI",
+      texto: "Magíster en Ciencias del Diseño de la Universidad Adolfo Ibáñez, que curso desde agosto de 2026. Acá están las entregas de los cursos del programa.",
+      enlaces: [
+        { texto: "uai.cl", url: "https://www.uai.cl/" }
+      ],
+      cargo: "Estudiante del Magíster en Ciencias del Diseño",
+      fechas: "Desde agosto de 2026"
+    },
+    {
       id: "converso",
       nombre: "Converso",
       texto: "Agencia de comunicaciones que trabajaba como equipo externo para el Ministerio de Salud.",
@@ -610,6 +620,7 @@ const SITE = {
       id: "molde-cnc-yeso",
       titulo: "Un molde, dos métodos de fabricación",
       sello: "Entrega de curso, Magíster UAI",
+      org: "magister-uai",
       cliente: "",
       participacion: "Modelado, fabricación y registro del proceso",
       anio: "2026",

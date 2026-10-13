@@ -25,6 +25,7 @@ Código en GitHub
 Datos abiertos
 Datos, Educación
 Descargas
+Desde agosto de 2026
 Diseño paramétrico
 Docentes y estudiantes que arman su primer robot y quieren entender cómo funciona un sensor, no solo copiar un esquema.
 Dos miradas al gasto del Estado con datos abiertos: hacia dónde se mueve el presupuesto y qué compras se salen de lo normal.
@@ -42,6 +43,7 @@ Entrega de curso, Magíster UAI
 Entrega del curso Formas Digitales para Diseño y Fabricación, sección 1, 2026/1
 Escribió la primera versión del código
 Esquema de conexión (PDF)
+Estudiante del Magíster en Ciencias del Diseño
 Explicó los errores del monitor serie
 Foto de ejemplo: el robot terminado sobre la pista.
 Gasto público en Chile, con datos abiertos
@@ -68,6 +70,8 @@ Los moldes impresos en 3D.
 Lámina explicativa del proceso (PDF)
 Lámpara paramétrica impresa en 3D
 Maduro
+Magíster UAI
+Magíster en Ciencias del Diseño de la Universidad Adolfo Ibáñez, que curso desde agosto de 2026. Acá están las entregas de los cursos del programa.
 Materiales
 Medidor de humedad con ESP32 programado con IA
 Modelado, fabricación y registro del proceso
@@ -146,3 +150,4 @@ Video principal, de 6 a 8 minutos, hablando a cámara en el taller.
 ejemplo-medidor-de-humedad-con-ia
 ejemplo-robot-seguidor-de-linea
 ejemplo-soporte-de-celular-laser
+uai.cl
