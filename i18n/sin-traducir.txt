@@ -8,6 +8,7 @@ Archivo SVG de corte
 Archivo de corte (SVG)
 Arduino Nano
 Armado paso a paso
+Ayudante: Sophia Boitano
 Batería de 9 V
 Boceto de ejemplo.
 Brote
@@ -29,7 +30,6 @@ Docentes y estudiantes que arman su primer robot y quieren entender cómo funcio
 Dos miradas al gasto del Estado con datos abiertos: hacia dónde se mueve el presupuesto y qué compras se salen de lo normal.
 Dos motores con ruedas
 Ejemplo de la instrucción que le di a la IA, escrita tal cual.
-Ejercicio de fabricación digital
 El cemento quedó muy adherido a la madera. Hubo que usar una sierra de banda para reducir el material de madera y retirarlo poco a poco.
 El desmolde difícil
 El modelo en Rhinoceros. De él salen las dos ramas.
@@ -38,6 +38,8 @@ El método A, con CNC y cemento, exige más herramientas y tiene un desmolde com
 El video
 El video completo
 Elegí los componentes
+Entrega de curso, Magíster UAI
+Entrega del curso Formas Digitales para Diseño y Fabricación, sección 1, 2026/1
 Escribió la primera versión del código
 Esquema de conexión (PDF)
 Explicó los errores del monitor serie
@@ -92,6 +94,7 @@ Postgres
 Preparación del archivo: el modelo 3D pasa al formato que lee la CNC.
 Primera impresión de prueba
 Probé el sensor con tierra seca y húmeda
+Profesor: Sebastián Valenzuela Montanares
 Propuso la conexión de los pines
 Quien arma proyectos maker y quiere saber, con un caso real, hasta dónde sirve una IA para programar la electrónica.
 Quien imprime en 3D y quiere ver cómo se documenta un proyecto desde la idea, antes de que funcione.

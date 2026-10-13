@@ -609,7 +609,7 @@ const SITE = {
     {
       id: "molde-cnc-yeso",
       titulo: "Un molde, dos métodos de fabricación",
-      sello: "Ejercicio de fabricación digital",
+      sello: "Entrega de curso, Magíster UAI",
       cliente: "",
       participacion: "Modelado, fabricación y registro del proceso",
       anio: "2026",
@@ -618,6 +618,7 @@ const SITE = {
         "Una misma pieza modelada en Rhinoceros y fabricada por dos caminos: fresada en madera para vaciar cemento, e impresa en 3D para vaciar yeso.",
       img: "assets/img/proyectos/molde-cnc-yeso/11-pieza-cemento.jpg",
       bloques: [
+        { tipo: "lista", titulo: "Ficha", valor: ["Entrega del curso Formas Digitales para Diseño y Fabricación, sección 1, 2026/1", "Magíster en Ciencias del Diseño, Universidad Adolfo Ibáñez", "Profesor: Sebastián Valenzuela Montanares", "Ayudante: Sophia Boitano"] },
         { tipo: "texto", valor: "Una pieza de caras facetadas, modelada una sola vez y fabricada de dos maneras para comparar cómo se comporta cada método. De un lado, un molde tallado en madera con CNC router, para vaciar cemento. Del otro, moldes impresos en 3D, para vaciar yeso." },
         { tipo: "imagen", valor: "assets/img/proyectos/molde-cnc-yeso/01-rhino.jpg", pie: "El modelo en Rhinoceros. De él salen las dos ramas." },
         { tipo: "texto", titulo: "Método A: CNC router y cemento", valor: "Se imprime en 3D el modelo para verlo en la mano y se prepara el archivo que lee la máquina CNC. Sobre la cama de sacrificio, un tablero de pino asegurado a la máquina, se fresa en madera la contraforma de la pieza, es decir su negativo." },
