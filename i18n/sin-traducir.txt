@@ -1,5 +1,6 @@
 3 horas
 30 minutos
+3cfjTB-TDm8
 4 horas
 Abrir el archivo en la cortadora
 Al detectar "Hola Roco" con una confianza de al menos 80 %, Roco responde en la pantalla OLED con "¡HOLA ROCO!" y mueve el servo. Para que no se active en cadena, espera tres segundos entre una activación y la siguiente, y el servo se suelta mientras escucha para que no vibre.
@@ -48,6 +49,7 @@ El modelo en Rhinoceros. De él salen las dos ramas.
 El molde de madera terminado.
 El método A, con CNC y cemento, exige más herramientas y tiene un desmolde complicado. El método B, con impresión 3D y yeso, es más directo.
 El prototipo se arma sobre tres protoboards: un ESP32-WROOM como cerebro, un micrófono INMP441 que escucha, una pantalla OLED de 0,96 pulgadas que habla, y un servomotor con mecanismo impreso en 3D que se mueve. Todo conectado con cables Dupont, sin soldar.
+El proyecto en video
 El siguiente hito es la unificación física: meter la electrónica ya validada dentro de la carcasa definitiva. Después, probar nuevas palabras de activación para ampliar el vocabulario que Roco reconoce, de modo que el juego con mi hermana sea cada vez más rico y variado. También falta mejorar el modelo, con más muestras de voz y de ruido, porque el conjunto de datos actual es pequeño y la exactitud todavía es baja.
 El sistema
 El sistema completo: ESP32, micrófono, pantalla OLED y servomotor con su soporte impreso.
@@ -118,6 +120,7 @@ Posdata de ejemplo: la herramienta y su versión cambian rápido, así que esta 
 Posdata de ejemplo: lo que no alcancé a probar, a quién agradezco y qué cambiaría en una segunda versión.
 Postgres
 Preparación del archivo: el modelo 3D pasa al formato que lee la CNC.
+Presentación del proyecto: concepto, circuito, entrenamiento del modelo y prueba con Roco.
 Primer prototipo de un robot compañero para aprender electrónica jugando con mi hermana de 8 años: escucha la palabra "Hola Roco" con un modelo entrenado en la nube y responde en una pantalla OLED y con un servomotor.
 Primera impresión de prueba
 Probé el sensor con tierra seca y húmeda

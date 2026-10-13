@@ -784,7 +784,10 @@ def pagina_proyecto(p, sig, idx, sitio, hashes):
             fotos.append(foto_ampliable(b["valor"], b.get("pie"), p["titulo"], pre, b.get("credito")))
             continue
         soltar_fotos()
-        if b["tipo"] == "aprendizaje":
+        if b["tipo"] == "youtube":
+            trozos.append('<div class="prose">%s</div>%s'
+                          % (t, pieza({"tipo": "youtube", "src": b["valor"], "pie": b.get("pie")}, b.get("titulo") or p["titulo"], i, pre)))
+        elif b["tipo"] == "aprendizaje":
             trozos.append('<blockquote class="quote aprendizaje"><span class="eyebrow">%s</span>%s</blockquote>'
                           % (tr("aprendizaje"), esc(b["valor"])))
         elif b["tipo"] == "cita":
