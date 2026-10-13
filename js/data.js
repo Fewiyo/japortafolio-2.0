@@ -659,6 +659,41 @@ const SITE = {
       ]
     },
     {
+      id: "roco-cobot",
+      titulo: "Roco: un robot compañero que escucha",
+      sello: "Entrega de curso, Magíster UAI",
+      org: "magister-uai",
+      cliente: "",
+      participacion: "Diseño, electrónica, programación, entrenamiento del modelo y fabricación digital",
+      anio: "2026",
+      tags: ["Electrónica", "ESP32", "Inteligencia artificial", "Edge Impulse", "Impresión 3D", "Robótica educativa"],
+      resumen:
+        "Primer prototipo de un robot compañero para aprender electrónica jugando con mi hermana de 8 años: escucha la palabra \"Hola Roco\" con un modelo entrenado en la nube y responde en una pantalla OLED y con un servomotor.",
+      img: "assets/img/proyectos/roco-cobot/02-carcasa.jpg",
+      bloques: [
+        { tipo: "lista", titulo: "Ficha", valor: ["Examen del curso Electrónica e Interactividad (FAB 1), sección 1, 2026/1", "Magíster en Ciencias del Diseño, Universidad Adolfo Ibáñez", "Profesora: Francisca Meza Pavanati", "Trabajo individual"] },
+        { tipo: "texto", titulo: "Qué es", valor: "Roco es el producto mínimo viable de un robot compañero pensado para conectar con mi hermana chica, de 8 años. La idea es aprender juntos de electrónica y tecnología, y acercarnos al mundo maker desde el juego y la curiosidad compartida." },
+        { tipo: "texto", titulo: "Cómo se definió su forma", valor: "Antes de dibujar nada armé moodboards de robots: tiernos, educativos, retro, de Arduino. De ahí salió una conclusión clara: Roco tenía que ser pequeño, tierno, gordito y torpe, para que una niña de 8 años lo sintiera cercano y no como un aparato. Es una decisión de diseño emocional, el enfoque que Donald Norman desarrolla en Emotional Design." },
+        { tipo: "imagen", valor: "assets/img/proyectos/roco-cobot/01-moodboard.jpg", pie: "Moodboard de exploración formal. Imágenes de referencia reunidas en Pinterest, de sus respectivos autores.", credito: "Pinterest, autores varios" },
+        { tipo: "texto", titulo: "El sistema", valor: "El prototipo se arma sobre tres protoboards: un ESP32-WROOM como cerebro, un micrófono INMP441 que escucha, una pantalla OLED de 0,96 pulgadas que habla, y un servomotor con mecanismo impreso en 3D que se mueve. Todo conectado con cables Dupont, sin soldar." },
+        { tipo: "imagen", valor: "assets/img/proyectos/roco-cobot/03-circuito.jpg", pie: "El sistema completo: ESP32, micrófono, pantalla OLED y servomotor con su soporte impreso." },
+        { tipo: "imagen", valor: "assets/img/proyectos/roco-cobot/04-arranque.jpg", pie: "Al encender, Roco muestra su nombre e \"Iniciando...\" mientras carga el modelo." },
+        { tipo: "texto", titulo: "Programación e IA", valor: "Roco escucha con un modelo de clasificación de voz entrenado en Edge Impulse Studio y programado desde Arduino IDE. El audio se transforma con MFCC (coeficientes cepstrales en las frecuencias de Mel) en un espectrograma, una imagen de sus frecuencias en el tiempo. Así la red neuronal aprende los rasgos de la palabra de activación y la distingue de otras palabras y del ruido de fondo." },
+        { tipo: "imagen", valor: "assets/img/proyectos/roco-cobot/05-edge-impulse-impulso.jpg", pie: "El impulso en Edge Impulse: audio de 1 segundo, bloque MFCC y clasificación en tres clases (Hola Roco, ruido y desconocido)." },
+        { tipo: "imagen", valor: "assets/img/proyectos/roco-cobot/06-edge-impulse-resultado.jpg", pie: "Resultado de una corrida de entrenamiento con 100 ciclos y modelo cuantizado (int8). En esa corrida, 60 % de exactitud general y 87,5 % de aciertos para \"Hola Roco\"." },
+        { tipo: "texto", titulo: "Prueba de inferencia", valor: "Al detectar \"Hola Roco\" con una confianza de al menos 80 %, Roco responde en la pantalla OLED con \"¡HOLA ROCO!\" y mueve el servo. Para que no se active en cadena, espera tres segundos entre una activación y la siguiente, y el servo se suelta mientras escucha para que no vibre." },
+        { tipo: "imagen", valor: "assets/img/proyectos/roco-cobot/07-hola-roco.jpg", pie: "Roco detecta la palabra y responde en pantalla." },
+        { tipo: "imagen", valor: "assets/img/proyectos/roco-cobot/08-roco-oled.jpg", pie: "La pantalla OLED con el nombre del robot." },
+        { tipo: "texto", titulo: "Fabricación digital", valor: "Diseñé e imprimí en 3D las piezas de la carcasa, con calces y encajes propios que permiten montar todo el hardware sin soldadura ni pegamento. Es un diseño completamente desmontable, pensado para abrir, ajustar y volver a armar el prototipo con facilidad." },
+        { tipo: "imagen", valor: "assets/img/proyectos/roco-cobot/02-carcasa.jpg", pie: "La carcasa impresa en 3D: prueba de forma en amarillo y estructura interior en verde." },
+        { tipo: "texto", titulo: "Próximos pasos", valor: "El siguiente hito es la unificación física: meter la electrónica ya validada dentro de la carcasa definitiva. Después, probar nuevas palabras de activación para ampliar el vocabulario que Roco reconoce, de modo que el juego con mi hermana sea cada vez más rico y variado. También falta mejorar el modelo, con más muestras de voz y de ruido, porque el conjunto de datos actual es pequeño y la exactitud todavía es baja." },
+        { tipo: "enlaces", titulo: "Descargas", valor: [
+          { texto: "Lámina del proyecto (PDF)", fuente: "Concepto, componentes, programación y registro del proceso", url: "assets/files/roco-cobot-lamina.pdf" },
+          { texto: "Código de Roco (Arduino, .ino)", fuente: "ESP32 + INMP441 + Edge Impulse + servo + OLED", url: "assets/files/hola_roco.ino" }
+        ] }
+      ]
+    },
+    {
       id: "diseno-editorial",
       titulo: "Plan Nacional RAM",
       estudio: "Converso",
