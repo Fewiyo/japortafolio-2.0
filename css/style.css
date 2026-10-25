@@ -303,6 +303,10 @@ ul{list-style:none; padding:0}
   border:1px solid var(--line);
 }
 .btn--linea:hover{border-color:var(--fg)}
+
+/* Contacto: verde WhatsApp con su icono, para que se reconozca de un vistazo */
+.btn--wa{background:#25d366; color:#06331a; font-weight:500}
+.btn__wa{width:18px; height:18px; flex:none}
 .acciones{
   display:flex; flex-wrap:wrap; gap:12px;
   margin-top:28px;

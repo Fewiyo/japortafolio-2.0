@@ -326,6 +326,9 @@ def icono_red(r):
             % (esc(r["url"]), externo, esc(r["nombre"]), esc(r["nombre"]), svg))
 
 
+ICONO_WA = ('<svg class="btn__wa" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>')
+
+
 def whatsapp(sitio):
     """Enlace al chat de WhatsApp con el primer mensaje ya escrito."""
     return "https://wa.me/%s?text=%s" % (sitio["whatsapp"], urllib.parse.quote(sitio["whatsappMensaje"]))
@@ -360,14 +363,14 @@ def pie(pre, sitio):
         '<p class="eyebrow">%s</p>'
         '<h2 class="rise">%s <a href="mailto:%s">%s</a></h2>'
         '<div class="footer__acciones rise">'
-        '<a class="btn" href="%s" target="_blank" rel="noopener"><span class="dot"></span>%s</a>'
+        '<a class="btn btn--wa" href="%s" target="_blank" rel="noopener">%s%s</a>'
         '<div class="redes">%s</div></div>'
         "%s%s"
         '<div class="footer__bottom">'
         "<div>© %d %s</div>"
         "</div></div></footer>"
         % (esc(sitio["footer"]), tr("escribeme"), esc(sitio["email"]), esc(sitio["email"]),
-           esc(whatsapp(sitio)), tr("whatsapp"), redes, bloque_cv, bloque_desc, ANIO, esc(sitio["nombre"]))
+           esc(whatsapp(sitio)), ICONO_WA, tr("whatsapp"), redes, bloque_cv, bloque_desc, ANIO, esc(sitio["nombre"]))
     )
 
 
@@ -649,7 +652,7 @@ def pagina_inicio(sitio, hashes):
         # Dos salidas desde la portada: bajar directo a los proyectos, o escribir.
         + '<div class="hero__acciones rise">'
         + '<a class="btn" href="#catalogo">%s <span aria-hidden="true">&darr;</span></a>' % tr("ver_proyectos")
-        + '<a class="btn btn--linea" href="%s" target="_blank" rel="noopener"><span class="dot"></span>%s</a>' % (esc(whatsapp(sitio)), esc(sitio["cta"]))
+        + '<a class="btn btn--wa" href="%s" target="_blank" rel="noopener">%s%s</a>' % (esc(whatsapp(sitio)), ICONO_WA, esc(sitio["cta"]))
         + "</div></div></header>"
         + ahora(sitio)
         + '<section class="section" id="catalogo"><div class="wrap">'
@@ -885,12 +888,14 @@ def pagina_app(a, sig, idx, sitio, hashes):
     acciones = ""
     if a.get("link") or a.get("sitioWeb") or (a.get("repo") and a.get("repoPublico")):
         botones = ""
-        if a.get("link"):
-            botones += ('<a class="btn" href="%s" target="_blank" rel="noopener">'
-                        '<span class="dot"></span>%s</a>' % (esc(a["link"]), tr("abrir")))
+        # El sitio web, si existe, va primero: ahi esta toda la informacion.
         if a.get("sitioWeb"):
-            botones += ('<a class="btn btn--linea" href="%s" target="_blank" rel="noopener">'
-                        "%s</a>" % (esc(a["sitioWeb"]), tr("sitio_web")))
+            botones += ('<a class="btn" href="%s" target="_blank" rel="noopener">'
+                        '<span class="dot"></span>%s</a>' % (esc(a["sitioWeb"]), tr("sitio_web")))
+        if a.get("link"):
+            botones += ('<a class="btn%s" href="%s" target="_blank" rel="noopener">%s%s</a>'
+                        % (" btn--linea" if a.get("sitioWeb") else "", esc(a["link"]),
+                           "" if a.get("sitioWeb") else '<span class="dot"></span>', tr("abrir")))
         if a.get("repo") and a.get("repoPublico"):
             botones += ('<a class="btn btn--linea" href="%s" target="_blank" rel="noopener">'
                         "%s</a>" % (esc(a["repo"]), tr("codigo")))

@@ -1309,10 +1309,11 @@ const SITE = {
       repo: "https://github.com/Fewiyo/escalada",
       /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
       repoPublico: false,
-      resumen: "App para registrar boulder y roca, acompañada por Mono, que está creciendo hacia una plataforma colaborativa con gimnasios, fundaciones y marcas.",
-      portada: "assets/img/ia/app-escalada/05-entrar-directo.png",
+      resumen: "App para registrar boulder y roca, acompañada por Mono, y su sitio web para gimnasios, fundaciones y marcas que quieren sumarse a una plataforma colaborativa.",
+      portada: "assets/img/ia/app-escalada/00-sitio-web.png",
       etiquetas: ["Aplicación", "Deporte", "Datos", "Diseño de servicios", "React", "MediaPipe", "PWA", "Vercel", "IA en el producto", "Programado con IA", "Codex", "Claude Code"],
       descripcion: [
+        "Toda la información del proyecto está en su sitio web, fewiyo.github.io/escalada-plataforma: qué es la app, qué puede hacer cada gimnasio, fundación o marca y qué no, cómo se cuida la privacidad, los planes, la hoja de ruta, cómo instalarla y el contacto directo por WhatsApp. Es la puerta de entrada para quien quiera sumarse, y se lanzó en un evento con 17 gimnasios de escalada.",
         "Empezó como una app personal para entrenar escalada y hoy es una app instalable donde se anota cada día de escalada: boulder por colores, como se gradúa en los gimnasios, y roca con la escala francesa. La acompaña Mono, un personaje que da la bienvenida, celebra los avances y da los avisos. Se entra directo con las dos disciplinas activas y cada persona apaga la que no usa desde su perfil.",
         "La decisión de fondo es que todo funcione sin conexión y sin cuentas: los datos se guardan en el teléfono y nadie más los ve. El módulo de técnica analiza un video de la propia escalada con estimación de pose sobre 33 puntos del cuerpo, también dentro del teléfono. Para medir el uso hay solo estadísticas anónimas, sin cookies, y una política de privacidad escrita pensando en la Ley 21.719 de protección de datos de Chile, que entra en vigencia en diciembre de 2026.",
         "En octubre de 2026 el proyecto dio un salto de producto: una propuesta para que gimnasios, fundaciones de roca y marcas tengan su propio espacio en la app, presentada en un evento con 17 gimnasios. Se construyó un simulador con perfiles y paneles para cada uno, un módulo de salud con botón de urgencia y perfiles de enfermeros y paramédicos que escalan, y un panel de administración. Hay un sitio de venta con contacto directo por WhatsApp y un kit impreso con QR.",
@@ -1329,6 +1330,8 @@ const SITE = {
         { fecha: "2026-07-01", titulo: "Publicada", texto: "Sale en línea con rutinas, metas por color, técnica por video y racha semanal. Del arranque a la versión publicada pasaron once horas." },
       ],
       galeria: [
+        { src: "assets/img/ia/app-escalada/00-sitio-web.png", pie: "El sitio web del proyecto: la portada, con la descarga de la app y el contacto por WhatsApp." },
+        { src: "assets/img/ia/app-escalada/00-sitio-gimnasios.png", pie: "El sitio explica, por público, qué puede y qué no puede hacer cada uno. Aquí, la sección para gimnasios." },
         { src: "assets/img/ia/app-escalada/05-entrar-directo.png", pie: "Inicio con Mono y el perfil con boulder y roca activos." },
         { src: "assets/img/ia/app-escalada/06-gimnasios.png", pie: "Los gimnasios en Lugares y el perfil de un gimnasio, en el simulador." },
         { src: "assets/img/ia/app-escalada/07-salud-admin.png", pie: "Salud y urgencias, y el panel admin, en el simulador." },
