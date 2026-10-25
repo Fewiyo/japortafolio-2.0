@@ -25,6 +25,7 @@ import re
 import sys
 import html
 import hashlib
+import urllib.parse
 import datetime
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -75,7 +76,7 @@ UI = {
     "equipo": ("Equipo", "Team"), "temario": ("Temario", "Syllabus"), "registro": ("Registro", "Gallery"),
     "tipo": ("Tipo", "Type"), "fecha": ("Fecha", "Date"), "estado": ("Estado", "Status"),
     "dominio": ("Dominio", "Field"), "construido": ("Construido con", "Built with"),
-    "abrir": ("Abrir el proyecto", "Open the project"), "codigo": ("Ver el código en GitHub", "View the code on GitHub"),
+    "abrir": ("Abrir el proyecto", "Open the project"), "sitio_web": ("Ver el sitio web", "Visit the website"), "whatsapp": ("Escríbeme por WhatsApp", "Message me on WhatsApp"), "codigo": ("Ver el código en GitHub", "View the code on GitHub"),
     "bitacora": ("Bitácora", "Log"), "pantallas": ("Pantallas", "Screens"), "etiquetas": ("Etiquetas", "Tags"),
     "trayectoria": ("Trayectoria", "Experience"), "formacion": ("Formación", "Education"),
     "volver_blog": ("Volver al blog", "Back to the blog"),
@@ -325,27 +326,9 @@ def icono_red(r):
             % (esc(r["url"]), externo, esc(r["nombre"]), esc(r["nombre"]), svg))
 
 
-def formulario(sitio):
-    f = sitio["formulario"]
-    return (
-        '<dialog class="form-dialogo" id="form-contacto" aria-labelledby="form-titulo">'
-        '<form class="form" method="post" action="https://formsubmit.co/ajax/%s" data-enviado="%s" novalidate>'
-        '<button class="form__cerrar" type="button" data-cerrar-form aria-label="%s">×</button>'
-        '<h2 id="form-titulo">%s</h2><p class="form__intro">%s</p>'
-        '<label>%s<input name="nombre" autocomplete="name" required></label>'
-        '<label>%s<input name="email" type="email" autocomplete="email" required></label>'
-        '<label><span>%s <i>%s</i></span><input name="institucion" autocomplete="organization"></label>'
-        '<label>%s<textarea name="mensaje" rows="5" required></textarea></label>'
-        '<input type="text" name="_honey" class="form__trampa" tabindex="-1" autocomplete="off">'
-        '<input type="hidden" name="_subject" value="%s">'
-        '<input type="hidden" name="_template" value="table">'
-        '<p class="form__estado" role="status" aria-live="polite"></p>'
-        '<button class="btn" type="submit"><span class="dot"></span>%s</button>'
-        '</form></dialog>'
-        % (esc(sitio["email"]), esc(f["enviado"]), tr("cerrar"), esc(f["titulo"]), esc(f["intro"]),
-           tr("nombre"), tr("correo"), tr("institucion_org"), tr("opcional"), tr("mensaje"),
-           esc(tr("asunto")), tr("enviar"))
-    )
+def whatsapp(sitio):
+    """Enlace al chat de WhatsApp con el primer mensaje ya escrito."""
+    return "https://wa.me/%s?text=%s" % (sitio["whatsapp"], urllib.parse.quote(sitio["whatsappMensaje"]))
 
 
 def pie(pre, sitio):
@@ -377,15 +360,14 @@ def pie(pre, sitio):
         '<p class="eyebrow">%s</p>'
         '<h2 class="rise">%s <a href="mailto:%s">%s</a></h2>'
         '<div class="footer__acciones rise">'
-        '<button class="btn" type="button" data-abrir-form><span class="dot"></span>%s</button>'
+        '<a class="btn" href="%s" target="_blank" rel="noopener"><span class="dot"></span>%s</a>'
         '<div class="redes">%s</div></div>'
         "%s%s"
         '<div class="footer__bottom">'
         "<div>© %d %s</div>"
         "</div></div></footer>"
         % (esc(sitio["footer"]), tr("escribeme"), esc(sitio["email"]), esc(sitio["email"]),
-           esc(sitio["cta"]), redes, bloque_cv, bloque_desc, ANIO, esc(sitio["nombre"]))
-        + formulario(sitio)
+           esc(whatsapp(sitio)), tr("whatsapp"), redes, bloque_cv, bloque_desc, ANIO, esc(sitio["nombre"]))
     )
 
 
@@ -667,7 +649,7 @@ def pagina_inicio(sitio, hashes):
         # Dos salidas desde la portada: bajar directo a los proyectos, o escribir.
         + '<div class="hero__acciones rise">'
         + '<a class="btn" href="#catalogo">%s <span aria-hidden="true">&darr;</span></a>' % tr("ver_proyectos")
-        + '<a class="btn btn--linea" href="#contacto" data-abrir-form><span class="dot"></span>%s</a>' % esc(sitio["cta"])
+        + '<a class="btn btn--linea" href="%s" target="_blank" rel="noopener"><span class="dot"></span>%s</a>' % (esc(whatsapp(sitio)), esc(sitio["cta"]))
         + "</div></div></header>"
         + ahora(sitio)
         + '<section class="section" id="catalogo"><div class="wrap">'
@@ -901,11 +883,14 @@ def pagina_app(a, sig, idx, sitio, hashes):
              (tr("dominio"), a.get("dominio")), (tr("construido"), a.get("herramienta"))]
     facts = "".join("<div><span>%s</span>%s</div>" % (esc(k), esc(v)) for k, v in datos if v)
     acciones = ""
-    if a.get("link") or (a.get("repo") and a.get("repoPublico")):
+    if a.get("link") or a.get("sitioWeb") or (a.get("repo") and a.get("repoPublico")):
         botones = ""
         if a.get("link"):
             botones += ('<a class="btn" href="%s" target="_blank" rel="noopener">'
                         '<span class="dot"></span>%s</a>' % (esc(a["link"]), tr("abrir")))
+        if a.get("sitioWeb"):
+            botones += ('<a class="btn btn--linea" href="%s" target="_blank" rel="noopener">'
+                        "%s</a>" % (esc(a["sitioWeb"]), tr("sitio_web")))
         if a.get("repo") and a.get("repoPublico"):
             botones += ('<a class="btn btn--linea" href="%s" target="_blank" rel="noopener">'
                         "%s</a>" % (esc(a["repo"]), tr("codigo")))
@@ -1267,7 +1252,7 @@ def traducir(v, dic, faltan, clave=None):
     return v
 
 
-NO_TRADUCIR = {"id", "img", "src", "url", "link", "repo", "portada", "retrato", "email", "codigo", "fecha", "org", "licencia", "licenciaCodigo"}
+NO_TRADUCIR = {"id", "img", "src", "url", "link", "sitioWeb", "whatsapp", "repo", "portada", "retrato", "email", "codigo", "fecha", "org", "licencia", "licenciaCodigo"}
 ESTRUCTURA = {"imagen", "texto", "lista", "cita", "enlaces", "video", "youtube",
               "YouTube", "YouTube Shorts", "Instagram", "TikTok", "Instructables", "Tinkercad",
               "MakerWorld", "GitHub", "Printables", "nota", "pasos", "archivos", "horizontal", "vertical"}

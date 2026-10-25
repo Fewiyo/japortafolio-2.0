@@ -9,6 +9,11 @@ const SITE = {
   rol: "Diseñador industrial · Experiencias de aprendizaje",
   email: "vicentecfarias@gmail.com",
 
+  /* WhatsApp: todos los botones de contacto abren el chat con este
+     mensaje ya escrito. El numero va sin "+" ni espacios. */
+  whatsapp: "56988291250",
+  whatsappMensaje: "Hola Vicente, vi tu portafolio y tengo un proyecto que me gustaría conversar contigo. ¿Podemos coordinar una conversación?",
+
   /* Titular del inicio. El texto entre <em> queda en gris. */
   titular:
     "Hola, soy Vicente, diseñador industrial experto en <em>diseño de experiencias de aprendizaje, laboratorios maker y STEAM</em>.",
@@ -156,16 +161,6 @@ const SITE = {
     { nombre: "GitHub",    url: "https://github.com/Fewiyo" },
     { nombre: "Behance",   url: "https://behance.net/vcntja" }
   ],
-
-  /* ---------- Formulario de contacto ----------
-     El boton del inicio abre un formulario que llega a "email" por
-     FormSubmit. El primer mensaje manda un correo de activacion: hay
-     que confirmarlo una vez para que empiecen a llegar. */
-  formulario: {
-    titulo: "Conversemos tu proyecto",
-    intro: "Cuéntame qué tienes en mente y te respondo a tu correo.",
-    enviado: "Gracias, recibí tu mensaje. Te respondo pronto."
-  },
 
   /* ---------- Curriculum ----------
      Aparecen como tarjetas al final de cada pagina (id="cv"). */
@@ -1309,6 +1304,8 @@ const SITE = {
       estado: "en desarrollo",
       dominio: "Deporte, Datos",
       link: "https://escalada-xi.vercel.app",
+      /* Sitio con la propuesta para gimnasios, fundaciones y marcas. */
+      sitioWeb: "https://fewiyo.github.io/escalada-plataforma/",
       repo: "https://github.com/Fewiyo/escalada",
       /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
       repoPublico: false,
