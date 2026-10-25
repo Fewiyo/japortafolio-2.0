@@ -6,7 +6,6 @@ Abrir el archivo en la cortadora
 Al detectar "Hola Roco" con una confianza de al menos 80 %, Roco responde en la pantalla OLED con "¡HOLA ROCO!" y mueve el servo. Para que no se active en cadena, espera tres segundos entre una activación y la siguiente, y el servo se suelta mientras escucha para que no vibre.
 Al encender, Roco muestra su nombre e "Iniciando..." mientras carga el modelo.
 Antes de dibujar nada armé moodboards de robots: tiernos, educativos, retro, de Arduino. De ahí salió una conclusión clara: Roco tenía que ser pequeño, tierno, gordito y torpe, para que una niña de 8 años lo sintiera cercano y no como un aparato. Es una decisión de diseño emocional, el enfoque que Donald Norman desarrolla en Emotional Design.
-Análisis de datos
 Aquí los moldes se imprimen directamente desde el modelo de Rhino. Se vacía yeso en el molde impreso, se retira el primer molde y se extrae la pieza. El proceso es más directo.
 Archivo SVG de corte
 Archivo de corte (SVG)
@@ -19,7 +18,6 @@ Brote
 Calibrar el sensor
 Cargar el código y probar
 Cartón o MDF
-Ciencia de datos
 Cita o frase de ejemplo: lo que dijo un estudiante al verlo andar.
 Claude Code, octubre de 2026
 Concepto, componentes, programación y registro del proceso
@@ -29,15 +27,12 @@ Corte láser
 Código de Roco (Arduino, .ino)
 Código en GitHub
 Cómo se definió su forma
-Datos abiertos
-Datos, Educación
 Descargas
 Desde agosto de 2026
 Diseño paramétrico
 Diseño, electrónica, programación, entrenamiento del modelo y fabricación digital
 Diseñé e imprimí en 3D las piezas de la carcasa, con calces y encajes propios que permiten montar todo el hardware sin soldadura ni pegamento. Es un diseño completamente desmontable, pensado para abrir, ajustar y volver a armar el prototipo con facilidad.
 Docentes y estudiantes que arman su primer robot y quieren entender cómo funciona un sensor, no solo copiar un esquema.
-Dos miradas al gasto del Estado con datos abiertos: hacia dónde se mueve el presupuesto y qué compras se salen de lo normal.
 Dos motores con ruedas
 ESP32 + INMP441 + Edge Impulse + servo + OLED
 Edge Impulse
@@ -64,7 +59,6 @@ Estudiante del Magíster en Ciencias del Diseño
 Examen del curso Electrónica e Interactividad (FAB 1), sección 1, 2026/1
 Explicó los errores del monitor serie
 Foto de ejemplo: el robot terminado sobre la pista.
-Gasto público en Chile, con datos abiertos
 Grosor mínimo de pared
 Hecho en un minuto
 IA en el taller
@@ -85,7 +79,6 @@ La pregunta
 Las fichas con la etiqueta Ejemplo son de muestra, para ver cómo se verán los proyectos reales cuando los suba.
 Lo que falta probar
 Lo que no funcionó
-Los datos se ordenan con SQL en Postgres, el análisis y los modelos van en Python y los resultados se muestran en Tableau Public. El código y la metodología quedan en GitHub.
 Los dos métodos, paso a paso
 Los moldes impresos en 3D.
 Lámina del proyecto (PDF)
@@ -118,7 +111,6 @@ Posdata de ejemplo: esta ficha se irá completando a medida que avance el proyec
 Posdata de ejemplo: falta probarlo con acrílico y con otros grosores.
 Posdata de ejemplo: la herramienta y su versión cambian rápido, así que esta ficha lleva fecha y se actualiza.
 Posdata de ejemplo: lo que no alcancé a probar, a quién agradezco y qué cambiaría en una segunda versión.
-Postgres
 Preparación del archivo: el modelo 3D pasa al formato que lee la CNC.
 Presentación del proyecto: concepto, circuito, entrenamiento del modelo y prueba con Roco.
 Primer prototipo de un robot compañero para aprender electrónica jugando con mi hermana de 8 años: escucha la palabra "Hola Roco" con un modelo entrenado en la nube y responde en una pantalla OLED y con un servomotor.
@@ -149,9 +141,7 @@ Roco detecta la palabra y responde en pantalla.
 Roco es el producto mínimo viable de un robot compañero pensado para conectar con mi hermana chica, de 8 años. La idea es aprender juntos de electrónica y tecnología, y acercarnos al mundo maker desde el juego y la curiosidad compartida.
 Roco escucha con un modelo de clasificación de voz entrenado en Edge Impulse Studio y programado desde Arduino IDE. El audio se transforma con MFCC (coeficientes cepstrales en las frecuencias de Mel) en un espectrograma, una imagen de sus frecuencias en el tiempo. Así la red neuronal aprende los rasgos de la palabra de activación y la distingue de otras palabras y del ruido de fondo.
 Roco: un robot compañero que escucha
-SQL, Python y Tableau Public
 Se asegura la cama de sacrificio sobre la máquina.
-Se define el alcance en dos partes, macro con Dipres y micro con ChileCompra, y las reglas para no confundir lo atípico con lo irregular.
 Se imprime en 3D el modelo para verlo en la mano y se prepara el archivo que lee la máquina CNC. Sobre la cama de sacrificio, un tablero de pino asegurado a la máquina, se fresa en madera la contraforma de la pieza, es decir su negativo.
 Segundo párrafo de ejemplo. Cada párrafo trata una sola idea, y lo más importante va primero.
 Semilla
@@ -168,16 +158,13 @@ Texto de ejemplo. Contar los errores es lo que vuelve útil el proyecto: quien l
 Texto de ejemplo. En los proyectos cortos el video cuenta casi todo, y esta página guarda los datos que no caben en 60 segundos.
 Texto de ejemplo. Qué quise saber: si una IA puede llevarme de una idea a un circuito que funciona, y dónde necesito saber yo.
 Texto de ejemplo. Una ficha en etapa de semilla muestra poco: la idea, un boceto y lo que falta.
-Tiene dos partes. La mirada macro usa datos de la Dipres para ver hacia dónde se mueve el gasto por ministerio y programa: cuánto se ejecuta, qué cambia entre el presupuesto inicial y el vigente, y cómo se compara con los mismos meses de años anteriores, en pesos reales. Educación entra como un sector más. La mirada micro usa datos de ChileCompra para buscar compras atípicas con estadística y modelos, por ejemplo montos fuera de rango para su categoría o compras directas donde normalmente hay competencia.
 Tipo de filamento translúcido
 Trabajo en pareja con Juan Pablo
 Trabajo individual
 Un molde, dos métodos de fabricación
-Un proyecto de ciencia de datos con datos públicos de Chile, inspirado en Serenata de Amor, el proyecto brasileño de Open Knowledge Brasil que usa un robot, Rosie, para revisar los gastos de los parlamentarios y publicar los que se salen de lo normal. Aquí el objetivo es parecido, pero con otras fuentes y otro método.
 Un robot de cartón y motores baratos que sigue una línea negra. Sirve para enseñar sensores y control en clases.
 Un sensor de humedad de suelo con ESP32 que avisa al celular. El código lo escribí con ayuda de una IA, y aquí cuento qué hizo ella y qué hice yo.
 Un soporte plegable que se corta de una sola plancha de MDF en menos de un minuto de láser.
-Una advertencia que es parte del diseño: atípico no significa irregular. Se comparan varios años y gobiernos con el mismo método, se publican resultados agregados por institución y categoría, y cada resultado dice qué se puede concluir y qué no. El proyecto parte como cierre práctico del curso de Ciencia de Datos de Desafío Latam y se documenta en una serie del canal Proyecto Ja.
 Una lámpara cuya forma cambia con tres números. Todavía es una idea y falta imprimir la primera prueba.
 Una misma pieza modelada en Rhinoceros y fabricada por dos caminos: fresada en madera para vaciar cemento, e impresa en 3D para vaciar yeso.
 Una pieza de caras facetadas, modelada una sola vez y fabricada de dos maneras para comparar cómo se comporta cada método. De un lado, un molde tallado en madera con CNC router, para vaciar cemento. Del otro, moldes impresos en 3D, para vaciar yeso.
