@@ -877,6 +877,7 @@ const SITE = {
         { titulo: "Feria de aprendizajes", detalle: "Evaluación final: exposición abierta de los prototipos terminados." }
       ],
       galeria: [
+        { tipo: "imagen", src: "assets/img/cursos/afiche-tecnologia-futurista.jpg", pie: "Afiche del curso." },
         { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-04.jpg", pie: "La impresora 3D trabajando en vivo durante la feria, junto a los prototipos terminados." },
         { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-01.jpg", pie: "El puesto del curso, con el cartel del desafío: traer un control roto y llevarse una impresión 3D." },
         { tipo: "imagen", src: "assets/img/cursos/tecnologia-futurista-05.jpg", pie: "La mesa de exposición con los objetos del futuro construidos por los equipos." },
@@ -924,6 +925,7 @@ const SITE = {
         { titulo: "Cierre", detalle: "Retroalimentación y reflexión sobre el proceso completo." }
       ],
       galeria: [
+        { tipo: "imagen", src: "assets/img/cursos/afiche-sostenibilidad-en-accion.jpg", pie: "Afiche del curso." },
         { tipo: "imagen", src: "assets/img/cursos/sostenibilidad-01.jpg", pie: "Nueve controles desarmados y ordenados pieza por pieza: el punto de partida del curso." },
         { tipo: "imagen", src: "assets/img/cursos/sostenibilidad-02.jpg", pie: "Desarme de un control de consola, el primer ejercicio." },
         { tipo: "imagen", src: "assets/img/cursos/sostenibilidad-03.jpg", pie: "Materioteca: cada componente catalogado y dispuesto para su análisis." },
@@ -975,6 +977,7 @@ const SITE = {
         { titulo: "Feria de aprendizajes", detalle: "Presentación del proyecto final para evaluación." }
       ],
       galeria: [
+        { tipo: "imagen", src: "assets/img/cursos/afiche-maquinas-fabulosas.jpg", pie: "Afiche del curso." },
         { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-01.jpg", pie: "Engranajes impresos en 3D por los equipos: distintos módulos y relaciones de transmisión." },
         { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-02.jpg", pie: "Mecanismo de engranajes con manivela: la transmisión completa en una pieza ensamblada." },
         { tipo: "imagen", src: "assets/img/cursos/maquinas-fabulosas-03.jpg", pie: "Sistema de poleas construido con materiales simples para probar el principio antes de imprimirlo." },
@@ -1039,6 +1042,7 @@ const SITE = {
         { titulo: "Feria de aprendizajes", detalle: "Muestra conjunta con todos los cursos del programa." }
       ],
       galeria: [
+        { tipo: "imagen", src: "assets/img/cursos/afiche-robots-makers-en-accion.jpg", pie: "Afiche del curso." },
         { tipo: "imagen", src: "assets/img/cursos/robots-makers-01.jpg", pie: "El robot educativo en su versión de trabajo: chasis, motores, puente H y microcontrolador con Wi-Fi." },
         { tipo: "imagen", src: "assets/img/cursos/robots-makers-08.jpg", pie: "Clase sobre el puente H y el control de motores, la pieza clave del robot." },
         { tipo: "imagen", src: "assets/img/cursos/robots-makers-02.jpg", pie: "Primeras pruebas de desplazamiento sobre la mesa." },
@@ -1090,6 +1094,7 @@ const SITE = {
         { titulo: "Muestra final", detalle: "Ensayo general, presentación de cada equipo y entrega de diplomas." }
       ],
       galeria: [
+        { tipo: "imagen", src: "assets/img/cursos/afiche-mision-espacial.jpg", pie: "Afiche del curso." },
         { tipo: "imagen", src: "assets/img/cursos/mision-espacial-01.jpg", pie: "La flota de robots durante la preparación del curso." },
         { tipo: "imagen", src: "assets/img/cursos/mision-espacial-02.jpg", pie: "Robots y notebooks listos para la sesión del día." },
         { tipo: "imagen", src: "assets/img/cursos/mision-espacial-03.jpg", pie: "Los robots dispuestos en la sala antes de empezar la misión." },
@@ -1145,6 +1150,7 @@ const SITE = {
         { titulo: "Retroalimentación final", detalle: "Cierre y reflexión sobre el proceso del semestre." }
       ],
       galeria: [
+        { tipo: "imagen", src: "assets/img/cursos/afiche-robot-espacial.jpg", pie: "Afiche del curso." },
         { tipo: "imagen", src: "assets/img/cursos/robot-espacial-01.jpg", pie: "Motores, ruedas y controladores preparados para el armado." },
         { tipo: "imagen", src: "assets/img/cursos/robot-espacial-05.jpg", pie: "Preparación de los kits antes de la sesión." },
         { tipo: "imagen", src: "assets/img/cursos/robot-espacial-07.jpg", pie: "Clase de modelado 3D: cada estudiante trabajando su pieza en Tinkercad." },
@@ -1196,6 +1202,7 @@ const SITE = {
         { titulo: "Evaluación intermedia", detalle: "Robot funcional capaz de resolver el desafío definido, con presentación y bitácora." }
       ],
       galeria: [
+        { tipo: "imagen", src: "assets/img/cursos/afiche-robots-y-juegos.jpg", pie: "Afiche del curso." },
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-08.jpg", pie: "Tablero terminado de un equipo: el recorrido dibujado a mano y el microcontrolador montado sobre el mapa." },
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-09.jpg", pie: "El robot controlado desde el teléfono mientras recorre el tablero." },
         { tipo: "imagen", src: "assets/img/cursos/robots-juegos-01.jpg", pie: "Robot sobre el mapa de papel durante una partida de prueba." },
