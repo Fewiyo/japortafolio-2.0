@@ -1273,7 +1273,7 @@ const SITE = {
       /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
       repoPublico: false,
       resumen: "La memoria de título de 2021 convertida en una plataforma real para manejar la ansiedad universitaria.",
-      portada: "assets/img/ia/ansiosos/01-portada.png",
+      portada: "assets/img/ia/ansiosos/00-web.png",
       etiquetas: ["Aplicación", "Salud", "Educación", "React", "PWA", "Vercel", "Programado con IA", "Investigación con IA", "Codex", "Claude Code"],
       descripcion: [
         "AnsioSOS es una plataforma psicoeducativa para que estudiantes universitarios manejen la ansiedad: contenido, ejercicios y un plan de seguridad personal. Es la reformulación funcional de mi memoria de título de Diseño Industrial (UDP, 2021, aprobada con distinción), que hasta ahora solo existía como prototipo navegable en Adobe XD. Pasó de ser una maqueta a diecisiete componentes y catorce pantallas que de verdad funcionan.",
@@ -1288,6 +1288,7 @@ const SITE = {
         { fecha: "2026-07-02", titulo: "De prototipo a plataforma", texto: "La memoria de título de 2021 deja de ser una maqueta: 70 archivos, 17 componentes, 14 pantallas funcionando." },
       ],
       galeria: [
+        { src: "assets/img/ia/ansiosos/00-web.png", pie: "Así se ve AnsioSOS en el navegador." },
         { src: "assets/img/ia/ansiosos/01-portada.png", pie: "El inicio con los ejercicios para disminuir la ansiedad." },
         { src: "assets/img/ia/ansiosos/02-ejercicios.png", pie: "El catálogo de ejercicios." },
         { src: "assets/img/ia/ansiosos/03-plan.png", pie: "El plan de seguridad personal (sin datos, recién inicializado)." },
@@ -1353,7 +1354,7 @@ const SITE = {
       /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
       repoPublico: false,
       resumen: "Repartir las tareas de una casa entre tres personas sin que nadie tenga que llevar la cuenta.",
-      portada: "assets/img/ia/granada-tareas-del-hogar/01-portada.png",
+      portada: "assets/img/ia/granada-tareas-del-hogar/00-web.png",
       etiquetas: ["Aplicación", "Hogar", "JavaScript", "Supabase", "PWA", "Vercel", "Programado con IA", "Codex", "Claude Code"],
       descripcion: [
         "Granada es una aplicación web instalable que reparte y sincroniza las tareas domésticas de un hogar de tres personas. Cada quien ve lo que le toca, marca lo que hizo, y el resto lo ve al instante desde su propio teléfono. Es el único de estos proyectos con usuarios reales y uso sostenido: no es un prototipo que se enseña, es algo que se usa todos los días.",
@@ -1369,6 +1370,7 @@ const SITE = {
         { fecha: "2026-07-06", titulo: "Arranca el proyecto", texto: "Primera versión: aplicación instalable, sin backend, todo en el dispositivo." },
       ],
       galeria: [
+        { src: "assets/img/ia/granada-tareas-del-hogar/00-web.png", pie: "Granada en el celular: Hoy, Tareas y Mes." },
         { src: "assets/img/ia/granada-tareas-del-hogar/01-portada.png", pie: "La selección de perfil: Sofía, Matías y Renata." },
         { src: "assets/img/ia/granada-tareas-del-hogar/02-hoy.png", pie: "Hoy, con el resumen de ayer y las tareas del día." },
         { src: "assets/img/ia/granada-tareas-del-hogar/03-tareas.png", pie: "La lista completa de tareas." },
@@ -1390,7 +1392,7 @@ const SITE = {
       /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
       repoPublico: false,
       resumen: "Un juego de laboratorio maker donde programar con bloques exporta código Arduino que funciona de verdad.",
-      portada: "assets/img/ia/maker-lab/01-portada.png",
+      portada: "assets/img/ia/maker-lab/00-web.png",
       etiquetas: ["Aplicación", "Educación", "Fabricación digital", "React", "Blockly", "Arduino", "Programado con IA", "Codex", "Claude Code"],
       descripcion: [
         "Un juego web de laboratorio maker escolar: el estudiante recolecta materiales, fabrica piezas, monta estaciones de trabajo y programa hardware con bloques. La diferencia con un juego de programación por bloques cualquiera es que el código que sale de esos bloques es Arduino real, listo para cargar en un microcontrolador. El puente entre el juego y el taller físico es el punto entero. Trece nodos de conocimiento, cinco estaciones, veintitrés recetas de fabricación y cinco prototipos como meta.",
@@ -1406,6 +1408,7 @@ const SITE = {
         { fecha: "2026-07-19", titulo: "Arranca el proyecto", texto: "Se define la economía del juego: 13 nodos de conocimiento, 5 estaciones, 23 recetas, 5 prototipos objetivo." },
       ],
       galeria: [
+        { src: "assets/img/ia/maker-lab/00-web.png", pie: "Así se ve Maker Lab en el navegador." },
         { src: "assets/img/ia/maker-lab/01-portada.png", pie: "El laboratorio: recolectar, estaciones y árbol STEAM de 13 nodos." },
         { src: "assets/img/ia/maker-lab/02-bloques.png", pie: "El taller de programación con el ESP32 simulado y la descarga del archivo .ino." },
         { src: "assets/img/ia/maker-lab/03-reto.png", pie: "Partida avanzada: inventario, pieza fabricada y el reto de armar el circuito." },
@@ -1425,7 +1428,7 @@ const SITE = {
       /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
       repoPublico: false,
       resumen: "La formación del diseñador chileno convertida en una malla navegable de eras, cursos y roles.",
-      portada: "assets/img/ia/esdiseno-malla-del-diseno/01-portada.png",
+      portada: "assets/img/ia/esdiseno-malla-del-diseno/00-web.png",
       etiquetas: ["Plataforma web", "Educación", "Diseño", "React", "Supabase", "Vercel", "Programado con IA", "Codex", "Claude Code"],
       descripcion: [
         "Una plataforma de aprendizaje que estructura la formación de un diseñador como una malla curricular recorrible: cuatro eras, veintidós cursos, sesenta y seis clases y siete roles profesionales hacia los que se puede derivar. En vez de una lista de cursos sueltos, el mapa muestra de dónde viene cada cosa y hacia dónde lleva.",
@@ -1439,6 +1442,7 @@ const SITE = {
         { fecha: "2026-07-04", titulo: "Arranca el proyecto", texto: "Se define la estructura: 4 eras, 22 cursos, 66 clases, 7 roles." },
       ],
       galeria: [
+        { src: "assets/img/ia/esdiseno-malla-del-diseno/00-web.png", pie: "Así se ve esdiseño: La Malla del Diseño en el navegador." },
         { src: "assets/img/ia/esdiseno-malla-del-diseno/01-portada.png", pie: "La malla por revoluciones industriales, con los cursos que nacen en cada una." },
         { src: "assets/img/ia/esdiseno-malla-del-diseno/02-curso.png", pie: "La ficha de un curso: ruta de aprendizaje, clase gratis y clases bloqueadas." },
         { src: "assets/img/ia/esdiseno-malla-del-diseno/03-roles.png", pie: "Los siete roles de salida con su sueldo referencial." },
@@ -1458,7 +1462,7 @@ const SITE = {
       /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
       repoPublico: false,
       resumen: "Encontrar en las licitaciones del Estado las que sí tienen que ver con salas maker y fabricación digital.",
-      portada: "assets/img/ia/mercado-publico/01-portada.png",
+      portada: "assets/img/ia/mercado-publico/00-web.png",
       etiquetas: ["Plataforma web", "Datos", "Comercio", "Fabricación digital", "React", "Vercel", "API pública", "Programado con IA", "Codex", "Claude Code"],
       descripcion: [
         "Un buscador sobre los datos abiertos de compras públicas de Chile, filtrado a lo que de verdad importa en este oficio: aulas maker, laboratorios de fabricación, impresión 3D, corte láser y robótica educativa. El problema que resuelve es concreto y personal: el portal oficial publica cientos de licitaciones al día y las que sirven se pierden entre las que no.",
@@ -1472,6 +1476,7 @@ const SITE = {
         { fecha: "2026-07-02", titulo: "Arranca el proyecto", texto: "Se definen los términos de búsqueda del filtro maker." },
       ],
       galeria: [
+        { src: "assets/img/ia/mercado-publico/00-web.png", pie: "Así se ve Buscador Mercado Público en el navegador." },
         { src: "assets/img/ia/mercado-publico/01-portada.png", pie: "Cinco licitaciones de ejemplo, con el aviso de datos de muestra." },
         { src: "assets/img/ia/mercado-publico/02-filtros.png", pie: "El filtrado por categoría." },
       ]
@@ -1490,7 +1495,7 @@ const SITE = {
       /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
       repoPublico: false,
       resumen: "Comparar becas y magísters de Chile y el extranjero según lo que uno realmente quiere estudiar.",
-      portada: "assets/img/ia/estudiar-futuro/01-portada.png",
+      portada: "assets/img/ia/estudiar-futuro/00-web.png",
       etiquetas: ["Plataforma web", "Educación", "Datos", "React", "Programado con IA", "Codex", "Claude Code"],
       descripcion: [
         "Un tablero para decidir un postgrado: compara programas de magíster y becas disponibles en Chile y fuera, y los cruza con el área de interés de quien consulta. La pregunta que intenta contestar no es \"qué programas existen\" sino \"cuál me conviene a mí\".",
@@ -1502,6 +1507,7 @@ const SITE = {
         { fecha: "2026-07-04", titulo: "Arranca el proyecto", texto: "" },
       ],
       galeria: [
+        { src: "assets/img/ia/estudiar-futuro/00-web.png", pie: "Así se ve Estudiar Futuro en el navegador." },
         { src: "assets/img/ia/estudiar-futuro/01-portada.png", pie: "Las nueve becas con su cobertura desglosada y los filtros por área." },
         { src: "assets/img/ia/estudiar-futuro/02-magisters.png", pie: "La pestaña de magísters." },
       ]
@@ -1520,7 +1526,7 @@ const SITE = {
       /* Ponlo en true cuando hagas publico el repositorio y el enlace aparece solo. */
       repoPublico: false,
       resumen: "Nueve pilares de datos sobre el estado real del diseño industrial en Chile, en un solo tablero.",
-      portada: "assets/img/ia/reporte-web-diseno/01-portada.png",
+      portada: "assets/img/ia/reporte-web-diseno/00-web.png",
       etiquetas: ["Plataforma web", "Datos", "Diseño", "Educación", "React", "Programado con IA", "Investigación con IA", "Codex", "Claude Code"],
       descripcion: [
         "Un tablero que reúne en nueve pilares lo que se puede saber con datos sobre el diseño industrial en Chile: mercado y sueldos por cargo, historia del oficio, formación (diez escuelas comparadas, diseño contra ingeniería, dónde quedó la matemática), herramientas e IA, referentes, trayectorias, concursos abiertos, y dos pilares que dan vuelta el ejercicio hacia quien lee: «tu perfil» y «qué hacer». 410 titulados al año, 23 profesores con proyecto propio, 16 proyectos influyentes, 17 concursos.",
@@ -1534,6 +1540,7 @@ const SITE = {
         { fecha: "2026-07-04", titulo: "Arranca el proyecto", texto: "" },
       ],
       galeria: [
+        { src: "assets/img/ia/reporte-web-diseno/00-web.png", pie: "Así se ve Diseño industrial en Chile en el navegador." },
         { src: "assets/img/ia/reporte-web-diseno/01-portada.png", pie: "La portada con los nueve pilares y las cifras de cabecera." },
         { src: "assets/img/ia/reporte-web-diseno/02-mercado.png", pie: "El pilar de mercado: filtro de sueldos y cargos." },
         { src: "assets/img/ia/reporte-web-diseno/03-trayectorias.png", pie: "Trayectorias: hacia dónde migran los diseñadores." },
