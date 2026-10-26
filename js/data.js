@@ -850,7 +850,7 @@ const SITE = {
       duracion: "12 sesiones",
       equipo: "Ayudante: Felipe Rivera, psicólogo educacional",
       resumen: "Imaginar cómo será la vida en el año 2100 y construir, con impresión 3D y electrónica básica, la tecnología que esa humanidad necesitaría para resolver sus problemas cotidianos.",
-      portada: "assets/img/cursos/tecnologia-futurista-portada.jpg",
+      portada: "assets/img/cursos/portada-afiche-tecnologia-futurista.jpg",
       descripcion: [
         "El curso parte de una pregunta que a los estudiantes de 7º y 8º les resulta irresistible: ¿cómo será vivir en el año 2100? En vez de responderla con una redacción, la respondimos construyendo. Cada equipo definió un futuro posible para la humanidad, identificó un problema cotidiano dentro de ese futuro y diseñó el objeto que lo resolvería.",
         "La columna vertebral es el Design Thinking en sus cinco etapas, pero aterrizado a herramientas que un estudiante de 13 años puede dominar en un semestre: diseño especulativo y referentes de ciencia ficción para empatizar, árbol de problemas para definir, Tinkercad y electrónica básica para idear, impresión 3D y materiales reutilizados para prototipar, y una feria de aprendizajes abierta al público para testear.",
@@ -901,7 +901,7 @@ const SITE = {
       duracion: "9 sesiones, lunes a viernes",
       equipo: "Ayudante: Belén Rebolledo, magíster en Territorio y Paisaje",
       resumen: "Desarmar objetos tecnológicos descartados para entender de qué están hechos, y rediseñarlos con electrónica básica para darles una segunda vida.",
-      portada: "assets/img/cursos/sostenibilidad-portada.jpg",
+      portada: "assets/img/cursos/portada-afiche-sostenibilidad-en-accion.jpg",
       descripcion: [
         "La pregunta de entrada era concreta: ¿de qué está hecho lo que botamos? El curso empieza literalmente desarmando: controles de consola que dejaron de funcionar, abiertos con destornillador sobre la mesa hasta dejar cada componente a la vista y catalogado en una materioteca.",
         "Desde ahí el trabajo se vuelve proyectual. Con los Objetivos de Desarrollo Sostenible de la ONU y los principios de la economía circular como marco, cada equipo eligió un objeto cotidiano y lo rediseñó para reducir la cantidad de residuos que genera. La electrónica básica fue la herramienta que permitió que esos rediseños encendieran, se movieran y funcionaran de verdad.",
@@ -950,7 +950,7 @@ const SITE = {
       duracion: "12 sesiones",
       equipo: "",
       resumen: "Palancas, poleas y engranajes llevados al diseño de juegos: mecanismos impresos en 3D que se convierten en experiencias lúdicas para un usuario real.",
-      portada: "assets/img/cursos/maquinas-fabulosas-portada.jpg",
+      portada: "assets/img/cursos/portada-afiche-maquinas-fabulosas.jpg",
       descripcion: [
         "Este curso toma los mecanismos simples, un contenido que suele quedarse en la pizarra, y lo empuja hasta un producto jugable. Durante la primera mitad del semestre los estudiantes entienden y aplican palancas, poleas y engranajes, aprendiendo a modelarlos en Tinkercad y a imprimirlos en 3D con las tolerancias correctas para que encajen y giren.",
         "La segunda mitad cambia de registro: ya no se trata de que el mecanismo funcione, sino de que le sirva a alguien. Cada equipo construyó un perfil de usuario, definió una necesidad y transformó su mecanismo en una experiencia de juego diseñada para esa persona.",
@@ -1009,7 +1009,7 @@ const SITE = {
       duracion: "14 sesiones",
       equipo: "Ayudante: Elvis Andrade Torres",
       resumen: "El curso donde nació el robot educativo: un explorador construido desde cero, programado en Arduino y controlado por Wi-Fi, con piezas impresas en 3D por los propios estudiantes.",
-      portada: "assets/img/cursos/robots-makers-portada.jpg",
+      portada: "assets/img/cursos/portada-afiche-robots-makers-en-accion.jpg",
       descripcion: [
         "Este es el curso que cambió los tres siguientes. Para poder enseñar robótica sin depender de kits comerciales caros y cerrados, junto a Elvis Andrade diseñamos y construimos un robot educativo propio: chasis, electrónica, puente H para el control de motores y firmware con control por Wi-Fi desde el navegador.",
         "Con esa base, los estudiantes no arman un kit siguiendo instrucciones: construyen su robot desde cero, lo programan en la IDE de Arduino y diseñan en Tinkercad las piezas que necesitan (brazos, pinzas, soportes) para que su explorador resuelva la misión que ellos mismos definieron.",
@@ -1069,7 +1069,7 @@ const SITE = {
       duracion: "6 días, lunes a sábado",
       equipo: "",
       resumen: "La versión para niños y niñas de 8 y 9 años: una misión espacial distinta cada día, construyendo y programando robots exploradores con materiales cotidianos y piezas impresas en 3D.",
-      portada: "assets/img/cursos/mision-espacial-portada.jpg",
+      portada: "assets/img/cursos/portada-afiche-mision-espacial.jpg",
       descripcion: [
         "Adaptar robótica real a estudiantes de 8 y 9 años obliga a cambiar todo el andamiaje sin bajar el nivel técnico. La solución fue estructurar el curso como una serie de misiones espaciales: cada día plantea un desafío concreto (navegar, aterrizar, desplazarse, personalizar) y el robot va creciendo misión a misión.",
         "El robot educativo desarrollado el semestre anterior hizo posible este curso. Al tener una base propia y confiable, pude entregar a niños de esa edad un robot que de verdad se mueve y se controla, en lugar de una maqueta que solo lo aparenta.",
@@ -1119,7 +1119,7 @@ const SITE = {
       duracion: "12 sesiones",
       equipo: "",
       resumen: "Un semestre completo de exploración espacial: del primer circuito al robot controlado remotamente por Wi-Fi, con piezas propias modeladas en Tinkercad.",
-      portada: "assets/img/cursos/robot-espacial-portada.jpg",
+      portada: "assets/img/cursos/portada-afiche-robot-espacial.jpg",
       descripcion: [
         "Robot Espacial lleva la lógica de las misiones a un formato semestral, con más tiempo para profundizar en cada capa técnica. Los estudiantes empiezan por entender las problemáticas reales de los viajes espaciales y terminan con un robot explorador que programan y controlan de forma remota a través de Wi-Fi.",
         "La progresión es deliberada: primero la metodología de diseño para abordar problemas complejos, después electrónica, después programación, y solo entonces el modelado 3D de las piezas que cada robot necesita. Cada capa se evalúa antes de montar la siguiente.",
@@ -1182,7 +1182,7 @@ const SITE = {
       duracion: "12 sesiones",
       equipo: "",
       resumen: "Robots que juegan: programación por bloques y código, diseño centrado en el usuario y tableros construidos por los propios equipos para poner a prueba cada máquina.",
-      portada: "assets/img/cursos/robots-juegos-portada.jpg",
+      portada: "assets/img/cursos/portada-afiche-robots-y-juegos.jpg",
       descripcion: [
         "El curso más reciente cruza las dos líneas que venía trabajando por separado: la robótica de los cursos espaciales y el diseño de juegos de Máquinas fabulosas. Los equipos ensamblan un robot, lo programan primero por bloques y después modificando el código directamente, y construyen el tablero o terreno sobre el que ese robot tiene que desempeñarse.",
         "La etapa de empatía es explícita: cada equipo elige un tipo de usuario (niños pequeños, adultos mayores, alguien con una necesidad específica) y define cómo debe comportarse el robot para esa persona. El diseño de interacción deja de ser un accesorio y pasa a determinar la mecánica del juego."
